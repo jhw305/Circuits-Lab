@@ -1,0 +1,52 @@
+\documentclass[a4paper,10pt]{article}
+% Voltage div formula
+% Take down resistances and capacitances
+% Take down length of cable and briefly note phase :)
+% V_osc / V_ac
+% Compare with measurement
+\usepackage{spreadtab}
+\begin{document}
+
+\begin{table}[h!]
+\centering
+\caption{Voltmeter Measurements}
+\label{tab:voltmeter}
+% Voltmeter measurements
+% Voltage used: 5V
+\begin{spreadtab}{{tabular}{|c|c|c|}}
+	\hline
+	& @Voltage at R = 1k$\Omega$ [ V ] & @Voltage at R = 1M$\Omega$ [ V ] \\
+	\hline
+	@Voltmeter & 0.499 & 0.455 \\
+	\hline
+	@Power Supply & 0.498 & 0.498 \\ 
+	\hline
+\end{spreadtab}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Oscilloscope Measurements}
+\label{tab:oscope}
+% Oscilloscope measurements
+% Voltage used: 10Vpp
+% Set to high impedance so that we see the proper voltage
+% All measuremets are peak to peak
+% 1MOhm input resistance, 12pF input capacitance
+\begin{spreadtab}{{tabular}{|c|c|c|}}
+	\hline
+	@Frequency [ Hz ] & @Scope Voltage at R = 1k$\Omega$ [ V ] & @Scope Voltage at R = 1M$\Omega$ [ V ] \\
+	\hline
+	@$10^3$ & 10.25 & 5.00 \\
+	\hline
+	@$10^6$ & 9.31 & 0.1 \\
+	\hline
+\end{spreadtab}
+\end{table}
+
+Example of LaTeX's table referencing: \\
+Voltmeter measurements - Table \ref{tab:voltmeter} \\
+Oscope measurements - Table \ref{tab:oscope} \\
+Remember! Use descriptive variable names for labels! Do NOT label something "tab:table1"!
+
+\end{document}

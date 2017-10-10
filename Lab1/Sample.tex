@@ -1,0 +1,37 @@
+% Roman Parise's LaTeX Tutorial
+% Here is what your heading should look like.
+
+% Controls settings related to the document.
+\documentclass[a4paper,10pt]{article}
+% This is like a #include in C. spreadtab is used for formatting tables
+% and performing calculations in tables.
+\usepackage{spreadtab}
+% url package is used for embedding URLs.
+\usepackage{url}
+% Start writing your document!
+\begin{document}
+
+% \\ creates a new line.
+LaTeX allows us to easily embed math in our documents. For instance, here is the Schrodinger equation:\\
+% Use $ to create a math equation. \centerline centers the text in brackets.
+\centerline{ $ \frac{\hbar^2}{2m} \nabla^2\Psi + \Psi V = j\hbar\frac{ \partial \Psi }{ \partial t } $ }
+
+LaTeX also lets you create tables:
+\begin{table}[h!]
+\centering
+\caption{My first LaTeX table}
+\label{tab:table1}
+\begin{spreadtab}{{tabular}{|c|c|c|}}
+	\hline
+	@Frequency [ Hz ] & @Scope Voltage at R = 1k$\Omega$ [ V ] & @Scope Voltage at R = 1M$\Omega$ [ V ] \\
+	\hline
+	1kHz & 10.25 & 5.00 \\
+	1MHz & 9.31 & 0.1 \\
+	\hline
+\end{spreadtab}
+\end{table}
+
+% Note you will need to compile LaTeX twice for \ref to work. I haven't read this in its entirely yet, but the following link explains why: https://tex.stackexchange.com/questions/111280/understanding-how-references-and-labels-work
+A really critical feature of LaTeX for us is that we can refer to tables by reference as opposed to by the name directly. Look in the LaTeX source for how I refer to \ref{tab:table1} without actually explicitly writing out "Table 1" or what have you. This way, we can simply give our tables variable names, and the numbering will be automatically done for us. This automated numbering scheme also extends to the text. This can also be extended to page numbers. See this link for more details: \url{https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing}.
+
+\end{document}
