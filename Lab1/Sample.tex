@@ -5,6 +5,7 @@
 \documentclass[a4paper,10pt]{article}
 % This is like a #include in C. spreadtab is used for formatting tables
 % and performing calculations in tables.
+\usepackage{siunitx}
 \usepackage{spreadtab}
 % url package is used for embedding URLs.
 \usepackage{url}
@@ -12,8 +13,11 @@
 \begin{document}
 
 % \\ creates a new line.
-LaTeX allows us to easily embed math in our documents. For instance, here is the Schrodinger equation:\\
+\underline{Introduction}
+
+For the Electronics Lab course, the multimeter model that is used is the 34405A. This multimeter allows us to help measure features such as either true RMS AC or DC voltage and as well as true RMS AC or DC current. The range of the voltage on the multimeter goes from 10mV to 1000V, while the range for the current goes from 10mA to 10A. The input impedance of the multimeter is around 1M\si{\ohm} +/- 2\% for AC voltage while the input resistance for DC voltage is listed around 10M\si{\ohm} +/- 2\%. The circuit in our lab is a simple series circuit, therefore the voltmeter acts as a voltage divider.\\
 % Use $ to create a math equation. \centerline centers the text in brackets.
+\centerline{ $ V_VM = V_Source(\frac{R_Vm}{R_VM + R} $}
 \centerline{ $ \frac{\hbar^2}{2m} \nabla^2\Psi + \Psi V = j\hbar\frac{ \partial \Psi }{ \partial t } $ }
 
 LaTeX also lets you create tables:
