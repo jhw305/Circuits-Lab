@@ -1,0 +1,4 @@
+# LaTeX byproducts
+*.aux
+*.log
+*.pdf
