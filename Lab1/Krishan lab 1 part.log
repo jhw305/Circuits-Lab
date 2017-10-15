@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.12)  12 OCT 2017 18:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.12)  15 OCT 2017 13:49
 entering extended mode
 **"./Krishan lab 1 part.tex"
 ("Krishan lab 1 part.tex"
@@ -492,30 +492,57 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 13.
 \c__siunitx_mathtt_int=\count279
- [1
 
-{C:/Users/solankik/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] ("Krisha
-n lab 1 part.aux") ) 
+Underfull \hbox (badness 10000) in paragraph at lines 18--22
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no „ in font cmr10!
+Missing character: There is no ¦ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no „ in font cmr10!
+Missing character: There is no ¦ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no „ in font cmr10!
+Missing character: There is no ¦ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no „ in font cmr10!
+Missing character: There is no ¦ in font cmr10!
+
+Overfull \hbox (8.77832pt too wide) in paragraph at lines 28--29
+[]\OT1/cmr/m/n/10 For the cir-cuit with the os-cil-lo-scope, stu-dents will mea
+-sure the in-put impedance
+ []
+
+[1
+
+{C:/Users/solankik/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+("Krishan lab 1 part.aux") ) 
 Here is how much of TeX's memory you used:
  11967 strings out of 493323
  255529 string characters out of 3128712
- 289847 words of memory out of 3000000
+ 290847 words of memory out of 3000000
  15481 multiletter control sequences out of 15000+200000
  531681 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,7n,33p,10389b,739s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/solankik/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/solankik/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/sol
-ankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr5.pfb><C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr7.pfb><C:/Users/solankik/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Krishan lab 1 part.pdf" (1 page, 71285 bytes).
+<C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/solankik/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/solankik/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/U
+sers/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb>
+Output written on "Krishan lab 1 part.pdf" (1 page, 56661 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
+ 26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

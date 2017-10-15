@@ -17,7 +17,15 @@
 
 For the Electronics Lab course, the multimeter model that is used is the 34405A. This multimeter allows us to help measure features such as either true RMS AC or DC voltage and as well as true RMS AC or DC current. The range of the voltage on the multimeter goes from 10mV to 1000V, while the range for the current goes from 10mA to 10A. The input impedance of the multimeter is around 1M\si{\ohm} +/- 2\% for AC voltage while the input resistance for DC voltage is listed around 10M\si{\ohm} +/- 2\%. The circuit in our lab is a simple series circuit, therefore the voltmeter acts as a voltage divider.\\
 % Use $ to create a math equation. \centerline centers the text in brackets.
+\\
 \centerline{ $ V_{Vm} = V_{Source}(\frac{R_{Vm}}{R_{Vm} + R}) $}
+
+\underline{Implementation}
+
+For the circuit with the voltmeter, students will measure the input impedance of a voltmeter and the voltage across a voltmeter on a circuit using resistors of value 1kΩ and 1MΩ simultaneously. After measuring the input impedance, a formula relating the measured voltage and the battery voltage will be created and used to find the impedance of the DVM by hand. To finish off this part of the experiment, the students’ measurements should be compared to the manufacturers’ results. 
+
+
+For the circuit with the oscilloscope, students will measure the input impedance of the oscilloscope from a circuit using resistors of value 1MΩ and 1kΩ simultaneously while setting the frequency to 1kHz. A formula will be created to relate the measured voltage and the battery voltage, which will then be used to find the impedance of the oscilloscope by hand. After measuring the impedance, the voltage will be taken across the oscilloscope using the two resistor values. The experiment will be repeated using a frequency of 1MHz.
 
 
 \end{document}
