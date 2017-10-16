@@ -3,42 +3,15 @@
 
 % Controls settings related to the document.
 \documentclass[a4paper,10pt]{article}
-% This is like a #include in C. spreadtab is used for formatting tables
-% and performing calculations in tables.
-\usepackage{spreadtab}
-\usepackage{siunitx}
-\usepackage{graphicx}
-% url package is used for embedding URLs.
-\usepackage{url}
-% Start writing your document!
 \begin{document}
 
 % \\ creates a new line.
 \underline{Introduction}
 
-For the Electronics Lab course, the multimeter model that is being used is the 34405A. This multimeter helps measure features such as either true RMS AC or DC voltage and as well as true RMS AC or DC current. The range of the voltage on the multimeter goes from 10mV to 1000V, while the range for the current goes from 10mA to 10A \cite{34405A:3}. The input impedance of the multimeter is around 1M\si{\ohm} +/- 2\% for AC voltage while the input resistance for DC voltage is listed around 10M\si{\ohm} +/-2\%\cite{34405A:6}. The circuit in this lab is a simple series circuit, therefore the voltmeter acts as a voltage divider.\\
-% Use $ to create a math equation. \centerline centers the text in brackets.
-\\
-
-\includegraphics{voltmeterfinal.png}
-\label{Voltmeter_Pic}
-\begin{equation}
-\label{eq:volt_div}
-\centerline{ $ V_{Vm} = V_{Source}(\frac{R_{Vm}}{R_{Vm} + R}) $} 
-\end{equation}
-
 
 \underline{Implementation}
 
-For the circuit with the voltmeter, students will measure the  voltage across a voltmeter on a circuit using resistors of value 1kΩ and 1MΩ simultaneously. After measuring the voltage, a formula relating the measured voltage and the battery voltage is derived and used to find the impedance of the DVM by hand (\ref{eq:DVM_VM}). To finish off this part of the experiment, the students’ measurements should be compared to the manufacturer's results. 
 
-\begin{equation}
-\label{eq:DVM_VM}
-\centerline{ $ \frac{V_{Vm}}{V_{Source}} = (\frac{R_{Vm}}{R_{Vm} + R}) $} 
-\end{equation}
-
-
-For the circuit with the oscilloscope, students will measure the voltage across the oscilloscope from a circuit using resistors of value 1MΩ and 1kΩ simultaneously while setting the frequency to 1kHz. A formula is then derived to relate the measured voltage and the battery voltage (\ref{eq:osc_ratio}), which will then be used to find the impedance of the oscilloscope by hand. The experiment will be repeated using a frequency of 1MHz.
 
 
 \end{document}
