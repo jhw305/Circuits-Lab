@@ -1,0 +1,126 @@
+Error eqn used: $ \epsilon = 100\% \times | \frac{x_{theoretical} - x_{measured}}{x_{theoretical}} | $
+
+\FloatBarrier
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.1]{"./images/Oscope 1kHz 1kOhm".JPG}
+\caption{Oscilloscope at 1kHz with R = 1k$\Omega$}
+\label{fig:scope_1kHz_1kOhm}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.1]{"./images/Oscope 1kHz 1MOhm".JPG}
+\caption{Oscilloscope at 1kHz with R = 1M$\Omega$}
+\label{fig:scope_1kHz_1MOhm}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.1]{"./images/Oscope 1MHz 1kOhm".JPG}
+\caption{Oscilloscope at 1MHz with R = 1k$\Omega$}
+\label{fig:scope_1MHz_1kOhm}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.1]{"./images/Oscope 1MHz 1MOhm".JPG}
+\caption{Oscilloscope at 1MHz with R = 1M$\Omega$}
+\label{fig:scope_1MHz_1MOhm}
+\end{figure}
+
+\FloatBarrier
+
+\begin{table}[h!]
+\centering
+\caption{Oscilloscope Specification}
+\label{tab:oscope_spec}
+\begin{spreadtab}{{tabular}{|c|c|}}
+	\hline
+	@Input Resistance [ $\Omega$ ] & @Input Capacitance [ pF ] \\
+	\hline
+	@$10^6$ & 12 \\
+	\hline
+\end{spreadtab}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Oscilloscope Measurements}
+\label{tab:oscope}
+% Oscilloscope measurements
+% Voltage used: 10Vpp
+% Set to high impedance so that we see the proper voltage
+% All measuremets are peak to peak
+% 1MOhm input resistance, 12pF input capacitance
+\begin{spreadtab}{{tabular}{|c|c|c|}}
+	\hline
+	@Frequency [ Hz ] & @Scope Voltage at R = 1k$\Omega$ [ V ] & @Scope Voltage at R = 1M$\Omega$ [ V ] \\
+	\hline
+	@$10^3$ & 10.25 & 5.00 \\
+	\hline
+	@$10^6$ & 9.31 & 0.1 \\
+	\hline
+\end{spreadtab}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{$\frac{V_{scope}}{V_{AC}}$ for R = 1k$\Omega$}
+\label{tab:oscope_ratio_1k}
+% TODO: Number of digits of precision?
+% TODO: Take out unreliable data?
+\begin{spreadtab}{{tabular}{|c|c|c|c|}}
+	\hline
+	@Frequency [ Hz ] & @$\frac{V_{scope}}{V_{AC}}$ [ unitless ] & @Theoretical Value [ unitless ] & @Error [ \% ] \\
+	\hline
+	@$10^3$ & 10.25/10 & 0.999 & 2.60 \\
+	\hline
+	@$10^6$ & 9.31/10 & 0.996 & 6.54 \\
+	\hline
+\end{spreadtab}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{$\frac{V_{scope}}{V_{AC}}$ for R = 1M$\Omega$}
+\label{tab:oscope_ratio_1M}
+% TODO: Number of digits of precision?
+\begin{spreadtab}{{tabular}{|c|c|c|c|}}
+	\hline
+	@Frequency [ Hz ] & @$\frac{V_{scope}}{V_{AC}}$ [ unitless ] & @Theoretical Value [ unitless ] & @Error [ \% ] \\
+	\hline
+	@$10^3$ & 5.00/10 & 0.500 & 0.07 \\
+	\hline
+	@$10^6$ & 0.1/10 & 0.013 & 24.58 \\
+	\hline
+\end{spreadtab}
+\end{table}
+
+All voltage measurements are peak-to-peak values. The source is set to 10V peak-to-peak. Signal generator is set to high impedance.
+Calculations are performed using original, unrounded values. Thus, the experimental and theoretical values may be the same in the table, but the error is not necessarily 0\%, albeit very close.
+
+% TODO: Have question included in this document or not?
+
+The 1k$\Omega$ measurement at 1kHz is unreliable. At 1kHz, the massive 1M$\Omega$ resistor dwarfs the 1k$\Omega$ value. Thus, the result of $\frac{V_{scope}}{V_{AC}}$ is expected to be very close to 1. Slight variations due to noise and other environmental factors cause the value to deviate from the result, which explains why the ratio could be slightly more than 1 and not exactly 1. The experimental setup is not sufficiently precise nor controlled to be able to eliminate these minor errors.
+
+At 1MHz, the situation is a bit different. The capacitive reactance is proportional to $\frac{1}{\omega}$. Thus, at high frequencies, the capacitor begins to short the 1M$\Omega$ input resistance. Therefore, the oscilloscope's impedance is closer in magnitude to the 1k$\Omega$ resistance. This explains why the ratio drops. This measurement is more reliable than the 1kHz case, but still not the best measurement.
+
+The 1M$\Omega$ at 1kHz measurement yields the lowest percentage error of 0.07\%. The frequency is low enough that the capacitor essentially acts as an open circuit, reducing the circuit to a voltage divider with two 1M$\Omega$ resistors. Thus, half the voltage drops over each, which is why the result is 0.5.
+
+The 1MHz ratio is far too low to be a reliable measurement. The capacitive reactance reduces the magnitude of the oscilloscope's impedance and therefore the fraction of the applied voltage the oscilloscope consumes. When R is 1k$\Omega$, this effect is not as extreme. However, now that R is one-thousand times larger, its significantly exceeds the oscilloscope impedance's magnitude. As a result, it consumes the vast majority of the source's voltage, leaving the oscilloscope with very little. Typically negligible deviations due to noise and other factors have a more pronounced effect when the value is this small. Thus, the 1kHz measurements should be taken instead.
+
+If phase is taken into account, measurements with lower percentage error for $\frac{V_{scope}}{V_{AC}}$ yield more accurate estimates of the oscilloscope's impedance. This is because $Z_{scope}$ directly depends on and is determined by that ratio:
+\begin{equation}
+\label{eq:zscope}
+Z_{scope} = \frac{\frac{V_{scope}}{V_{AC}} \cdot R }{1 - \frac{V_{scope}}{V_{AC}}}
+\end{equation}
+The setup essentially estimates the oscilloscope's impedance $Z_{scope}$ using a reference impedance, the resistance R. Whenever frequencies and R values are chosen such that R is close to the oscilloscope's expected impedance, the results are closer to theory. If the oscilloscope's impedance greatly exceeds R in magnitude, there is virtually no difference between using the oscilloscope's true impedance and using a purely broken circuit ( $|Z_{scope}| \rightarrow \infty$ ). The only information that can be ascertained from this is $|Z_{scope}| >> R$, but a true value for $Z_{scope}$ is difficult to obtain. This is why 1k$\Omega$ at 1kHz is an inaccurate way of obtaining the oscilloscope's impedance.
+Similarly, if the reference impedance R is much larger than $Z_{scope}$ in magnitude, the result is again inaccurate because there is no way to diffferentiate between a short circuit and the oscilloscope. All the result indicates is $|Z_{scope}| << R$, which is exactly what occurs with 1M$\Omega$ at 1MHz.

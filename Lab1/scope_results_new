@@ -1,0 +1,26 @@
+\begin{table}[h!]
+\centering
+\caption{Oscilloscope Measurements for R = 1k$\Omega$}
+\label{tab:oscope_1k}
+% TODO: Number of digits of precision?
+\begin{spreadtab}{{tabular}{|c|c|c|c|}}
+	@Frequency [ Hz ] & @$\frac{V_{scope}}{V_{AC}}$ [ unitless ] & @Theoretical Value [ unitless ] & Error [ % ] \\
+	@$10^3$ & 10.25/10 & 0.999 & 1 \\
+	@$10^6$ & 9.31/10 & 0.996 & 1 \\
+\end{spreadtab}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Oscilloscope Measurements for R = 1M$\Omega$}
+\label{tab:oscope_1M}
+% TODO: Number of digits of precision?
+\begin{spreadtab}{{tabular}{|c|c|c|c|}}
+	@Frequency [ Hz ] & @$\frac{V_{scope}}{V_{AC}}$ [ unitless ] & @Theoretical Value [ unitless ] & Error [ % ] \\
+	@$10^3$ & 5.00/10 & 0.500 & 1 \\
+	@$10^6$ & 0.1/10 & 0.013 & 1 \\
+\end{spreadtab}
+\end{table}
+
+All voltage measurements are peak-to-peak values. The source is set to 10V peak-to-peak. Signal generator is set to high impedance.
+
