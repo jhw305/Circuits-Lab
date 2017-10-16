@@ -26,7 +26,12 @@ The BNC cables used in the testing of the oscilloscope may account for some capa
 	V_{scope} = V_{Source}(\frac{Z_{scope}}{Z_{scope} + R + R_{Source}}) 
 \end{equation}
 	
-where $Z_{scope}$ encompasses the input impedance modeled by $R_{scope}$ and $C_{scope}$ in parallel. 
+where $Z_{scope}$ encompasses the input impedance modeled by $R_{scope}$ and $C_{scope}$ in parallel. The ratio between the input voltage of the oscilloscope and the voltage of the function generator would then be the following:
+
+\begin{equation}
+	\label{eq:osc_ratio}
+	\frac{V_{scope}}{V_{Source}} = \frac{Z_{scope}}{Z_{scope} + R + R_{Source}} 
+\end{equation}
 	
 	
 	
