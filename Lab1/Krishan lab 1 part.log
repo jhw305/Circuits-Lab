@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.12)  15 OCT 2017 22:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.12)  16 OCT 2017 16:02
 entering extended mode
 **"./Krishan lab 1 part.tex"
 ("Krishan lab 1 part.tex"
@@ -613,11 +613,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
  []
 
-<voltmeter.png, id=1, 326.4195pt x 145.7445pt>
-File: voltmeter.png Graphic file (type png)
- <use voltmeter.png>
-Package pdftex.def Info: voltmeter.png used on input line 23.
-(pdftex.def)             Requested size: 326.41869pt x 145.74414pt.
+<voltmeterfinal.png, id=1, 242.1045pt x 104.18925pt>
+File: voltmeterfinal.png Graphic file (type png)
+ <use voltmeterfinal.png>
+Package pdftex.def Info: voltmeterfinal.png used on input line 23.
+(pdftex.def)             Requested size: 242.10391pt x 104.18898pt.
 Missing character: There is no â in font cmr10!
 Missing character: There is no „ in font cmr10!
 Missing character: There is no ¦ in font cmr10!
@@ -640,14 +640,14 @@ LaTeX Warning: Reference `eq:osc_ratio' on page 1 undefined on input line 41.
 [1
 
 {C:/Users/solankik/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./voltme
-ter.png>] ("Krishan lab 1 part.aux")
+terfinal.png>] ("Krishan lab 1 part.aux")
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
  13198 strings out of 493323
- 274714 string characters out of 3128712
+ 274739 string characters out of 3128712
  315937 words of memory out of 3000000
  16651 multiletter control sequences out of 15000+200000
  531989 words of font info for 29 fonts, out of 3000000 for 9000
@@ -661,7 +661,7 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/solan
 kik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
 <C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmr7.pfb>
-Output written on "Krishan lab 1 part.pdf" (1 page, 79864 bytes).
+Output written on "Krishan lab 1 part.pdf" (1 page, 73429 bytes).
 PDF statistics:
  33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
