@@ -9,16 +9,24 @@
 \usepackage{standalone}
 \usepackage{geometry}
 \geometry{left=20mm}
-\title{Lab 1}
-\author{
-Roman Parise (59611417) \and
-Krishan Solanki (38154673) \and
-Jason Wang (42873192) \and
-Lab Bench 1}
-% Lab bench 1 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+	\centering
+	\vspace{2.5cm}
+	{\huge Experiment 1 \par}
+	{\LARGE Introduction and Equipment Operations \par}
+	\vspace{1cm}
+	{\Large EECS 170A - Lab Bench \#1 \par}
+	{\Large \today \par}
+	\vspace{1cm}
+	{\large Roman Parise (59611417) \par}
+	{\large Krishan Solanki (38154673) \par}
+	{\large Jason Wang (42873192) \par}
+	\vspace{1cm}
+\end{titlepage}
+
+\clearpage
 
 \section{Procedure}
 \subsection{Voltmeter Impedance}
@@ -38,10 +46,10 @@ For the Electronics Lab course, the multimeter model that is being used is the 3
 	V_{DVM} = V_{Source}(\frac{R_{DVM}}{R_{DVM} + R}) 
 \end{equation}
 
-For the circuit with the voltmeter, students will measure the voltage across a voltmeter on a circuit using resistors of value 1kΩ and 1MΩ simultaneously. After measuring the voltage, equation \ref{eq:vdvm} can be used to find the impedance of the DVM from the voltmeter's voltage, the source's voltage, and the resistance R. To finish off this part of the experiment, the measured voltmeter impedance is compared to the manufacturer's results. 
+For the circuit with the voltmeter, students will measure the voltage across a voltmeter on a circuit using resistors of value 1k\si{\ohm} and 1M\si{\ohm} simultaneously. After measuring the voltage, equation (\ref{eq:vdvm}) can be used to find the impedance of the DVM from the voltmeter's voltage, the source's voltage, and the resistance R. To finish off this part of the experiment, the measured voltmeter impedance is compared to the manufacturer's results. 
 \subsection{Oscilloscope Impedance}
 %\input{oscope_procedure.tex}
-For the circuit with the oscilloscope, students will measure the voltage across the oscilloscope from a circuit using resistors of value 1MΩ and 1kΩ simultaneously while setting the frequency to 1kHz. A formula is then derived to relate the measured voltage and the battery voltage (\ref{eq:osc_ratio}), which will then be used to find the impedance of the oscilloscope by hand. The experiment will be repeated using a frequency of 1MHz.
+For the circuit with the oscilloscope, students will measure the voltage across the oscilloscope from a circuit using resistors of value 1M\si{\ohm} and 1k\si{\ohm} while setting the frequency to 1kHz. Equation (\ref{eq:osc_ratio}) is used to find the ratio of the oscilloscope's measured voltage to the source voltage. The experiment will be repeated using a frequency of 1MHz.
 
 The oscilloscope to be used in this course is the Agilent InfiniiVision DSO5034A. This oscilloscope is able to perform a variety of useful functions for this lab course including plotting input and output signal waveforms, measuring amplitudes and frequencies of periodic signals, performing Fourier Transforms for visualization of frequency peaks, etc. The oscilloscope has an input resistance rated at 1 M$\Omega$ and an input capacitance of 12 pF, acquired from looking at the front of the oscilloscope. The oscilloscope can be simply modeled as a resistor and capacitor in parallel and is connected in series with a resistor and function generator which is assumed to have an internal impedance of 50 $\Omega$ and that is accounted for in the circuit model shown below: 
 
@@ -51,7 +59,6 @@ The oscilloscope to be used in this course is the Agilent InfiniiVision DSO5034A
 	\caption{Oscilloscope Testing Circuit Schematic}
 	\label{fig:scope_circuit}
 \end{figure}
-
 
 The BNC cables used in the testing of the oscilloscope may account for some capacitance in the overall circuit. However, the effects of cables are neglected. As a result, the voltage division relation can be applied to the circuit and the following equation is derived for the voltage measured across the oscilloscope,
 
@@ -70,17 +77,24 @@ In equation (\ref{eq:vscope}), the oscilloscope's impedance is given by:
 The ratio between the input voltage of the oscilloscope and the voltage of the function generator would then be the following:
 
 \begin{equation}
-	\label{eq:osc_ratio}
-	\frac{V_{scope}}{V_{Source}} = \frac{Z_{scope}}{Z_{scope} + R + R_{Source}} 
+	\label{eq:osc_ratio_original}
+	\frac{V_{scope}}{V_{Source}} = \frac{Z_{scope}}{Z_{scope} + R + R_{Source}}
 \end{equation}
 
-The "Appendix" section at the end contains a Python script used to calculate the expected results. Theoretical results are acquired by first using equation (\ref{eq:zscope_main}) to get the oscilloscope's impedance and then applying it to equation (\ref{eq:vscope}) to find the ratio $\frac{V_{scope}}{V_{Source}}$.
+However, $R_{Source}$ is negligible in comparison to $R$ and $Z_{scope}$. So, the following simpler relation is used instead:
+
+\begin{equation}
+	\label{eq:osc_ratio}
+	\frac{V_{scope}}{V_{Source}} \approx \frac{Z_{scope}}{Z_{scope} + R}
+\end{equation}
+
+The "Appendix" section at the end contains a Python script used to calculate the expected results. Theoretical results are acquired by first using equation (\ref{eq:zscope_main}) to get the oscilloscope's impedance and then applying it to equation (\ref{eq:osc_ratio}) to find the ratio $\frac{V_{scope}}{V_{Source}}$.
 
 \section{Results and Analysis}
 \subsection{Voltmeter Impedance}
 %\input{dvm_results.tex}
 
-Equation \ref{err_eqn} is used for all error calculations:
+Equation (\ref{err_eqn}) is used for all error calculations:
 \begin{equation}
 \label{err_eqn}
 \epsilon = 100\% \times | \frac{x_{theoretical} - x_{measured}}{x_{theoretical}} |
@@ -88,6 +102,8 @@ Equation \ref{err_eqn} is used for all error calculations:
 
 The following results are values indicated by the displays of the digital voltmeter and power supply:
 	
+\FloatBarrier
+
 \begin{table}[h!]
 	\centering
 	\caption{Voltmeter Measurements}
@@ -104,6 +120,8 @@ The following results are values indicated by the displays of the digital voltme
 		\hline
 	\end{spreadtab}
 \end{table}
+
+\FloatBarrier
 	
 The setup with the 1 k$\Omega$ yields a voltmeter input voltage higher than the voltage of the power supply. By introducing these results to the voltage division equation in \ref{eq:vdvm}, a negative $R{DVM}$ value is computed.
 
@@ -117,9 +135,9 @@ R_{DVM} = -499 k\Omega
 \end{gathered}
 \end{equation}
 
-The negative input resistance computed in \ref{eq:vdvm_calc_1k} is an impossible value so it is dropped.
+The negative input resistance computed in (\ref{eq:vdvm_calc_1k}) is an impossible value so it is dropped.
 
-By using \ref{eq:vdvm} for the 1 M$\Omega$ setup, the following input resistance is computed:
+By using (\ref{eq:vdvm}) for the 1 M$\Omega$ setup, the following input resistance is computed:
 
 \begin{equation}
 	\label{eq:vdvm_calc_1M}
@@ -142,7 +160,7 @@ When compared to the 10M\si{\ohm} +/- 2\% input resistance indicated in the user
 	\end{gathered}
 \end{equation}
 
-Though this 5.8\% error is not within the manufacturer's predicted 2\% range, the value acquired is still quite close to the expected value. For resistances R closer to the expected value of $R_{DVM}$, the result is more accurate. It is conceivable that using a 10M$\Omega$ resistance R or some value close to it would yield a result fairly close to the manufacturer's specification.
+Though this 5.8\% error is not within the manufacturer's predicted 2\% range, the value acquired is still quite close to the expected value. For resistances R closer to the expected value of $R_{DVM}$, the result is observed to be more accurate, which explains why the 1 k$\Omega$ result is erroneous and the 1 M$\Omega$ result is much closer. It is conceivable that using a 10M$\Omega$ resistance R or some value close to it would yield a result fairly close to the manufacturer's specification.
 
 \subsection{Oscilloscope Impedance}
 \input{scope_results.tex}
