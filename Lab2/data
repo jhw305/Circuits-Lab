@@ -68,6 +68,9 @@ C = 102 -> 1 nF
 		90kHz -> 10.00V
 2) Measure time constants for impulse response (20vpp)
 	- LPF
+		20kHz frequency
+		1us pulse width
+		20V pulse
 		Peak :: 1.1125V
 		T = 8.6us
 		Prediction = 10us
@@ -82,4 +85,17 @@ C = 102 -> 1 nF
 		Prediction = 40us
 
 	- HPF
-		Peak :: 
+		10kHz frequency
+		2us pulse width
+		20V pulse
+		Peak :: 1.76875V
+		T = 8.8us
+		Prediction = 10us
+
+		2T = 18.2us
+		Prediction = 20us
+
+		3T = 28.0us
+		Prediction = 30us
+
+		Can't hit 4T
