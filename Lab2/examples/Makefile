@@ -14,3 +14,8 @@ example_build: $(EXAMPLE_DOC_TEX) $(EXAMPLE_DOC_PREAMBLE_TEX) $(EXAMPLE_DOC_WRAP
 
 example_read: example_build
 	$(PDF_READER) $(EXAMPLE_DOC_OUTPUT_PDF)
+
+# Variables omitted for readability so you can use this as an example for commands.
+bandgap_build: 
+	python2 bandgap_graph.py
+	pdflatex bandgap_graph.tex
