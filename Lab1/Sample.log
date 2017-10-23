@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.12)  12 OCT 2017 18:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.12)  23 OCT 2017 10:50
 entering extended mode
 **./Sample.tex
 (Sample.tex
@@ -465,18 +465,18 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (Sample.aux)
 \openout1 = `Sample.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 ("C:\Users\solankik\AppData\Local\Programs\MiKTeX 2.9\tex\latex\beamer\translat
 or\dicts\translator-basic-dictionary\translator-basic-dictionary-English.dict"
@@ -488,9 +488,9 @@ File: siunitx-abbreviations.cfg 2017/08/02 v2.7j siunitx: Abbreviated units
 )
 \c__siunitx_mathsf_int=\count278
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 13.
+(Font)              <7> on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 13.
+(Font)              <5> on input line 7.
 \c__siunitx_mathtt_int=\count279
  New spreadtab: \begin{tabular}{|c|c|c|}
 * reading tab: ok
@@ -505,29 +505,35 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 End of spreadtab: \end{tabular}
 
 
-Overfull \hbox (47.21161pt too wide) in paragraph at lines 35--36
+Overfull \hbox (47.21161pt too wide) in paragraph at lines 29--30
  [][] 
  []
 
+[1
 
-LaTeX Warning: Reference `tab:table1' on page 1 undefined on input line 39.
-
-! I can't write on file `Sample.pdf'.
-Please type another file name for output
-! Emergency stop.
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.41 \end{document}
-                   
-*** (job aborted, file error in nonstop mode)
-
- 
+{C:/Users/solankik/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(Sample.aux) ) 
 Here is how much of TeX's memory you used:
- 12000 strings out of 493323
- 255706 string characters out of 3128712
- 290530 words of memory out of 3000000
+ 12003 strings out of 493323
+ 255731 string characters out of 3128712
+ 290538 words of memory out of 3000000
  15517 multiletter control sequences out of 15000+200000
- 531989 words of font info for 29 fonts, out of 3000000 for 9000
+ 531681 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,9n,33p,10381b,739s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+<C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><C:/Users/solankik/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/solankik/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/solankik/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr5.pfb><C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb><C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/solankik/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Sample.pdf (1 page, 88306 bytes).
+PDF statistics:
+ 38 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
