@@ -85,17 +85,56 @@ Assume the existence of an inverse Laplace transform $\mathcal{L}^{-1}$. The sta
 	\end{aligned}
 \end{equation*}
 
-% Demonstrate that impulse response is simply V_out / V_in in Laplace domain. So, we can use a very simple formula L-1{ V_out / V_in } to find the impulse response.
-
-
 % Do this for a low-pass filter
+\subsection{Low-Pass Filter}
+The transfer function for the low-pass filter can be acquired using voltage division in the Laplace domain with the output voltage taken over the capacitor:
+\begin{equation}
+	\label{eq:tf_lpf}
+	H(s) = \frac{ \frac{ 1 }{ sC } }{ \frac{ 1 }{ sC } + R } = \frac{ \frac{ 1 }{ RC } }{ \frac{ 1 }{ RC } + s } \xrightarrow{\mathcal{L}^{-1}} h(t) = \frac{ e^{-\frac{t}{\tau}} }{ \tau } ( by equation (\ref{eq:dd_to_ir}) )
+\end{equation}
 
-% Do this for a high-pass filter
+Here, $\tau = RC$ is the time constant. It can be experimentally measured by observing where $h(t)$ acquires a value of $e^{-1} \approx 0.37$ times the maximum value of $h(t)$ at the start $(t = 0)$.
 
-% Check that the two results are the same by applying voltage division
+% Output signal plot - LPF
+
+\FloatBarrier
 
 % Table of time constants
-
-% Table of peak values
+\begin{table}[h!]
+\centering
+\caption{Low-Pass Filter Time Constant}
+\label{tab:lpf_tau}
+\csvautotabular{../tables/tau_lpf.csv}
+\end{table}
+{\footnotesize Resistor R is $10k\Omega$. Capacitor C is 1nF. Frequency is set to 20kHz. Pulse height is 20V. Pulse width is $1\mu s$. Each value represents a different measurement. The first reported value is a 1 $\tau$ measurement. The next is a 2 $\tau$ measurement, and so on.} \\
+\FloatBarrier
 
 % Analysis
+The results for the low-pass filter are fairly close to theory. At the very beginning, the quick surge of the power supply's voltage charges the capacitor. When the pulse turns off, the capacitor simply discharges, and its voltage decays exponentially.
+Each measurement corresponds to particular number of time constants. The first is $\tau$ calculated by observing the point at which the voltage is $e^{-1}$ times its peak value. The second is $\tau$ calculated by finding the point that is $e^{-2}$ of the peak, which would be $t = 2\tau$, and then dividing the time by 2. As the measurements are taken at later values of $t$, the approximation for $\tau$ has a lower and lower percentage error from theory. Thus, the source of error is likely a result of the difficulty of acquiring accurate measurements from $\tau$ rather than deviations from theory. For minimal error, a very low pulse frequency should be used, and measurements should be taken at a later time, like $t=5\tau$, dividing by 5 to acquire $\tau$.
+
+% Do this for a high-pass filter
+\subsection{High-Pass Filter}
+The high-pass filter's impulse response can also be acquired using voltage division:
+\begin{equation}
+	\label{eq:ir_hpf}
+	h(t) = \mathcal{L}^{-1}\{ \frac{ sRC }{ 1 + sRC } \} = \delta(t) - \frac{ e^{- \frac{t}{RC} } }{RC}
+\end{equation}
+
+\FloatBarrier
+
+% Table of time constants
+\begin{table}[h!]
+\centering
+\caption{High-Pass Filter Time Constant}
+\label{tab:hpf_tau}
+\csvautotabular{../tables/tau_hpf.csv}
+\end{table}
+{\footnotesize Resistor R is $10k\Omega$. Capacitor C is 1nF. Frequency is set to 10kHz. Pulse height is 20V. Pulse width is $2\mu s$. Measurements follow the same convention as table \ref{tab:lpf_tau}, namely whether they are 1$\tau$ or higher measurements.} \\
+\FloatBarrier
+
+% Analysis
+Acquiring measurements for the high-pass filter is difficult. The frequency should be decreased by a factor of 2. This allows the capacitor to take more time to discharge through the resistor so that $\tau$ measurements can be taken more easily. However, the peak value of the resistor's voltage drop must also increase in magnitude in order for the decay to observable. So, the pulse width should be increased by a factor of 2 to give the capacitor more time to charge, and the resistor more current, and therefore more voltage, when the capacitor discharges.
+The impulse response is essentially as expected once the tweaks to the power supply settings are made. The sudden charging of the capacitor at the start demands a large current flowing through the resistor. This gives rise to a high voltage drop, explaining the Dirac delta term in equation \ref{eq:ir_hpf}.
+When the supply's pulse ends, the capacitor discharges through the resistor. Thus, the current, and therefore the voltage drop over the resistor, flips polarity, which is why the resistor's voltage drop becomes negative. As the capacitor discharges, less and less current (in terms of magnitude) flows. Thus, the magnitude of the voltage drop decreases, which explains the exponential curve.
+The same trend in percentage errors is observed in the high-pass filter. Like with the low-pass filter, the decreasing trend in percentage errors indicates that the accuracy of the experiment is limited in the accuracy of $\tau$ measurements. For an accurate measurement of the high-pass filter, a higher voltage, lower pulse frequency, and wider pulse width are likely necessary, so a $5\tau$ measurement or so can be taken.
