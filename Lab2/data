@@ -1,0 +1,101 @@
+1 / ( 2 pi R C ) for cutoff freq of hpf or lpf for RC circuit
+Cutoff - 1/sqrt(2) drop ( should be around 15.9 kHz )
+Postlab - one plot with transfer fn against frequency (Bode plot) for LPF and HPF
+Values in bode plot must be negative because otherwise it would act as an amplifier ( power instead of voltage )
+
+R = 10k
+C = 102 -> 1 nF
+
+1) Transfer fn (10vpp)
+	- LPF
+		1kHz -> 10.06V
+		3kHz -> 9.94V
+		6kHz -> 9.56V
+		9kHz -> 8.88V
+		12kHz -> 8.25V
+		15kHz -> 7.63V
+		16kHz -> 7.44V
+		18kHz -> 7.00V
+		21kHz -> 6.50V
+		24kHz -> 6.00V
+		27kHz -> 5.56V
+		30kHz -> 5.19V
+		33kHz -> 4.88V
+		36kHz -> 4.56V
+		39kHz -> 4.31V
+		42kHz -> 4.06V
+		45kHz -> 3.81V
+		48kHz -> 3.63V
+		51kHz -> 3.44V
+		54kHz -> 3.25V
+		57kHz -> 3.13V
+		60kHz -> 3.00V
+		63kHz -> 2.88V
+		66kHz -> 2.75V
+		72kHz -> 2.63V
+		78kHz -> 2.38V
+		90kHz -> 2.13V
+		125kHz -> 1.48V
+		200kHz -> 0.97V
+		250kHz -> 0.78V
+	- HPF
+		1kHz -> 0.88V
+		3kHz -> 2.00V
+		6kHz -> 3.56V
+		9kHz -> 4.78V
+		12kHz -> 5.94V
+		15kHz -> 6.75V
+		16kHz -> 7.00V
+		18kHz -> 7.44V
+		21kHz -> 7.94V
+		24kHz -> 8.31V
+		27kHz -> 8.63V
+		30kHz -> 8.88V
+		33kHz -> 9.06V
+		36kHz -> 9.19V
+		39kHz -> 9.31V
+		42kHz -> 9.44V
+		45kHz -> 9.50V
+		48kHz -> 9.63V
+		51kHz -> 9.69V
+		54kHz -> 9.75V
+		57kHz -> 9.75V
+		60kHz -> 9.81V
+		63kHz -> 9.88V
+		66kHz -> 9.88V
+		72kHz -> 9.94V
+		78kHz -> 10.00V
+		90kHz -> 10.00V
+2) Measure time constants for impulse response (20vpp)
+	- LPF
+		20kHz frequency
+		1us pulse width
+		20V pulse
+		Peak :: 1.1125V
+		T = 8.6us
+		Prediction = 10us
+
+		2T = 17.6us
+		Prediction = 20us
+
+		3T = 27.0us
+		Prediction = 30us
+
+		4T = 37.2us
+		Prediction = 40us
+
+	- HPF
+		10kHz frequency
+		2us pulse width
+		20V pulse
+		Peak :: 1.76875V
+		T = 8.8us
+		Prediction = 10us
+
+		2T = 18.2us
+		Prediction = 20us
+
+		3T = 28.0us
+		Prediction = 30us
+
+		Can't hit 4T

@@ -1,4 +1,4 @@
-Error eqn used: $ \epsilon = 100\% \times | \frac{x_{theoretical} - x_{measured}}{x_{theoretical}} | $
+Calculations for this section are a bit tedious to perform by hand since many involve complex numbers. The Python code provided in the "Appendix" section at the end is used to calculate any expected results and errors.
 
 \FloatBarrier
 
@@ -51,6 +51,8 @@ Error eqn used: $ \epsilon = 100\% \times | \frac{x_{theoretical} - x_{measured}
 \end{spreadtab}
 \end{table}
 
+\FloatBarrier
+
 \begin{table}[h!]
 \centering
 \caption{Oscilloscope Measurements}
@@ -64,12 +66,14 @@ Error eqn used: $ \epsilon = 100\% \times | \frac{x_{theoretical} - x_{measured}
 	\hline
 	@Frequency [ Hz ] & @Scope Voltage at R = 1k$\Omega$ [ V ] & @Scope Voltage at R = 1M$\Omega$ [ V ] \\
 	\hline
-	@$10^3$ & 10.25 & 5.00 \\
+	@$10^3$ & @10.25 & @5.00 \\
 	\hline
-	@$10^6$ & 9.31 & 0.1 \\
+	@$10^6$ & @9.31 & @0.1 \\
 	\hline
 \end{spreadtab}
 \end{table}
+
+\FloatBarrier
 
 \begin{table}[h!]
 \centering
@@ -81,12 +85,14 @@ Error eqn used: $ \epsilon = 100\% \times | \frac{x_{theoretical} - x_{measured}
 	\hline
 	@Frequency [ Hz ] & @$\frac{V_{scope}}{V_{AC}}$ [ unitless ] & @Theoretical Value [ unitless ] & @Error [ \% ] \\
 	\hline
-	@$10^3$ & 10.25/10 & 0.999 & 2.60 \\
+	@$10^3$ & 10.25/10 & @0.999 & @2.60 \\
 	\hline
-	@$10^6$ & 9.31/10 & 0.996 & 6.54 \\
+	@$10^6$ & 9.31/10 & @0.996 & @6.54 \\
 	\hline
 \end{spreadtab}
 \end{table}
+
+\FloatBarrier
 
 \begin{table}[h!]
 \centering
@@ -97,15 +103,17 @@ Error eqn used: $ \epsilon = 100\% \times | \frac{x_{theoretical} - x_{measured}
 	\hline
 	@Frequency [ Hz ] & @$\frac{V_{scope}}{V_{AC}}$ [ unitless ] & @Theoretical Value [ unitless ] & @Error [ \% ] \\
 	\hline
-	@$10^3$ & 5.00/10 & 0.500 & 0.07 \\
+	@$10^3$ & @0.50 & @0.500 & @0.07 \\
 	\hline
-	@$10^6$ & 0.1/10 & 0.013 & 24.58 \\
+	@$10^6$ & @0.01 & @0.013 & @24.58 \\
 	\hline
 \end{spreadtab}
 \end{table}
 
-All voltage measurements are peak-to-peak values. The source is set to 10V peak-to-peak. Signal generator is set to high impedance.
-Calculations are performed using original, unrounded values. Thus, the experimental and theoretical values may be the same in the table, but the error is not necessarily 0\%, albeit very close.
+\FloatBarrier
+
+{\footnotesize All voltage measurements are peak-to-peak values. The source is set to 10V peak-to-peak. Signal generator is set to high impedance.
+Calculations are performed using original, unrounded values. Thus, the experimental and theoretical values may be the same in the table, but the error is not necessarily 0\%, albeit very close. Furthermore, the results for percentage error may not be exactly as calculated from the listed values since the unrounded values yield slightly different results. Regardless, the validity of the results is essentially the same, and the observations are identical.} \\
 
 % TODO: Have question included in this document or not?
 
@@ -122,5 +130,5 @@ If phase is taken into account, measurements with lower percentage error for $\f
 \label{eq:zscope}
 Z_{scope} = \frac{\frac{V_{scope}}{V_{AC}} \cdot R }{1 - \frac{V_{scope}}{V_{AC}}}
 \end{equation}
-The setup essentially estimates the oscilloscope's impedance $Z_{scope}$ using a reference impedance, the resistance R. Whenever frequencies and R values are chosen such that R is close to the oscilloscope's expected impedance, the results are closer to theory. If the oscilloscope's impedance greatly exceeds R in magnitude, there is virtually no difference between using the oscilloscope's true impedance and using a purely broken circuit ( $|Z_{scope}| \rightarrow \infty$ ). The only information that can be ascertained from this is $|Z_{scope}| >> R$, but a true value for $Z_{scope}$ is difficult to obtain. This is why 1k$\Omega$ at 1kHz is an inaccurate way of obtaining the oscilloscope's impedance.
+The setup can be used to estimate the oscilloscope's impedance $Z_{scope}$ using a reference impedance, the resistance R. Whenever frequencies and R values are chosen such that R is close to the oscilloscope's expected impedance, the results are closer to theory. If the oscilloscope's impedance greatly exceeds R in magnitude, there is virtually no difference between using the oscilloscope's true impedance and using a purely broken circuit ( $|Z_{scope}| \rightarrow \infty$ ). The only information that can be ascertained from this is $|Z_{scope}| >> R$, but a true value for $Z_{scope}$ is difficult to obtain. This is why 1k$\Omega$ at 1kHz is an inaccurate way of obtaining the oscilloscope's impedance.
 Similarly, if the reference impedance R is much larger than $Z_{scope}$ in magnitude, the result is again inaccurate because there is no way to diffferentiate between a short circuit and the oscilloscope. All the result indicates is $|Z_{scope}| << R$, which is exactly what occurs with 1M$\Omega$ at 1MHz.

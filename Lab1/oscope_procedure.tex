@@ -1,0 +1,25 @@
+For the circuit with the oscilloscope, students will measure the voltage across the oscilloscope from a circuit using resistors of value 1MΩ and 1kΩ simultaneously while setting the frequency to 1kHz. A formula is then derived to relate the measured voltage and the battery voltage (\ref{eq:osc_ratio}), which will then be used to find the impedance of the oscilloscope by hand. The experiment will be repeated using a frequency of 1MHz.
+
+The oscilloscope to be used in this course is the Agilent InfiniiVision DSO5034A. This oscilloscope is able to perform a variety of useful functions for this lab course including plotting input and output signal waveforms, measuring amplitudes and frequencies of periodic signals, performing Fourier Transforms for visualization of frequency peaks, etc. The oscilloscope has an input resistance rated at 1 M$\Omega$ and an input capacitance of 12 pF. It also boasts a sampling rate of 2 Giga-samples/s and a bandwidth of 300 MHz. The oscilloscope can be simply modeled as a resistor and capacitor in parallel and is connected in series with a resistor and function generator which has an internal impedance of 50 $\Omega$ and that is accounted for in the circuit model shown below: 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{"./Oscope circuit extended figure".PNG}
+	\caption{Oscilloscope Testing Circuit Schematic}
+	\label{fig:scope_circuit}
+\end{figure}
+
+
+The BNC cables used in the testing of the oscilloscope may account for some capacitance in the overall circuit. However, the effects of cables are neglected. As a result, the voltage division relation can be applied to the circuit and the following equation is derived for the voltage measured across the oscilloscope,
+
+\begin{equation}
+	\label{eq:vscope}
+	V_{scope} = V_{Source}(\frac{Z_{scope}}{Z_{scope} + R + R_{Source}}) 
+\end{equation}
+	
+where $Z_{scope}$ encompasses the input impedance modeled by $R_{scope}$ and $C_{scope}$ in parallel. The ratio between the input voltage of the oscilloscope and the voltage of the function generator would then be the following:
+
+\begin{equation}
+	\label{eq:osc_ratio}
+	\frac{V_{scope}}{V_{Source}} = \frac{Z_{scope}}{Z_{scope} + R + R_{Source}} 
+\end{equation}
