@@ -1,0 +1,78 @@
+% Definition of Dirac delta ( done )
+The basis of the pulse input experiment lies in the Dirac delta. A variety of definitions for the Dirac delta exist. The definition to be used herein is that it is the limit of a Gaussian distribution as the standard deviation becomes very small [\ref{itm:dirac_delta_def}]:
+\begin{equation}
+	\label{eq:dirac_delta_def}
+	\delta(t) = \lim_{\sigma \to 0} \frac{ 1 }{ \sigma \sqrt{ 2 \pi } } e^{ - \frac{ t^2 }{ 2\sigma^2 } }
+\end{equation}
+
+% Dirac delta definition figure
+
+% Proof of the sifting property
+Given that the Dirac delta takes on the same form as a probability distribution, the following must be true:
+\begin{equation}
+	\label{eq:int_to_one}
+	\int_{-\infty}^{+\infty}{\delta(t)dt} = 1
+\end{equation}
+
+This very easily extends to the following (for $t_0 \in \mathbb{R}$):
+\begin{equation}
+	\label{eq:int_to_one_shift}
+	\int_{-\infty}^{+\infty}{\delta(t-t_0)dt} \\
+	= \int_{-\infty}^{+\infty}{\delta(t')dt'} ( let t' = t - t_0 ) \\
+	= 1 ( by equation (\ref{eq:int_to_one}) )
+\end{equation}
+
+The proof is omitted for the sake of brevity, but the following results from equation (\ref{eq:int_to_one_shift}):
+\begin{equation}
+	\label{eq:int_of_dirac_is_step}
+	\int \delta( t - t_0 )dt = \mathcal{U}( t - t_0 )
+\end{equation}
+
+Here, $\mathcal{U}(t)$ is the unit step function, which is 1 for $t >= 0$ and 0 for $t < 0$. Given this information, an important result, known as the sifting property, can be ascertained [ \ref{ itm:sifting_prop } ]. Let $f(t)$ be a continuous function such that $\lim_{ t \to +\infty } f(t) = \lim_{ t \to -\infty } f(t) = 0$ and $t_0 \in \mathbb{R}$:
+\begin{equation*}
+	\label{eq:sifting_prop}
+	\begin{aligned}
+	\int_{-\infty}^{+\infty} \delta( t - t_0 ) f(t) dt = [ f(t)\int \delta( t - t_0 ) dt ]\rvert_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} f'(t)[ \int \delta( t - t_0 ) dt ]dt \\
+							   = [ f(t)\mathcal{U}( t - t_0 ) ]\rvert_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} f'(t)\mathcal{U}( t - t_0 )dt ( by equation (\ref{eq:int_of_dirac_is_step}) \\
+							   = -\int_{t_0}^{+\infty} f'(t)dt ( since \lim_{ t \to +\infty } f(t) = 0 and \mathcal{U}( t - t_0 ) = 0 for t < t_0 ) \\
+							   = -[ f(t) ]\rvert_{t_0}^{+\infty} ( Fundamental Theorem of Calculus ) \\
+							   = -[ 0 - f(t_0) ] ( since \lim_{ t \to +\infty } f(t) = 0 ) \\
+							   = f(t_0) \\
+	\end{aligned}
+\end{equation*}
+
+% Proof of the convolution theorem
+These properties of the Dirac delta prove to be useful when discussing linear time-invariant, or LTI, systems. For an input signal $x(t)$ to a causal LTI system $\mathcal{T}$, the output signal $y(t)$ is given by:
+\begin{equation}
+	\label{eq:causal_lti_conv}
+	y(t) = x(t) * h(t) = \int_{0^{-}}{+\infty} h(\tau)x(t-\tau)d\tau
+\end{equation}
+The function $h(t)$ is known as the system's impulse response. The purpose of this portion of the experiment is to determine the impulse response $h(t)$ since all information about the high-pass and low-pass filtering systems can be acquired from this function alone. $h(t)$ can be acquired by applying a Dirac delta as the input and observing the system's response.
+To acquire the theoretical impulse response, the Laplace transform of f(t) must first be defined:
+\begin{equation}
+	\label{eq:lt_def}
+	\mathcal{L}{f(t)} = \int_{0^{-}}{+\infty} e^{-st}f(t)dt ( s \in \mathbb{C} )
+\end{equation}
+This leads to a necessary result in the theory of LTI systems known as the convolution theorem [\ref{itm:convolution_thm}]:
+\begin{equation*}
+	\label{eq:conv_thm}
+	\begin{aligned}
+	\mathcal{L}{h(t) * x(t)} = \int_{0^{-}}{+\infty} e^{-st}( h(t) * x(t) )dt ( from equation
+	\end{aligned}
+\end{equation*}
+
+% Using convolution theorem, demonstrate that for LTI systems, impulse response is simply the output when a Dirac delta is the input.
+
+% Demonstrate that impulse response is simply V_out / V_in in Laplace domain. So, we can use a very simple formula L-1{ V_out / V_in } to find the impulse response.
+
+% Do this for a low-pass filter
+
+% Do this for a high-pass filter
+
+% Check that the two results are the same by applying voltage division
+
+% Table of time constants
+
+% Table of peak values
+
+% Analysis
