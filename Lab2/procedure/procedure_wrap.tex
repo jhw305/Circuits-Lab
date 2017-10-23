@@ -1,30 +1,7 @@
+\documentclass[a4paper,10pt]{article}
+\input{procedure_preamble.tex}
 \begin{document}
-
-
-\underline{Procedure}
-
-For the second Electronics Lab, the objective is to solder RC circuits on a printed circuit board and then test the circuit as a Lowpass and Highpass Filter. To solder the resistor and capacitor, a soldering iron is used by melting metal onto the ends of the resistor and capacitor on a printed circuit board. After soldering, the output voltage in sine wave mode is measured at different frequencies using the oscilloscope. The Lowpass Filter has a function generator connected to a resistor (50\textOmega) which is in series with another resistor. The capacitor in the circuit is in parallel with the oscilloscope, while the Highpass filter has a function generator connected to a resistor of 50\textOmega  in series with a capacitor. The second resistor is connected to the negative terminal of the function generator and is also in parallel with the oscilloscope. After taking the measurements, the transfer function ($\frac{Output Voltage}{Input Voltage}$) for both filters are plotted as a function of frequency on a log-log scale. Lastly, the impulse response is measured by sending a pulse signal that is shorter than the RC time constant. The measured responses are then compared to the theoretical responses. \\
-\\
-\underline{LowPass Filter}
-\\
-\centerline{ $ H_{(j\omega)} = \frac{V_o}{V_{in}} = \frac{Z_c}{Z_r + Z_c} $ }
-\centerline{ $ Z_r = R, Z_c = \frac{1}{j\omega c} $}
-\centerline{ $ H_{(j\omega)} = \frac{V_o}{V_{in}} = \frac{\frac{1}{j\omega c}}{R + \frac{1}{j\omega c}} $ }
-\begin{equation}
-\label{eq:LowPassFunction}
-\centerline{ $ H_{(j\omega)} = \frac{V_o}{V_{in}} = \frac{1}{j\omega RC + 1} $ }
-\end{equation}
-\\
-\underline{HighPass Filter}
-\\
-\centerline{ $ H_{(j\omega)} = \frac{V_o}{V_{in}} = \frac{Z_r}{Z_r + Z_c} $ }
-\centerline{ $ Z_r = R, Z_c = \frac{1}{j\omega c} $}
-\centerline{ $ H_{(j\omega)} = \frac{V_o}{V_{in}} = \frac{R}{R + \frac{1}{j\omega c}} $ }
-\begin{equation}
-\label{eq:HighPassFunction}
-\centerline{ $ H_{(j\omega)} = \frac{V_o}{V_{in}} = \frac{j\omega RC}{j\omega RC + 1} $ }
-\end{equation}
-
+\input{procedure.tex}
 
 
 \end{document}
