@@ -1,10 +1,19 @@
 \documentclass{article}
 	% This is where you include the preambles for every file.
-	\input{results_and_analysis/pulse_input_preamble.tex}
-	\input{discussion/pulse_input_preamble.tex}
-	\input{appendix/appendix_preamble.tex}
-	\input{procedure/procedure_preamble.tex}
-	\input{references/ref_list_preamble.tex}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{csvsimple}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{siunitx}
+\usepackage{spreadtab}
+\usepackage[euler]{textgreek}
+\usepackage{url}
+\usepackage{geometry}
+\usepackage{listings}
+\geometry{left=20mm}
+
 \begin{document}
 	\begin{titlepage}
 		\centering
@@ -20,17 +29,362 @@
 	\end{titlepage}
 	% This is where the body of each file goes
 	\section{Procedure}
-	\input{procedure/procedure.tex}
+The objective of the experiment is to solder RC circuits on a printed circuit board and then test the circuit as a low-pass and high-pass filter. To solder the resistor and capacitor, a soldering iron is used by melting metal onto the ends of the resistor and capacitor on a printed circuit board. After soldering, the output voltage given a sine wave input is measured at different frequencies using the oscilloscope. The filters use a function generator with an internal resistance of (50\textOmega) as the input voltage. The function generator is in series with a 10k\textOmega resistor and a 1nF capacitor. For the low-pass filter, the capacitor's voltage is measured with the oscilloscope. For the high-pass filter, the 10k\textOmega resistor's voltage is measured by connecting it to the negative terminal of the function generator and measuring with the oscilloscope. After taking the measurements, the transfer function ($H(s) = \frac{V_{out}(s)}{V_{in}(s)}$) for both filters are plotted as a function of frequency on a log-log scale. Lastly, the impulse response is measured by sending a pulse signal that is shorter than the RC time constant. The measured responses are then compared to the theoretical responses. \\
+
 	\section{Results and Analysis}
 	\subsection{Transfer Function}
+	In analyzing the low-pass and high-pass filter setups with sinusoidal inputs, a peak-to-peak voltage of 10 V is used. Peak-to-peak voltages of the output signal at a range of frequencies are used to construct the Bode plots for the low-pass and high-pass filters. A resistor with R = 10 k$\Omega$, a capacitor with C = 10 nF, and a function generator with 50 $\Omega$ internal resistance is used to build the filters.
+	
+	\subsection{Low-Pass Filter}
+	
+	The output voltage signal for the low-pass filter is taken across the capacitor in the following schematic:
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.6]{"./images/LPF_schematic".PNG}
+		\caption{Low-pass Filter Circuit Schematic}
+		\label{fig:LPF_Schematic}
+	\end{figure}
+	
+	The transfer function of this filter is the following where the internal resistance of the function generator is neglected due to its low value:
+	
+	\begin{equation}
+	\label{eq:lpf_transfer}
+	H_{LPF}(s) = \frac{1}{1+sRC}
+	\end{equation}
+	
+	The following output voltages are recorded at the frequencies tested below along with the calculated gain in decibels:
+	
+	\FloatBarrier
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Low-Pass Filter Output Voltages at Various Frequencies}
+		\label{tab:lpf_vout}
+		\csvautotabular{./tables/vpp_freq_lpf.csv}
+	\end{table}
+	
+	\FloatBarrier
+	
+	The gain values above are calculated using the definition of decibel scale taking the ratio of output and input power. The equation simplifies to this:
+	
+	\begin{equation}
+	\label{eq:decibels}
+	Gain = 10 log(\frac{P_{out}}{P_{in}}) = 10 log (\frac{V_{out}}{ V_{in}})^2 = 20 log (\frac{V_{out}}{ V_{in}})
+	\end{equation}
+	
+	Using the gain values, the following bode plot for the low-pass filter is generated:
+	
+	\FloatBarrier
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.5]{"./images/LPF_Bode".PNG}
+		\caption{Low-pass Filter Circuit Bode Plot}
+		\label{fig:LPF_Bode}
+	\end{figure}
+	
+	\FloatBarrier
+	
+	The cutoff frequency can be obtained by finding the value of the frequency in which the system outputs a -3 dB gain. By inspection of the Bode plot above, the corner frequency of the low-pass filter is 18 kHz.
+	
+	Theoretically, the cutoff frequency of the filter occurs when the magnitude of the transfer function of the filter is $\frac{1}{\sqrt{2}}$. From \ref{eq:lpf_transfer}, the theoretical cutoff frequency can be obtained:
+	
+	\begin{equation}
+	\label{eq:lpf_cutoff}
+	\begin{gathered}
+	|H_{LPF}(s)| = |\frac{1}{1+sRC}| = \frac{1}{\sqrt{2}}\\
+	\frac{1}{\sqrt{1^2 + (\omega_{c} RC)^2}} = \frac{1}{\sqrt{2}}\\
+	1^2 + (\omega_{c} RC)^2 = 2\\
+	(\omega_{c} RC)^2 = 1\\
+	\omega_{c} = \frac{1}{RC} = \frac{1}{(10^5 \Omega)(10^{-9} F)}\\
+	\omega_{c} = 10^5\\
+	f_{c}  = \frac{\omega_{c}}{2\pi} = 15.915 k\Omega
+	\end{gathered}
+	\end{equation}
+	
+	Compared to the measured cutoff frequency from \ref{fig:LPF_Bode}, the following error is calculated:
+	
+	\begin{equation}
+	\label{eq:lpf_cutoff_error}
+	|\frac{18 - 15.915}{15.915}| * 100\% = 13.1\%
+	\end{equation}
+	
+	
+	\subsection{High-Pass Filter}
+	
+	The output voltage signal for the low-pass filter is taken across the capacitor in the following schematic:
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.6]{"./images/HPF_schematic".PNG}
+		\caption{High-pass Filter Circuit Schematic}
+		\label{fig:HPF_Schematic}
+	\end{figure}
+	
+	The transfer function of this filter is the following where again, the resistance of the function generator is ignored:
+	
+	\begin{equation}
+	\label{eq:hpf_transfer}
+	H_{HPF}(s) = \frac{sRC}{1+sRC}
+	\end{equation}
+	
+	The following output voltages are recorded at the frequencies tested below along with the calculated gain in decibels calculated using \ref{eq:decibels}:
+	
+	\FloatBarrier
+	
+	\begin{table}[h!]
+		\centering
+		\caption{High-Pass Filter Output Voltages at Various Frequencies}
+		\label{tab:hpf_vout}
+		\csvautotabular{./tables/vpp_freq_hpf.csv}
+	\end{table}
+	
+	\FloatBarrier
+	
+	The gain values produce the following Bode plot:
+	
+	\FloatBarrier
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.5]{"./images/HPF_Bode".PNG}
+		\caption{High-pass Filter Circuit Bode Plot}
+		\label{fig:HPF_Bode}
+	\end{figure}
+	
+	\FloatBarrier
+	
+	Again, by inspection, the cutoff frequency of the high-pass filter is 16 kHz.
+	
+	Theoretically, the cutoff frequency can be calculated as such using the magnitude of \ref{eq:hpf_transfer}:
+	
+	\begin{equation}
+	\label{eq:hpf_cutoff}
+	\begin{gathered}
+	|H_{HPF}(s)| = |\frac{sRC}{1+sRC}| = \frac{1}{\sqrt{2}}\\
+	\frac{\omega_{c}RC}{\sqrt{1^2 + (\omega_{c} RC)^2}} = \frac{1}{\sqrt{2}}\\
+	\frac{(\omega_{c}RC)^2}{1^2 + (\omega_{c} RC)^2} = \frac{1}{2}\\
+	2(\omega_{c} RC)^2 = 1^2 + (\omega_{c} RC)^2\\
+	(\omega_{c} RC)^2 = 1\\
+	\omega_{c} = \frac{1}{RC} = \frac{1}{(10^5 \Omega)(10^{-9} F)}\\
+	\omega_{c} = 10^5\\
+	f_{c}  = \frac{\omega_{c}}{2\pi} = 15.915 k\Omega
+	\end{gathered}
+	\end{equation}
+	
+	Compared to the measured cutoff frequency from \ref{fig:HPF_Bode}, the following error is calculated:
+	
+	\begin{equation}
+	\label{eq:hpf_cutoff_error}
+	|\frac{16 - 15.915}{15.915}| * 100\% = 0.534\%
+	\end{equation}
+	
 	\subsection{Pulse Input and Impulse Response}
-	\input{results_and_analysis/pulse_input.tex}
+	% Definition of Dirac delta
+	The basis of the pulse input experiment lies in the Dirac delta. A variety of definitions for the Dirac delta exist. The definition to be used herein is that it is the limit of a Gaussian distribution as the standard deviation becomes very small [\ref{itm:dirac_delta_def}]:
+	\begin{equation}
+	\label{eq:dirac_delta_def}
+	\delta(t) = \lim_{\sigma \to 0} \frac{ 1 }{ \sigma \sqrt{ 2 \pi } } e^{ - \frac{ t^2 }{ 2\sigma^2 } }
+	\end{equation}
+	
+	% Proof of the sifting property
+	Given that the Dirac delta takes on the same form as a probability distribution, the following must be true:
+	\begin{equation}
+	\label{eq:int_to_one}
+	\int_{-\infty}^{+\infty}{\delta(t)dt} = 1
+	\end{equation}
+	
+	This very easily extends to the following (for $t_0 \in \mathbb{R}$):
+	\begin{equation}
+	\begin{aligned}
+	\label{eq:int_to_one_shift}
+	\int_{-\infty}^{+\infty}{\delta(t-t_0)dt} \\
+	= \int_{-\infty}^{+\infty}{\delta(t')dt'} \ ( \ let \ t' = t - t_0 \ ) \\
+	= 1 \ ( \ by \ equation \ (\ref{eq:int_to_one}) \ )
+	\end{aligned}
+	\end{equation}
+	
+	The proof is omitted for the sake of brevity, but the following results from equation (\ref{eq:int_to_one_shift}):
+	\begin{equation}
+	\label{eq:int_of_dirac_is_step}
+	\int \delta( t - t_0 )dt = \mathcal{U}( t - t_0 )
+	\end{equation}
+	
+	Here, $\mathcal{U}(t)$ is the unit step function, which is 1 for $t \geq 0$ and 0 for $t < 0$. Given this information, an important result, known as the sifting property, can be ascertained [ \ref{itm:sifting_prop} ]. Let $f(t)$ be a continuous function such that $\lim_{ t \to +\infty } f(t) = \lim_{ t \to -\infty } f(t) = 0$ and $t_0 \in \mathbb{R}$:
+	\begin{equation}
+	\label{eq:sifting_property}
+	\begin{aligned}
+	\int_{-\infty}^{+\infty} \delta( t - t_0 ) f(t) dt = [ f(t)\int \delta( t - t_0 ) dt ]\rvert_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} f'(t)[ \int \delta( t - t_0 ) dt ]dt \\
+	= [ f(t)\mathcal{U}( t - t_0 ) ]\rvert_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} f'(t)\mathcal{U}( t - t_0 )dt \ ( \ by \ equation \ (\ref{eq:int_of_dirac_is_step}) \ ) \\
+	= -\int_{t_0}^{+\infty} f'(t)dt \ ( \ since \ \lim_{ t \to +\infty } f(t) = 0 \ and \ \mathcal{U}( t - t_0 ) = 0 \ for \ t < t_0 \ ) \\
+	= -[ f(t) ]\rvert_{t_0}^{+\infty} \ ( \ Fundamental \ Theorem \ of \ Calculus \ ) \\
+	= -[ 0 - f(t_0) ] \ ( \ since \ \lim_{ t \to +\infty } f(t) = 0 \ ) \\
+	= f(t_0) \\
+	\end{aligned}
+	\end{equation}
+	
+	% Convolution theorem
+	These properties of the Dirac delta prove to be useful when discussing linear time-invariant, or LTI, systems. For an input signal $x(t)$ to a causal LTI system $\mathcal{T}$, the output signal $y(t)$ is given by:
+	\begin{equation}
+	\label{eq:causal_lti_conv}
+	y(t) = x(t) * h(t) = \int_{0}^{+\infty} h(\tau)x(t-\tau)d\tau
+	\end{equation}
+	The function $h(t)$ is known as the system's impulse response. The purpose of this portion of the experiment is to determine the impulse response $h(t)$ since all information about the high-pass and low-pass filtering systems can be acquired from this function alone. $h(t)$ can be acquired by applying a Dirac delta as the input and observing the system's response.
+	To acquire the theoretical impulse response, the Laplace transform of f(t) must first be defined:
+	\begin{equation}
+	\label{eq:lt_def}
+	\mathcal{L}\{f(t)\} = \int_{0^{-}}^{+\infty} e^{-st}f(t)dt \ ( s \in \mathbb{C} )
+	\end{equation}
+	This leads to a necessary result in the theory of LTI systems known as the convolution theorem [\ref{itm:convolution_thm}]:
+	\begin{equation}
+	\label{eq:conv_thm}
+	\mathcal{L}\{ x(t) * h(t) \} = X(s)H(s)
+	\end{equation}
+	$X(s)$ and $H(s)$ are the Laplace transforms of $x(t)$ and $h(t)$, respectively. Specifically, $H(s)$ is known as the transfer function.
+	
+	% Using convolution theorem, demonstrate that for LTI systems, impulse response is simply the output when a Dirac delta is the input.
+	The Dirac delta is used as the input to the filters because its output is simply the impulse response. Without performing a formal proof, it is clear by equation (\ref{eq:dirac_delta_def}) that $\delta(t)$ is 0 except at $t = 0$, where its value becomes very large. With this knowledge, the Laplace transform of the Dirac delta is proven to be 1:
+	\begin{equation}
+	\label{eq:lt_of_dd}
+	\begin{aligned}
+	\mathcal{L}\{\delta(t)\} = \int_{0^{-}}^{+\infty} e^{-st}\delta(t)dt \ ( \ by \ equation \ (\ref{eq:lt_def}) \ ) \\
+	= 0 + \int_{0^{-}}^{+\infty} e^{-st}\delta(t)dt \\
+	= \int_{-\infty}^{0^{-}} e^{-st}\delta(t)dt + \int_{0^{-}}^{+\infty} e^{-st}\delta(t)dt \\
+	= \int_{-\infty}^{+\infty} e^{-st}\delta(t)dt \\
+	= e^{-s \cdot 0} \ ( \ by \ equation \ (\ref{eq:sifting_property}) \ ) \\
+	= 1
+	\end{aligned}
+	\end{equation}
+	Assume the existence of an inverse Laplace transform $\mathcal{L}^{-1}$. The statement above can then be proven, justifying the use of the Dirac delta as the input to the system:
+	\begin{equation}
+	\label{eq:dd_to_ir}
+	\begin{aligned}
+	y(t) = \delta(t) * h(t) \\
+	\mathcal{L}\{y(t)\} = \mathcal{L}\{\delta(t) * h(t)\} \\
+	\mathcal{L}\{y(t)\} = \mathcal{L}\{\delta(t)\} \cdot \mathcal{L}\{h(t)\} \ ( \ by \ equation \ (\ref{eq:conv_thm}) \ ) \\
+	\mathcal{L}\{y(t)\} = 1 \cdot H(s) = H(s) \ ( \ by \ equation \ (\ref{eq:lt_of_dd}) \ ) \\
+	y(t) = \mathcal{L}^{-1}\{H(s)\} = \mathcal{L}^{-1}\{\mathcal{L}\{h(t)\}\} = h(t)
+	\end{aligned}
+	\end{equation}
+	
+	% Do this for a low-pass filter
+	\subsubsection{Low-Pass Filter}
+	The transfer function for the low-pass filter can be acquired using voltage division in the Laplace domain with the output voltage taken over the capacitor:
+	\begin{equation}
+	\label{eq:tf_lpf}
+	H(s) = \frac{ \frac{ 1 }{ sC } }{ \frac{ 1 }{ sC } + R } = \frac{ \frac{ 1 }{ RC } }{ \frac{ 1 }{ RC } + s } \xrightarrow{\mathcal{L}^{-1}} h(t) = \frac{ e^{-\frac{t}{\tau}} }{ \tau } \ ( \ by \ equation \ (\ref{eq:dd_to_ir}) \ )
+	\end{equation}
+	
+	Here, $\tau = RC \approx 10\mu s$ is the time constant. It can be experimentally measured by observing where $h(t)$ acquires a value of $e^{-1} \approx 0.37$ times the maximum value of $h(t)$ at the start $(t = 0)$. See the "Appendix" section at the end for the script that generates the tables and data. The pulse width of $1\mu s$ is chosen because it is considerably less than the time constant $\tau$.
+	
+	% Output signal plot - LPF
+	
+	\FloatBarrier
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.1]{"./images/LPF response".JPG}
+		\caption{Low-Pass Filter Impulse Response}
+		\label{fig:lpf_response}
+	\end{figure}
+	
+	\FloatBarrier
+	
+	% Table of time constants
+	\begin{table}[h!]
+		\centering
+		\caption{Low-Pass Filter Time Constant}
+		\label{tab:lpf_tau}
+		\csvautotabular{./tables/tau_lpf.csv}
+	\end{table}
+	{\footnotesize Resistor R is $10k\Omega$. Capacitor C is 1nF. Frequency is set to 20kHz. Pulse height is 20V. Pulse width is $1\mu s$. Each value represents a different measurement. The first reported value is a 1 $\tau$ measurement. The next is a 2 $\tau$ measurement, and so on.} \\
+	\FloatBarrier
+	
+	% Analysis
+	The results for the low-pass filter are fairly close to theory. At the very beginning, the quick surge of the power supply's voltage charges the capacitor. When the pulse turns off, the capacitor simply discharges, and its voltage decays exponentially.
+	Each measurement corresponds to a particular number of time constants. The first is $\tau$ calculated by observing the point at which the voltage is $e^{-1}$ times its peak value. The second is $\tau$ calculated by finding the point that is $e^{-2}$ of the peak, which would be $t = 2\tau$, and then dividing the time by 2. As the measurements are taken at later values of $t$, the approximation for $\tau$ has a lower and lower percentage error from theory. Thus, much of the error is a result of the difficulty of acquiring accurate measurements from $\tau$ rather than deviations from theory. For minimal error, a very low pulse frequency should be used, and measurements should be taken at a later time, like $t=5\tau$, dividing by 5 to acquire $\tau$.
+	Another potential source of error is the nonideality of the Dirac delta input. Because the input voltage pulse has a finite height of 20V and a finite width of $1\mu s$, the results deviate from when the input signal is perfectly $\delta(t)$.
+	
+	% Do this for a high-pass filter
+	\subsubsection{High-Pass Filter}
+	The high-pass filter's impulse response can also be acquired using voltage division:
+	\begin{equation}
+	\label{eq:ir_hpf}
+	h(t) = \mathcal{L}^{-1}\{ \frac{ sRC }{ 1 + sRC } \} = \delta(t) - \frac{ e^{- \frac{t}{RC} } }{RC}
+	\end{equation}
+	
+	\FloatBarrier
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.1]{"./images/HPF closeup".JPG}
+		\caption{Attempt 1 - High-Pass Filter Impulse Response}
+		\label{fig:lpf_response}
+	\end{figure}
+	
+	\FloatBarrier
+	
+	{\footnotesize The same settings are used in this test as are used in the low-pass filter test. Please see the footnote of table \ref{tab:lpf_tau} for details on the test settings.}
+	
+	\FloatBarrier
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.1]{"./images/HPF response".JPG}
+		\caption{Attempt 2 - High-Pass Filter Impulse Response (Closeup)}
+		\label{fig:hpf_response_closeup}
+	\end{figure}
+	
+	\FloatBarrier
+	
+	{\footnotesize See the footnote of table \ref{tab:hpf_tau} for details on the test settings, such as pulse width and voltage.}
+	
+	\FloatBarrier
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.1]{"./images/HPF zoomout".JPG}
+		\caption{Attempt 2 - High-Pass Filter Impulse Response (Zoomout)}
+		\label{fig:hpf_response_zoomout}
+	\end{figure}
+	
+	\FloatBarrier
+	
+	{\footnotesize See the footnote of table \ref{tab:hpf_tau} for details on the test settings, such as pulse width and voltage.}
+	
+	\FloatBarrier
+	
+	% Table of time constants
+	\begin{table}[h!]
+		\centering
+		\caption{High-Pass Filter Time Constant}
+		\label{tab:hpf_tau}
+		\csvautotabular{./tables/tau_hpf.csv}
+	\end{table}
+	{\footnotesize Resistor R is $10k\Omega$. Capacitor C is 1nF. Frequency is set to 10kHz. Pulse height is 20V. Pulse width is $2\mu s$. Measurements follow the same convention as table \ref{tab:lpf_tau}, namely whether they are 1$\tau$ or higher measurements.} \\
+	\FloatBarrier
+	
+	% Analysis
+	Acquiring measurements for the high-pass filter is difficult. The frequency should be decreased by a factor of 2. This allows the capacitor to take more time to discharge through the resistor so that $\tau$ measurements can be taken more easily. However, the peak value of the resistor's voltage drop must also increase in magnitude in order for the decay to observable. So, the pulse width should be increased by a factor of 2 to give the capacitor more time to charge, the resistor more current, and therefore more voltage, when the capacitor discharges. Note that this new pulse width is still less than the time constant $\tau$ by a factor of about 5.
+	The impulse response is essentially as expected once the tweaks to the power supply settings are made. The sudden charging of the capacitor at the start demands a large current flowing through the resistor. This gives rise to a high voltage drop, explaining the Dirac delta term in equation (\ref{eq:ir_hpf}).
+	When the supply's pulse ends, the capacitor discharges through the resistor. Thus, the current, and therefore the voltage drop over the resistor, flips polarity, which is why the resistor's voltage drop becomes negative. As the capacitor discharges, less and less current (in terms of magnitude) flows. Thus, the magnitude of the voltage drop decreases, which explains the exponential curve.
+	The same trend in percentage errors is observed in the high-pass filter. Like with the low-pass filter, the decreasing trend in percentage errors indicates that the accuracy of the experiment is limited by the accuracy of $\tau$ measurements. For an accurate measurement of the high-pass filter, a higher voltage, lower pulse frequency, and wider pulse width are likely necessary, so a $5\tau$ measurement or so can be taken.
+	
 	\section{Discussion}
 	\subsection{Transfer Function}
+	While the high-pass filter yielded a very good result, the low-pass filter produced a more non-ideal result. This is most likely due to the intervals of frequency in which the output voltage is measured. Measuring output voltage at even smaller intervals of frequency near the theoretical corner frequency would have definitely produced better results as the gain would be able to more closely reach the -3 dB gain in which cutoff frequency is measured. Of course, the discrepancies between theoretical and measured values may also be due to errors in resistance and capacitance of the system tested, as the tolerances of both the resistor and capacitor is approximately 5\%. 
 	\subsection{Pulse Input and Impulse Response}
-	\input{discussion/pulse_input.tex}
+	The high-pass and low-pass filters both produce impulse responses that are relatively close to what theory predicts. Regarding the low-pass filter, the capacitor charges suddenly during the pulse, and the voltage gradually decays from this peak after the pulse ends due to the discharging of the capacitor. In the high-pass filter's case, the voltage over the resistor surges because the supply drives massive current through it to charge the capacitor. However, after the pulse, the polarity of the current flips due to the discharging of the capacitor. The voltage becomes negative, and its magnitude decays as the capacitor discharges. The accuracy of the measurements is limited by the ability to measure $\tau$ values from the oscilloscope. In order to acquire better measurements, the power supply needs to have a higher voltage, wider pulse width, and lower pulse frequency. More generally, the physical limitation of the experiment is that true Dirac deltas do not exist in practice since the pulse always has a finite width and a noninfinite height. For as long as this holds true, the experiment deviates from theoretical predictions.
+	
 	\section{Appendix}
-	\input{appendix/appendix.tex}
+	The following Python script is used to generate the data for the high-pass and low-pass filters:
+	\lstinputlisting[breaklines]{./scripts/pulse_input.py}
 	\section{References}
-	\input{references/ref_list.tex}
+	\begin{enumerate}
+		\item \label{itm:dirac_delta_def} \url{http://hitoshi.berkeley.edu/221a/delta.pdf}
+		\item \label{itm:sifting_prop} \url{http://lpsa.swarthmore.edu/BackGround/ImpulseFunc/ImpFunc.html}
+		\item \label{itm:convolution_thm} \url{https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/} \\
+		\url{unit-iii-fourier-series-and-laplace-transform/transfer-system-and-weight-functions-greens-formula/MIT18_03SCF11_s30_5text.pdf}
+	\end{enumerate}
 \end{document}
