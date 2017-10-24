@@ -15,12 +15,14 @@ Given that the Dirac delta takes on the same form as a probability distribution,
 \end{equation}
 
 This very easily extends to the following (for $t_0 \in \mathbb{R}$):
-\begin{equation}
+\begin{equation*}
 	\label{eq:int_to_one_shift}
-	\int_{-\infty}^{+\infty}{\delta(t-t_0)dt} \\
-	= \int_{-\infty}^{+\infty}{\delta(t')dt'} ( let t' = t - t_0 ) \\
-	= 1 ( by equation (\ref{eq:int_to_one}) )
-\end{equation}
+	\begin{aligned}
+		\int_{-\infty}^{+\infty}{\delta(t-t_0)dt} \\
+		= \int_{-\infty}^{+\infty}{\delta(t')dt'} \ ( \ let \ t' = t - t_0 \ ) \\
+		= 1 \ ( \ by \ equation \ (\ref{eq:int_to_one}) \ )
+	\end{aligned}
+\end{equation*}
 
 The proof is omitted for the sake of brevity, but the following results from equation (\ref{eq:int_to_one_shift}):
 \begin{equation}
