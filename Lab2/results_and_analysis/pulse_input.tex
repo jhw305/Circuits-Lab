@@ -35,10 +35,10 @@ Here, $\mathcal{U}(t)$ is the unit step function, which is 1 for $t >= 0$ and 0 
 	\label{eq:sifting_property}
 	\begin{aligned}
 	\int_{-\infty}^{+\infty} \delta( t - t_0 ) f(t) dt = [ f(t)\int \delta( t - t_0 ) dt ]\rvert_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} f'(t)[ \int \delta( t - t_0 ) dt ]dt \\
-							   = [ f(t)\mathcal{U}( t - t_0 ) ]\rvert_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} f'(t)\mathcal{U}( t - t_0 )dt ( by equation (\ref{eq:int_of_dirac_is_step}) \\
-							   = -\int_{t_0}^{+\infty} f'(t)dt ( since \lim_{ t \to +\infty } f(t) = 0 and \mathcal{U}( t - t_0 ) = 0 for t < t_0 ) \\
-							   = -[ f(t) ]\rvert_{t_0}^{+\infty} ( Fundamental Theorem of Calculus ) \\
-							   = -[ 0 - f(t_0) ] ( since \lim_{ t \to +\infty } f(t) = 0 ) \\
+							   = [ f(t)\mathcal{U}( t - t_0 ) ]\rvert_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} f'(t)\mathcal{U}( t - t_0 )dt \ ( \ by \ equation \ (\ref{eq:int_of_dirac_is_step}) \ ) \\
+							   = -\int_{t_0}^{+\infty} f'(t)dt \ ( \ since \ \lim_{ t \to +\infty } f(t) = 0 \ and \ \mathcal{U}( t - t_0 ) = 0 \ for \ t < t_0 \ ) \\
+							   = -[ f(t) ]\rvert_{t_0}^{+\infty} \ ( \ Fundamental \ Theorem \ of \ Calculus \ ) \\
+							   = -[ 0 - f(t_0) ] \ ( \ since \ \lim_{ t \to +\infty } f(t) = 0 \ ) \\
 							   = f(t_0) \\
 	\end{aligned}
 \end{equation*}
@@ -47,13 +47,13 @@ Here, $\mathcal{U}(t)$ is the unit step function, which is 1 for $t >= 0$ and 0 
 These properties of the Dirac delta prove to be useful when discussing linear time-invariant, or LTI, systems. For an input signal $x(t)$ to a causal LTI system $\mathcal{T}$, the output signal $y(t)$ is given by:
 \begin{equation}
 	\label{eq:causal_lti_conv}
-	y(t) = x(t) * h(t) = \int_{0}{+\infty} h(\tau)x(t-\tau)d\tau
+	y(t) = x(t) * h(t) = \int_{0}^{+\infty} h(\tau)x(t-\tau)d\tau
 \end{equation}
 The function $h(t)$ is known as the system's impulse response. The purpose of this portion of the experiment is to determine the impulse response $h(t)$ since all information about the high-pass and low-pass filtering systems can be acquired from this function alone. $h(t)$ can be acquired by applying a Dirac delta as the input and observing the system's response.
 To acquire the theoretical impulse response, the Laplace transform of f(t) must first be defined:
 \begin{equation}
 	\label{eq:lt_def}
-	\mathcal{L}\{f(t)\} = \int_{0^{-}}^{+\infty} e^{-st}f(t)dt ( s \in \mathbb{C} )
+	\mathcal{L}\{f(t)\} = \int_{0^{-}}^{+\infty} e^{-st}f(t)dt \ ( s \in \mathbb{C} )
 \end{equation}
 This leads to a necessary result in the theory of LTI systems known as the convolution theorem [\ref{itm:convolution_thm}]:
 \begin{equation}
@@ -67,11 +67,11 @@ The Dirac delta is used as the input to the filters because its output is simply
 \begin{equation*}
 	\label{eq:lt_of_dd}
 	\begin{aligned}
-		\mathcal{L}\{\delta(t)\} = \int_{0^{-}}^{+\infty} e^{-st}\delta(t)dt ( by equation (\ref{eq:lt_def}) ) \\
+		\mathcal{L}\{\delta(t)\} = \int_{0^{-}}^{+\infty} e^{-st}\delta(t)dt \ ( \ by \ equation \ (\ref{eq:lt_def}) \ ) \\
 				       = 0 + \int_{0^{-}}^{+\infty} e^{-st}\delta(t)dt \\
 				       = \int_{-\infty}^{0^{-}} e^{-st}\delta(t)dt + \int_{0^{-}}^{+\infty} e^{-st}\delta(t)dt \\
 				       = \int_{-\infty}^{+\infty} e^{-st}\delta(t)dt \\
-				       = e^{-s \cdot 0} ( by equation (\ref{eq:sifting_property}) ) \\
+				       = e^{-s \cdot 0} \ ( \ by \ equation \ (\ref{eq:sifting_property}) \ ) \\
 				       = 1
 	\end{aligned}
 \end{equation*}
@@ -81,8 +81,8 @@ Assume the existence of an inverse Laplace transform $\mathcal{L}^{-1}$. The sta
 	\begin{aligned}
 		y(t) = \delta(t) * h(t) \\
 		\mathcal{L}\{y(t)\} = \mathcal{L}\{\delta(t) * h(t)\} \\
-		\mathcal{L}\{y(t)\} = \mathcal{L}\{\delta(t)\} \cdot \mathcal{L}\{h(t)\} ( by equation (\ref{eq:conv_thm}) ) \\
-		\mathcal{L}\{y(t)\} = 1 \cdot H(s) = H(s) ( by equation (\ref{eq:lt_of_dd}) ) \\
+		\mathcal{L}\{y(t)\} = \mathcal{L}\{\delta(t)\} \cdot \mathcal{L}\{h(t)\} \ ( \ by \ equation \ (\ref{eq:conv_thm}) \ ) \\
+		\mathcal{L}\{y(t)\} = 1 \cdot H(s) = H(s) \ ( \ by \ equation \ (\ref{eq:lt_of_dd}) \ ) \\
 		y(t) = \mathcal{L}^{-1}\{H(s)\}
 	\end{aligned}
 \end{equation*}
@@ -92,7 +92,7 @@ Assume the existence of an inverse Laplace transform $\mathcal{L}^{-1}$. The sta
 The transfer function for the low-pass filter can be acquired using voltage division in the Laplace domain with the output voltage taken over the capacitor:
 \begin{equation}
 	\label{eq:tf_lpf}
-	H(s) = \frac{ \frac{ 1 }{ sC } }{ \frac{ 1 }{ sC } + R } = \frac{ \frac{ 1 }{ RC } }{ \frac{ 1 }{ RC } + s } \xrightarrow{\mathcal{L}^{-1}} h(t) = \frac{ e^{-\frac{t}{\tau}} }{ \tau } ( by equation (\ref{eq:dd_to_ir}) )
+	H(s) = \frac{ \frac{ 1 }{ sC } }{ \frac{ 1 }{ sC } + R } = \frac{ \frac{ 1 }{ RC } }{ \frac{ 1 }{ RC } + s } \xrightarrow{\mathcal{L}^{-1}} h(t) = \frac{ e^{-\frac{t}{\tau}} }{ \tau } \ ( \ by \ equation \ (\ref{eq:dd_to_ir}) \ )
 \end{equation}
 
 Here, $\tau = RC$ is the time constant. It can be experimentally measured by observing where $h(t)$ acquires a value of $e^{-1} \approx 0.37$ times the maximum value of $h(t)$ at the start $(t = 0)$.
@@ -137,6 +137,6 @@ The high-pass filter's impulse response can also be acquired using voltage divis
 
 % Analysis
 Acquiring measurements for the high-pass filter is difficult. The frequency should be decreased by a factor of 2. This allows the capacitor to take more time to discharge through the resistor so that $\tau$ measurements can be taken more easily. However, the peak value of the resistor's voltage drop must also increase in magnitude in order for the decay to observable. So, the pulse width should be increased by a factor of 2 to give the capacitor more time to charge, and the resistor more current, and therefore more voltage, when the capacitor discharges.
-The impulse response is essentially as expected once the tweaks to the power supply settings are made. The sudden charging of the capacitor at the start demands a large current flowing through the resistor. This gives rise to a high voltage drop, explaining the Dirac delta term in equation \ref{eq:ir_hpf}.
+The impulse response is essentially as expected once the tweaks to the power supply settings are made. The sudden charging of the capacitor at the start demands a large current flowing through the resistor. This gives rise to a high voltage drop, explaining the Dirac delta term in equation (\ref{eq:ir_hpf}).
 When the supply's pulse ends, the capacitor discharges through the resistor. Thus, the current, and therefore the voltage drop over the resistor, flips polarity, which is why the resistor's voltage drop becomes negative. As the capacitor discharges, less and less current (in terms of magnitude) flows. Thus, the magnitude of the voltage drop decreases, which explains the exponential curve.
 The same trend in percentage errors is observed in the high-pass filter. Like with the low-pass filter, the decreasing trend in percentage errors indicates that the accuracy of the experiment is limited in the accuracy of $\tau$ measurements. For an accurate measurement of the high-pass filter, a higher voltage, lower pulse frequency, and wider pulse width are likely necessary, so a $5\tau$ measurement or so can be taken.
