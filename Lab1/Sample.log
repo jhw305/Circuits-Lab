@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.12)  23 OCT 2017 10:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.12)  29 OCT 2017 14:30
 entering extended mode
 **./Sample.tex
 (Sample.tex
@@ -492,21 +492,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 7.
 \c__siunitx_mathtt_int=\count279
- New spreadtab: \begin{tabular}{|c|c|c|}
-* reading tab: ok
-* computing formulas:
-     cell A2
-     cell B2
-     cell C2
-     cell A3
-     cell B3
-     cell C3
-* building tab: ok
-End of spreadtab: \end{tabular}
 
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
-Overfull \hbox (47.21161pt too wide) in paragraph at lines 29--30
- [][] 
  []
 
 [1
@@ -514,26 +502,18 @@ Overfull \hbox (47.21161pt too wide) in paragraph at lines 29--30
 {C:/Users/solankik/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (Sample.aux) ) 
 Here is how much of TeX's memory you used:
- 12003 strings out of 493323
- 255731 string characters out of 3128712
- 290538 words of memory out of 3000000
- 15517 multiletter control sequences out of 15000+200000
+ 11968 strings out of 493323
+ 255417 string characters out of 3128712
+ 289538 words of memory out of 3000000
+ 15482 multiletter control sequences out of 15000+200000
  531681 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,9n,33p,10381b,739s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,4n,33p,10381b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb><C:/Users/solankik/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/solankik/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/solankik/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
-Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr5.pfb><C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb><C:/Users/solankik/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/solankik/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Sample.pdf (1 page, 88306 bytes).
+public/amsfonts/cm/cmr10.pfb>
+Output written on Sample.pdf (1 page, 18156 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 10 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
