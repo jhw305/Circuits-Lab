@@ -1,0 +1,60 @@
+Thickness - 280um +- 25um
+F = 4.54 or so when d/S >> 20
+Measure slope of best fit line through R_s
+Show schematic of voltmeter and carriers. Explain n- and p-type measurements
+
+Red probe at soldering iron
+Black probe at other end of the wafer
+
+Wafer 1
+-------
+0.25V
+Polarity of flipped: 
+
+Wafer 2
+-------
+Polarity flipped: 0.25V
+
+Wafers are tiny. Gets uniformly heated
+
+Wafer 1
+-------
+-0.3 -> -0.8V
+
+reverse polarity check: 0.2 -> 0.9V
+
+Wafer 2
+------
+0.4 -> 0.7V
+
+reverse polarity check:
+
+Placing red probe on wafer and letting iron heat up before placing black probe:
+
+Wafer 1
+-------
+-6.5V and then dropping to -4V
+
+Wafer 2
+-------
+Wafer is very small no good
+
+Wafer 1
+-------
+Reverse polarity: approx. -0.8V
+
+Wafer 1 again
+-------------
+-5.7V
+-6V again
+Flip polarity: 0.7 - 0.8 a few times
+
+Replaced the probe with the same model for ground as supply
+Wafer 1: -7V to -6.5V
+Flip polarity:
+
+4-point probe is n-type
+V = 2.3mV
+I = 0.0565mA
+s = 1.25mm
+d = 2cm

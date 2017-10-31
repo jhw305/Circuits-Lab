@@ -1,0 +1,113 @@
+% Derive the sheet resistance equation
+% TODO Pic of wafer
+Let $t$ be the thickness of the wafer and $\rho$ be its resistivity. The sheet resistance $R_s$ is defined to be:
+
+\begin{equation}
+	\label{eq:rs_def}
+	R_s = \frac{ \rho }{ t }
+\end{equation}
+
+When the current source delivers current to the silicon wafer, the current moves uniformly along the surface due to the negligible thickness of the wafer. Thus, the current spreads in a circle around center. A similar phenomenon occurs at the other probe of the current source, but the current moves toward rather than away from the probe.
+The voltage is measured with probes, each a distance $s$ away from the respective probes measuring current. The surface current from each current probe passes between the voltage probes. Thus, a resistance $R$ between the two voltage probes can be defined.
+Let $L$ be the length of a slab along which current travels, and $A$ be its cross-sectional area. Resistance can then be defined as:
+
+\begin{equation}
+	\label{eq:resistance_def}
+	R = \frac{ \rho L }{ A }
+\end{equation}
+
+At a radius $r$ from the location of a current source probe, current can be modeled as flowing through a cylindrical surface of height $t$ and radius $r$. This is due to the circular spread of current from the current source probe. The effective "area" through which current flows is thus a function of $r$:
+
+\begin{equation}
+	\label{eq:area_fn}
+	A(r) = 2 \pi r t
+\end{equation}
+
+The first voltage probe occurs at a distance $s$ from the current probe. The current then flows $s$ further to reach the other voltage probe. Thus, $r$ varies from $s$ to $2s$. Clearly, equation \ref{eq:resistance_def} is difficult to apply since $A$ is a function of $L$ in this particular case. The longer $L$, or $r$ in this particular case, the larger $A$ becomes.
+For a small distance around a particular value of $r$, $A$ is effectively constant. The interval $[0,r]$ can be partitioned into small segments of length $\Delta r$ with an essentially constant resistance for that particular segment. Since these small resistances would all be in series, the equivalent resistance is simply their sum. The approximation becomes better with smaller values of $\Delta r$:
+
+\begin{equation}
+	\label{eq:res_btwn_probes}
+	\begin{aligned}
+	R = \lim_{n\to\infty} [ \frac{ \rho \Delta r }{ A(s) } + \frac{ \rho \Delta r }{ A(s + \Delta r) } + ... + \frac{ \rho \Delta r }{ A(s + n \Delta r = 2s ) } ] \\
+	= \lim_{n\to\infty} \sum_{i=0}^{n} \frac{ \rho \Delta r }{ A( s + i\Delta r )} \\
+	= \int_{s}^{2s} \frac{ \rho dr }{ A(r) } \\
+	= \int_{s}^{2s} \frac{ \rho dr }{ 2 \pi r t } \ ( \ substitute \ equation \ (\ref{eq:area_fn}) \ ) \\
+	= \frac{ \rho }{ 2 \pi t } \int_{s}^{2s} \frac{ dr }{ r } \\
+	= \frac{ \rho }{ 2 \pi t } ln(2)
+	\end{aligned}
+\end{equation}
+
+The resistance is more traditionally defined as the ratio between the voltage over a circuit element to the current through the circuit element. The voltage is measured to be $V$. The current from one probe is $I$, and the current from the other probe is $-I$. They overlap in the region between the voltage probes, and the effective current becomes $2I$:
+
+\begin{equation}
+	\label{eq:alt_res_btwn_probes}
+	R = \frac{V}{2I}
+\end{equation}
+
+Equating (\ref{eq:res_btwn_probes}) and (\ref{eq:alt_res_btwn_probes}) and letting $F = \frac{\pi}{ln(2)}$, known as the correction factor, the following result is obtained:
+
+\begin{equation}
+	\label{eq:sheet_res_vi}
+	R_s = \frac{\rho}{t} = \frac{ FV }{ I }
+\end{equation}
+
+If the sheet resistance is acquired, then $\rho$ can be ascertained by simply multiplying $R_s \cdot t$. It should be noted that equation (\ref{eq:sheet_res_vi}) only holds when $s$ is negligible in comparison to the dimensions of the wafer. If the wafer is sufficiently small, then its geometry becomes more important when performing the calculation for equation (\ref{eq:res_btwn_probes}). $F$ ends up being smaller in these cases. [\url{http://astro1.panet.utoledo.edu/~relling2/teach/archives/4580.6280.2011/20111025_lecture_4.2_phys4580.6280.pdf} and lab manual ] % TODO Fix this citation %Why
+
+% V,I data table with Rs and rho calculations
+
+\FloatBarrier
+
+\begin{table}[h!]
+\centering
+\caption{Four-Point Probe Measurements}
+\label{tab:fpp_measure}
+\csvautotabular{../tables/data_table_4ptprobe.csv}
+\end{table}
+
+\FloatBarrier
+
+\begin{table}[h!]
+\centering
+\caption{Four-Point Probe Results}
+\label{tab:fpp_results}
+\csvautotabular{../tables/results_table_4ptprobe.csv}
+\end{table}
+
+\FloatBarrier
+
+% Find impurity concentration
+Given the resistivity in table (\ref{tab:fpp_results}), the impurity concentration is approximately $2 \times 10^{17} [\frac{donors}{cm^3}]$. The wafer given is n-type, so the impurity present would be donors, which is typically an element like phosphorus or arsenic [lab manual].
+
+Note that the theory above can be applied since $d >> s$ (by a factor of about 10), and the thickness of the wafer $t$ is also much less than $s$ and $d$ by about three orders of magnitude. The thickness of the wafer is crucial because the above analysis assumes that the current largely travels in an outward cylindrical fashion rather than spherically. If the wafer were thick, then a considerable portion of the current would travel through the interior of the wafer, making the analysis require a spherical current rather than the cylindrical current considered. Moreover, if $d >> s$ were to fail, then as the current spreads cylindrically from the current probe, it would be limited in its spread by the dimensions of the wafer. So, the integration to find the resistance would be tricky to perform.% TODO Proper citation
+
+% TODO Resistivity graph and cite lab manual
+
+% Linear regression explanation
+
+The resistance is estimated from one value of current and voltage. However, this is not the most reliable way of performing resistance measurements.
+Equation (\ref{eq:alt_res_btwn_probes}) uses a somewhat naive definition of resistance known as static resistance:
+
+\begin{equation}
+	\label{eq:static_res_def}
+	R_{static} = \frac{V}{I}
+\end{equation}
+
+Equation (\ref{eq:static_res_def}) can be interpreted as finding the slope of a linear IV-curve. This definition makes two assumptions about the IV-curve of a device. The first is that the point $(I,V) = (0,0)$ exists on the IV-line, which is not necessarily a flawed assumption given that no current through the device produces no voltage drop and vice versa. The second is much stronger, and that is that the IV-curve of the device, the n-type silicon wafer in this case, is linear.
+Dynamic resistance is a more general definition for resistance. It makes no assumption of the IV-curve's form (except perhaps differentiability):
+
+\begin{equation}
+	\label{eq:diff_res_def}
+	R_{dynamic} = \frac{dV}{dI}
+\end{equation}
+
+A large number of currents can be tested, and the IV-curve can be approximately determined in the lab. Whenever the dynamic resistance at a particular current is needed, numerical methods can be used to approximate the derivative in equation (\ref{eq:diff_res_def}). Though this approach might be more accurate than the one taken in equation (\ref{eq:static_res_def}), it overcomplicates the model of resistance in an unnecessary way [\url{https://books.google.com/books?id=nZzOAsroBIEC&pg=SA13-PA52&lpg=SA13-PA52&dq=electromagnetic+compatibility+handbook+static+vs+dynamic+resistance&source=bl&ots=bB_L6xJM1S&sig=zkE0IWOaOjY7DQSPjdWZzDDJID4&hl=en&sa=X&ved=0ahUKEwj0h-DGgJfXAhVR3GMKHa9ODXEQ6AEIKDAA#v=onepage&q=electromagnetic\%20compatibility\%20handbook\%20static\%20vs\%20dynamic\%20resistance&f=false} - electromagnetic compatability handbook].
+Ideally, there would be a method of capturing and averaging out nonlinear variations of resistance along an IV-curve, while still keeping a simple linear model. The best way of doing this is linear regression. Without going into a derivation and the technical details underlying the theory of linear regression, the idea is to find the best linear relationship between two variables, current and voltage in this case:
+
+\begin{equation}
+	\label{eq:linear_reg}
+	V = RI + b
+\end{equation}
+
+Then, rather than trying to find a curve that precisely fits all of the measured $(I,V)$ points, take multiple $(I,V)$ measurements in the lab, and find the values of $R$ and $b$ that produce a line that most "closely" fits the data points. "Most closely" essentially means the values of $R$ and $b$ that minimize the standard deviation of the dataset [\url{http://www.mit.edu/~6.s085/notes/lecture3.pdf}].
+The slope $R$ in this line would simply be the resistance. The difference between this model and the static resistance model is this model takes into account various other $(I,V)$ points. So, it is able to capture almost as much information as the dynamic resistance model, but still maintains the linear simplicity of the static resistance model.

@@ -1,0 +1,10 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{siunitx}
+\usepackage{spreadtab}
+\usepackage{amsmath}
+\usepackage[euler]{textgreek}
+\usepackage{url}
+
+\begin{document}
+The objective of the experiment is to solder RC circuits on a printed circuit board and then test the circuit as a low-pass and high-pass filter. To solder the resistor and capacitor, a soldering iron is used by melting metal onto the ends of the resistor and capacitor on a printed circuit board. After soldering, the output voltage given a sine wave input is measured at different frequencies using the oscilloscope. The filters use a function generator with an internal resistance of (50\textOmega) as the input voltage. The function generator is in series with a 10k\textOmega resistor and a 1nF capacitor. For the low-pass filter, the capacitor's voltage is measured with the oscilloscope. For the high-pass filter, the 10k\textOmega resistor's voltage is measured by connecting it to the negative terminal of the function generator and measuring with the oscilloscope. After taking the measurements, the transfer function ($H(s) = \frac{V_{out}(s)}{V_{in}(s)}$) for both filters are plotted as a function of frequency on a log-log scale. Lastly, the impulse response is measured by sending a pulse signal that is shorter than the RC time constant. The measured responses are then compared to the theoretical responses. \\
+\end{document}
