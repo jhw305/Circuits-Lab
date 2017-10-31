@@ -1,0 +1,146 @@
+In analyzing the low-pass and high-pass filter setups with sinusoidal inputs, a peak-to-peak voltage of 10 V is used. Peak-to-peak voltages of the output signal at a range of frequencies are used to construct the Bode plots for the low-pass and high-pass filters. A resistor with R = 10 k$\Omega$, a capacitor with C = 10 nF, and a function generator with 50 $\Omega$ internal resistance is used to build the filters.
+
+\subsection{Low-Pass Filter}
+
+The output voltage signal for the low-pass filter is taken across the capacitor in the following schematic:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{"../images/LPF_schematic".PNG}
+	\caption{Low-pass Filter Circuit Schematic}
+	\label{fig:LPF_Schematic}
+\end{figure}
+
+The transfer function of this filter is the following where the internal resistance of the function generator is neglected due to its low value:
+
+\begin{equation}
+\label{eq:lpf_transfer}
+H_{LPF}(s) = \frac{1}{1+sRC}
+\end{equation}
+
+The following output voltages are recorded at the frequencies tested below along with the calculated gain in decibels:
+
+\FloatBarrier
+
+\begin{table}[h!]
+	\centering
+	\caption{Low-Pass Filter Output Voltages at Various Frequencies}
+	\label{tab:lpf_vout}
+	\csvautotabular{../tables/vpp_freq_lpf.csv}
+\end{table}
+
+\FloatBarrier
+
+The gain values above are calculated using the definition of decibel scale taking the ratio of output and input power. The equation simplifies to this:
+
+\begin{equation}
+\label{eq:decibels}
+Gain = 10 log(\frac{P_{out}}{P_{in}}) = 10 log (\frac{V_{out}}{ V_{in}})^2 = 20 log (\frac{V_{out}}{ V_{in}})
+\end{equation}
+
+Using the gain values, the following bode plot for the low-pass filter is generated:
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{"../images/LPF_Bode".PNG}
+	\caption{Low-pass Filter Circuit Bode Plot}
+	\label{fig:LPF_Bode}
+\end{figure}
+
+\FloatBarrier
+
+The cutoff frequency can be obtained by finding the value of the frequency in which the system outputs a -3 dB gain. By inspection of the Bode plot above, the corner frequency of the low-pass filter is 18 kHz.
+
+Theoretically, the cutoff frequency of the filter occurs when the magnitude of the transfer function of the filter is $\frac{1}{\sqrt{2}}$. From \ref{eq:lpf_transfer}, the theoretical cutoff frequency can be obtained:
+
+\begin{equation}
+\label{eq:lpf_cutoff}
+\begin{gathered}
+|H_{LPF}(s)| = |\frac{1}{1+sRC}| = \frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{1^2 + (\omega_{c} RC)^2}} = \frac{1}{\sqrt{2}}\\
+1^2 + (\omega_{c} RC)^2 = 2\\
+(\omega_{c} RC)^2 = 1\\
+\omega_{c} = \frac{1}{RC} = \frac{1}{(10^5 \Omega)(10^{-9} F)}\\
+\omega_{c} = 10^5\\
+f_{c}  = \frac{\omega_{c}}{2\pi} = 15.915 k\Omega
+\end{gathered}
+\end{equation}
+
+Compared to the measured cutoff frequency from \ref{fig:LPF_Bode}, the following error is calculated:
+
+\begin{equation}
+\label{eq:lpf_cutoff_error}
+|\frac{18 - 15.915}{15.915}| * 100\% = 13.1\%
+\end{equation}
+
+
+\subsection{High-Pass Filter}
+
+The output voltage signal for the low-pass filter is taken across the capacitor in the following schematic:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{"../images/HPF_schematic".PNG}
+	\caption{High-pass Filter Circuit Schematic}
+	\label{fig:HPF_Schematic}
+\end{figure}
+
+The transfer function of this filter is the following where again, the resistance of the function generator is ignored:
+
+\begin{equation}
+\label{eq:hpf_transfer}
+H_{HPF}(s) = \frac{sRC}{1+sRC}
+\end{equation}
+
+The following output voltages are recorded at the frequencies tested below along with the calculated gain in decibels calculated using \ref{eq:decibels}:
+
+\FloatBarrier
+
+\begin{table}[h!]
+	\centering
+	\caption{High-Pass Filter Output Voltages at Various Frequencies}
+	\label{tab:hpf_vout}
+	\csvautotabular{../tables/vpp_freq_hpf.csv}
+\end{table}
+
+\FloatBarrier
+
+The gain values produce the following Bode plot:
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{"../images/HPF_Bode".PNG}
+	\caption{High-pass Filter Circuit Bode Plot}
+	\label{fig:HPF_Bode}
+\end{figure}
+
+\FloatBarrier
+
+Again, by inspection, the cutoff frequency of the high-pass filter is 16 kHz.
+
+Theoretically, the cutoff frequency can be calculated as such using the magnitude of \ref{eq:hpf_transfer}:
+
+\begin{equation}
+\label{eq:hpf_cutoff}
+\begin{gathered}
+|H_{HPF}(s)| = |\frac{sRC}{1+sRC}| = \frac{1}{\sqrt{2}}\\
+\frac{\omega_{c}RC}{\sqrt{1^2 + (\omega_{c} RC)^2}} = \frac{1}{\sqrt{2}}\\
+\frac{(\omega_{c}RC)^2}{1^2 + (\omega_{c} RC)^2} = \frac{1}{2}\\
+2(\omega_{c} RC)^2 = 1^2 + (\omega_{c} RC)^2\\
+(\omega_{c} RC)^2 = 1\\
+\omega_{c} = \frac{1}{RC} = \frac{1}{(10^5 \Omega)(10^{-9} F)}\\
+\omega_{c} = 10^5\\
+f_{c}  = \frac{\omega_{c}}{2\pi} = 15.915 k\Omega
+\end{gathered}
+\end{equation}
+
+Compared to the measured cutoff frequency from \ref{fig:HPF_Bode}, the following error is calculated:
+
+\begin{equation}
+\label{eq:lpf_cutoff_error}
+|\frac{16 - 15.915}{15.915}| * 100\% = 0.534\%
+\end{equation}
