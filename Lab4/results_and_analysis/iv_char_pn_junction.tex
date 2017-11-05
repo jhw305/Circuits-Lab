@@ -1,0 +1,49 @@
+% Derivation of the Ideal Diode Equation
+% TODO Note about ideal diode equation and why these derivations are important
+Consider a semiconductor material with a concentration of $n$ electrons and $p$ holes. These carrier concentrations come from two sources. The system is said to be in thermal equilibrium when no energy flows to different parts of the system or outside the system [\ref{ref:thermal_eq}]. At the thermal equilibrium, the carrier concentrations are $n_0$ and $p_0$.
+Some carriers result from the system not being in thermal equilibrium. For instance, a light source may transfer energy to the material. In this case, the energy in the form of photons can excite electrons from the valence band to the conduction band, thereby producing a carrier concentration. These are known as excess carrier concentrations and are denoted by $\delta n$ and $\delta p$. Because the generation mechanisms, the excess carrier currents, etc. can be position and time dependent, these are functions of time $t$ and position $x$ in general for the one-dimensional case.
+It is important to note the difference between thermal equilibrium and steady state. The generation mechanism can continually be supplying energy and producing a carrier concentration. After a while, the system reaches a steady state in which the carrier concentration no longer changes with time. However, the system is not in thermal equilibrium because it is receiving energy from the generation mechanism, such as light.
+The total carrier concentrations are given by:
+
+\begin{equation}
+	\label{eq:carrier_conc}
+	\begin{cases}
+		n = n_0 + \delta n(x,t) //
+		p = p_0 + \delta p(x,t) //
+	\end{cases}
+\end{equation}
+
+The excess carrier concentrations depend on a few dynamics. The first is a generation process. Assume that whatever generation process exists is uniformly distributed over the material and generates at a constant rate of $g [\frac{cm^{-3}}{s}]$. When the electrons are promoted to the conduction band, they only last for as long as they have energy greater than the minimum energy of the conduction band $E_c$. Any energy they possess above $E_c$ is simply kinetic energy. The electrons move around and lose energy to collisions and other mechanisms. At a certain point, their kinetic energy is depleted, and they no longer have energy in excess of $E_c$. At this point, they fall back down to the valence band.
+From this physical description, it is clear that the lifetime of these excess carriers is finite. Thus, a recombination mechanism whereby electrons fall back down to the valence band and recombine with their respective holes must be considered. This consideration is based more on physical intuition than mathematical formalisms for the sake of brevity. Essentially, the mechanism must decrease $\frac{\partial \delta n}{\partial t}$ and make it more negative since excess carriers are being depleted. With more carriers in the conduction band, more collisions between carriers occur. When they lose energy and fall down to lower and lower energy levels in the conduction band, many of them are already full, forcing them to drop all the way down to the valence band. Thus, with more carriers, this recombination mechanism must become stronger. The simplest formulation of a semiconductor with both generation and recombination mechanisms is the following:
+
+\begin{equation}
+	\label{eq:gen_and_rec}
+	\frac{\partial \delta n}{\partial t} = g - \frac{\delta n}{\tau _n}
+\end{equation}
+
+Here, $\tau _n$ is the lifetime of electrons in the conduction band. When to consider electrons or holes for these calculations is discussed later.
+Excess carriers are subject to drift and diffusion mechanics, causing spatial variations in the excess carrier concentration. The drift current density $J_{n,drift}$ for conduction electrons under the influence of an electric field $E$ is given by:
+
+\begin{equation}
+	\label{eq:drift}
+	J_{n,drift} = en\mu _nE
+\end{equation}
+
+Here, $e$ is the elementary charge, and $\mu _n$ is the electron mobility. Diffusion current density results from spatial variation in the carrier concentration, causing carriers to move from regions of high concentration to low concentration. The diffusion current density is given by:
+
+\begin{equation}
+	\label{eq:diffusion}
+	J_{n,diff} = eD\frac{\partial \delta n}{\partial x}
+\end{equation}
+
+Including both of these effects into the current model yields the continuity equation [\ref{ref:carrier_conc_src},\ref{ref:class_slideshow}]:
+
+\begin{equation}
+	\label{eq:cont_eqn}
+	\frac{\partial \delta n}{\partial t} = \frac{1}{e} \frac{\partial J}{\partial x} + g - \frac{\delta n}{\tau _n} \\
+					     = \frac{1}{e} \frac{\partial}{\partial x} ( J_{n,diff} + J_{n,drift}) + g - \frac{\delta n}{\tau _n} \\
+					     = \frac{1}{e} \frac{\partial}{\partial x} ( eD\frac{\partial \delta n}{\partial x} + en\mu _nE ) + g - \frac{\delta n}{\tau _n} \\
+					     = \mu _n E \frac{\partial \delta n}{\partial x} + \mu _n n \frac{\partial \delta E}{\partial x} + D_n \frac{\partial^2 \delta n}{\partial x^2} + g - \frac{\delta n}{\tau _n}
+\end{equation}
+
+
