@@ -24,7 +24,7 @@ def gen_diode_data_matrix( source_voltages , diode_voltages ) :
 		diode_voltage = diode_voltages[ v_count ]
 		resistor_voltage = source_voltage - diode_voltage
 		current = resistor_voltage / R
-		data_rows.append( [ source_voltage , resistor_voltage * 1e3 , diode_voltage , current * 1e6 ] )
+		data_rows.append( [ source_voltage , resistor_voltage * 1e3 , diode_voltage , common.set_precision_str( current * 1e6 ) ] )
 
 	# Sort by source voltage
 	sorted_data_rows = [ ]
