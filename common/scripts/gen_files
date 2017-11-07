@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# TODO Add error checking
+
+fname=$1
+tex_ext=.tex
+
+content_fname=$fname$tex_ext
+wrap_fname=$fname\_wrap$tex_ext
+preamble_fname=$fname\_preamble$tex_ext
+
+touch $content_fname
+touch $wrap_fname
+touch $preamble_fname

@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{multicol}
+\newcommand{\subcom}{( see comment from before )}
+\begin{document}
+	\begin{multicols}{2}
+	Krish - do the titlepage. And by do the titlepage, I mean, take the titlepage code we've been using and define a titlepage macro that takes two arguments (name of the lab report and experiment number). Put it in /common/latex/common.tex. This way, we never have to do another cover page again :) \\
+	I think we should try out column-splitting for this lab. It looks more professional and cuts printing costs since we're typically charged by the page. \\
+	Pull before starting on your section. Files are separated by subsubsection. I have included these files in each of the necessary directories. Don't worry about overwriting other people's changes. Just edit your parts, push to your fork, and I should be able to resolve any conflicts when you make a final pull request. \\
+	\section{Procedure}
+		- Krish
+	\section{Results and Analysis}
+		\subsection{I-V Characterization of Diodes}
+			\subsubsection{p-n Junction Diode}
+				1. Roman (derive ideal diode equation and plot with reasonable values for p-n junction diode) \\
+				2. Krish \\
+					- schematic of circuit used to test WITH values labeled explicitly \\
+				3. Roman (tables should include percentage errors with theory) \\
+				4. + 5. The labels for breakdown, etc. regions and such should be in the same pic as the graph. Please push all relevant code and not just the images. We technically don't need you to push the images if you push the code that generates them. \\
+			\subsubsection{Schottky Diode}
+				1. Roman (derive curve or explain differences for Schottky diode) \\
+				2. Krish \subcom \\
+				3. Roman \subcom \\
+				4. + 5. Jason \subcom \\
+			\subsubsection{Zener Diode}
+				1. Roman (derive curve or explain differences for Zener diode) \\
+				2. Krish \subcom \\
+				3. Roman \subcom \\
+				4. + 5. Jason \subcom \\
+		\subsection{Oscilloscope Analysis of Diodes}
+			\subsubsection{p-n Junction Diode}
+				6. Krish \subcom \\
+				7. Jason ( the pics are probably sufficient. If Krish has the pics, include them here. ) \\
+				8. Jason ( also might want to compare with theoretical estimates and mention the error/create a new table for it or something. I'll let you be creative ) \\
+			\subsubsection{Schottky Diode}
+				6. Krish \subcom \\
+				7. Jason \subcom \\
+				8. Jason \subcom \\
+			\subsubsection{Zener Diode}
+				6. Krish \subcom \\
+				7. Jason \subcom \\
+				8. Jason \subcom \\
+		\subsection{Photodiode}
+				9. Roman (briefly look for any theoretical comparison) \\
+				10. Roman (add a note about the difference between photodiodes and phototransistors) \\
+	\section{Discussion}
+		\subsection{I-V Characterization of Diodes}
+			Roman (discuss Schottky, Zener, and pn junction results)
+		\subsection{Oscilloscope Analysis of Diodes}
+			Jason
+		\subsection{Photodiode}
+			Roman
+	\section{Appendix}
+	\section{References}
+	Jason organizes this section at the end and includes any misc. images for our sections. This will be Krish's responsibility for next lab.
+	Krish prints the final document on tuesday at 1pm.
+	Also, we need to come up with a better way to log data. If somebody has any ideas, lmk.
+	Last note: use the \ FloatBarrier macro before and after images or tables. This fixes a lot of formatting issues.
+	\end{multicols}
+\end{document}
