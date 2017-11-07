@@ -1,43 +1,92 @@
 \underline{Photodiode}
 
-The final part of this experiment deals with inserting a photodiode into the circuit. It should be noted that a phototransistor is used instead of a photodiode since a  phototransistor has similar characteristics as a photodiode when light is illuminated onto it, even being more sensitive to light. For this particular part, the phototransistor has a wide depletion layer that helps more excited electrons be exposed to light. When light is illuminated onto the phototransistor, the transistor absorbs many photons and produces a lot of power. Photons at a high frequency excite electrons from the valence band to the conduction band since their energy level is higher than the bandgap energy. The phototransistor is to be regarded in three cases (reverse bias, zero bias, and forward bias). When electrons jump from the valence band to conduction band, the electric field in the region with a shortage of electrons cause the electrons to move in a reverse-biased direction. The reverse bias current is driven by these excited electrons, which as a result supply the load with power. The second case for this phototransistor is being zero biased. The flow of current out of the transistor is restricted and a voltage builds up, which leads to some amount of power generation. For both cases of reverse bias and zero bias, the voltage drop over the transistor increases as light shines on the phototransistor, therefore these two biases generate the most power compared to the forward bias. Calculations of power efficiency help show that the power efficiency and power generated from both of the biases is very similar because of the widened depletion layer (eq:\ref{(eq:Reverse Bias W/ Light)} and eq:\ref{(eq:Zero Bias W/ Light)}). The third and final case is when the diode is in forward bias. When the diode is in forward bias, the depletion layer of the diode is decreased thus not much power being generated. Calculations for the forward bias help show that the power efficiency remains the same whether if the light is on or off. Therefore, the voltage drop over the phototransistor is the same when the light is both off and on. The only source of power comes from the supply voltage. \\
+The final part of this experiment deals with inserting a photodiode into the circuit. It should be noted that a phototransistor is used instead of a photodiode since a  phototransistor has similar characteristics as a photodiode when light is illuminated onto it, even being more sensitive to light. For this particular part, the phototransistor has a wide depletion layer that helps more excited electrons be exposed to light. When light is illuminated onto the phototransistor, the transistor absorbs many photons and produces a lot of power. Photons at a high frequency excite electrons from the valence band to the conduction band since their energy level is higher than the bandgap energy. The phototransistor is to be regarded in three cases (reverse bias, zero bias, and forward bias). When electrons jump from the valence band to conduction band, the electric field in the region with a shortage of electrons cause the electrons to move in a reverse-biased direction. The reverse bias current is driven by these excited electrons, which as a result supply the load with power. The second case for this phototransistor is being zero biased. The flow of current out of the transistor is restricted and a voltage builds up, which leads to some amount of power generation. For both cases of reverse bias and zero bias, the voltage drop over the transistor increases as light shines on the phototransistor, therefore these two biases generate the most power compared to the forward bias. Calculations of the difference in voltage when the light is on minus when the light is off helps determine that the power generated from both of the biases is very similar because of the widened depletion layer. The third and final case is when the diode is in forward bias. When the diode is in forward bias, the depletion layer of the diode is decreased thus not much power being generated. Calculations for the forward bias help show that the power generated remains the same whether if the light is on or off. Therefore, the voltage drop over the phototransistor is the same when the light is both off and on. The only source of power comes from the supply voltage for the forward bias. \\
+
+\underline{Reverse Bias}\\
+\begin{equation}
+\label{eq:Reverse Bias}
+{V_{on}}-{V_{off}} = 0.50V - (-0.01V) = 0.51V 
+\end{equation}
 
 \underline{Reverse Bias W/o Light}\\
 \begin{equation}
 \label{eq:Reverse Bias W/o Light}
-\frac{P_{out}}{P_{in}} = \frac{(0.01V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 0.2\%
+{P_{load}}-{P_{source}} = {(0.0166A)^{2}(300)}-{(-5V)(-0.0166A)} = 0.0002W
 \end{equation}
 
 \underline{Reverse Bias W/ Light}\\
 \begin{equation}
 \label{eq:Reverse Bias W/ Light}
-\frac{P_{out}}{P_{in}} = \frac{(0.50V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 10.0\%
+{P_{load}}-{P_{source}} = (0.01833A)^{2}(300)-{(-5V)(-0.01833A)} = 0.0091W 
+\end{equation}
+
+\underline{Forward Bias}\\
+\begin{equation}
+\label{eq:Forward Bias}
+{V_{on}}-{V_{off}} = 0.82V - 0.82V = 0V 
 \end{equation}
 
 \underline{Forward Bias W/o Light}\\
 \begin{equation}
 \label{eq:Forward Bias W/o Light}
-\frac{P_{out}}{P_{in}} = \frac{(0.82V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 16.4\%
+{P_{load}}-{P_{source}} = (0.01393A)^{2}(300)-{(5V)(0.01393A)} = -0.01W
 \end{equation}
 
 \underline{Forward Bias W/ Light}\\
 \begin{equation}
 \label{eq:Forward Bias W/ Light}
-\frac{P_{out}}{P_{in}} = \frac{(0.82V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 16.4\%
+{P_{load}}-{P_{source}} = (0.01393A)^{2}(300)-{(5V)(0.01393A)} = -0.01W
+\end{equation}
+
+\underline{Zero Bias}\\
+\begin{equation}
+\label{eq:Zero Bias}
+{V_{on}}-{V_{off}} = 0.52V - 0.075V = 0.445V
 \end{equation}
 
 \underline{Zero Bias W/o Light}\\
 \begin{equation}
 \label{eq:Zero Bias W/o Light}
-\frac{P_{out}}{P_{in}} = \frac{(0.075V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 1.5\%
+{P_{load}}-{P_{source}} = (0.0164A)^{2}(300)-{(0V)(0.0164A)} = 0.0809 
 \end{equation}
 
 \underline{Zero Bias W/ Light}\\
 \begin{equation}
 \label{eq:Zero Bias W/ Light}
-\frac{P_{out}}{P_{in}} = \frac{(0.52V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 10.4\%
+{P_{load}}-{P_{source}} = (0.01493A)^{2}(300)-{(0V)(0.01493A)} = 0.0669
 \end{equation}
-\\
+
+
+%\underline{Reverse Bias W/o Light}\\
+%\begin{equation}
+%\label{eq:Reverse Bias W/o Light}
+%\frac{P_{out}}{P_{in}} = \frac{(0.01V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 0.2\%
+%\end{equation}
+
+%\underline{Reverse Bias W/ Light}\\
+%\begin{equation}
+%\label{eq:Reverse Bias W/ Light}
+%\frac{P_{out}}{P_{in}} = \frac{(0.50V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 10.0\%
+%\end{equation}
+
+%\underline{Forward Bias W/o Light}\\
+%\begin{equation}
+%\label{eq:Forward Bias W/o Light}
+%\frac{P_{out}}{P_{in}} = \frac{(0.82V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 16.4\%
+%\end{equation}
+
+%\underline{Forward Bias W/ Light}\\
+%\begin{equation}
+%\label{eq:Forward Bias W/ Light}
+%\frac{P_{out}}{P_{in}} = \frac{(0.82V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 16.4\%
+%\end{equation}
+
+%\underline{Zero Bias W/ Light}\\
+%\begin{equation}
+%\label{eq:Zero Bias W/ Light}
+%\frac{P_{out}}{P_{in}} = \frac{(0.52V)(0.0167A)}{(5V)(0.0167A)} \times 100 = 10.4\%
+%\end{equation}
+
 
 \underline{\#9}
 
@@ -53,7 +102,7 @@ The final part of this experiment deals with inserting a photodiode into the cir
 
 \underline{\#10}
 \\
-When working with solar cells (pn-junction) the best case to collect energy of light is by shining light on a photodiode. When the light is illuminated on the diode, the photons are absorbed and more power is produced by converting light energy into electrical energy. This only occurs if the diode is in reverse bias, so there is an increase in effect of the electric field which contributes to current. Reverse bias helps the holes depart from the valence band and helps the electrons depart from the conduction band while also enhancing the potential. This results in carriers being excited and going towards either the cathode or anode electrodes. Electron-hole pairs are formed when light is illuminated onto a diode which results in reverse current. If the diode is in forward bias there will be almost negligible current due to the current flowing in only one direction. This occurs when the p-type carries are made more positive while the n-type carriers are made more negative. The charge carriers move very slowly and this leads to the solar cell being less effective. If a PIN diode is used, it is even better since there is an intrinsic semiconductor layer between the n-type layer and p-type layer that will help excited electrons be exposed to light. This concludes that power efficiency is at its best when the photodiode is in reverse bias since the output power divided by input power is much larger than forward bias due to no voltage change in forward bias.\\
+When working with solar cells (pn-junction) the best case to collect energy of light is by shining light on a photodiode. When the light is illuminated on the diode, the photons are absorbed and more power is produced by converting light energy into electrical energy. The power burned by the load minus the power generated by the source gives us the most efficient way of telling how much power is generated by the diode. Looking at eq:(\ref{eq:Reverse Bias W/o Light}) and eq:(\ref{eq:Reverse Bias W/ Light}) helps note the difference the diode makes in relation to power generated. When light is shining on the diode more power is being burned over the load compared to the power generated by the source. More power is produced only if the diode is in reverse bias, so there is an increase in effect of the electric field which contributes to current. Reverse bias helps the holes depart from the valence band and helps the electrons depart from the conduction band while also enhancing the potential. This results in carriers being excited and going towards either the cathode or anode electrodes. Electron-hole pairs are formed when light is illuminated onto a diode which results in reverse current. If the diode is in forward bias there will be almost negligible current due to the current flowing in only one direction. The calculations show that there is no difference in power consumed by the load and generated by the source when the light is either on/off over the diode. This occurs when the p-type carries are made more positive while the n-type carriers are made more negative. The charge carriers move very slowly and this leads to the solar cell being less effective. If a PIN diode is used, it is even better since there is an intrinsic semiconductor layer between the n-type layer and p-type layer that will help excited electrons be exposed to light. This concludes that power generation is at its best when the photodiode is in reverse bias since the power consumed by the load is much larger than the power generated by the source compared to the power difference in forward bias. Zero bias is a simple case of power generation using a photodiode. In zero bias there is no source voltage, so the only source of power comes from the photodiode. The calculations show that the higher power generated by the diode when the light is on is due to less power being burned over the load.\\
 
 
 
