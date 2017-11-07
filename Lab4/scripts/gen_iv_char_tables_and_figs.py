@@ -12,7 +12,7 @@ gen_csv = lambda name : tables_dir + name + csv_ext
 pn_junction_table = gen_csv( "pn_junction_table" )
 zener_table = gen_csv( "zener_table" )
 schottky_table = gen_csv( "schottky_table" )
-R = 1e3
+R = 300
 headings = [ r"Source Voltage [V]" , r"Voltage over Resistor [mV]" , r"Voltage over Diode [V]" , r"Current [uA]" ]
 
 def gen_diode_data_matrix( source_voltages , diode_voltages ) :
@@ -60,3 +60,16 @@ common.write_csv_from_matrix( schottky_table , gen_diode_data_matrix( zener_sour
 
 # Generate figures
 # TODO
+
+import matplotlib.pylab as plt
+
+images_dir = "../images/"
+pn_fname = "pn_junction_diode"
+schottky_fname = "schottky_diode"
+zener_fname = "zener_diode"
+png_ext = ".PNG"
+
+# generate plot
+
+plt.plot(pn_junction_source_voltages, pn_junction_diode_voltages, 'k')
+plt.savefig(images_dir + pn_fname + png_ext)
