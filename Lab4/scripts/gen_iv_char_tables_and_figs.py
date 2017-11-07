@@ -12,7 +12,7 @@ gen_csv = lambda name : tables_dir + name + csv_ext
 pn_junction_table = gen_csv( "pn_junction_table" )
 zener_table = gen_csv( "zener_table" )
 schottky_table = gen_csv( "schottky_table" )
-R = 1e3
+R = 300
 headings = [ r"Source Voltage [V]" , r"Voltage over Resistor [mV]" , r"Voltage over Diode [V]" , r"Current [uA]" ]
 
 def gen_diode_data_matrix( source_voltages , diode_voltages ) :
