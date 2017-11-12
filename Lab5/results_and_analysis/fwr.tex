@@ -54,7 +54,7 @@ When $V_{A} > 2V_{Th}$, the diodes in figure (\ref{fig:v_app_high}) are enabled.
 
 \begin{figure}[h!]
 \centering
-\caption{Full-Wave Rectifier when $V_{applied} > 0$}
+\caption{Full-Wave Rectifier when $V_{A} > 2V_{Th}$}
 \label{fig:v_app_high}
 \begin{circuitikz}
 	\draw
@@ -79,7 +79,7 @@ Figure (\ref{fig:v_app_low}) demonstrates the case when $V_{A} < 2V_{Th}$. Again
 
 \begin{figure}[h!]
 \centering
-\caption{Full-Wave Rectifier when $V_{applied} > 0$}
+\caption{Full-Wave Rectifier when $V_{A} < 2V_{Th}$}
 \label{fig:v_app_low}
 \begin{circuitikz}
 	\draw
@@ -98,4 +98,86 @@ Figure (\ref{fig:v_app_low}) demonstrates the case when $V_{A} < 2V_{Th}$. Again
 
 \FloatBarrier
 
-In the
+A more quantitative description of this behavior can be obtained. In the $V_{A} > 2V_{Th}$ case, Kirchhoff's voltage law may be applied:
+
+\FloatBarrier
+
+\begin{figure}[h!]
+\centering
+\caption{Kirchhoff's Voltage Law for $V_{A} > 2V_{Th}$}
+\label{fig:kvl_app_high}
+\begin{circuitikz}
+	\draw
+	( 0 , 4 ) to [ sV , v<=$20Vpp$ ] ( 0 , 0 )
+	( 0 , 4 ) -- ( 4 , 4 ) to [ empty diode , color = green ] ( 6 , 2 )
+	( 2 , 2 ) to [ empty diode , color = green ] ( 4 , 0 )
+	( 4 , 0 ) -- ( 0 , 0 )
+	( 2 , 2 ) to [ R = 300 <\ohm> , i<_=$I$ ] ( 6 , 2 )
+	( 2 , 2 ) node[label={ [font=\normalsize] above : $-$ } ] { }
+	( 6 , 2 ) node[label={ [font=\normalsize] above : $+$ } ] { }
+	( 1.5 , 1 ) node[scale=3]{$\circlearrowright$}
+	;
+\end{circuitikz}
+\end{figure}
+
+\FloatBarrier
+
+\begin{equation}
+	\label{eq:kvl_va_gt_2vth}
+	+V_{A} - V_{Th} - V_{out} - V_{Th} = 0 \rightarrow V_{out} = V_{A} - 2V_{Th}
+\end{equation}
+
+The same method can be applied to the $V_{A} < 2V_{Th}$ case.
+
+\FloatBarrier
+
+\begin{figure}[h!]
+\centering
+\caption{Kirchhoff's Voltage Law for $V_{A} > 2V_{Th}$}
+\label{fig:kvl_app_low}
+\begin{circuitikz}
+	\draw
+	( 0 , 4 ) to [ sV , v<=$20Vpp$ ] ( 0 , 0 )
+	( 0 , 4 ) -- ( 4 , 4 )
+	( 2 , 2 ) to [ empty diode , color = green ] ( 4 , 4 )
+	( 4 , 0 ) to [ empty diode , color = green ] ( 6 , 2 )
+	( 4 , 0 ) -- ( 0 , 0 )
+	( 2 , 2 ) to [ R = 300 <\ohm> , i<_=$I$ ] ( 6 , 2 )
+	( 2 , 2 ) node[label={ [font=\normalsize] above : $-$ } ] { }
+	( 6 , 2 ) node[label={ [font=\normalsize] above : $+$ } ] { }
+	( 1.5 , 1 ) node[scale=3]{$\circlearrowright$}
+	;
+\end{circuitikz}
+\end{figure}
+
+\FloatBarrier
+
+\begin{equation}
+	\label{eq:kvl_va_lt_2vth}
+	+V_{A} + V_{Th} + V_{out} + V_{Th} = 0 \rightarrow V_{out} = - V_{A} - 2V_{Th}
+\end{equation}
+
+These behaviors can be generalized in the following result for the output voltage of the full-wave rectifier circuit in figure (\ref{fig:fwr}):
+
+\begin{equation}
+	\label{eq:fwr_eq}
+	V_{out}(V_{A}) =
+	\begin{cases}
+		|V_{A}| - 2V_{Th} , & |V_{A}| > 2V_{Th} \\
+		0 , & \text{otherwise}
+	\end{cases}
+\end{equation}
+
+A plot of the expected output voltage against the input voltage is shown in figure (\ref{fig:expected_out_vs_in_fwr}):
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.75]{../images/full_wave_rect.PNG}
+	\caption{Full-Wave Bridge Rectifier Expected Result}
+	\label{fig:expected_out_vs_in_fwr}
+\end{figure}
+
+\FloatBarrier
+
