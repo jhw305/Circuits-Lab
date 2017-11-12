@@ -9,6 +9,9 @@ NEWLINE="\n"
 def perc_err( measured , theoretical ):
 	return abs( ( measured - theoretical ) / theoretical )
 
+def fmt_perc_err( measured , theoretical ) :
+	return fmt_perc( perc_err( measured , theoretical ) )
+
 # TODO: Make the precision on these variable
 def set_precision_str( fp_number ):
 	return ( "%.1f" % fp_number )
