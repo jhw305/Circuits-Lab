@@ -24,7 +24,7 @@ def gen_diode_data_matrix( source_voltages , diode_voltages ) :
 		diode_voltage = diode_voltages[ v_count ]
 		resistor_voltage = source_voltage - diode_voltage
 		current = resistor_voltage / R
-		data_rows.append( [ source_voltage , resistor_voltage * 1e3 , diode_voltage , current * 1e6 ] )
+		data_rows.append( [ source_voltage , resistor_voltage * 1e3 , diode_voltage , common.set_precision_str( current * 1e6 ) ] )
 
 	# Sort by source voltage
 	sorted_data_rows = [ ]
@@ -59,17 +59,4 @@ common.write_csv_from_matrix( zener_table , gen_diode_data_matrix( zener_source_
 common.write_csv_from_matrix( schottky_table , gen_diode_data_matrix( zener_source_voltages , zener_diode_voltages ) )
 
 # Generate figures
-# TODO
 
-import matplotlib.pylab as plt
-
-images_dir = "../images/"
-pn_fname = "pn_junction_diode"
-schottky_fname = "schottky_diode"
-zener_fname = "zener_diode"
-png_ext = ".PNG"
-
-# generate plot
-
-plt.plot(pn_junction_source_voltages, pn_junction_diode_voltages, 'k')
-plt.savefig(images_dir + pn_fname + png_ext)
