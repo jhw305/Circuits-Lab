@@ -35,7 +35,7 @@ In equation (\ref{eq:shockley_diode}), $I_0$ is the reverse saturation current, 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/ideal_diode.PNG}
+	\includegraphics[scale=0.75]{./images/ideal_diode.PNG}
 	\caption{Shockley Diode Model vs. Perfectly Ideal Diode}
 	\label{fig:ideal_vs_shock}
 \end{figure}
@@ -174,20 +174,20 @@ A plot of the expected output voltage against the input voltage is shown in figu
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/full_wave_rect.PNG}
+	\includegraphics[scale=0.75]{./images/full_wave_rect.PNG}
 	\caption{Full-Wave Bridge Rectifier Expected Result}
 	\label{fig:expected_out_vs_in_fwr}
 \end{figure}
 
 \FloatBarrier
 
-The measured result is presented in figure (\ref{fig:measured_fwr}) below:
+The full-wave bridge rectifier is constructed using 1N4005 rectifier diodes. The measured result is presented in figure (\ref{fig:measured_fwr}) below:
 
 \FloatBarrier
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.25]{../images/full_wave_rect_measured_amp.PNG}
+	\includegraphics[scale=0.25]{./images/full_wave_rect_measured_amp.PNG}
 	\caption{Measured Amplitude of Full-Wave Rectifier}
 	\label{fig:measured_fwr}
 \end{figure}
@@ -225,7 +225,7 @@ Without proof, $V_{out} = V_1 - V_0$. Thus, by subtracting these voltages, $V_{o
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.25]{../images/full_wave_rectifier.PNG}
+	\includegraphics[scale=0.25]{./images/full_wave_rectifier.PNG}
 	\caption{Measured Amplitude of Full-Wave Rectifier with Input Signals}
 	\label{fig:measured_fwr_with_inputs}
 \end{figure}
@@ -246,7 +246,7 @@ The peak and trough voltages of $V_{out}$ relative to the input supply voltage $
 	\centering
 	\caption{Peak and Trough Voltages of $V_{out}$ and $V_{A}$}
 	\label{tab:peak_n_trough}
-	\csvautotabular{../tables/fwr_data.csv}
+	\csvautotabular{./tables/fwr_data.csv}
 \end{table}
 
 \FloatBarrier
@@ -259,7 +259,7 @@ Equation (\ref{eq:fwr_eq}) predicts that the absolute value of the peak of $V_{o
 	\centering
 	\caption{Theoretical vs. Measured Results for Full-Wave Rectifier}
 	\label{tab:theory_vs_practice}
-	\csvautotabular{../tables/fwr_err.csv}
+	\csvautotabular{./tables/fwr_err.csv}
 \end{table}
 
 \FloatBarrier
