@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{listings}
+\input{./procedure/procedure_preamble.tex}
+\input{./results_and_analysis/fwr_preamble.tex}
+\input{./discussion/fwr_discussion_preamble.tex}
+\input{./results_and_analysis/dtr_preamble.tex}
+\input{./discussion/dtr_discussion_preamble.tex}
+\begin{document}
+	\begin{titlepage}
+		\centering
+		\Huge{Experiment 5} \\
+		\huge{Transient Responses of Diodes and Rectifiers} \\
+		\vspace{1cm}
+		\large{EECS 170A - Lab Bench \#1} \\
+		\large{\today} \\
+		\vspace{1cm}
+		\normalsize{Roman Parise (59611417)} \\
+		\normalsize{Krishan Solanki (38154673)} \\
+		\normalsize{Jason Wang (42873192)} \\
+	\end{titlepage}
+\section{Procedure}
+\input{./procedure/procedure.tex}
+\section{Results and Analysis}
+\subsection{Transient Response of Diodes}
+\input{./results_and_analysis/dtr.tex}
+\subsection{Full-Wave Bridge Rectifier}
+\input{./results_and_analysis/fwr.tex}
+\section{Discussion}
+\subsection{Transient Response of Diodes}
+\input{./discussion/dtr_discussion.tex}
+\subsection{Full-Wave Bridge Rectifier}
+\input{./discussion/fwr_discussion.tex}
+\section{Appendix}
+The following script is used to generate the theoretical pn-junction diode current plot in figure (\ref{fig:diode_current}):
+\lstinputlisting[breaklines]{./scripts/diode_current.py}
+The following script is used to generate the theoretical pn-junction diode voltage plot in figure (\ref{fig:diode_voltage}):
+\lstinputlisting[breaklines]{./scripts/diode_voltage.py}
+The following script is used to generate the theoretical full-wave recitifer plot in figure (\ref{fig:expected_out_vs_in_fwr}):
+\lstinputlisting[breaklines]{./scripts/full_wave_rect.py}
+The following script is used to generate tables (\ref{tab:peak_n_trough}) and (\ref{tab:theory_vs_practice}):
+\lstinputlisting[breaklines]{./scripts/fwr_data.py}
+Lastly, this script is used to generate figure (\ref{fig:ideal_vs_shock}):
+\lstinputlisting[breaklines]{./scripts/gen_ideal_diode.py}
+\section{References}
+\begin{enumerate}
+	\item \label{ref:schottky} \url{https://tex.stackexchange.com/questions/236359/making-a-list-of-websites}
+	\item \label{ref:schottky2} \url{http://www.radio-electronics.com/info/data/semicond/schottky_diode/schottky_barrier_diode.php}
+\end{enumerate}
+\end{document}

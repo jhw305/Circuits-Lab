@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{stackrel}
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{url}
+\title{Lab 4 Prelab}
+\author{Roman Parise}
+\date{\today}
+\geometry{top=5mm}
+\begin{document}
+\maketitle
+\section{Objective}
+\scriptsize{
+Students are to build a circuit with a resistor, a diode, and a source voltage in series. The voltage drop over each component is measured with a voltmeter. The resistor's voltage drop is proportional to the current through the diode by Ohm's Law. So, the voltmeter over the resistor is used to characterize the diode's current, whereas the voltmeter over the diode is used to characterize its voltage. These are measured over a range of source voltages. Using the voltmeters to measure current and voltage over the diodes, the IV curve is determined. The breakdown voltage is then estimated by reverse biasing the diode (assuming the value is below -16V or so).
+
+In the next part of the experiment, students characterize a silicon PIN photodiode. The diode is to be tested in the forward, reverse, and zero bias states. In particular, students should take note of the current in each of the three states. Students then determine which of the states is best for power generation.
+}
+\section{Expected Results}
+\scriptsize{
+In the first part of the experiment, the diode's IV curve is expected to roughly obey the ideal diode equation:
+
+\begin{equation}
+	\label{eq:ideal_diode}
+	I = I_{0} (e^{\frac{qV}{nk_{B}T}} - 1)
+\end{equation}
+
+Here, $I_{0}$ is the reverse saturation current, $V$ is the applied voltage, $n$ is known as the ideality factor, $T$ is temperature, $k_{B}$ is Boltzmann's constant, and $q$ is the elementary charge. When heavily forward biased, the diode essentially varies exponentially with the applied forward voltage:
+
+\begin{equation}
+	\label{eq:fwd_bias_approx}
+	I = I_{0} (e^{\frac{qV}{nk_{B}T}} - 1) \stackrel{V \gg 0}{\approx} I_{0} e^{\frac{qV}{nk_{B}T}}
+\end{equation}
+
+When reverse biased, the $-1$ term dominates in magnitude, and the current essentially reduces to the reverse saturation current $I_{0}$:
+
+\begin{equation}
+	\label{eq:rev_bias_approx}
+	I = I_{0} (e^{\frac{qV}{nk_{B}T}} - 1) \stackrel{V \ll 0}{\approx} -I_{0}
+\end{equation}
+
+The diode can be one of two types, each with different breakdown characteristics. If the diode is a Zener diode, the breakdown voltage is at a relatively low point. However, if the diode still does not break down at -16V, then it is likely an avalanche diode.
+
+The second part of the experiment deals with a photodiode. Traditional diodes, which are most likely the ones tested in the first part of the experiment, are packaged in such a way that the pn-junction is covered from incident light. This way, the electrical properties of the junction are preserved and not affected by incident light. When this protective packaging around the junction is removed, a photodiode is formed.
+
+Photons at a frequency high enough that their energy exceeds the bandgap energy of the semiconductor material used in the pn-junction excite electrons from the valence band into the conduction band. The electric field in the depletion region then causes the excited electron to move in the reverse bias direction. Thus, a reverse bias current is formed when the circuit is closed through a load. The photoexcitation of electrons in the photodiode's depletion layer then drives this reverse bias current through the load, supplying it with power. When the diode is zero biased, some degree of power generation in this manner should be observed.
+
+The wider the depletion layer, the more area in which excitable electrons are exposed to light. This is why the PIN diode is used instead of a typical pn-junction diode. The PIN diode contains an intrinsic semiconductor layer between the n-type and p-type layers. PIN diodes tend to have a wider depletion region than typical pn-junction diodes. Thus, they are able to absorb more photons and produce more power. If the diode is forward biased, this depletion layer decreases and not as much power is generated. This is not the desired state for power generation.
+
+The reverse biased diode is a more interesting case. The depletion layer is widened because of the voltage supplied by the source. If a large number of photons end up hitting the wider depletion layer, the diode could produce significantly more power, exceeding the power supplied by the reverse-biasing source. Thus, the net effect could be more power generation. However, if there are not enough photons to hit the widened depletion layer, then power spent widening the depletion layer is wasted. In the extreme case, no photons are present, and the diode's reverse saturation current runs through the circuit, causing the reverse-biasing source to simply waste power through the load. The results from the lab will determine whether reverse-biasing generates more power than zero-biasing.
+}
+
+\section{References}
+\scriptsize{
+\begin{enumerate}
+	\item \url{https://courses.engr.illinois.edu/ece110/fa2017/content/courseNotes/files/?photodiodes}
+	\item \url{http://www.ele.uri.edu/Courses/ele432/spring08/photo_detectors.pdf}
+	\item \url{https://www.electronics-notes.com/articles/electronic_components/diode/pin-diode.php}
+\end{enumerate}
+}
+
+\end{document}
