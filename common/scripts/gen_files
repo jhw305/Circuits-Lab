@@ -7,8 +7,13 @@ tex_ext=.tex
 
 content_fname=$fname$tex_ext
 wrap_fname=$fname\_wrap$tex_ext
-preamble_fname=$fname\_preamble$tex_ext
+preamble_fname=../preamble.tex
 
 touch $content_fname
 touch $wrap_fname
-touch $preamble_fname
+
+echo "\\documentclass{article}" >> $wrap_fname
+echo "\\input{$preamble_fname}" >> $wrap_fname
+echo "\\begin{document}" >> $wrap_fname
+echo "\\input{$content_fname}" >> $wrap_fname
+echo "\\end{document}" >> $wrap_fname
