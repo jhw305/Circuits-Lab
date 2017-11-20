@@ -1,0 +1,8 @@
+The full-wave bridge rectifier results align quite well with theory. However, the peak measurement does have slightly more error than the trough measurement. These errors are a result of either an asymmetry in the source voltage or an asymmetry in the threshold voltages of the diodes. The former is not possible to prove due to the fact that the source voltage is not probed in the experiment. However, if the sinusoidal source voltage's peak is higher than the reported value on the power supply, this would explain why the measured voltage for the output voltage's peak is higher than expected. Furthermore, the diodes may differ in threshold voltage. Differences in threshold voltage are a result of either temperature, material, or doping variations:
+
+\begin{equation}
+	\label{eq:vbi}
+	V_{bi} = \frac{k_BT}{q} ln( \frac{N_AN_D}{(n_{i}(T))^2} )
+\end{equation}
+
+Temperature is likely not the cause since the temperature in the room in which the experiment is conducted is essentially uniform, which would not explain the asymmetry in the measurements. A better explanation is that the doping concentrations vary slightly from diode to diode due to slight nonidealities in the manufacturing process. So, the diodes along the enabled path when the source voltage is positive could have slightly lower threshold voltages than the diodes along the other path.
