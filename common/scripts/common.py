@@ -4,6 +4,8 @@
 # Common functions for data processing
 import csv
 import matplotlib.pyplot as plt
+import numpy as np
+from scipy import stats
 
 WRITE="w"
 COMMA_DELIMITER=","
@@ -42,7 +44,16 @@ def save_plot_xy( fname , x_list , y_list ) :
 	plt.savefig( fname )
 	plt.clf( )
 
+def save_plot_xy_with_best_fit_line( fname , x_list , y_list ) :
+	plt.plot( x_list , y_list )
+	m , b , r , p , e = stats.linregress( x_list , y_list )
+	x = np.linspace( min( x_list ) , max( x_list ) , 100 * len( x_list ) )
+	y = m * x  + b
+	plt.plot( x , y )
+	plt.savefig( fname )
+	plt.clf( )
+
 if __name__ == "__main__" :
 	rows = read_csv_rows( "test.csv" )
 	print( rows )
-	save_plot_xy( "test_file.png" , rows[ 0 ] , rows[ 1 ] )
+	save_plot_xy_with_best_fit_line( "test_file.png" , rows[ 0 ] , rows[ 1 ] )

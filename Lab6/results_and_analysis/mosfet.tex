@@ -1,11 +1,11 @@
-The source and drain of an n-channel MOSFET are both formed by a metal-semiconductor junction with an n-type region in a p-type substrate. These regions exist in a p-type substrate. The gate is formed by placing an insulating oxide between a metal contact and the aforementioned p-type substrate. When a high voltage is applied at the gate, this attracts attracts excess electrons toward the gate. The electrons cannot leave the substrate due to the insulating oxide layer. So, they simply build up just below the oxide. The number of electrons in this region, known as the channel, increases considerably. However, by the principle of low-level injection ($\delta p$ << $p$ under a perturbation, the applied voltage in this case), the number of holes in the p-type substrate does not change considerably. The conductivity of a semiconductor is given by equation (\ref{eq:cond_semi}):
+The source and drain of an n-channel MOSFET are both formed by a metal-semiconductor junction with an n-type region in a p-type substrate. The gate is formed by placing an insulating oxide between a metal contact and the aforementioned p-type substrate. When a high voltage is applied at the gate, this attracts attracts excess electrons toward the gate. The electrons cannot leave the substrate due to the insulating oxide layer. So, they simply build up just below the oxide. The number of electrons in this region, known as the channel, increases considerably. However, by the principle of low-level injection ($\delta p \ll p$ under a perturbation, the applied voltage in this case), the number of holes in the p-type substrate does not change considerably. The conductivity of a semiconductor is given by equation (\ref{eq:cond_semi}):
 
 \begin{equation}
 	\label{eq:cond_semi}
 	\sigma = q(\mu_n n + \mu_p p)
 \end{equation}
 
-Here, $\sigma$ is the conductivity, $q$ is the elementary charge, $\mu_n$ is the electron mobility, $\mu_p$ is the hole mobility, $n$ is the electron concentration, and $p$ is the hole concentration. Since $p$ does not change very much, but $n$ increases considerably, $\sigma$ increases. At a certain point, the channel essentially acts like a conductor. Electrons can now move freely between the source and drain terminals (reference - mosfet\_op).
+Here, $\sigma$ is the conductivity, $q$ is the elementary charge, $\mu_n$ is the electron mobility, $\mu_p$ is the hole mobility, $n$ is the electron concentration, and $p$ is the hole concentration. Since $p$ does not change very much, but $n$ increases considerably, $\sigma$ increases. At a certain point, the channel essentially acts like a conductor. Electrons can now move freely between the source and drain terminals (1).
 
 The situation is actually a bit more complicated. Depletion regions exist between the source and the gate and the gate and the drain. When $V_{GS}$ exceeds a threshold voltage, call it $V_{Th}$, the depletion region is overcome, much like in a pn-junction diode. Since the channel acts as a conductor, electrons, the majority carrier in the source, can now flow freely into the channel between the source and drain terminals. When $V_{GS} \leq V_{Th}$, the diode is "off" and is said to be in the cut-off region. The expected $I_D$ versus $V_{GS}$ plot is shown below. $I_D$ is essentially $0$ in the cut-off region and "turns on" after a certain threshold:
 
@@ -13,7 +13,7 @@ The situation is actually a bit more complicated. Depletion regions exist betwee
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/id_vs_vgs.PNG}
+	\includegraphics[scale=0.75]{./images/id_vs_vgs.PNG}
 	\caption{Expected $I_D$ versus $V_{GS}$ Curve for an n-Channel MOSFET}
 	\label{fig:id_vs_vgs}
 \end{figure}
@@ -22,7 +22,7 @@ The situation is actually a bit more complicated. Depletion regions exist betwee
 
 Once the electrons have migrated from the source to the channel, the drain-source voltage, or $V_{DS}$ becomes important. Assume the MOSFET is in the "on" state in which $V_{GS} > V_{Th}$. The channel conductance is essentially constant and given by equation (\ref{eq:cond_semi}). Thus, the channel can be modeled as a simple resistor. By increasing $V_{D}$ and therefore $V_{DS}$, the drain can attract electrons more strongly, causing a greater electron current to flow from the drain. So, for small variations in $V_{DS}$, $I_{D}$ increases approximately linearly with $V_{DS}$. This is known as the triode region and occurs when $V_{DS} < V_{GS} - V_{Th}$.
 
-However, this trend cannot continue indefinitely. At a certain point, electrons are so strongly attracted to the drain, that the channel loses many electrons, causing its conductivity to drop. This causes the drain current $I_{D}$ to taper off since the effect of attracting electrons to the drain by increasing $V_{DS}$ is counteracted by the drop in channel conductance. In integrated circuits, the channel width is small enough that the electrons are limited by velocity saturation, causing the same effect (reference - vel\_sat). This is known as the saturation region and occurs when $V_{GS} < V_{Th}$. However, with a sufficiently high $V_{DS}$, the voltage may be high enough to produce a strong enough electric field to force electrons from the source through the channel to the drain (reference - lab\_manual).
+However, this trend cannot continue indefinitely. At a certain point, electrons are so strongly attracted to the drain, that the channel loses many electrons, causing its conductivity to drop. This causes the drain current $I_{D}$ to taper off since the effect of attracting electrons to the drain by increasing $V_{DS}$ is counteracted by the drop in channel conductance. In integrated circuits, the channel width is small enough that the electrons are limited by velocity saturation, causing the same effect (2). This is known as the saturation region and occurs when $V_{GS} - V_{Th} < V_{DS}$ (3). However, with a sufficiently high $V_{DS}$, the voltage may be high enough to produce a strong enough electric field to force electrons from the source through the channel to the drain.
 
 When $V_{GS}$ is increased, a greater electron current flows from the channel to the source. Therefore, the diode can operate in the triode region for longer because it can now draw a larger electron current from the drain to the channel. The saturation region still occurs, but at a higher drain current $I_D$. The expected plot is below with higher values of $V_{GS}$ reaching higher saturation drain currents $I_D$.
 
@@ -32,7 +32,7 @@ When $V_{GS}$ is increased, a greater electron current flows from the channel to
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/id_vs_vds.PNG}
+	\includegraphics[scale=0.75]{./images/id_vs_vds.PNG}
 	\caption{Expected $I_D$ versus $V_{DS}$ Curve for an n-Channel MOSFET}
 	\label{fig:id_vs_vds}
 \end{figure}
@@ -72,7 +72,7 @@ Note that gate voltages can be obtained by probing the pins in the MOSFET packag
 	\centering
 	\caption{MOSFET $I_D$ versus $V_{GS}$ Data}
 	\label{tab:mosfet_id_vgs}
-	\csvautotabular{../tables/mosfet_id_vgs.csv}
+	\csvautotabular{./tables/mosfet_id_vgs.csv}
 \end{table}
 
 \FloatBarrier
@@ -85,7 +85,7 @@ Note that gate voltages can be obtained by probing the pins in the MOSFET packag
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/mosfet_id_vgs.PNG}
+	\includegraphics[scale=0.75]{./images/mosfet_id_vgs.PNG}
 	\caption{MOSFET $I_D$ versus $V_{GS}$ Plot}
 	\label{fig:mosfet_id_vgs}
 \end{figure}
@@ -102,10 +102,12 @@ To acquire the $I_D$ versus $V_{DS}$ plot, $V_1$ is fixed at about $2.3$\si{\vol
 	\centering
 	\caption{MOSFET $I_D$ versus $V_{DS}$ Data}
 	\label{tab:mosfet_id_vds}
-	\csvautotabular{../tables/mosfet_id_vds.csv}
+	\csvautotabular{./tables/mosfet_id_vds.csv}
 \end{table}
 
-(\footnotesize $V_1$ is fixed at $2.3$\si{\volt}.}
+\FloatBarrier
+
+{\footnotesize $V_1$ is fixed at $2.3$\si{\volt}.}
 
 \FloatBarrier
 
@@ -113,7 +115,7 @@ To acquire the $I_D$ versus $V_{DS}$ plot, $V_1$ is fixed at about $2.3$\si{\vol
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/mosfet_id_vds.PNG}
+	\includegraphics[scale=0.75]{./images/mosfet_id_vds.PNG}
 	\caption{MOSFET $I_D$ versus $V_{DS}$ Plot}
 	\label{fig:mosfet_id_vds}
 \end{figure}
@@ -123,9 +125,3 @@ To acquire the $I_D$ versus $V_{DS}$ plot, $V_1$ is fixed at about $2.3$\si{\vol
 The $I_D$ versus $V_{DS}$ curve is quite close to what is expected. The curve starts off linear when it is in the saturation region. The increased drain voltage relative to the source voltage is similar to increasing the voltage drop over an Ohmic resistor with the channel acting as the resistor. The voltage and current follow a linear relationship. The steepness of the curve reflects the low channel resistance. However, at a certain point, the drain voltage $V_{D}$ becomes very large relative to the gate voltage $V_{G}$. As a result, too many electrons flow to the drain, decreasing the channel's conductance and causing the curve to level off. The growth of the curve at the end is likely due to the very high voltage driving electrons to the drain as described above.
 
 Because $V_1$ is fixed at $2.3$\si{\volt}, $V_{GS} = 2.3$\si{\volt}. The MOSFET operates in the triode region for $V_{DS} < V_{GS} - V_{Th} \approx 2.3$ \si{\volt} $ - 2$ \si{\volt} $ = 0.3$ \si{\volt} assuming $V_{Th} \approx 2$ \si{\volt}. The triode region, though visible, is quite short lived due to the fact that $V_{GS} - V_{Th}$ is only greater than $V_{DS}$ at the very beginning of the curve. As a result, it quickly enters the saturation region. Increasing $V_{GS}$ would prolong the triode region and possibly flatten out the curve afterward.
-
-%Refs
-%https://coefs.uncc.edu/dlsharer/files/2012/04/J3b.pdf - mosfet_op
-%https://inst.eecs.berkeley.edu/~ee40/su05/lectures/lecture13.pdf
-%lab manual
-
