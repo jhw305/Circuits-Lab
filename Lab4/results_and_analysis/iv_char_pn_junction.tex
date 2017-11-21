@@ -165,3 +165,23 @@ If the reverse-bias voltage becomes sufficiently negative, then the diode breaks
 \end{table}
 
 \FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.4]{../images/pn_diode.PNG}
+	\caption{Measured IV Characteristic Curve of pn-Junction Diode}
+	\label{fig:pn_iv_measured}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{../images/pn_diode_turn_on.PNG}
+	\caption{Measured Turn-on Voltage of pn-Junction Diode}
+	\label{fig:pn_iv_turn_on}
+\end{figure}
+
+\FloatBarrier
+
+Taking the calculated currents and voltages over the diode from Table \ref{tab:pn-junction-results}, Figure \ref{fig:pn_iv_measured} is generated. Zooming in to the forward bias region of the curve (Figure \ref{fig:pn_iv_turn_on}), turn-on voltage is observed to be approximately $0.6 V$, which is well within typical expectation. The breakdown voltage is too large to be observed in the DC voltage sweep as no hint of breakdown is indicated by the curve in Figure \ref{fig:pn_iv_measured}, but the breakdown voltage is expected to be greater than $100 V$ (\ref{ref:pn-plot-src}).
