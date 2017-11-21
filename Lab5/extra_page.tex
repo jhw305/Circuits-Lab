@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{placeins}
+\usepackage{graphics}
+\usepackage{csvsimple}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{url}
+\begin{document}
+\section{test}
+\section{test}
+\newpage
+results: \\
+
+\FloatBarrier
+
+\begin{table}[h!]
+	\centering
+	\caption{Theoretical vs. Measured Results for Full-Wave Rectifier}
+	\label{tab:theory_vs_practice}
+	\csvautotabular{./tables/fwr_err.csv}
+\end{table}
+
+\FloatBarrier
+
+\section{Discussion}
+\subsection{Transient Response of Diodes}
+\input{./dtr_discussion.tex}
+\subsection{Full-Wave Bridge Rectifier}
+\input{./discussion/fwr_discussion.tex}
+\section{Appendix}
+The following script is used to generate the theoretical pn-junction diode current plot in figure (2):
+\lstinputlisting[breaklines]{./scripts/diode_current.py}
+The following script is used to generate the theoretical pn-junction diode voltage plot in figure (3):
+\lstinputlisting[breaklines]{./scripts/diode_voltage.py}
+The following script is used to generate the theoretical full-wave recitifer plot in figure (15):
+\lstinputlisting[breaklines]{./scripts/full_wave_rect.py}
+The following script is used to generate tables (3) and (4):
+\lstinputlisting[breaklines]{./scripts/fwr_data.py}
+Lastly, this script is used to generate figure (10):
+\lstinputlisting[breaklines]{./scripts/gen_ideal_diode.py}
+\section{References}
+\begin{enumerate}
+	\item \label{ref:schottky} \url{https://tex.stackexchange.com/questions/236359/making-a-list-of-websites}
+	\item \label{ref:schottky2} \url{http://www.radio-electronics.com/info/data/semicond/schottky_diode/schottky_barrier_diode.php}
+\end{enumerate}
+\end{document}
+\end{document}
