@@ -1,0 +1,61 @@
+\subsubsection{Gain and Frequency Response of Common-Emitter Amplifier}
+This portion of the experiment demonstrates the amplification behavior of the inverter, also known as a common-emitter amplifier. Its properties are characterized by analyzing its gain and frequency response. \\
+% Initial settings
+The amplifier's input signal has a $200$\si{\milli\volt}pp amplitude and an $800$\si{\milli\volt}pp offset.
+% At what point do distortions occur?
+When the amplitude is increased to $400$\si{\milli\volt}pp, distortions occur in which the waveform becomes clipped. This is because the output waveform is amplified, but its peak and trough voltages are limited by the supply and ground voltages, respectively.
+% Explanation of low-pass filtering with circuit diagram
+The amplifier does not have a perfect frequency response due to the structure of the BJT used. The BJT has two pn-junctions, one between the collector and the base and one between the base and the emitter. Due to a variety of effects, the junctions each have an associated capacitance. At DC, current can easily flow through the BJT. Thus, these capacitances are not accurately modeled using a series capacitance since that would simply charge. A better model uses parallel capacitances, like in figure (\ref{fig:bjt_circ}) below:
+
+\FloatBarrier
+% NOTE: Circuit schematics MUST have labeled values.
+\begin{figure}[h!]
+	\centering
+	\caption{BJT Measurement Circuit}
+	\label{fig:bjt_circ}
+	\begin{circuitikz}
+		\draw
+		( 0 , 0 ) node[ npn ] (my_npn) {}
+		(my_npn.B) to [ R ] ++( -2 , 0 ) coordinate(r_in)
+		(r_in) to [ battery , v<=$V_1$ ] ++( 0 , -2 ) coordinate(gnd_1)
+		(r_in) node[label={ [font=\normalsize] above : $V_{in}$ } ] { }
+		(gnd_1) node[ ground ] (my_gnd_1) {}
+		(my_npn.E) node[ ground ] (my_gnd_2) {}
+		(my_npn.C) to [ R ] ++( 0 , 2 ) coordinate(r_c)
+		(r_c) to [ battery , v<=$V_2$ ] ++( 2 , 0 ) coordinate(gnd_3)
+		(gnd_3) node[ ground ] (my_gnd_3) {}
+		(my_npn.C) to [ C ] coordinate(my_npn.B)
+		(my_npn.E) to [ C ] coordinate(my_npn.B)
+		(my_npn.C) node[label={ [font=\normalsize] above : $V_{out}$ } ] { }
+		;
+	\end{circuitikz}
+\end{figure}
+
+\FloatBarrier
+
+At low frequencies, the parasitic capacitances acts as broken circuits. Thus, the circuit reduces to an ideal common-emitter amplifier. However, at higher frequencies, signals can short through the parasitic capacitances. Specifically, a short path exists between ground and the collector, making $V_{out} = 0$\si{\volt}. Thus, as frequency increases, the output voltage for a given input voltage, and therefore the gain, should drop. This is because gain is defined as $\frac{V_{out}}{V_{in}}$ [\ref{ref:bjt_cap}].
+
+% Gain at 10kHz
+At $10$\si{\kilo\hertz}, the input voltage is the starting value of $200$\si{\milli\volt}pp, and the output voltage is 1.63\si{\volt}pp. Thus, the gain is $8.15$.
+% How do you measure higher cutoff frequency?
+Since parasitic capacitances should drop the gain at higher frequencies, a cutoff frequency can be defined. The cutoff frequency $f_c$ is the frequency at which the output voltage is $\frac{1}{\sqrt{2}}$ of the peak output voltage for a given input voltage. So, in this case, $f_c$ is the frequency at which the output voltage is $\frac{1.63}{\sqrt{2}}$ \si{\volt}pp $ \approx 1.15$ \si{\volt}pp. This can be measured by simply increasing the frequency until an output voltage amplitude of $1.15$ \si{\volt}pp occurs.
+% What was our measured cutoff frequency?
+Using this method, the cutoff frequency $f_c \approx 150$\si{\kilo\hertz} is obtained.
+% Gain at cutoff frequency
+At this point, the gain is approximately $5.75$.
+% Table with gains at different frequencies
+\FloatBarrier
+\begin{table}[h!]
+	\centering
+	\caption{Common-Emitter Amplifier Frequency Response}
+	\label{tab:cea_response}
+	\csvautotabular{../tables/amplifier_gains.csv}
+\end{table}
+\FloatBarrier
+\subsubsection{Square Wave Response of Common-Emitter Amplifier}
+% Output signal vs square wave input
+% Why is there distortion
+
+% References
+References
+\url{http://www.ittc.ku.edu/~jstiles/412/handouts/5.8\%20BJT\%20Internal\%20Capacitances\%20and\%20high\%20frequency\%20model/section\%205_8\%20BJT\%20Internal\%20Capacitances\%20lecture.pdf} %ref:bjt_cap
