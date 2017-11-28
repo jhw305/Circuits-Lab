@@ -7,13 +7,13 @@ When the amplitude is increased to $400$\si{\milli\volt}pp, distortions occur in
 \FloatBarrier
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.25]{../images/amplifier_10ghz_clamping.jpeg}
+	\includegraphics[scale=0.25]{./images/amplifier_10ghz_clamping.jpeg}
 	\caption{Common-Emitter Amplifier $10$\si{\kilo\hertz} Distortions}
 	\label{fig:clamping}
 \end{figure}
 \FloatBarrier
 % Explanation of low-pass filtering with circuit diagram
-The amplifier does not have a perfect frequency response due to the structure of the BJT used. The BJT has two pn-junctions, one between the collector and the base and one between the base and the emitter. Due to a variety of effects, the junctions each have an associated capacitance. At DC, current can easily flow through the BJT. Thus, these capacitances are not accurately modeled using a series capacitance since that would simply charge. A better model uses parallel capacitances, like in figure (\ref{fig:bjt_circ}) below:
+The amplifier does not have a perfect frequency response due to the structure of the BJT used. The BJT has two pn-junctions, one between the collector and the base and one between the base and the emitter. Due to a variety of effects, the junctions each have an associated capacitance. At DC, current can easily flow through the BJT. Thus, these capacitances are not accurately modeled using a series capacitance since that would simply charge. A better model uses parallel capacitances, like in figure (\ref{fig:hf_bjt}) below:
 
 \FloatBarrier
 % NOTE: Circuit schematics MUST have labeled values.
@@ -51,12 +51,12 @@ The amplifier does not have a perfect frequency response due to the structure of
 
 \FloatBarrier
 
-At low frequencies, the parasitic capacitances acts as broken circuits. Thus, the circuit reduces to an ideal common-emitter amplifier. However, at higher frequencies, signals can short through the parasitic capacitances. Specifically, a short path exists between ground and the collector, making $V_{out} = 0$\si{\volt}. Thus, as frequency increases, the output voltage for a given input voltage, and therefore the gain, should drop. This is because gain is defined as $\frac{V_{out}}{V_{in}}$ [\ref{ref:bjt_cap}].
+At low frequencies, the parasitic capacitances acts as broken circuits. Thus, the circuit reduces to an ideal common-emitter amplifier. However, at higher frequencies, signals can short through the parasitic capacitances. Specifically, a short path exists between ground and the collector, making $V_{out} = 0$\si{\volt}. Thus, as frequency increases, the output voltage for a given input voltage, and therefore the gain, should drop. This is because gain is defined as $\frac{V_{out}}{V_{in}}$ [1].
 
 % Gain at 10kHz
 At $10$\si{\kilo\hertz}, the input voltage is the starting value of $200$\si{\milli\volt}pp, and the output voltage is 1.63\si{\volt}pp. Thus, the gain is $8.15$.
 % How do you measure higher cutoff frequency?
-Since parasitic capacitances should drop the gain at higher frequencies, a cutoff frequency can be defined. The cutoff frequency $f_c$ is the frequency at which the output voltage is $\frac{1}{\sqrt{2}}$ of the peak output voltage for a given input voltage [\ref{ref:cutoff_freq}]. So, in this case, $f_c$ is the frequency at which the output voltage is $\frac{1.63}{\sqrt{2}}$ \si{\volt}pp $ \approx 1.15$ \si{\volt}pp. This can be measured by simply increasing the frequency until an output voltage amplitude of $1.15$ \si{\volt}pp occurs.
+Since parasitic capacitances should drop the gain at higher frequencies, a cutoff frequency can be defined. The cutoff frequency $f_c$ is the frequency at which the output voltage is $\frac{1}{\sqrt{2}}$ of the peak output voltage for a given input voltage [2]. So, in this case, $f_c$ is the frequency at which the output voltage is $\frac{1.63}{\sqrt{2}}$ \si{\volt}pp $ \approx 1.15$ \si{\volt}pp. This can be measured by simply increasing the frequency until an output voltage amplitude of $1.15$ \si{\volt}pp occurs.
 % What was our measured cutoff frequency?
 Using this method, the cutoff frequency $f_c \approx 150$\si{\kilo\hertz} is obtained.
 % Gain at cutoff frequency
@@ -67,7 +67,7 @@ At this point, the gain is approximately $5.75$.
 	\centering
 	\caption{Common-Emitter Amplifier Frequency Response}
 	\label{tab:cea_response}
-	\csvautotabular{../tables/amplifier_gains.csv}
+	\csvautotabular{./tables/amplifier_gains.csv}
 \end{table}
 \FloatBarrier
 \subsubsection{Square Wave Response of Common-Emitter Amplifier}
@@ -76,7 +76,7 @@ The frequency of the square wave response is set to the cutoff frequency $f_c = 
 \FloatBarrier
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.25]{../images/amplifier_20_duty_cycle.jpeg}
+	\includegraphics[scale=0.25]{./images/amplifier_20_duty_cycle.jpeg}
 	\caption{Common-Emitter Amplifier Square Wave Response 20\% Duty Cycle}
 	\label{fig:twenty_perc_duty_cycle}
 \end{figure}
@@ -87,7 +87,7 @@ When the duty cycle is increased to 50\%, the same physical principles still app
 \FloatBarrier
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.25]{../images/amplifier_50_duty_cycle.jpeg}
+	\includegraphics[scale=0.25]{./images/amplifier_50_duty_cycle.jpeg}
 	\caption{Common-Emitter Amplifier Square Wave Response 50\% Duty Cycle}
 	\label{fig:fifty_perc_duty_cycle}
 \end{figure}
@@ -95,8 +95,3 @@ When the duty cycle is increased to 50\%, the same physical principles still app
 The output waveform waits for a time delay and then begins to develop. However, because the duty cycle is longer, the input signal remains low for a shorter period of time. Thus, the output voltage does not have a sufficient amount of time to fully develop and is cut short when the rising edge of the input occurs. \\
 % Why is there distortion
 % TODO Add values to circuit schematics. TODO Discussion. TODO Tell Jason to put values in circuit schematics and explain why inverting amplifier works. Send him your prelab which explains why.
-
-% References
-References \\
-\url{http://www.ittc.ku.edu/~jstiles/412/handouts/5.8\%20BJT\%20Internal\%20Capacitances\%20and\%20high\%20frequency\%20model/section\%205_8\%20BJT\%20Internal\%20Capacitances\%20lecture.pdf} \\ %ref:bjt_cap
-\url{http://alignment.hep.brandeis.edu/Lab/Filter/Filter.html} \\ %ref:cutoff_freq

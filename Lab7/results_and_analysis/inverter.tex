@@ -1,5 +1,3 @@
-\subsubsection{Output Signal of Inverter Circuit}
-
 The inverter circuit is constructed using a BJT. The input and output signals of the BJT inverter circuit are analyzed to determine its unique properties. The output signal is taken from the collector of the BJT in the circuit, which can be visualized below:
 
 \FloatBarrier
@@ -12,20 +10,17 @@ The inverter circuit is constructed using a BJT. The input and output signals of
 		( 0 , 0 ) node[ npn ] (my_npn) {$V_{out}$}
 		
 		% Base
-		(my_npn.B) to [ short ] +( -2 , 0 ) coordinate(r_in)
-		(r_in) to [ R={$10k\Omega$} ] ++( -2 , 0 ) coordinate(v_in)
+		(my_npn.B) to [ R={$10k\Omega$} ] ++( -2 , 0 ) coordinate(v_in)
 		(v_in) to [ sqV , v<=$V_{in}$ ] ++( 0 , -2 ) coordinate(gnd_1)
 		(gnd_1) node[ ground ] (my_gnd_1) {}
 		
 		% Collector
-		(my_npn.C) to [ short ] ++( 0 , 2 ) coordinate(r_c)
-		(r_c) to [ R={$1k\Omega$} ] ++( 0 , 2 ) coordinate(vcc)
+		(my_npn.C) to [ R={$1k\Omega$} ] ++( 0 , 2 ) coordinate(vcc)
 		(vcc) to [ battery , v<=$V_{cc}$ ] ++( 2 , 0 ) coordinate(gnd_3)
 		(gnd_3) node[ ground ] (my_gnd_3) {}
 		
 		% Emitter
-		(my_npn.E) to [ short ] ++( 0 , -2 ) coordinate(e_gnd)
-		(e_gnd) node[ ground ] (my_e_gnd) {}
+		(my_npn.E) node[ ground ] (my_e_gnd) {}
 		
 		;
 	\end{circuitikz}
@@ -38,7 +33,7 @@ By supplying the inverter with a $10$\si{\kilo\hertz} square input signal with f
 \FloatBarrier
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.25]{../images/inverter_input_output.jpeg}
+	\includegraphics[scale=0.25]{./images/inverter_input_output.jpeg}
 	\caption{Input and Output Signals of BJT Inverter}
 	\label{fig:inverter_in_out}
 \end{figure}
@@ -57,7 +52,7 @@ By zooming in to the output signal, the rise and fall time of the signal can be 
 \FloatBarrier
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.24]{../images/inverter_tr.jpeg}
+	\includegraphics[scale=0.24]{./images/inverter_tr.jpeg}
 	\caption{Rise Time of Output Signal}
 	\label{fig:inverter_tr}
 \end{figure}
@@ -68,7 +63,7 @@ The rise time is found by measuring the difference in time of when the signal re
 \FloatBarrier
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.34]{../images/inverter_tf.jpeg}
+	\includegraphics[scale=0.34]{./images/inverter_tf.jpeg}
 	\caption{Fall Time of Output Signal}
 	\label{fig:inverter_tf}
 \end{figure}
@@ -81,7 +76,7 @@ The delay times between the input and output signals for the saturation to cutof
 \FloatBarrier
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.26]{../images/inverter_td.jpeg}
+	\includegraphics[scale=0.26]{./images/inverter_td.jpeg}
 	\caption{Delay Time for Saturation to Cutoff Transition}
 	\label{fig:inverter_td}
 \end{figure}
@@ -90,3 +85,12 @@ The delay times between the input and output signals for the saturation to cutof
 The delay time, $t_d$, for the saturation to cutoff transition of the BJT is measured to be $5.64$\si{\micro\second}. $t_d$ for the cutoff to saturation transition of the BJT is very close to the value found for $t_f$, and is approximately $130$\si{\nano\second}. The $t_d$ value for the saturation to cutoff transition is the more significant one by a large margin.
 
 While the delay times are large for the BJT inverter circuit, they are still reasonable at $10$\si{\kilo\hertz}. This is because at $10$\si{\kilo\hertz}, the period of the wave is $0.1$\si{\milli\second}. The maxima and minima of a square wave at that frequency would then have a duration of $50$\si{\micro\second} which is significantly larger than the delay times, meaning their effects are relatively minimal. However, for high frequency applications, the BJT inverter circuit will fail. If the input signal has a frequency of $3$\si{\giga\hertz}, then the period of the wave would be $0.333$\si{\nano\second}. The delay times of the BJT inverter are orders of magnitudes larger than the period of the wave. Inversion of the input signal would not be observed because the slow switching time of the BJT.
+
+\FloatBarrier
+\begin{table}[h!]
+	\centering
+	\caption{Inverter Times}
+	\label{tab:inverter_times}
+	\csvautotabular{./tables/inverter_times.csv}
+\end{table}
+\FloatBarrier
