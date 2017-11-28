@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{listings}
+\input{preamble.tex}
+\begin{document}
+	\begin{titlepage}
+		\centering
+		\Huge{Experiment 6} \\
+		\huge{Characterization of Bipolar Junction Transistors and MOSFETs} \\
+		\vspace{1cm}
+		\large{EECS 170A - Lab Bench \#1} \\
+		\large{\today} \\
+		\vspace{1cm}
+		\normalsize{Roman Parise (59611417)} \\
+		\normalsize{Krishan Solanki (38154673)} \\
+		\normalsize{Jason Wang (42873192)} \\
+	\end{titlepage}
+\section{Procedure}
+\input{./procedure/procedure.tex}
+\section{Bipolar Junction Transistor (BJT)}
+\input{./results_and_analysis/bjt.tex}
+\section{Metal-Oxide Semiconductor Field Effect Transistor}
+\input{./results_and_analysis/mosfet.tex}
+\section{Discussion}
+\subsection{Bipolar Junction Transistor (BJT)}
+\input{./discussion/bjt_discussion.tex}
+\subsection{Metal-Oxide Semiconductor Field Effect Transistor (MOSFET)}
+\input{./discussion/mosfet_discussion.tex}
+\section{Appendix}
+The following script is used to generate the expected $I_D$ versus $V_{DS}$ curve for the MOSFET:
+\lstinputlisting[breaklines]{./scripts/id_vs_vds.py}
+The following script is used to generate the expected $I_D$ versus $V_{GS}$ curve for the MOSFET:
+\lstinputlisting[breaklines]{./scripts/id_vs_vgs.py}
+The following script is used to generate the tables and figures for the MOSFET:
+\lstinputlisting[breaklines]{./scripts/mosfet_data.py}
+\section{References}
+1. \url{https://coefs.uncc.edu/dlsharer/files/2012/04/J3b.pdf} \\
+2. \url{https://inst.eecs.berkeley.edu/~ee40/su05/lectures/lecture13.pdf} \\
+3. Lab manual \\
+\end{document}

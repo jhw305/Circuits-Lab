@@ -1,0 +1,42 @@
+fall time and rise time - 10 to 90%
+time delay - 50%
+one plot with input and output on same plot
+
+10kHz
+Amplitude - 5V , 10Vpp
+High impedance
+
+Does it work for 3GHz? Definitely not!
+
+100% of output - 4.85V (top - 4.925V , bottom - 0.075V)
+100% of input - 5.00V
+
+Inverter
+
+Rise time
+---------
+tr - 0.780us
+10% - 0.56V
+90% - 4.44V
+
+Delay (rising edge)
+-----
+td - 5.64us
+
+Fall time
+---------
+tf - 0.126us
+
+Amplifier
+------------------------------------------------------
+200mVpp - amplitude
+offset - 800mVpp
+
+Distortions occur at 400mVpp and beyond
+Peak - 1.63Vpp (8.15 gain)
+Upper cutoff - 150kHz (1.63/sqrt(2)  = 1.15Vpp) (5.75 gain)
+Lower cutoff - not observed. Essentially constant until upper cutoff
+
+5V square pulse
+150kHz (cutoff)
+50% and 20% duty cycle

@@ -156,7 +156,11 @@ Equating (\ref{eq:res_btwn_probes}) and (\ref{eq:alt_res_btwn_probes}) and letti
 R_s = \frac{\rho}{t} = \frac{ FV }{ I }
 \end{equation}
 
+<<<<<<< HEAD
+If the sheet resistance is acquired, then $\rho$ can be ascertained by simply multiplying $R_s \cdot t$. It should be noted that equation (\ref{eq:sheet_res_vi}) only holds when $s$ is negligible in comparison to the dimensions of the wafer. If the wafer is sufficiently small, then its geometry becomes more important when performing the calculation for equation (\ref{eq:res_btwn_probes}). $F$ ends up being smaller in these cases. [\ref{itm:resistivity_simplification}] % TODO Fix this citation %Why
+=======
 If the sheet resistance is acquired, then $\rho$ can be ascertained by simply multiplying $R_s \cdot t$.
+>>>>>>> 494b9cf178200338efa4240825bd9a6ece61ed2e
 
 % V,I data table with Rs and rho calculations
 
@@ -201,16 +205,42 @@ Note that the theory above can be applied since $d >> s$ (by a factor of about 1
 
 % Linear regression explanation
 
+<<<<<<< HEAD
+The resistance is estimated from one value of current and voltage. However, this is not the most reliable way of performing resistance measurements.
+Equation (\ref{eq:alt_res_btwn_probes}) uses a somewhat naive definition of resistance known as static resistance:
+
+\begin{equation}
+\label{eq:static_res_def}
+R_{static} = \frac{V}{I}
+\end{equation}
+
+Equation (\ref{eq:static_res_def}) can be interpreted as finding the slope of a linear IV-curve. This definition makes two assumptions about the IV-curve of a device. The first is that the point $(I,V) = (0,0)$ exists on the IV-line, which is not necessarily a flawed assumption given that no current through the device produces no voltage drop and vice versa. The second is much stronger, and that is that the IV-curve of the device, the n-type silicon wafer in this case, is linear.
+Dynamic resistance is a more general definition for resistance. It makes no assumption of the IV-curve's form (except perhaps differentiability):
+
+\begin{equation}
+\label{eq:diff_res_def}
+R_{dynamic} = \frac{dV}{dI}
+\end{equation}
+
+A large number of currents can be tested, and the IV-curve can be approximately determined in the lab. Whenever the dynamic resistance at a particular current is needed, numerical methods can be used to approximate the derivative in equation (\ref{eq:diff_res_def}). Though this approach might be more accurate than the one taken in equation (\ref{eq:static_res_def}), it overcomplicates the model of resistance in an unnecessary way [\ref{itm:electromagnetic_compatibility}].
+Ideally, there would be a method of capturing and averaging out nonlinear variations of resistance along an IV-curve, while still keeping a simple linear model. The best way of doing this is linear regression. Without going into a derivation and the technical details underlying the theory of linear regression, the idea is to find the best linear relationship between two variables, current and voltage in this case:
+=======
 The resistance is estimated from one value of current and voltage. However, this is not the most reliable way of performing resistance measurements. The issue is individual resistance measurements can be subject to experimental errors and nonlinear variations in the device.
 Ideally, there would be a method of capturing and averaging out various measurements of resistance along an IV-curve, while still keeping a simple linear model. The best way of doing this is linear regression. Without going into a derivation and the technical details underlying the theory of linear regression, the idea is to find the best linear relationship between two variables, current and voltage in this case:
+>>>>>>> 494b9cf178200338efa4240825bd9a6ece61ed2e
 
 \begin{equation}
 \label{eq:linear_reg}
 V = RI + b
 \end{equation}
 
+<<<<<<< HEAD
+Then, rather than trying to find a curve that precisely fits all of the measured $(I,V)$ points, take multiple $(I,V)$ measurements in the lab, and find the values of $R$ and $b$ that produce a line that most "closely" fits the data points. "Most closely" essentially means the values of $R$ and $b$ that minimize the standard deviation of the dataset [\ref{itm:best_fit_line}].
+The slope $R$ in this line would simply be the resistance. The difference between this model and the static resistance model is this model takes into account various other $(I,V)$ points. So, it is able to capture almost as much information as the dynamic resistance model, but still maintains the linear simplicity of the static resistance model.
+=======
 Then, take multiple $(I,V)$ measurements in the lab, and find the values of $R$ and $b$ that produce a line that most "closely" fits the data points. "Most closely" essentially means the values of $R$ and $b$ that minimize the squared error between the best fit line and the measured data points [\ref{itm:best_fit_line}].
 The slope $R$ in this line would simply be the resistance, or more specifically $\frac{V}{I}$ in the lab. $R_{s}$ can then be acquired using equation (\ref{eq:sheet_res_vi}). This model takes into account various other $(I,V)$ points, but still maintains the linear simplicity of the static resistance model.
+>>>>>>> 494b9cf178200338efa4240825bd9a6ece61ed2e
 
 	
 	\section{Discussion}
