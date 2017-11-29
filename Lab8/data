@@ -1,0 +1,17 @@
+Resistor - 296 ohms
+We need to measure fall time, rise time, delay at the front and back
+yellow - input, green - output
+y2 - y1 = 5.175 V, output pulse height
+starts at y1 = -6.55V, and y2 = -1.375V
+rise time = 24ns
+fall time = 14.4 ns
+peak of the input = 5.075V
+rising edge of input to falling edge of output = 2.4ns
+falling of edge of input to rising edge of output = 10.4ns
+the settings for the square wave - 10kHz, 50% duty cycle, high is 5V while low is 0V
+
+200mvpp. 2.5vdc offset
+Clamps at 250 mvpp. Outside saturationa mode
+3.3V is the peak to peak
+input - 200mV, output - 3.3V, the gain is 16.5
+3.6MHz is -3db upper cutoff. Gain is 16.5/sqrt(2) = 11.7
