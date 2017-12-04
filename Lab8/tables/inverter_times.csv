@@ -1,0 +1,5 @@
+, Time [ns]
+Delay time (cutoff to saturation) , 2.4
+Delay time (saturation to cutoff) , 10.4
+Rise time , 24
+Fall time , 14.4
