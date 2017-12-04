@@ -110,3 +110,5 @@ This delay is measured to be $2.4$\si{\nano\second}. In the same manner, the del
 	\csvautotabular{../tables/inverter_times.csv}
 \end{table}
 \FloatBarrier
+
+The delays and rise/fall times limit the MOSFET's frequency performance. At a high frequency, say $3$\si{\giga\hertz}, the period is very short, about $0.33$\si{\nano\second}. When the MOSFET transitions from cutoff to saturation, the response is delayed by $2.4$\si{\nano\second}, more than an order of magnitude longer than a half-period. Thus, at this frequency, the MOSFET could not transition from state to state since it would not have enough time to transition before the input voltage changes back to its original value. This issue is also not limited to switching applications. MOSFET-based amplifiers are also limited in the amplification abilities at high frequencies.
