@@ -26,7 +26,7 @@ The MOSFET inverter circuit is shown below:
 	\end{circuitikz}
 \end{figure}
 
-Consider the case when $V_{in}$ is low (close to ground). The MOSFET's gate is set to the ground voltage, the source and the gate are at the same voltage. In this case, the depletion region between the source and the substrate prevents charges from diffusing into the substrate. Typically, the bulk and source are connected to the same node. Thus, if the source is grounded, the bulk is as well. Because the bulk and gate are grounded, the channel does not form because no excess electrons are attracted to the area under the gate. So, not only does the source not provide electrons to drive a current, but the channel cannot conduct them to the drain. Thus, no current flows through the MOSFET.
+Consider the case when $V_{in}$ is low (close to ground). The MOSFET's gate is set to the ground voltage, the source and the gate are at the same voltage. Typically, the bulk and source are connected to the same node. Thus, if the source is grounded, the bulk is as well. Because the bulk and gate are grounded, the channel does not form because no excess electrons are attracted to the area under the gate. So, the channel cannot conduct carriers to the drain. Thus, no current flows through the MOSFET.
 
 This operation mode is known as the cutoff region. Each MOSFET has what is known as a threshold voltage $V_{Th}$. A MOSFET is said to be in the cutoff region and thus abide by this physical description when the following condition holds:
 
@@ -35,11 +35,11 @@ This operation mode is known as the cutoff region. Each MOSFET has what is known
 	V_{GS} \leq V_{Th}
 \end{equation}
 
-When the gate voltage does not exceed the source voltage by an amount greather than the threshold voltage $V_{Th}$, the MOSFET cannot conduct a current.
+When the gate voltage does not exceed the source voltage by an amount greater than the threshold voltage $V_{Th}$, the MOSFET cannot conduct a current.
 
 Because no current flows through the MOSFET in the cutoff region, no current flows through the resistor connected to its drain terminal. By Ohm's Law, the voltage drop over the resistor is $0$\si{\volt}. Since the MOSFET and the resistor are in series and the resistor consumes no voltage, the MOSFET must consume a voltage equivalent to the supply voltage $V_{cc}$. Therefore, the output voltage $V_{out}$ is high when the input voltage $V_{in}$ is low.
 
-When $V_{in}$ is high, the gate voltage is higher than the grounded source voltage. Thus, the depletion region's built-in potential is overcome, and electrons can diffuse from the n-type source to the p-type bulk. At the same time, because the gate voltage is high, the gate is now at a higher voltage than the grounded bulk. Thus, excess electrons are attracted from the bulk to the area just beneath the gate oxide. These excess electrons increase the conductivity of this area, producing a conductive channel. The electrons from the source diffuse into this region provided that no high-level injection occurs in this area. If the concentration of electrons were sufficiently high, then the electrons would actually diffuse from the channel to the source.
+When $V_{in}$ is high, the gate voltage is higher than the grounded source voltage. Because the gate voltage is high, the gate is now at a higher voltage than the grounded bulk. Thus, excess electrons are attracted from the bulk to the area just beneath the gate oxide. These excess electrons increase the conductivity of this area, producing a conductive channel.
 
 Assume the MOSFET is in saturation mode. A MOSFET is said to be in saturation mode when the following condition holds:
 
@@ -48,11 +48,11 @@ Assume the MOSFET is in saturation mode. A MOSFET is said to be in saturation mo
 	V_{GS} - V_{Th} < V_{DS} \rightarrow V_{GD} < V_{Th}
 \end{equation}
 
-In saturation mode, current can flow through the MOSFET. However, increasing $V_{G}$ causes the drain current $I_{D}$ to level off. Because $V_{GD} < V_{Th}$, the depletion region between the bulk and the drain limits current flow. When $V_{G}$ is increased, electrons are propelled into the channel from the source with a greater electric field, but they are also impeded with a stronger electric field when entering the drain. Therefore, increasing $V_{G}$ in this state does not increase the drain current $I_D$.
+In saturation mode, current can flow through the MOSFET. However, increasing $V_{G}$ causes the drain current $I_{D}$ to level off. Because $V_{GD} < V_{Th}$, the depletion region between the bulk and the drain limits current flow. When $V_{G}$ is increased, more conduction electrons are attracted to the channel, but they are also impeded with a stronger electric field when entering the drain. Therefore, increasing $V_{G}$ in this state does not increase the drain current $I_D$.
 
-Because electrons can move from the source to the channel to the drain, a current through the MOSFET $I_D$ is produced. Because current can flow through the MOSFET, the resistor can now consume voltage. This means that the MOSFET receives a smaller fraction of the voltage. Thus, the output voltage $V_{out}$ is low when the input voltage is $V_{in}$ is high. Clearly, this circuit demonstrates inverting characteristics, which is why it is called an "inverter".
+Because electrons can flow through the MOSFET, a current through the MOSFET $I_D$ is produced. Because current can flow through the MOSFET, the resistor can now consume voltage. This means that the MOSFET receives a smaller fraction of the voltage. Thus, the output voltage $V_{out}$ is low when the input voltage is $V_{in}$ is high. Clearly, this circuit demonstrates inverting characteristics, which is why it is called an "inverter".
 
-However, this inverter is not ideal. It takes time for the MOSFET channel to form and for electrons to diffuse into the channel when the gate voltage is high. When the gate voltage drops back to ground, it takes time for the excess electrons to recombine and diffuse back into the bulk. Thus, a rise time, fall time, and delays can be measured for the output waveform. 
+However, this inverter is not ideal. It takes time for the MOSFET channel to form when the gate voltage is high. When the gate voltage drops back to ground, it takes time for the excess electrons to recombine and diffuse back into the bulk. Thus, a rise time, fall time, and delays can be measured for the output waveform. 
 
 In the experiment, the circuit is configured so that the MOSFET enters the saturation region when the input is high and the cutoff region when the input is low. The input and output waveforms are displayed below, where the yellow waveform is the input and the green waveform is the output.
 
@@ -111,4 +111,4 @@ This delay is measured to be $2.4$\si{\nano\second}. In the same manner, the del
 \end{table}
 \FloatBarrier
 
-The delays and rise/fall times limit the MOSFET's frequency performance. At a high frequency, say $3$\si{\giga\hertz}, the period is very short, about $0.33$\si{\nano\second}. When the MOSFET transitions from cutoff to saturation, the response is delayed by $2.4$\si{\nano\second}, more than an order of magnitude longer than a half-period. Thus, at this frequency, the MOSFET could not transition from state to state since it would not have enough time to transition before the input voltage changes back to its original value. This issue is also not limited to switching applications. MOSFET-based amplifiers are also limited in the amplification abilities at high frequencies.
+The delays and rise/fall times limit the MOSFET's frequency performance. At a high frequency, say $3$\si{\giga\hertz}, the period is very short, about $0.33$\si{\nano\second}. When the MOSFET transitions from cutoff to saturation, the response is delayed by $2.4$\si{\nano\second}, more than an order of magnitude longer than a half-period. Thus, at this frequency, the MOSFET could not transition from state to state since it would not have enough time to transition before the input voltage changes back to its original value. This issue is also not limited to switching applications. MOSFET-based amplifiers are also limited in their amplification abilities at high frequencies.
