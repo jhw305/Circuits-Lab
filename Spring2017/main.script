@@ -1,0 +1,2 @@
+#!/bin/bash
+~/Circuits-Lab/common/scripts/gen_main.py "NMOS Transistor" "PMOS Transistor" "Diode-Connected NMOS" "Current Mirror"

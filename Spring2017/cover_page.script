@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ./cover_page/
+~/Circuits-Lab/common/scripts/gen_cover_page.py "Lab 1: DC Analysis of MOS Transistors" "EECS 170B" "Roman Parise"
+cd -

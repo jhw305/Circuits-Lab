@@ -1,0 +1,65 @@
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.75]{./images/circuit2.PNG}
+	\caption{PMOS Circuit}
+	\label{fig:circuit2}
+\end{figure}
+
+\FloatBarrier
+
+The PMOS transistor has behavior similar to the NMOS, but with a few slight deviations. When the MOS capacitor is charged a voltage lower than the source, holes are attracted to form the channel. The terminal from which carriers flow shall be called the source. So, for the PMOS, the source terminal should be higher than the drain terminal so that holes can flow from high to low potential from the source. Therefore, current flows into the drain, unlike in an NMOS transistor, where the current flows away from the drain. So, the NMOS current plot should be flipped over the x-axis for the PMOS since the current is negative.
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.75]{./images/circuit2_vsd_sweep.PNG}
+	\caption{PMOS $i_{D}$ versus $V_{SD}$}
+	\label{fig:circuit2_vsd_sweep}
+\end{figure}
+
+\FloatBarrier
+
+If only the magnitude is observed, the plots should turn out to be the same. The voltages applied to the transistor are essentially the same, with source and drain terminals flipped, giving rise to the factor of $-1$ difference between the NMOS and PMOS current plots. For the SPICE models used, the PMOS has a process transconductance parameter $k_p \approx \frac{k_n}{2}$. The PMOS's process transconductance parameter is given by:
+
+\begin{equation}
+	\label{eq:pmos_trans}
+	k_p' = \mu _{p} C_{ox}
+\end{equation}
+
+The NMOS's parameter is:
+
+\begin{equation}
+	\label{eq:nmos_trans}
+	k_n' = \mu _{n} C_{ox}
+\end{equation}
+
+Here, $C_{ox}$ is the oxide capacitance density per area, $\mu _{n}$ is the electron mobility, and $\mu _{p}$ is the hole mobility. $k_p'$ is about half the magnitude of $k_n'$ because the hole mobility $\mu _{p}$ is about half the magnitude of $\mu _{n}$. Carrier electrons are simply electrons that move around freely in the conduction band. Carrier holes arise from electrons moving around in the valence band. When an electron moves in the valence band, the hole moves in the opposite direction in the conduction band. In the valence band, electrons are much closer to the nuclei of the semiconductor material, meaning the electrostatic force is much stronger and prevents the electrons from moving as quickly as they would in the conduction band. Because the electrons in the valence band move more slowly, the corresponding holes in the conduction band also move more slowly (for the same applied electric field as electrons in the conduction band). This is what leads to the lower hole mobility and thus a lower process transconductance parameter.
+
+The drain currents in transistors depend on the MOSFET transconductance parameter, which for a PMOS is given by:
+
+\begin{equation}
+	\label{eq:pmos_fettrans}
+	k_p = k_p' \frac{W}{L}
+\end{equation}
+
+% TODO Mention the actual values from the model of kp and kp'
+
+$W$ is the transistor's channel width, and $L$ is the channel length. Making the width $W$ twice the width of the corresponding NMOS model compensates for the lower process transconductance parameter. Thus, the PMOS's $|i_D|$ curve should be the same as the NMOS's. The factor of $-1$ difference for the $i_D$ plots should be the only difference between the two.
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.75]{./images/circuit2_vsd_sweep_abs.PNG}
+	\caption{PMOS $|i_D|$ vs $V_{SD}$}
+	\label{fig:circuit2_vsd_sweep_abs}
+\end{figure}
+
+\FloatBarrier
+
+%id vs vds curves
+
+When sweeping $V_{SD}$, the mechanics of the PMOS transistor are nearly identical besides the fact that holes are the charge carrier. As a result, the drain current differs by a factor of $-1$. The $|i_D|$ curve is essentially the same as for the NMOS for the same reasons as above.
