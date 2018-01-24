@@ -2,7 +2,7 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{./images/circuit2.PNG}
+	\includegraphics[scale=0.5]{./images/circuit2.PNG}
 	\caption{PMOS Circuit}
 	\label{fig:circuit2}
 \end{figure}
@@ -15,7 +15,7 @@ The PMOS transistor has behavior similar to the NMOS, but with a few slight devi
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{./images/circuit2_vsd_sweep.PNG}
+	\includegraphics[scale=0.25]{./images/circuit2_vsd_sweep.PNG}
 	\caption{PMOS $i_{D}$ versus $V_{SD}$}
 	\label{fig:circuit2_vsd_sweep}
 \end{figure}
@@ -53,7 +53,7 @@ $W$ is the transistor's channel width, and $L$ is the channel length. Making the
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{./images/circuit2_vsd_sweep_abs.PNG}
+	\includegraphics[scale=0.25]{./images/circuit2_vsd_sweep_abs.PNG}
 	\caption{PMOS $|i_D|$ vs $V_{SD}$}
 	\label{fig:circuit2_vsd_sweep_abs}
 \end{figure}
@@ -62,4 +62,28 @@ $W$ is the transistor's channel width, and $L$ is the channel length. Making the
 
 %id vs vds curves
 
-When sweeping $V_{SD}$, the mechanics of the PMOS transistor are nearly identical besides the fact that holes are the charge carrier. As a result, the drain current differs by a factor of $-1$. The $|i_D|$ curve is essentially the same as for the NMOS for the same reasons as above.
+When sweeping $V_{SD}$, the mechanics of the PMOS transistor are nearly identical besides the fact that holes are the charge carrier. As a result, the drain current differs by a factor of $-1$. The $|i_D|$ curve is essentially the same as for the NMOS for the same reasons as above. \\
+
+The same logic applies to the $i_{D}$ versus $V_{SG}$ curves. The difference is in the factor of $-1$.
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.25]{./images/id_vs_vsg.PNG}
+	\caption{PMOS $i_D$ vs $V_{SG}$}
+	\label{fig:id_vs_vsg}
+\end{figure}
+
+\FloatBarrier
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{./images/id_vs_vsg_abs.PNG}
+	\caption{PMOS $|i_D|$ vs $V_{SG}$}
+	\label{fig:id_vs_vsg_abs}
+\end{figure}
+
+\FloatBarrier

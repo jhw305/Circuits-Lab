@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  23 JAN 2018 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  24 JAN 2018 01:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -579,12 +579,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
  []
 
 [1 <./images/circuit1.PNG>]
-<./images/circuit1_vds_sweep.PNG, id=19, 929.97438pt x 431.6125pt>
+<./images/circuit1_vds_sweep.PNG, id=19, 1859.94875pt x 863.225pt>
 File: ./images/circuit1_vds_sweep.PNG Graphic file (type png)
 <use ./images/circuit1_vds_sweep.PNG>
 Package pdftex.def Info: ./images/circuit1_vds_sweep.PNG  used on input line 30
 . on input line 30.
-Package pdftex.def Info: Requested size: 464.98605pt x 215.80571pt on input lin
+Package pdftex.def Info: Requested size: 464.98605pt x 215.80573pt on input lin
 e 30.
 
 Overfull \hbox (119.98605pt too wide) in paragraph at lines 30--31
@@ -607,75 +607,106 @@ Overfull \hbox (119.73512pt too wide) in paragraph at lines 41--42
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2 <./images/circuit1_vds_sweep.PNG>]) (./pmos/pmos.tex
-<./images/circuit2.PNG, id=26, 440.14438pt x 223.83624pt>
+<./images/circuit2.PNG, id=26, 527.47063pt x 211.28937pt>
 File: ./images/circuit2.PNG Graphic file (type png)
 <use ./images/circuit2.PNG>
 Package pdftex.def Info: ./images/circuit2.PNG  used on input line 5. on input 
 line 5.
-Package pdftex.def Info: Requested size: 330.10747pt x 167.87677pt on input lin
+Package pdftex.def Info: Requested size: 263.73466pt x 105.64442pt on input lin
 e 5.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3 <./images/circuit1_full_sweep.PNG>]
-<./images/circuit2_vsd_sweep.PNG, id=32, 930.97812pt x 431.11063pt>
+<./images/circuit2_vsd_sweep.PNG, id=32, 1864.9675pt x 863.225pt>
 File: ./images/circuit2_vsd_sweep.PNG Graphic file (type png)
 <use ./images/circuit2_vsd_sweep.PNG>
 Package pdftex.def Info: ./images/circuit2_vsd_sweep.PNG  used on input line 18
 . on input line 18.
-Package pdftex.def Info: Requested size: 698.23187pt x 323.33217pt on input lin
+Package pdftex.def Info: Requested size: 466.24074pt x 215.80573pt on input lin
 e 18.
 
-Overfull \hbox (353.23187pt too wide) in paragraph at lines 18--19
+Overfull \hbox (121.24074pt too wide) in paragraph at lines 18--19
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4 <./images/circuit2.PNG>] [5 <./images/circuit2_vsd_sweep.PNG>]
-<./images/circuit2_vsd_sweep_abs.PNG, id=42, 931.48pt x 431.6125pt>
+[4 <./images/circuit2.PNG> <./images/circuit2_vsd_sweep.PNG>]
+<./images/circuit2_vsd_sweep_abs.PNG, id=38, 1862.96pt x 861.2175pt>
 File: ./images/circuit2_vsd_sweep_abs.PNG Graphic file (type png)
 <use ./images/circuit2_vsd_sweep_abs.PNG>
 Package pdftex.def Info: ./images/circuit2_vsd_sweep_abs.PNG  used on input lin
 e 56. on input line 56.
-Package pdftex.def Info: Requested size: 698.60829pt x 323.70857pt on input lin
+Package pdftex.def Info: Requested size: 465.73886pt x 215.30385pt on input lin
 e 56.
 
-Overfull \hbox (353.60829pt too wide) in paragraph at lines 56--57
+Overfull \hbox (120.73886pt too wide) in paragraph at lines 56--57
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6]) (./diode/diode.tex
-<./images/circuit3.PNG, id=47, 327.72438pt x 140.02313pt>
-File: ./images/circuit3.PNG Graphic file (type png)
-<use ./images/circuit3.PNG>
-Package pdftex.def Info: ./images/circuit3.PNG  used on input line 5. on input 
-line 5.
-Package pdftex.def Info: Requested size: 245.79268pt x 105.01707pt on input lin
-e 5.
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+<./images/id_vs_vsg.PNG, id=43, 1860.9525pt x 860.21375pt>
+File: ./images/id_vs_vsg.PNG Graphic file (type png)
+<use ./images/id_vs_vsg.PNG>
+Package pdftex.def Info: ./images/id_vs_vsg.PNG  used on input line 73. on inpu
+t line 73.
+Package pdftex.def Info: Requested size: 465.23698pt x 215.0529pt on input line
+ 73.
+
+Overfull \hbox (120.23698pt too wide) in paragraph at lines 73--74
+ [][] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./images/circuit2_vsd_sweep_abs.PNG>]
+[6 <./images/circuit2_vsd_sweep_abs.PNG>]
+<./images/id_vs_vsg_abs.PNG, id=49, 931.48pt x 432.11438pt>
+File: ./images/id_vs_vsg_abs.PNG Graphic file (type png)
+<use ./images/id_vs_vsg_abs.PNG>
+Package pdftex.def Info: ./images/id_vs_vsg_abs.PNG  used on input line 84. on 
+input line 84.
+Package pdftex.def Info: Requested size: 465.73886pt x 216.05666pt on input lin
+e 84.
+
+Overfull \hbox (120.73886pt too wide) in paragraph at lines 84--85
+ [][] 
+ []
+
+) (./diode/diode.tex
+<./images/circuit3.PNG, id=50, 494.84875pt x 234.37563pt>
+File: ./images/circuit3.PNG Graphic file (type png)
+<use ./images/circuit3.PNG>
+Package pdftex.def Info: ./images/circuit3.PNG  used on input line 5. on input 
+line 5.
+Package pdftex.def Info: Requested size: 371.13565pt x 175.78127pt on input lin
+e 5.
+
+Overfull \hbox (26.13565pt too wide) in paragraph at lines 5--6
+ [][] 
+ []
+
+[7 <./images/id_vs_vsg.PNG> <./images/id_vs_vsg_abs.PNG>]
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-<./images/circuit3_dc_sweep.PNG, id=52, 931.98187pt x 430.10687pt>
+<./images/circuit3_dc_sweep.PNG, id=56, 930.47626pt x 430.60875pt>
 File: ./images/circuit3_dc_sweep.PNG Graphic file (type png)
 <use ./images/circuit3_dc_sweep.PNG>
 Package pdftex.def Info: ./images/circuit3_dc_sweep.PNG  used on input line 29.
  on input line 29.
-Package pdftex.def Info: Requested size: 465.98979pt x 215.0529pt on input line
- 29.
+Package pdftex.def Info: Requested size: 465.23698pt x 215.30383pt on input lin
+e 29.
 
-Overfull \hbox (120.98979pt too wide) in paragraph at lines 29--30
+Overfull \hbox (120.23698pt too wide) in paragraph at lines 29--30
  [][] 
  []
 
@@ -683,7 +714,7 @@ Overfull \hbox (120.98979pt too wide) in paragraph at lines 29--30
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./images/circuit3.PNG>]) (./current_mirror/current_mirror.tex
-<./images/circuit4.PNG, id=58, 393.47pt x 234.8775pt>
+<./images/circuit4.PNG, id=62, 393.47pt x 234.8775pt>
 File: ./images/circuit4.PNG Graphic file (type png)
 <use ./images/circuit4.PNG>
 Package pdftex.def Info: ./images/circuit4.PNG  used on input line 7. on input 
@@ -705,117 +736,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-<./images/circuit4_r_sweep.PNG, id=64, 928.97063pt x 428.60126pt>
+<./images/circuit4_r_sweep.PNG, id=68, 927.96687pt x 421.07312pt>
 File: ./images/circuit4_r_sweep.PNG Graphic file (type png)
 <use ./images/circuit4_r_sweep.PNG>
-Package pdftex.def Info: ./images/circuit4_r_sweep.PNG  used on input line 34. 
-on input line 34.
-Package pdftex.def Info: Requested size: 464.48418pt x 214.3001pt on input line
- 34.
+Package pdftex.def Info: ./images/circuit4_r_sweep.PNG  used on input line 32. 
+on input line 32.
+Package pdftex.def Info: Requested size: 463.9823pt x 210.53604pt on input line
+ 32.
 
-Overfull \hbox (119.48418pt too wide) in paragraph at lines 34--35
+Overfull \hbox (118.9823pt too wide) in paragraph at lines 32--33
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 [10 <./images/circuit4_r_sweep.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
-<./images/circuit5.PNG, id=69, 493.34312pt x 230.8625pt>
+<./images/circuit5.PNG, id=73, 573.14125pt x 255.45438pt>
 File: ./images/circuit5.PNG Graphic file (type png)
 <use ./images/circuit5.PNG>
-Package pdftex.def Info: ./images/circuit5.PNG  used on input line 52. on input
- line 52.
-Package pdftex.def Info: Requested size: 370.00642pt x 173.14644pt on input lin
-e 52.
+Package pdftex.def Info: ./images/circuit5.PNG  used on input line 50. on input
+ line 50.
+Package pdftex.def Info: Requested size: 429.85487pt x 191.5903pt on input line
+ 50.
 
-Overfull \hbox (25.00642pt too wide) in paragraph at lines 52--53
+Overfull \hbox (84.85487pt too wide) in paragraph at lines 50--51
  [][] 
  []
 
+<./images/circuit5_r_sweep.PNG, id=74, 931.98187pt x 429.605pt>
+File: ./images/circuit5_r_sweep.PNG Graphic file (type png)
+<use ./images/circuit5_r_sweep.PNG>
+Package pdftex.def Info: ./images/circuit5_r_sweep.PNG  used on input line 63. 
+on input line 63.
+Package pdftex.def Info: Requested size: 465.98979pt x 214.80197pt on input lin
+e 63.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
-
- []
-
-[11 <./images/circuit5.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
-
- []
-
-<./images/circuit5_id1_vs_r.PNG, id=74, 930.47626pt x 430.60875pt>
-File: ./images/circuit5_id1_vs_r.PNG Graphic file (type png)
-<use ./images/circuit5_id1_vs_r.PNG>
-Package pdftex.def Info: ./images/circuit5_id1_vs_r.PNG  used on input line 71.
- on input line 71.
-Package pdftex.def Info: Requested size: 465.23698pt x 215.30383pt on input lin
-e 71.
-
-Overfull \hbox (120.23698pt too wide) in paragraph at lines 71--72
- [][] 
- []
-
-<./images/circuit5_id2_plus_id3_vs_r.PNG, id=75, 928.46875pt x 429.605pt>
-File: ./images/circuit5_id2_plus_id3_vs_r.PNG Graphic file (type png)
-<use ./images/circuit5_id2_plus_id3_vs_r.PNG>
-Package pdftex.def Info: ./images/circuit5_id2_plus_id3_vs_r.PNG  used on input
- line 82. on input line 82.
-Package pdftex.def Info: Requested size: 464.23325pt x 214.80197pt on input lin
-e 82.
-
-Overfull \hbox (119.23325pt too wide) in paragraph at lines 82--83
+Overfull \hbox (120.98979pt too wide) in paragraph at lines 63--64
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./images/circuit5_id1_vs_r.PNG>]) (./main.bbl
+[11 <./images/circuit5.PNG>]
+<./images/circuit5_sum_r_sweep.PNG, id=79, 930.97812pt x 430.60875pt>
+File: ./images/circuit5_sum_r_sweep.PNG Graphic file (type png)
+<use ./images/circuit5_sum_r_sweep.PNG>
+Package pdftex.def Info: ./images/circuit5_sum_r_sweep.PNG  used on input line 
+76. on input line 76.
+Package pdftex.def Info: Requested size: 465.48792pt x 215.30383pt on input lin
+e 76.
+
+Overfull \hbox (120.48792pt too wide) in paragraph at lines 76--77
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <./images/circuit5_r_sweep.PNG>]) (./main.bbl
 Overfull \hbox (42.5009pt too wide) in paragraph at lines 4--5
 []\OT1/cmr/m/n/10 http://inf-server.inf.uth.gr/courses/ce433/tutorials/mosfet%2
 0current%20mirror.pdf. 
  []
 
-) [13 <./images/circuit5_id2_plus_id3_vs_r.PNG>] (./main.aux) ) 
+) [13 <./images/circuit5_sum_r_sweep.PNG>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 12784 strings out of 492990
- 266863 string characters out of 6135004
- 280633 words of memory out of 5000000
- 16231 multiletter control sequences out of 15000+600000
+ 12796 strings out of 492990
+ 267122 string characters out of 6135004
+ 280651 words of memory out of 5000000
+ 16241 multiletter control sequences out of 15000+600000
  534889 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,33p,10396b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (14 pages, 408720 bytes).
+ 41i,9n,33p,10396b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (14 pages, 530843 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 125 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
