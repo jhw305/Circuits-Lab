@@ -16,7 +16,7 @@ By setting a voltage at the gate, the majority carrier holes in the p-type subst
 
 When $V_{GS} > V_{T}$, a bifurcation occurs. The NMOS can either enter the triode or saturation mode. In the triode mode, the NMOS acts as an approximately linear resistor. The conductivity, and therefore the resistance, can be controlled by varying the number of minority carrier electrons by changing the gate voltage. By applying $V_{DS}$, a current is then driven through the somewhat linear resistance. For small values of $V_{DS}$, the resistance is basically linear. For larger values, the resistance begins to act less linear, but still exhibits similar behavior. The MOSFET remains in this triode mode for as long as $V_{DS} < V_{GS} - V_{T}$. However, once $V_{DS} > V_{GS} - V_{T}$, the MOSFET enters saturation. In the saturation mode, the NMOS does not have enough carrier electrons in the channel to support the desired current that should be present given $V_{DS}$. At this point, increasing $V_{DS}$ leads to no additional current past the saturation current.
 
-However, in the saturation mode, as $V_{DS}$ is increased, more electrons concentrate toward the source than the drain. This is because the voltage in the semiconductor needs to reflect those applied at the metal electrodes. Thus, electrons concentrate toward the source to reflect the lower voltage that exists at that position. At saturation, no excess carrier electrons exist at the drain, and the channel "pinches-off" as a result. Past this point, the channel length decreases because more and more of the area closer to the drain becomes unoccupied by electrons as they move toward the source. As the channel becomes shorter, its resistance decreases, and the current increases linearly. This effect is known as channel length modulation. So, the saturation current looks like:
+However, in the saturation mode, as $V_{DS}$ is increased, more electrons concentrate toward the source than the drain. At saturation, no excess carrier electrons exist at the drain, and the channel "pinches-off" as a result. Past this point, the channel length decreases because more and more of the area closer to the drain becomes unoccupied by electrons as they move toward the source. As the channel becomes shorter, its resistance decreases, and the current increases linearly. This effect is known as channel length modulation. So, the saturation current looks like:
 
 \begin{equation}
 	\label{eq:sat_current_clm}
@@ -45,7 +45,7 @@ However, in the saturation mode, as $V_{DS}$ is increased, more electrons concen
 
 \FloatBarrier
 
-When sweeping through increasing values of $V_{GS}$, the transistor goes from cutoff mode to saturation mode and eventually to triode mode. In the saturation mode, the current varies quadratically with $V_{GS}$:
+When sweeping through increasing values of $V_{GS}$, the transistor goes from cutoff mode to saturation mode and eventually to triode mode. In the saturation mode, ignoring channel length modulation effects, the current varies approximately quadratically with $V_{GS}$:
 
 \begin{equation}
 	\label{eq:sat_current}
