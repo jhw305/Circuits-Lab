@@ -1,0 +1,3 @@
+100 ohm resistors for measurements
+
+When you crank up the Vsg past the threshold voltage, holes gather in the channel. When you turn it back down, the current is a bit higher than before (about double). When the voltage is sufficiently low, everything is the same as before. The holes probably sit in the channel when we drop back down. Since hole mobility is lower than electron mobility, the holes havent yet diffused and so a current can still be driven.
