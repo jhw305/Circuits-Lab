@@ -2,7 +2,6 @@
 
 # Roman Parise
 # Common functions for melatonin flow
-import csv
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
@@ -16,6 +15,7 @@ TEX_EXT=".tex"
 WRAP="_wrap"
 
 ERR_CODE = -1
+SUCCESS = 0
 
 # File generation
 def wrap_fname( section_name ) :
@@ -63,18 +63,18 @@ def write_csv_from_matrix( fname , matrix ):
 def read_csv_cols( csv_fname ) :
 	# Get data in a matrix
 	data_matrix = [ ]
-	with open( csv_fname , "rb" ) as csv_file :
-		reader = csv.reader( csv_file , delimiter = COMMA_DELIMITER )
-		for row_index in range( 0 , len( reader ) ) :
-			data_matrix_row = [ ]
-			for col_index in range( 0 , len( reader[ row_index ] ) ) :
-				if row_index == 0 :
-					# Headings
-					data_matrix_row.append( str( element ) )
-				else :
-					# Data
-					data_matrix_row.append( float( element ) )
-			data_matrix.append( data_matrix_row )
+	# TODO Maybe we can use dtype to our advantage
+	reader = np.genfromtxt( csv_fname , delimiter = COMMA_DELIMITER , dtype = str )
+	for row_index in range( 0 , len( reader ) ) :
+		data_matrix_row = [ ]
+		for col_index in range( 0 , len( reader[ row_index ] ) ) :
+			if row_index == 0 :
+				# Headings
+				data_matrix_row.append( str( reader[ row_index ][ col_index ] ) )
+			else :
+				# Data
+				data_matrix_row.append( float( reader[ row_index ][ col_index ] ) )
+		data_matrix.append( data_matrix_row )
 	# TODO: Temp soln. Transpose the matrix to get in column form.
 	return transpose( data_matrix )
 
