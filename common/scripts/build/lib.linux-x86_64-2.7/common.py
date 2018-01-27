@@ -6,6 +6,7 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
+import sys
 
 WRITE="w"
 COMMA_DELIMITER=","
@@ -13,6 +14,8 @@ NEWLINE="\n"
 CSV_EXT=".csv"
 TEX_EXT=".tex"
 WRAP="_wrap"
+
+ERR_CODE = -1
 
 # File generation
 def wrap_fname( section_name ) :
@@ -52,14 +55,76 @@ def write_csv_from_matrix( fname , matrix ):
 			str_to_write = COMMA_DELIMITER.join( [ str( element ) for element in row ] )
 			file_handle.write( str_to_write + NEWLINE )
 
-# TODO: Needs error checking
-# Reads out a csv file into rows
-def read_csv_rows( csv_fname ) :
+# TODO: Need a clean way to generate plots from rows or columns format
+
+# TODO: Needs error checking and possibly a cleaner, more elegant solution
+# Reads out a csv file into cols
+# Note: Top row is reserved for headings
+def read_csv_cols( csv_fname ) :
+	# Get data in a matrix
+	data_matrix = [ ]
 	with open( csv_fname , "rb" ) as csv_file :
 		reader = csv.reader( csv_file , delimiter = COMMA_DELIMITER )
-		return [ [ float( element ) for element in row ] for row in reader ]
+		for row_index in range( 0 , len( reader ) ) :
+			data_matrix_row = [ ]
+			for col_index in range( 0 , len( reader[ row_index ] ) ) :
+				if row_index == 0 :
+					# Headings
+					data_matrix_row.append( str( element ) )
+				else :
+					# Data
+					data_matrix_row.append( float( element ) )
+			data_matrix.append( data_matrix_row )
+	# TODO: Temp soln. Transpose the matrix to get in column form.
+	return transpose( data_matrix )
 
-def save_plot_xy( fname , x_list , y_list ) :
+# TODO: Only checks rank-2 tensors. Do we care about rank-n where 0 <= n < inf?
+# Matrix by our current definition is a nonempty array of nonempty arrays, all of same length.
+# Ex: [ [ 1 ] , [ "lolx" ] ], [ [ 1 , "lolcatz" , 3 ] ] , [ [ 2 ] , [ -1 ] , [ 3 ] ] are all matrices.
+# [ 1 ] , [ [ 1 ] , [ 2 , "hahaha" ] ] , [ [ ] , [ ] ], and [ ] are not.
+def is_matrix( matrix ) :
+	# Is an array
+	if not isinstance( matrix , list ) :
+		return False
+	# Nonempty array
+	if len( matrix ) == 0 :
+		return False
+	# By design, col_num >= 0
+	col_num = -1
+	for row in matrix :
+		# Row is an array
+		if not isinstance( row , list ) :
+			return False
+		# Each row must be nonempty
+		if len( row ) == 0 :
+			return False
+		# If first row, use its number of columns as the default.
+		if col_num == -1 :
+			col_num = len( row )
+		# If not first row, check number of columns against col_num.
+		elif col_num != len( row ) :
+			return False
+	# Array of arrays. Arrays all have same length. Therefore, matrix.
+	return True
+
+def transpose( input_matrix ) :
+	if is_matrix( input_matrix ) :
+		output_matrix = [ ]
+		# No errors in input_matrix[ 0 ] because matrix is nonempty by our definition.
+		for col_index in range( 0 , len( input_matrix[ 0 ] ) ) :
+			new_row = [ ]
+			for row_index in range( 0 , len( input_matrix ) ) :
+				new_row.append( input_matrix[ row_index ][ col_index ] )
+			output_matrix.append( new_row )
+		return output_matrix
+	else :
+		# TODO Replace with exceptions
+		print( "Cannot take transpose of a non-matrix object." )
+		sys.exit( ERR_CODE )
+
+def save_plot_xy( fname , x_list , y_list , x_axis_title = "" , y_axis_title = "" ) :
+	plt.xlabel( x_axis_title )
+	plt.ylabel( y_axis_title )
 	plt.plot( x_list , y_list )
 	plt.savefig( fname )
 	plt.clf( )
@@ -74,6 +139,4 @@ def save_plot_xy_with_best_fit_line( fname , x_list , y_list ) :
 	plt.clf( )
 
 if __name__ == "__main__" :
-	rows = read_csv_rows( "test.csv" )
-	print( rows )
-	save_plot_xy_with_best_fit_line( "test_file.png" , rows[ 0 ] , rows[ 1 ] )
+	pass
