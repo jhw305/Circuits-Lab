@@ -6,4 +6,4 @@ build: nmos.tex nmos_wrap.tex
 	$(BUILD)
 
 clean:
-	rm nmos_wrap.aux nmos_wrap.log
+	@rm nmos_wrap.aux nmos_wrap.log

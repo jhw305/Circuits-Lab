@@ -2,6 +2,17 @@
 \subsection{Part A}
 Using the circuit shown in figure \ref{fig:circuit1}, we measured the drain current with $V_{bs} = 0 V$, $V_{gs} = 2.5 V$, and $0V \le V_{ds} \le 5 V$.
 \\
+
+		\FloatBarrier
+
+		\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.75]{../images/circuit1.png}
+		\caption{The circuit tested in part 1.}
+		\label{fig:circuit1}
+		\end{figure}
+
+		\FloatBarrier
 		From the data we collected for $I_{ds}$ and $V_{ds}$, we were able to find that the NMOS entered triode mode at $V_{ov} \approx 0.1 V$. 
 		As soon as the drain voltage surpassed $V_{ds}=0.1 V$ we saw a dramatic increase in drain current.
 		This increase began to taper off around $V_{ds}\approx0.8V$, as the NMOS entered saturation mode. 
@@ -16,9 +27,10 @@ Using the circuit shown in figure \ref{fig:circuit1}, we measured the drain curr
 
 		\begin{figure}[h!]
 		\centering
-		\includegraphics[scale=0.75]{../images/circuit1}
-		\caption{The circuit tested in part 1.}
-		\label{fig:circuit1}
+		\includegraphics[scale=0.75]{../data/nmos.png}
+		\caption{The resulting $I_{ds}$ vs $V_{ds}$ graph for $V_{gs}=2.5V$.}
+}
+		\label{fig:nmos}
 		\end{figure}
 
 		\FloatBarrier
@@ -29,8 +41,18 @@ Using the circuit shown in figure \ref{fig:circuit1}, we measured the drain curr
 
 		\subsection{Part B}
 		During Part B we used the same parameters from Part A, except the gate voltage was increased to $V_{gs} = 5V$. 
-		We can see from the $I_{ds}$ and $V_{ds}$ curve the NMOS is operating in triode mode over the range of $0.8 \le V_{ds} \le 3.2V$.
+		We can see from the $I_{ds}$ and $V_{ds}$ curve in figure \ref{fig:nmos_5v} the NMOS is operating in triode mode over the range of $0.8 \le V_{ds} \le 3.2V$.
 
+		\FloatBarrier
+
+		\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.75]{../data/nmos_5v.png}
+		\caption{The resulting $I_{ds}$ vs $V_{ds}$ graph for $V_{gs}=5V$.}
+		\label{fig:nmos_5v}
+		\end{figure}
+
+		\FloatBarrier
 		We can check our approximation from part A for the threshold voltage of $V_{tn} = 1.7 V$.
 		
 \begin{equation}
