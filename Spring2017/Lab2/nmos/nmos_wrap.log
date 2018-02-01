@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.31)  31 JAN 2018 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.31)  1 FEB 2018 08:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,7 +679,7 @@ File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
 \pgf@circ@res@temp=\dimen262
 \pgfstartlinewidth=\dimen263
 ))
-No file nmos_wrap.aux.
+(./nmos_wrap.aux)
 \openout1 = `nmos_wrap.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -771,85 +771,61 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 \c__siunitx_mathtt_int=\count159
  (./nmos.tex
-
-LaTeX Warning: Reference `fig:circuit1' on page 1 undefined on input line 3.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
-
- []
-
 <../images/circuit1.png, id=4, 376.40625pt x 316.18124pt>
 File: ../images/circuit1.png Graphic file (type png)
 
 <use ../images/circuit1.png>
-Package pdftex.def Info: ../images/circuit1.png used on input line 10.
+Package pdftex.def Info: ../images/circuit1.png used on input line 8.
 (pdftex.def)             Requested size: 282.30399pt x 237.13535pt.
  <../data/nmos.png, id=5, 462.528pt x 346.896pt>
 File: ../data/nmos.png Graphic file (type png)
 
 <use ../data/nmos.png>
-Package pdftex.def Info: ../data/nmos.png used on input line 30.
+Package pdftex.def Info: ../data/nmos.png used on input line 28.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
-Overfull \hbox (1.89514pt too wide) in paragraph at lines 30--31
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 28--29
  [][] 
  []
 
-! Extra }, or forgotten \endgroup.
-\@endfloatbox ...pagefalse \outer@nobreak \egroup 
-                                                  \color@endbox 
-l.34 		\end{figure}
-                   
-? 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/circuit1.png>]
-
-LaTeX Warning: Reference `fig:nmos_5v' on page 2 undefined on input line 44.
-
-<../data/nmos_5v.png, id=18, 462.528pt x 346.896pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/circuit1.png>] <
+../data/nmos_5v.png, id=17, 462.528pt x 346.896pt>
 File: ../data/nmos_5v.png Graphic file (type png)
  <use ../data/nmos_5v.png>
-Package pdftex.def Info: ../data/nmos_5v.png used on input line 50.
+Package pdftex.def Info: ../data/nmos_5v.png used on input line 47.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
-Overfull \hbox (1.89514pt too wide) in paragraph at lines 50--51
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 47--48
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2 <../data/nmos.png>]) [3 <../data/nmos_5v.png>] (./nmos_wrap.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[2 <../data/nmos.png>]) [3 <../data/nmos_5v.png>] (./nmos_wrap.aux) ) 
 Here is how much of TeX's memory you used:
  26409 strings out of 493029
- 615218 string characters out of 6136234
- 672154 words of memory out of 5000000
- 29634 multiletter control sequences out of 15000+600000
- 6567 words of font info for 25 fonts, out of 8000000 for 9000
+ 615225 string characters out of 6136234
+ 672194 words of memory out of 5000000
+ 29633 multiletter control sequences out of 15000+600000
+ 6259 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,7n,56p,10405b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on nmos_wrap.pdf (3 pages, 114078 bytes).
+</usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on nmos_wrap.pdf (3 pages, 104125 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 43 PDF objects out of 1000 (max. 8388607)
+ 27 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
