@@ -9,6 +9,6 @@ all: $(PNG_FNAMES)
 	$(GEN_PLT) $< $@
 
 clean:
-	rm -rf $(PNG_FNAMES)
+	@rm -rf $(PNG_FNAMES)
 
 .PHONY: clean
