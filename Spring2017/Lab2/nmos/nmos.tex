@@ -10,10 +10,10 @@
 		\end{figure}
 
 		\FloatBarrier
-		From the data we collected for $I_{ds}$ and $V_{ds}$, we were able to find that the NMOS entered triode mode at $V_{ov} \approx 0.1 V$. 
-		As soon as the drain voltage surpassed $V_{ds}=0.1 V$ we saw a dramatic increase in drain current.
-		This increase began to taper off around $V_{ds}\approx0.8V$, as the NMOS entered saturation mode. 
-		We can approximate the threshold voltage to be $V_{tn} = 1.7 V$.
+		From the data collected for $I_{ds}$ and $V_{ds}$, the NMOS starts in triode mode. 
+		A dramatic increase in drain current is observed in this region.
+		This increase begins to taper off around $V_{ds}\approx0.8V$, as the NMOS enters saturation mode. 
+		The threshold voltage is approximated to be $V_{tn} = 1.7 V$.
 
 		\begin{equation}
 		\label{eq:threshold}
@@ -30,14 +30,13 @@
 		\end{figure}
 
 		\FloatBarrier
-		During testing we noticed capacitive effects when moving from triode down to cutoff. 
-		If we were increasing drain voltage from below the point of cutoff to move into triode mode the drain voltage of $V_{ds}=0.15V$ resulted in $I_{ds}\approx 166 \mu A$;
-		however, when moving from saturation or triode mode down into cutoff mode a drain voltage of $V_{ds}=0.15 V$ produced $I_{ds}\approx 310 \mu A$.
-		We believe this is due to the capacitive effects of the MOSFET structure.
+		During testing, capacitive effects in the triode region are observed. 
+		Increasing the drain voltage past $V_{ds}=0.15V$ results in $I_{ds}\approx 166 \mu A$.
+		However, decreasing the drain voltage afterward to $V_{ds}=0.15 V$ produces $I_{ds}\approx 310 \mu A$.
 
 		\subsubsection{Part B}
-		During Part B we used the same parameters from Part A, except the gate voltage was increased to $V_{gs} = 5V$. 
-		We can see from the $I_{ds}$ and $V_{ds}$ curve in figure \ref{fig:nmos_5v} the NMOS is operating in triode mode over the range of $0.8 \le V_{ds} \le 3.2V$.
+		The same parameters from part A are used in part B, except the gate voltage is increased to $V_{gs} = 5V$. 
+		From the $I_{ds}$ and $V_{ds}$ curve in figure \ref{fig:nmos_5v}, the NMOS is operating in triode mode for $V_{ds} \le 3.2V$ and saturation otherwise.
 
 		\FloatBarrier
 
@@ -49,13 +48,13 @@
 		\end{figure}
 
 		\FloatBarrier
-		We can check our approximation from part A for the threshold voltage of $V_{tn} = 1.7 V$.
+		The approximation from part A for the threshold voltage of $V_{tn} = 1.7 V$ can be confirmed.
 		
 \begin{equation}
 	\label{eq:thresh_5V}
 		V_{ds} = V_{gs} - V_{tn} = 5 V - 1.7 V = 3.3 V.	
 \end{equation}
-This result for $V_{ds} = 3.3 V$ as the edge of saturation agrees well with the measured data. 
-We can see on the curve the drain current stays fairly constant after approximately $V_{ds}=3.2 V$.
-After comparing the percentage of change in the drain current and drain voltage, we find that after $V_{ds} = 3.2 V$ the change in the drain current stays at less than one percent, despite the change in drain voltage of about five percent. 
-This result proves that our result of $V_{tn} = 1.7 V$ is a good approximation for the threshold voltage.
+This result for $V_{ds} = 3.2 V$ as the edge of saturation agrees well with the measured data. 
+On the curve, the drain current stays fairly constant after approximately $V_{ds}=3.2 V$.
+After comparing the percentage of change in the drain current and drain voltage, it is determined that after $V_{ds} = 3.2 V$ the change in the drain current stays at less than one percent, despite the change in drain voltage of about five percent. 
+This result proves that the result of $V_{tn} = 1.7 V$ is a good approximation for the threshold voltage.
