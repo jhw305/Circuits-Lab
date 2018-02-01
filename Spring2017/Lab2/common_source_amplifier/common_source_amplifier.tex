@@ -24,7 +24,7 @@
 
 		% Source
 		(my_nmos.S) node [ ] (S)
-		(S) to [ short ] ++( 0 , -1 ) coordinate(my_e_gnd)
+		(S) to [ short ] ++( 0 , -1 ) coordinate(my_e_gnd) {}
 		(my_e_gnd) node[ ground ] (e_gnd) {}
 
 		;
@@ -57,7 +57,7 @@ In triode region, $V_{out}$ is expected to be very small because of the large $I
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.50]{../data/common_source_edited.png}
+	\includegraphics[scale=0.50]{./data/common_source_edited.png}
 	\caption{Common Source Amplifier Voltage Transfer Characteristic}
 	\label{fig:common_source}
 \end{figure}
