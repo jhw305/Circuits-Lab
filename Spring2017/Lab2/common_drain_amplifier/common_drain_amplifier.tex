@@ -51,11 +51,16 @@ By design, $V_{in}$ never exceeds $5$\si{\volt}. So, the transistor transitions 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.50]{../data/common_drain.png}
+	\includegraphics[scale=0.50]{../data/common_drain_edited.png}
 	\caption{Common Drain Amplifier Voltage Transfer Characteristic}
 	\label{fig:common_drain}
 \end{figure}
 
 \FloatBarrier
 
-% Bias point???
+The amplifier should be biased in the middle of the saturation region. Using the characteristics of the NMOS determined earlier (and not what figure (\ref{fig:common_drain}) may present), the threshold voltage is taken to be $V_T = 1.7$\si{\volt}. Suppose the transistor exits the cutoff region for some $V_{in} > V_T$. Then, no current flows through the resistor. Therefore, the source voltage becomes $0$\si{\volt}, meaning that $V_{GS} = V_{in} > V_T$. This is a contradiction. Thus, transistor cannot begin to exit cutoff at a voltage above $V_T$.
+For a voltage $V_{in} < V_T$, assume the transistor is not in cutoff. Then, current flows through the resistor.
+Therefore, the source voltage is above ground, meaning that $V_{GS} = V_{in} - V_S < V_T$.
+This is a contradiction.
+So, the transistor exits cutoff mode when $V_{in} = V_T = 1.7$\si{\volt}. This value is to be used instead of the value in figure (\ref{fig:common_drain}) because subthreshold current can flow even though the transistor is still in cutoff.
+The transistor exits saturation when $V_{in} = 5V + V_T = 5V + 1.7V = 6.7V$. So, the midpoint of the saturation region occcurs when $V_{in} = \frac{1.7V + 6.7V}{2} = 4.2$\si{\volt}, which corresponds to a bias current of $\frac{V_{out}}{5k\Omega} \approx \frac{1.3V}{5k\Omega} = 0.26$\si{\milli\ampere}.
