@@ -2,8 +2,8 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit2.PNG}
-	\caption{}
+	\includegraphics[scale=0.75]{./images/circuit2.PNG}
+	\caption{Common Source Amplifier with Sinusoidal Input}
 	\label{fig:circuit2}
 \end{figure}
 
@@ -13,7 +13,7 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/vout_vs_f.PNG}
+	\includegraphics[scale=0.25]{./images/vout_vs_f.PNG}
 	\caption{AC Sweep of Common-Source Amplifier}
 	\label{fig:vout_vs_f}
 \end{figure}
@@ -26,14 +26,14 @@ Given the SPICE MOSFET model parameters, the NMOS's transconductance parameter $
 
 \begin{table}[h!]
 	\centering
-	\caption{}
+	\caption{$g_m$ Values for Different $V_{GS}$ Bias Points}
 	\label{tab:ss_gm}
-	\csvautotabular{../tables/ss_gm.csv}
+	\csvautotabular{./tables/ss_gm.csv}
 \end{table}
 
 \FloatBarrier
 
-The transconductance $g_m$ increases with $V_{GS}$ since more charge accumulate in the channel when the gate voltage is higher. Since the MOSFET's channel can support more charge, higher currents can flow for the same applied $V_{DS}$. The transconductance captures how well voltage applied to the MOSFET is converted to current, so the transconductance should be higher at higher $V_{GS}$ values. \\
+\uline{The transconductance $g_m$ increases with $V_{GS}$ since more charge accumulates in the channel when the gate voltage is higher.} Since the MOSFET's channel can support more charge, higher currents can flow for the same applied $V_{DS}$. The transconductance captures how well voltage applied to the MOSFET is converted to current, so the transconductance should be higher at higher $V_{GS}$ values. \\
 
 The output resistance is given by $r_o = \frac{1}{\lambda I_D'}$. $\lambda$ is given as $0.02 V^{-1}$ in the SPICE model. $I_D'$ is the saturation current without taking channel-length modulation into account. So, $I_D' = \frac{k_n}{2} V_{ov}^2$. Therefore, the output resistance is given by:
 
@@ -46,26 +46,26 @@ The output resistance is given by $r_o = \frac{1}{\lambda I_D'}$. $\lambda$ is g
 
 \begin{table}[h!]
 	\centering
-	\caption{}
+	\caption{$r_o$ Values for Different $V_{GS}$ Bias Points}
 	\label{tab:ss_ro}
-	\csvautotabular{../tables/ss_ro.csv}
+	\csvautotabular{./tables/ss_ro.csv}
 \end{table}
 
 \FloatBarrier
 
-It has already been established that higher currents flow when $V_{GS}$ is higher. If this is the case, then if one were to calculate the resistance for a fixed $V_{DS}$ value, higher currents would flow whenever $V_{GS}$ is increased. So, the output resistance drops as $V_{GS}$ is increased since higher currents flow for the same applied voltage. \\
+It has already been established that higher currents flow when $V_{GS}$ is higher. If this is the case, then if one were to calculate the resistance for a fixed $V_{DS}$ value, higher currents would flow whenever $V_{GS}$ is increased. \uline{So, the output resistance drops as $V_{GS}$ is increased since higher currents flow for the same applied voltage.} \\
 
-The open circuit small-signal gain of a common source amplifier is given by $A_{vo} = -g_m R_D$, where $R_D$ is the drain resistance. $R_D$ here is fixed, but $g_m$ increases with $V_{GS}$. So, the small-signal gain increases with increasing $V_{GS}$. If $V_{GS}$ is higher, then $g_m$ is higher, meaning the MOSFET more easily converts a voltage applied at the gate to a current flowing through the MOSFET. So, smaller variations in the gate voltage, lead to larger variations in the drain current. $V_{out}$ is directly related to the drain current because of the resistor in series with the MOSFET. So, smaller variations in the gate voltage lead to larger variations in the output voltage $V_{out}$ when one increases $V_{GS}$.
+The open circuit small-signal gain of a common source amplifier is given by $A_{vo} = -g_m R_D$, where $R_D$ is the drain resistance. $R_D$ here is fixed, but $g_m$ increases with $V_{GS}$. \uline{So, the small-signal gain magnitude increases with increasing $V_{GS}$.} If $V_{GS}$ is higher, then $g_m$ is higher, meaning the MOSFET more easily converts a voltage applied at the gate to a current flowing through the MOSFET. So, smaller variations in the gate voltage, lead to larger variations in the drain current. $V_{out}$ is directly related to the drain current because of the resistor in series with the MOSFET. So, smaller variations in the gate voltage lead to larger variations in the output voltage $V_{out}$ when one increases $V_{GS}$. This is why the gain's magnitude increases with increasing $V_{GS}$.
 
 \FloatBarrier
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/vout_vs_v3.PNG}
-	\caption{DC Sweep}
+	\includegraphics[scale=0.50]{./images/vout_vs_v3.PNG}
+	\caption{Voltage Transfer Characteristic}
 	\label{fig:vout_vs_v3}
 \end{figure}
 
 \FloatBarrier
 
-If $V_{GS}$ is biased at about $1$\si{\volt}, then the output voltage $V_{out}$ is biased at about $\frac{V_{DD}}{2}$, where $V_{DD} = 10$\si{\volt} is the supply voltage. As the input bias voltage at $V_{GS}$ is increased, the output bias voltage at $V_{out}$ decreases because of the inverting nature of the common source amplifier. If the amplifier is biased in the middle of the saturation region, which is where the steep downward slope in figure (\ref{fig:vout_vs_v3}) occurs, then varying the small-signal $V_{gs}$ linearly varies the output voltage $V_{out}$. This is because the slope, or $\frac{dV_{out}}{dV_{in}}$, is steepest in this region. So, the amplifier is most linear when it is biased here. If it is biased closer to cutoff region at lower voltages or the triode region at higher voltages, varying $V_{gs}$ could produce a clamped waveform at the output, meaning the gain is not constant, and the amplifier is not linear. \\
+\uline{If $V_{GS}$ is biased at about $1$\si{\volt}, then the output voltage $V_{out}$ is biased at about $\frac{V_{DD}}{2}$, where $V_{DD} = 10$\si{\volt} is the supply voltage.} As the input bias voltage at $V_{GS}$ is increased, the output bias voltage at $V_{out}$ decreases because of the inverting nature of the common source amplifier. If the amplifier is biased in the middle of the saturation region, which is where the steep downward slope in figure (\ref{fig:vout_vs_v3}) occurs, then varying the small-signal $V_{gs}$ linearly varies the output voltage $V_{out}$. This is because the slope, or $\frac{dV_{out}}{dV_{in}}$, is steepest in this region. So, the amplifier is most linear when it is biased here. If it is biased closer to cutoff region at lower voltages or the triode region at higher voltages, varying $V_{gs}$ could produce a clamped waveform at the output, meaning the gain is not constant, and the amplifier is not linear. \\
