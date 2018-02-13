@@ -2,7 +2,7 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit2.PNG}
+	\includegraphics[scale=0.75]{./images/circuit2.PNG}
 	\caption{Common-Source Amplifier with PMOS Current Mirror}
 	\label{fig:circuit2}
 \end{figure}
@@ -15,20 +15,20 @@ The input voltage $V_2$ is swept from $0$\si{\volt} to $10$\si{\volt} to determi
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit2_dc_sweep.PNG}
-	\caption{Voltage Transfer Characteristic of Figure (\ref{fig:circuit2}) Circuit}
-	\label{fig:circuit2_dc_sweep}
+	\includegraphics[scale=0.50]{./images/circuit5_vtc.PNG}
+	\caption{Voltage Transfer Characteristic}
+	\label{fig:circuit5_vtc}
 \end{figure}
 
 \FloatBarrier
 
-The amplifier is biased at about $1.3116$\si{\volt}. A bias simulation is run, and its results are used to calculate the small signal parameters in table ().
+The amplifier is biased at about $1.3116$\si{\volt} when $V_{out}$ is biased at approximately $\frac{V_{DD}}{2} = 5$\si{\volt}. A bias simulation is run, and its results are used to calculate the small signal parameters in table (\ref{tab:ss_params}).
 
 \FloatBarrier
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit2_bias_sim.PNG}
+	\includegraphics[scale=0.75]{./images/circuit2_bias_sim.PNG}
 	\caption{Figure (\ref{fig:circuit2}) Circuit Bias Simulation}
 	\label{fig:circuit2_bias_sim}
 \end{figure}
@@ -41,7 +41,7 @@ The amplifier is biased at about $1.3116$\si{\volt}. A bias simulation is run, a
 	\centering
 	\caption{Small-Signal Parameters of Figure (\ref{fig:circuit2}) Circuit}
 	\label{tab:ss_params}
-	\csvautotabular{../tables/ss_params.csv}
+	\csvautotabular{./tables/ss_params.csv}
 \end{table}
 
 \FloatBarrier
@@ -71,7 +71,7 @@ The low-frequency, small-signal gain can be determined through simulation as wel
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit3.PNG}
+	\includegraphics[scale=0.75]{./images/circuit3.PNG}
 	\caption{AC Signal Version of Circuit in Figure (\ref{fig:circuit2})}
 	\label{fig:circuit3}
 \end{figure}
@@ -82,11 +82,28 @@ The low-frequency, small-signal gain can be determined through simulation as wel
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit3_ac_sweep.PNG}
-	\caption{AC Sweep of Circuit in Figure (\fig{fig:circuit3})}
+	\includegraphics[scale=0.50]{./images/circuit3_ac_sweep.PNG}
+	\caption{AC Sweep of Circuit in Figure (\ref{fig:circuit3})}
 	\label{fig:circuit3_ac_sweep}
 \end{figure}
 
 \FloatBarrier
 
 From figure (\ref{fig:circuit3_ac_sweep}), the gain is estimated to be about $-177[\frac{V}{V}]$. This gain is a bit larger in magnitude than what is expected from the small-signal model of the amplifier. After turning off each SPICE model parameter one-by-one, none seems to be directly responsible for this increased gain. Some inner-working of the transistor model is likely different from the small-signal model used for the calculations, though the two are reasonably close together.
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.50]{./images/circuit4_dc_sweep_vout.PNG}
+	\caption{DC Sweep of $V_{out}$ with Load Line}
+	\label{fig:circuit4_dc_sweep_vout}
+\end{figure}
+
+\FloatBarrier
+
+{\footnotesize The load line, the source current to $M_1$, is in red, whereas the curves for different $V_{in}$ values representing the drain current through $M_3$ are in green. $V_{out}$ is on the x-axis, whereas the current is on the y-axis.}
+
+\FloatBarrier
+
+The simulation demonstrates the various potential operating points for the circuit. If a particular $V_{out}$ is desired, then the drain current is simply the y-value at the intersection of the load line in red (i.e. the source current through $M_1$) and one of the $M_3$ drain current curves in green. The particular $M_3$ drain current curve at which the intersection occurs corresponds to a particular $V_{in}$, the applied input voltage to achieve such an operating condition.
