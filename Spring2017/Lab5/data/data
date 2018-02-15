@@ -1,0 +1,12 @@
+Bias point: (Vin,Vout) = (2.55625,4.875)
+Resistance R1 for part 2: 295.3 ohms
+Test in the second part, biased Vin at 2.5V and peak-to-peak of 200mVpp
+
+Input pp - 76.899mV
+Output pp - 1.6485V
+Gain - -21.4[V/V]
+
+Vt = 2.0V
+
+gm = 136 mA/V
+Av0 = - gm * Rd = -40.2 [V/V]
