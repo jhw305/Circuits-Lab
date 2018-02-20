@@ -16,7 +16,10 @@ with open(sys.argv[1] + '.csv', 'w') as csvfile:
 		min_value = int(sys.argv[position + 1])
 		max_value = int(sys.argv[position + 2])
 		if min_value != 0 or max_value != 0:
-			writer.writerow([sys.argv[position]] + (np.linspace(min_value, max_value, num_elements)).tolist())
+			row_values = np.linspace(min_value, max_value, num_elements)
+			row_values = np.around(row_values, 3)
+			row_list = [sys.argv[position]] + row_values.tolist()
 		else:
-			writer.writerow([sys.argv[position]] + [''] * num_elements)
+			row_list = [sys.argv[position]] + [''] * num_elements
+		writer.writerow(row_list)
 		position += 3
