@@ -3,7 +3,7 @@
 \subsection{Procedure}
 
 The input source of the circuit in figure \ref{fig:circuit} is set to a $50 mVpp$ sinusoid with a $1 kHz$ frequency.
-The sinusoidal input signal is offset by the $2.5 V$ DC, after making necessary adjustments to the bias point found in the previous portion of the experiment.
+The sinusoidal input signal is offset by $2.5 V$ DC, after making necessary adjustments to the bias point found in the previous portion of the experiment.
 The oscilloscope is set to measure time-domain signals to find the amplitude of the output signal.
 The gain of the amplifier is then calculated from the measurements and is compared to the theoretical result.
 
@@ -28,7 +28,7 @@ The theoretical transconductance $g_m$ of the amplifier can be calculated using 
 
 \begin{equation}
 	\label{eq:g_m}
-	I_D = \sqrt{2k_nI_D} = \sqrt{2(80 mA/V^2)(17.4 mA)} = 52.8 mA/V
+	g_m = \sqrt{2k_nI_D} = \sqrt{2(80 mA/V^2)(17.4 mA)} = 52.8 mA/V
 \end{equation}
 
 \FloatBarrier
@@ -39,8 +39,12 @@ The theoretical open loop gain $A_{vo}$ of the amplifier can then be found using
 
 \begin{equation}
 	\label{eq:theoretical_gain}
-	A_{vo} = -g_mR = -(52.8 mA/V)(295.3 \Omega) = -15.6 V/V
-    gain in dB = 20 log(|-15.6|) = 23.9 dB
+	A_{vo} = -g_mR = -(52.8 mA/V)(295.3 \Omega) = -15.6 V/V \\
+\end{equation}
+
+\begin{equation}
+	\label{eq:theoretical_gain_db}
+        gain \ in \ dB = 20 log(|-15.6|) = 23.9 dB
 \end{equation}
 
 \FloatBarrier
@@ -51,7 +55,7 @@ The following input and output voltages are measured using the oscilloscope.
 
 \begin{figure}[h!]
 	\centering
-		\includegraphics[scale=1]{../img/scope_4.png}
+		\includegraphics[scale=0.35]{./images/scope_4.png}
 		\caption{Input and Output Voltages Measured}
 		\label{fig:measured_vin_vout}
 \end{figure}
@@ -59,25 +63,33 @@ The following input and output voltages are measured using the oscilloscope.
 \FloatBarrier
 
 From figure \ref{fig:measured_vin_vout}, the measured peak-to-peak amplitudes of $V_{in}$ and $V_{out}$ are $77 mVpp$ and $-1.66 Vpp$, respectively.
-The peak-to-peak amplitude of the input signal measured from the oscilloscope will be used instead of the ideal $50 mVpp$ value set on the function generator because the signals measured on the oscilloscope account for noise in the waveforms.
-The values found in figure \ref{fig:measured_vin_vout} is used to calculate the measured gain of the amplifier.
+The peak-to-peak amplitude of the input signal measured from the oscilloscope will be used instead of the ideal $50 mVpp$ value set on the function generator because the signals measured on the oscilloscope account for noise, loading effects, and other nonidealities in the waveforms.
+The values found in figure \ref{fig:measured_vin_vout} are used to calculate the measured gain of the amplifier.
 
 \FloatBarrier
 
 \begin{equation}
 	\label{eq:measured_gain}
 	A_{vo} = - \frac{V_{out}}{V_{in}} = \frac{-1.66 V}{0.077 V} = 21.6 V/V
-    gain in dB = 20 log(|-21.6|) = 26.7 dB
+\end{equation}
+
+\begin{equation}
+	\label{eq:measured_gain_db}
+	gain \ in \ dB = 20 log(|-21.6|) = 26.7 dB
 \end{equation}
 
 \FloatBarrier
 
-The percent error of the measured gain and theoretical gain is found using the following equation:
+The percent error of the measured and theoretical gains are found using the following equation:
 
 \begin{equation}
 	\label{eq:error}
-	error in amplitude gain = - |\frac{(-21.6) - (-15.6)}{-15.6}| * 100\% = 38\%
-    error in dB gain = - |\frac{26.7 dB - 23.9 dB}{23.9 dB}| * 100\% = 12\%
+	error \ in \ amplitude \ gain = - |\frac{(-21.6) - (-15.6)}{-15.6}| * 100\% = 38\%
+\end{equation}
+
+\begin{equation}
+	\label{eq:error_db}
+        error \ in \ dB \ gain = - |\frac{26.7 dB - 23.9 dB}{23.9 dB}| * 100\% = 12\%
 \end{equation}
 
  The measured gain and theoretical gain are in the same order of magnitude and the measured gain in dB is close to the theoretical value.
