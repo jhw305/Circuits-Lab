@@ -33,7 +33,14 @@ The theoretical transconductance $g_m$ of the amplifier can be calculated using 
 
 \FloatBarrier
 
-The theoretical open loop gain $A_{vo}$ of the amplifier can then be found using the transconductance $g_m$.
+Using the small signal model for the common source amplifier and using KCL at the drain node, the equation to find the theoretical open loop gain $A_{vo}$ is found.
+
+\begin{equation}
+	\label{eq:ss_kcl}
+	-g_mV_{in} = \frac{V_{out}}{R} \rightarrow A_{vo} = \frac{V_{out}}{V{in}} = -g_mR
+\end{equation}
+
+The theoretical open loop gain $A_{vo}$ of the amplifier can then be found using the transconductance $g_m$ in equation \ref{eq:g_m}.
 
 \FloatBarrier
 
