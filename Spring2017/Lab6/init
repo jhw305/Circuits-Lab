@@ -1,2 +1,2 @@
 #!/bin/bash
-~/Circuits-Lab/common/scripts/azide --report "Lab 5: Hands-On AC Analysis of NMOS Transistors" --course "EECS 170LB" --authors "Roman Parise (59611417)" "Johnathan Fritsche (11106947)" "Jason Wang (42873192)" --sections "Introduction" "Procedure and Results - Voltage Transfer Curve" "Procedure and Results - Common Source Amplifier with Passive Load" "Conclusion"
+~/Circuits-Lab/common/scripts/azide --report "Lab 6: Introduction to Digital Circuits - CMOS Inverter" --course "EECS 170LB" --authors "Roman Parise (59611417)" --sections "Introduction" "CMOS Inverter Circuit" "CMOS Inverter Layout" "Conclusion"
