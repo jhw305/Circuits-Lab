@@ -110,3 +110,44 @@ The SPICE model does not seem to contain information on such short-channel effec
 If the oxide layer thickness is increased, the MOS capacitor's capacitance is decreased.
 Thus, for the same applied gate voltage, less charge accumulates in the channel.
 Therefore, ceteris paribus, the current should decrease if the oxide layer thickness is increased. \\
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.75]{../images/inverter_layout.PNG}
+	\caption{Layout of CMOS Inverter}
+	\label{fig:inverter_layout}
+\end{figure}
+
+\FloatBarrier
+
+The CMOS inverter can be implemented in a true integrated circuit process, depicted in figure (\ref{fig:inverter_layout}).
+The design depicted passes the design rule check.
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.75]{../images/cmos_layout_transient.PNG}
+	\caption{CMOS Inverter Layout Transient Response}
+	\label{fig:cmos_layout_transient}
+\end{figure}
+
+\FloatBarrier
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.75]{../images/cmos_layout_vtc.PNG}
+	\caption{CMOS Inverter Layout Voltage Transfer Characteristic (VTC)}
+	\label{fig:cmos_layout_vtc}
+\end{figure}
+
+\FloatBarrier
+
+Figure (\ref{fig:cmos_layout_transient}) presents the transient response of the inverter.
+Figure (\ref{fig:cmos_layout_vtc}) depicts the voltage transfer characteristic.
+The nature of the results is similar to those presented in SPICE simulations earlier.
+
