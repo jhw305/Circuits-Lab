@@ -1,0 +1,2 @@
+#!/bin/bash
+~/Circuits-Lab/common/scripts/azide --report "Lab 6: Introduction to Digital Circuits - CMOS Inverter" --course "EECS 170LB" --authors "Roman Parise (59611417)" --sections "Introduction" "CMOS Inverter Circuit" "CMOS Inverter Layout" "Conclusion"

@@ -12,27 +12,9 @@ COMMA_DELIMITER=","
 NEWLINE="\n"
 CSV_EXT=".csv"
 TEX_EXT=".tex"
-WRAP="_wrap"
 
 ERR_CODE = -1
 SUCCESS = 0
-
-# File generation
-def wrap_fname( section_name ) :
-	return section_name + WRAP + TEX_EXT
-
-def content_fname( section_name ) :
-	return section_name + TEX_EXT
-
-def gen_makefile_txt( section_name ) :
-	txt = ""
-	txt += "LATEX=pdflatex" + NEWLINE
-	txt += "BUILD=$(LATEX) " + wrap_fname( section_name ) + NEWLINE
-	txt += NEWLINE
-	txt += "build: " + content_fname( section_name ) + " " + wrap_fname( section_name ) + NEWLINE
-	txt += "	$(BUILD)" + NEWLINE
-	txt += "	$(BUILD)" + NEWLINE
-	return txt
 
 # Data processing
 def perc_err( measured , theoretical ):

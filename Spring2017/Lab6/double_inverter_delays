@@ -1,0 +1,4 @@
+Layout , 1st Inverter - tPLH [ps] , 1st Inverter - tPHL [ps] , 1st Inverter - tP [ps]
+0.6um NMOS - 0.6um PMOS , 52 , 6 , 29
+0.6um NMOS - 1.5um PMOS , 23 , 23 , 23
+1.2um NMOS - 3.0um PMOS , 22 , 22 , 22
