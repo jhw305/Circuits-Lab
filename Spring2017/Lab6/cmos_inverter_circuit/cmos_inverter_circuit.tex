@@ -2,20 +2,20 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit1.PNG}
+	\includegraphics[scale=0.75]{./images/circuit1.PNG}
 	\caption{CMOS Inverter Circuit}
 	\label{fig:circuit1}
 \end{figure}
 
 \FloatBarrier
 
-A DC sweep simulation is run to determine the voltage transfer characteristic for the CMOS inverter circuit in figure (\ref{fig:circuit}).
+A DC sweep simulation is run to determine the voltage transfer characteristic for the CMOS inverter circuit in figure (\ref{fig:circuit1}).
 
 \FloatBarrier
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit1_dcsweep.PNG}
+	\includegraphics[scale=0.50]{./images/circuit1_dcsweep.PNG}
 	\caption{Figure (\ref{fig:circuit1}) Circuit Voltage Transfer Characteristic}
 	\label{fig:circuit1_dcsweep}
 \end{figure}
@@ -30,7 +30,7 @@ At high input gate voltages, "high" meaning "close to supply", $V_{GS}$ for the 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit1_noisemargin_measure.PNG}
+	\includegraphics[scale=0.50]{./images/circuit1_noisemargin_measure.PNG}
 	\caption{CMOS Inverter Noise Margin Measurement}
 	\label{fig:circuit1_noisemargin_measure}
 \end{figure}
@@ -59,7 +59,7 @@ Regarding equations (\ref{eq:nml}) and (\ref{eq:nmh}), $NM_{L}$ and $NM_{H}$ are
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit1_noisemargin.PNG}
+	\includegraphics[scale=0.25]{./images/circuit1_noisemargin.PNG}
 	\caption{Depiction of Noise Margins on Voltage Transfer Characteristic}
 	\label{fig:circuit1_noisemargin}
 \end{figure}
@@ -72,7 +72,7 @@ The CMOS inverter, unlike other inverters like common-source amplifiers, is desi
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit2.PNG}
+	\includegraphics[scale=0.75]{./images/circuit2.PNG}
 	\caption{CMOS Inverter with Square-Wave Input}
 	\label{fig:circuit2}
 \end{figure}
@@ -85,7 +85,7 @@ The circuit in figure (\ref{fig:circuit2}) is used to observe the inverter's tra
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit2_transient.PNG}
+	\includegraphics[scale=0.65]{./images/circuit2_transient.PNG}
 	\caption{Transient Analysis of the Circuit in Figure (\ref{fig:circuit2})}
 	\label{fig:circuit2_transient}
 \end{figure}
@@ -103,4 +103,4 @@ The propagation delay can be ascertained from the transient response in figure (
 	t_{p} = \frac{t_{PHL} + t_{PLH}}{2}
 \end{equation}
 
-Because $t_{PHL} = 81$\si{\pico\seconds} and $t_{PLH} = 103$\si{\pico\seconds}, the propagation delay $t_p = 92$\si{\pico\seconds}.
+Because $t_{PHL} = 81$\si{\pico\second} and $t_{PLH} = 103$\si{\pico\second}, the propagation delay $t_p = 92$\si{\pico\second}.
