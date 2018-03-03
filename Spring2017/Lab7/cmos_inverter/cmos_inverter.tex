@@ -5,7 +5,7 @@ A $1$\si{\kilo\hertz} ramp going from $0$\si{\volt} to $5$\si{\volt} is applied 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/vout_and_vin_inverter_alt.PNG}
+	\includegraphics[scale=0.50]{../images/vout_and_vin_inverter_alt.png}
 	\caption{$V_{out}$ and $V_{in}$}
 	\label{fig:vout_and_vin_inverter_alt}
 \end{figure}
@@ -26,7 +26,7 @@ The ramp function resets every period, which is why the output does the same.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/vtc.png.PNG}
+	\includegraphics[scale=0.50]{../images/vtc.png}
 	\caption{Voltage Transfer Characteristic of CMOS Inverter - $V_{out}$ versus $V_{in}$}
 	\label{fig:vtc.png}
 \end{figure}
@@ -42,7 +42,7 @@ The physics of why the inverter works in this manner is explained above.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/vil_vih_measure.PNG}
+	\includegraphics[scale=0.50]{../images/vil_vih_measure.png}
 	\caption{$V_{IL}$ and $V_{IH}$ Measurement}
 	\label{fig:vil_vih_measure}
 \end{figure}
@@ -111,7 +111,51 @@ The values for the noise margins of this CMOS inverter are given in table (\ref{
 	\centering
 	\caption{Noise Margins}
 	\label{tab:noise_margins}
-	\csvautotabular{../tables/noise_margins.csv}
+	\csvautotabular{../data/noise_margins.csv}
 \end{table}
 
 \FloatBarrier
+
+A square wave input with the same frequency and amplitudes is then provided to the CMOS inverter.
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.50]{../images/square_wave_inverter.png}
+	\caption{Square Wave Input - Transient}
+	\label{fig:square_wave_inverter}
+\end{figure}
+
+\FloatBarrier
+
+{\footnotesize The same color convention as figure (\ref{fig:vout_and_vin_inverter_alt}) is followed.}
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.50]{../images/square_wave_vtc.png}
+	\caption{Square Wave Input - Voltage Transfer Characteristic}
+	\label{fig:square_wave_vtc}
+\end{figure}
+
+\FloatBarrier
+
+The two points ( $V_{out}$ , $V_{in}$ ) at which the output is pulled to supply and ground are very pronounced in figure (\ref{fig:square_wave_vtc}).
+However, because the square wave transitions so quickly, very few other points between are sampled.
+As a result, the quality of the voltage transfer characteristic is significantly diminished.
+A sine wave input is then tested.
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.50]{../images/sine_wave_input_vtc.png}
+	\caption{Sine Wave Input - Voltage Transfer Characteristic}
+	\label{fig:sine_wave_input_vtc}
+\end{figure}
+
+\FloatBarrier
+
+In the same period, the sine wave gives much better quality than the ramp function input when determining the voltage transfer characteristic.
