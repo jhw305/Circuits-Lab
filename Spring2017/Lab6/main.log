@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  28 FEB 2018 19:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  28 FEB 2018 22:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,12 +683,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./images/id_vgs_level1.PNG, id=63, 799.98875pt x 460.21938pt>
 File: ./images/id_vgs_level1.PNG Graphic file (type png)
 <use ./images/id_vgs_level1.PNG>
-Package pdftex.def Info: ./images/id_vgs_level1.PNG  used on input line 65. on 
-input line 65.
+Package pdftex.def Info: ./images/id_vgs_level1.PNG  used on input line 67. on 
+input line 67.
 Package pdftex.def Info: Requested size: 399.9934pt x 230.10912pt on input line
- 65.
+ 67.
 
-Overfull \hbox (54.9934pt too wide) in paragraph at lines 65--66
+Overfull \hbox (54.9934pt too wide) in paragraph at lines 67--68
  [][] 
  []
 
@@ -696,27 +696,27 @@ Overfull \hbox (54.9934pt too wide) in paragraph at lines 65--66
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [9 <./images/bsim4_id_vds_nmos.PNG>]
-<./images/id_vgs_level3.PNG, id=68, 801.49437pt x 461.22313pt>
+<./images/id_vgs_level3.PNG, id=69, 801.49437pt x 461.22313pt>
 File: ./images/id_vgs_level3.PNG Graphic file (type png)
 <use ./images/id_vgs_level3.PNG>
-Package pdftex.def Info: ./images/id_vgs_level3.PNG  used on input line 76. on 
-input line 76.
+Package pdftex.def Info: ./images/id_vgs_level3.PNG  used on input line 78. on 
+input line 78.
 Package pdftex.def Info: Requested size: 400.7462pt x 230.611pt on input line 7
-6.
+8.
 
-Overfull \hbox (55.7462pt too wide) in paragraph at lines 76--77
+Overfull \hbox (55.7462pt too wide) in paragraph at lines 78--79
  [][] 
  []
 
-<./images/id_vgs_bsim4.PNG, id=69, 800.9925pt x 461.725pt>
+<./images/id_vgs_bsim4.PNG, id=70, 800.9925pt x 461.725pt>
 File: ./images/id_vgs_bsim4.PNG Graphic file (type png)
 <use ./images/id_vgs_bsim4.PNG>
-Package pdftex.def Info: ./images/id_vgs_bsim4.PNG  used on input line 87. on i
-nput line 87.
+Package pdftex.def Info: ./images/id_vgs_bsim4.PNG  used on input line 89. on i
+nput line 89.
 Package pdftex.def Info: Requested size: 400.49527pt x 230.86194pt on input lin
-e 87.
+e 89.
 
-Overfull \hbox (55.49527pt too wide) in paragraph at lines 87--88
+Overfull \hbox (55.49527pt too wide) in paragraph at lines 89--90
  [][] 
  []
 
@@ -724,15 +724,15 @@ Overfull \hbox (55.49527pt too wide) in paragraph at lines 87--88
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10 <./images/id_vgs_level1.PNG> <./images/id_vgs_level3.PNG>]
-<./images/level1_body_effect_nmos.PNG, id=75, 799.98875pt x 461.22313pt>
+<./images/level1_body_effect_nmos.PNG, id=76, 799.98875pt x 461.22313pt>
 File: ./images/level1_body_effect_nmos.PNG Graphic file (type png)
 <use ./images/level1_body_effect_nmos.PNG>
 Package pdftex.def Info: ./images/level1_body_effect_nmos.PNG  used on input li
-ne 107. on input line 107.
+ne 109. on input line 109.
 Package pdftex.def Info: Requested size: 399.9934pt x 230.611pt on input line 1
-07.
+09.
 
-Overfull \hbox (54.9934pt too wide) in paragraph at lines 107--108
+Overfull \hbox (54.9934pt too wide) in paragraph at lines 109--110
  [][] 
  []
 
@@ -740,68 +740,66 @@ Overfull \hbox (54.9934pt too wide) in paragraph at lines 107--108
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11 <./images/id_vgs_bsim4.PNG>]
-<./images/level3_body_effect_nmos.PNG, id=80, 801.49437pt x 460.21938pt>
+<./images/level3_body_effect_nmos.PNG, id=81, 801.49437pt x 460.21938pt>
 File: ./images/level3_body_effect_nmos.PNG Graphic file (type png)
 <use ./images/level3_body_effect_nmos.PNG>
 Package pdftex.def Info: ./images/level3_body_effect_nmos.PNG  used on input li
-ne 118. on input line 118.
+ne 120. on input line 120.
 Package pdftex.def Info: Requested size: 400.7462pt x 230.10912pt on input line
- 118.
+ 120.
 
-Overfull \hbox (55.7462pt too wide) in paragraph at lines 118--119
+Overfull \hbox (55.7462pt too wide) in paragraph at lines 120--121
  [][] 
  []
 
 [12 <./images/level1_body_effect_nmos.PNG> <./images/level3_body_effect_nmos.PN
 G>]
-<./images/bsim4_body_effect_nmos.PNG, id=87, 800.9925pt x 459.21562pt>
+<./images/bsim4_body_effect_nmos.PNG, id=88, 800.9925pt x 459.21562pt>
 File: ./images/bsim4_body_effect_nmos.PNG Graphic file (type png)
 <use ./images/bsim4_body_effect_nmos.PNG>
 Package pdftex.def Info: ./images/bsim4_body_effect_nmos.PNG  used on input lin
-e 133. on input line 133.
+e 137. on input line 137.
 Package pdftex.def Info: Requested size: 400.49527pt x 229.60724pt on input lin
-e 133.
+e 137.
 
-Overfull \hbox (55.49527pt too wide) in paragraph at lines 133--134
+Overfull \hbox (55.49527pt too wide) in paragraph at lines 137--138
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--145
+Underfull \hbox (badness 10000) in paragraph at lines 144--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--149
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
 
  []
 
-<./images/inverter_06nmos06pmos.PNG, id=88, 408.52625pt x 510.90875pt>
+[13 <./images/bsim4_body_effect_nmos.PNG>]
+<./images/inverter_06nmos06pmos.PNG, id=93, 408.52625pt x 510.90875pt>
 File: ./images/inverter_06nmos06pmos.PNG Graphic file (type png)
 <use ./images/inverter_06nmos06pmos.PNG>
 Package pdftex.def Info: ./images/inverter_06nmos06pmos.PNG  used on input line
- 154. on input line 154.
+ 162. on input line 162.
 Package pdftex.def Info: Requested size: 306.39394pt x 383.18062pt on input lin
-e 154.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 155.
+e 162.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 163.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13 <./images/bsim4_body_effect_nmos.PNG>]
-<./images/inverter_transient_06nmos_06pmos.PNG, id=93, 890.82813pt x 579.16376p
+<./images/inverter_transient_06nmos_06pmos.PNG, id=94, 890.82813pt x 579.16376p
 t>
 File: ./images/inverter_transient_06nmos_06pmos.PNG Graphic file (type png)
 <use ./images/inverter_transient_06nmos_06pmos.PNG>
 Package pdftex.def Info: ./images/inverter_transient_06nmos_06pmos.PNG  used on
- input line 168. on input line 168.
+ input line 176. on input line 176.
 Package pdftex.def Info: Requested size: 445.41298pt x 289.58116pt on input lin
-e 168.
+e 176.
 
-Overfull \hbox (100.41298pt too wide) in paragraph at lines 168--169
+Overfull \hbox (100.41298pt too wide) in paragraph at lines 176--177
  [][] 
  []
 
@@ -809,15 +807,15 @@ Overfull \hbox (100.41298pt too wide) in paragraph at lines 168--169
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14 <./images/inverter_06nmos06pmos.PNG>]
-<./images/inverter_vtc_06nmos_06pmos.PNG, id=99, 891.33pt x 579.66562pt>
+<./images/inverter_vtc_06nmos_06pmos.PNG, id=100, 891.33pt x 579.66562pt>
 File: ./images/inverter_vtc_06nmos_06pmos.PNG Graphic file (type png)
 <use ./images/inverter_vtc_06nmos_06pmos.PNG>
 Package pdftex.def Info: ./images/inverter_vtc_06nmos_06pmos.PNG  used on input
- line 179. on input line 179.
+ line 187. on input line 187.
 Package pdftex.def Info: Requested size: 445.66391pt x 289.83209pt on input lin
-e 179.
+e 187.
 
-Overfull \hbox (100.66391pt too wide) in paragraph at lines 179--180
+Overfull \hbox (100.66391pt too wide) in paragraph at lines 187--188
  [][] 
  []
 
@@ -826,29 +824,29 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [15 <./images/inverter_transient_06nmos_06pmos.PNG>] [16 <./images/inverter_vtc
 _06nmos_06pmos.PNG>]
-<./images/cascaded_inverter_06nmos06pmos.PNG, id=108, 654.445pt x 437.13312pt>
+<./images/cascaded_inverter_06nmos06pmos.PNG, id=109, 654.445pt x 437.13312pt>
 File: ./images/cascaded_inverter_06nmos06pmos.PNG Graphic file (type png)
 <use ./images/cascaded_inverter_06nmos06pmos.PNG>
 Package pdftex.def Info: ./images/cascaded_inverter_06nmos06pmos.PNG  used on i
-nput line 195. on input line 195.
+nput line 203. on input line 203.
 Package pdftex.def Info: Requested size: 490.83255pt x 327.84903pt on input lin
-e 195.
+e 203.
 
-Overfull \hbox (145.83255pt too wide) in paragraph at lines 195--196
+Overfull \hbox (145.83255pt too wide) in paragraph at lines 203--204
  [][] 
  []
 
-<./images/cascaded_inverter_transient_06nmos06pmos.PNG, id=109, 891.33pt x 580.
+<./images/cascaded_inverter_transient_06nmos06pmos.PNG, id=110, 891.33pt x 580.
 66937pt>
 File: ./images/cascaded_inverter_transient_06nmos06pmos.PNG Graphic file (type 
 png)
 <use ./images/cascaded_inverter_transient_06nmos06pmos.PNG>
 Package pdftex.def Info: ./images/cascaded_inverter_transient_06nmos06pmos.PNG 
- used on input line 206. on input line 206.
+ used on input line 214. on input line 214.
 Package pdftex.def Info: Requested size: 445.66391pt x 290.33397pt on input lin
-e 206.
+e 214.
 
-Overfull \hbox (100.66391pt too wide) in paragraph at lines 206--207
+Overfull \hbox (100.66391pt too wide) in paragraph at lines 214--215
  [][] 
  []
 
@@ -858,28 +856,28 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [17
 
  <./images/cascaded_inverter_06nmos06pmos.PNG>]
-<./images/inverter_06nmos15pmos.PNG, id=114, 320.69812pt x 437.13312pt>
+<./images/inverter_06nmos15pmos.PNG, id=115, 320.69812pt x 437.13312pt>
 File: ./images/inverter_06nmos15pmos.PNG Graphic file (type png)
 <use ./images/inverter_06nmos15pmos.PNG>
 Package pdftex.def Info: ./images/inverter_06nmos15pmos.PNG  used on input line
- 219. on input line 219.
+ 227. on input line 227.
 Package pdftex.def Info: Requested size: 240.523pt x 327.84903pt on input line 
-219.
+227.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [18 <./images/cascaded_inverter_transient_06nmos06pmos.PNG>]
-<./images/inverter_transient_06nmos_15pmos.PNG, id=120, 867.24pt x 519.44063pt>
+<./images/inverter_transient_06nmos_15pmos.PNG, id=121, 867.24pt x 519.44063pt>
 
 File: ./images/inverter_transient_06nmos_15pmos.PNG Graphic file (type png)
 <use ./images/inverter_transient_06nmos_15pmos.PNG>
 Package pdftex.def Info: ./images/inverter_transient_06nmos_15pmos.PNG  used on
- input line 230. on input line 230.
+ input line 238. on input line 238.
 Package pdftex.def Info: Requested size: 433.61894pt x 259.71968pt on input lin
-e 230.
+e 238.
 
-Overfull \hbox (88.61894pt too wide) in paragraph at lines 230--231
+Overfull \hbox (88.61894pt too wide) in paragraph at lines 238--239
  [][] 
  []
 
@@ -888,28 +886,28 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [19 <./images/inverter_06nmos15pmos.PNG>] [20 <./images/inverter_transient_06nm
 os_15pmos.PNG>]
-<./images/inverter_vtc_06nmos_15pmos.PNG, id=129, 868.74562pt x 518.43687pt>
+<./images/inverter_vtc_06nmos_15pmos.PNG, id=130, 868.74562pt x 518.43687pt>
 File: ./images/inverter_vtc_06nmos_15pmos.PNG Graphic file (type png)
 <use ./images/inverter_vtc_06nmos_15pmos.PNG>
 Package pdftex.def Info: ./images/inverter_vtc_06nmos_15pmos.PNG  used on input
- line 241. on input line 241.
+ line 249. on input line 249.
 Package pdftex.def Info: Requested size: 434.37175pt x 259.21779pt on input lin
-e 241.
+e 249.
 
-Overfull \hbox (89.37175pt too wide) in paragraph at lines 241--242
+Overfull \hbox (89.37175pt too wide) in paragraph at lines 249--250
  [][] 
  []
 
-<./images/cascaded_inverter_06nmos15pmos.PNG, id=130, 725.20938pt x 515.9275pt>
+<./images/cascaded_inverter_06nmos15pmos.PNG, id=131, 725.20938pt x 515.9275pt>
 
 File: ./images/cascaded_inverter_06nmos15pmos.PNG Graphic file (type png)
 <use ./images/cascaded_inverter_06nmos15pmos.PNG>
 Package pdftex.def Info: ./images/cascaded_inverter_06nmos15pmos.PNG  used on i
-nput line 252. on input line 252.
+nput line 260. on input line 260.
 Package pdftex.def Info: Requested size: 362.6038pt x 257.96312pt on input line
- 252.
+ 260.
 
-Overfull \hbox (17.6038pt too wide) in paragraph at lines 252--253
+Overfull \hbox (17.6038pt too wide) in paragraph at lines 260--261
  [][] 
  []
 
@@ -919,17 +917,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [21
 
  <./images/inverter_vtc_06nmos_15pmos.PNG>]
-<./images/cascaded_inverter_transient_06nmos15pmos.PNG, id=135, 868.74562pt x 5
+<./images/cascaded_inverter_transient_06nmos15pmos.PNG, id=136, 868.74562pt x 5
 19.9425pt>
 File: ./images/cascaded_inverter_transient_06nmos15pmos.PNG Graphic file (type 
 png)
 <use ./images/cascaded_inverter_transient_06nmos15pmos.PNG>
 Package pdftex.def Info: ./images/cascaded_inverter_transient_06nmos15pmos.PNG 
- used on input line 263. on input line 263.
+ used on input line 271. on input line 271.
 Package pdftex.def Info: Requested size: 434.37175pt x 259.97061pt on input lin
-e 263.
+e 271.
 
-Overfull \hbox (89.37175pt too wide) in paragraph at lines 263--264
+Overfull \hbox (89.37175pt too wide) in paragraph at lines 271--272
  [][] 
  []
 
@@ -938,23 +936,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [22 <./images/cascaded_inverter_06nmos15pmos.PNG>] [23 <./images/cascaded_inver
 ter_transient_06nmos15pmos.PNG>]
-<./images/inverter_12nmos30pmos.PNG, id=144, 288.57813pt x 438.13687pt>
+<./images/inverter_12nmos30pmos.PNG, id=145, 288.57813pt x 438.13687pt>
 File: ./images/inverter_12nmos30pmos.PNG Graphic file (type png)
 <use ./images/inverter_12nmos30pmos.PNG>
 Package pdftex.def Info: ./images/inverter_12nmos30pmos.PNG  used on input line
- 276. on input line 276.
+ 284. on input line 284.
 Package pdftex.def Info: Requested size: 216.43304pt x 328.60184pt on input lin
-e 276.
-<./images/inverter_transient_12nmos_30pmos.PNG, id=145, 866.73813pt x 519.44063
+e 284.
+<./images/inverter_transient_12nmos_30pmos.PNG, id=146, 866.73813pt x 519.44063
 pt>
 File: ./images/inverter_transient_12nmos_30pmos.PNG Graphic file (type png)
 <use ./images/inverter_transient_12nmos_30pmos.PNG>
 Package pdftex.def Info: ./images/inverter_transient_12nmos_30pmos.PNG  used on
- input line 287. on input line 287.
+ input line 295. on input line 295.
 Package pdftex.def Info: Requested size: 433.36801pt x 259.71968pt on input lin
-e 287.
+e 295.
 
-Overfull \hbox (88.36801pt too wide) in paragraph at lines 287--288
+Overfull \hbox (88.36801pt too wide) in paragraph at lines 295--296
  [][] 
  []
 
@@ -964,15 +962,15 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [24
 
  <./images/inverter_12nmos30pmos.PNG>]
-<./images/inverter_vtc_12nmos_30pmos.PNG, id=151, 864.73062pt x 517.43312pt>
+<./images/inverter_vtc_12nmos_30pmos.PNG, id=152, 864.73062pt x 517.43312pt>
 File: ./images/inverter_vtc_12nmos_30pmos.PNG Graphic file (type png)
 <use ./images/inverter_vtc_12nmos_30pmos.PNG>
 Package pdftex.def Info: ./images/inverter_vtc_12nmos_30pmos.PNG  used on input
- line 298. on input line 298.
+ line 306. on input line 306.
 Package pdftex.def Info: Requested size: 432.36424pt x 258.71591pt on input lin
-e 298.
+e 306.
 
-Overfull \hbox (87.36424pt too wide) in paragraph at lines 298--299
+Overfull \hbox (87.36424pt too wide) in paragraph at lines 306--307
  [][] 
  []
 
@@ -981,29 +979,29 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [25 <./images/inverter_transient_12nmos_30pmos.PNG>] [26 <./images/inverter_vtc
 _12nmos_30pmos.PNG>]
-<./images/cascaded_inverter_12nmos_30pmos.PNG, id=160, 474.27188pt x 401.5pt>
+<./images/cascaded_inverter_12nmos_30pmos.PNG, id=161, 474.27188pt x 401.5pt>
 File: ./images/cascaded_inverter_12nmos_30pmos.PNG Graphic file (type png)
 <use ./images/cascaded_inverter_12nmos_30pmos.PNG>
 Package pdftex.def Info: ./images/cascaded_inverter_12nmos_30pmos.PNG  used on 
-input line 309. on input line 309.
+input line 317. on input line 317.
 Package pdftex.def Info: Requested size: 355.70303pt x 301.12425pt on input lin
-e 309.
+e 317.
 
-Overfull \hbox (10.70303pt too wide) in paragraph at lines 309--310
+Overfull \hbox (10.70303pt too wide) in paragraph at lines 317--318
  [][] 
  []
 
-<./images/cascaded_inverter_transient_12nmos_30pmos.PNG, id=161, 868.24374pt x 
+<./images/cascaded_inverter_transient_12nmos_30pmos.PNG, id=162, 868.24374pt x 
 517.43312pt>
 File: ./images/cascaded_inverter_transient_12nmos_30pmos.PNG Graphic file (type
  png)
 <use ./images/cascaded_inverter_transient_12nmos_30pmos.PNG>
 Package pdftex.def Info: ./images/cascaded_inverter_transient_12nmos_30pmos.PNG
-  used on input line 320. on input line 320.
+  used on input line 328. on input line 328.
 Package pdftex.def Info: Requested size: 434.1208pt x 258.71591pt on input line
- 320.
+ 328.
 
-Overfull \hbox (89.1208pt too wide) in paragraph at lines 320--321
+Overfull \hbox (89.1208pt too wide) in paragraph at lines 328--329
  [][] 
  []
 
@@ -1013,34 +1011,39 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [27
 
  <./images/cascaded_inverter_12nmos_30pmos.PNG>] [28 <./images/cascaded_inverte
-r_transient_12nmos_30pmos.PNG>]) (./conclusion/conclusion.tex [29]) [30]
-(./main.aux) ) 
+r_transient_12nmos_30pmos.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 379--383
+
+ []
+
+) [29] (./conclusion/conclusion.tex) [30] [31] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  13359 strings out of 492990
  292056 string characters out of 6135004
- 300173 words of memory out of 5000000
+ 305173 words of memory out of 5000000
  16778 multiletter control sequences out of 15000+600000
  536962 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,46p,10398b,914s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texm
-f/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (31 pages, 1821357 bytes).
+{/usr/share/texmf/
+fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+rm1000.pfb>
+Output written on main.pdf (32 pages, 1825554 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
+ 228 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  156 words of extra memory for PDF output out of 10000 (max. 10000000)
 
