@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.1)  9 MAR 2018 01:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.1)  9 MAR 2018 00:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**conclusion_wrap.tex
+(./conclusion_wrap.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -22,7 +22,7 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (./preamble.tex
+) (../preamble.tex
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2016/01/19 v6377 L3 programming layer (loader) 
@@ -384,8 +384,9 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \c@csvrow=\count134
 \c@csvcol=\count135
 \csv@out=\write3
-) (./main.aux)
-\openout1 = `main.aux'.
+)
+(./conclusion_wrap.aux)
+\openout1 = `conclusion_wrap.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -475,147 +476,26 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 \c__siunitx_mathtt_int=\count143
 
-(./cover_page/cover.tex) [1
+(./conclusion.tex (./conc_inverter.tex) (./conc_nand.tex) (./conc_nor.tex))
+[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction/introducti
-on.tex) (./cmos_inverter/cmos_inverter.tex
-<./images/vout_and_vin_inverter_alt.png, id=8, 1027.84pt x 832.10875pt>
-File: ./images/vout_and_vin_inverter_alt.png Graphic file (type png)
-
-<use ./images/vout_and_vin_inverter_alt.png>
-Package pdftex.def Info: ./images/vout_and_vin_inverter_alt.png used on input l
-ine 8.
-(pdftex.def)             Requested size: 308.35437pt x 249.63455pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 15.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 15.
-
-<./images/vtc.png, id=9, 1027.84pt x 832.10875pt>
-File: ./images/vtc.png Graphic file (type png)
- <use ./images/vtc.png>
-Package pdftex.def Info: ./images/vtc.png used on input line 29.
-(pdftex.def)             Requested size: 308.35437pt x 249.63455pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[1 <./images/vout_and_vin_inverter_alt.png (PNG copy)>]
-<./images/vil_vih_measure.png, id=20, 1027.84pt x 832.10875pt>
-File: ./images/vil_vih_measure.png Graphic file (type png)
-
-<use ./images/vil_vih_measure.png>
-Package pdftex.def Info: ./images/vil_vih_measure.png used on input line 45.
-(pdftex.def)             Requested size: 308.35437pt x 249.63455pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[2 <./images/vtc.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 71.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [3 <./images/vil_vih_measure.png (PNG copy)>]
-<./images/square_wave_inverter.png, id=30, 1027.84pt x 832.10875pt>
-File: ./images/square_wave_inverter.png Graphic file (type png)
-
-<use ./images/square_wave_inverter.png>
-Package pdftex.def Info: ./images/square_wave_inverter.png used on input line 1
-25.
-(pdftex.def)             Requested size: 308.35437pt x 249.63455pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4] <./images/square_wave_vtc.png, id=34, 1027.84pt x 832.10875pt>
-File: ./images/square_wave_vtc.png Graphic file (type png)
-
-<use ./images/square_wave_vtc.png>
-Package pdftex.def Info: ./images/square_wave_vtc.png used on input line 138.
-(pdftex.def)             Requested size: 308.35437pt x 249.63455pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5 <./images/square_wave_inverter.png (PNG copy)>]
-<./images/sine_wave_input_vtc.png, id=38, 1027.84pt x 832.10875pt>
-File: ./images/sine_wave_input_vtc.png Graphic file (type png)
-
-<use ./images/sine_wave_input_vtc.png>
-Package pdftex.def Info: ./images/sine_wave_input_vtc.png used on input line 15
-4.
-(pdftex.def)             Requested size: 308.35437pt x 249.63455pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6 <./images/square_wave_vtc.png (PNG copy)>])
-(./nand_and_nor_gate/nand_and_nor_gate.tex (./nand_and_nor_gate/nand.tex
-<./images/nand_schematic.PNG, id=43, 284.56313pt x 189.1065pt>
-File: ./images/nand_schematic.PNG Graphic file (type png)
-
-<use ./images/nand_schematic.PNG>
-Package pdftex.def Info: ./images/nand_schematic.PNG used on input line 9.
-(pdftex.def)             Requested size: 142.2812pt x 94.55301pt.
- [7 <./images/sine_wave_input_vtc.png (PNG copy)> <./images/nand_schematic.PNG>
-]
-<./images/nand_transient_output.PNG, id=49, 1102.71976pt x 493.24275pt>
-File: ./images/nand_transient_output.PNG Graphic file (type png)
-
-<use ./images/nand_transient_output.PNG>
-Package pdftex.def Info: ./images/nand_transient_output.PNG used on input line 
-38.
-(pdftex.def)             Requested size: 330.81848pt x 147.97397pt.
-) (./nand_and_nor_gate/nor.tex
-<./images/nor_schematic.PNG, id=50, 284.86424pt x 158.09062pt>
-File: ./images/nor_schematic.PNG Graphic file (type png)
-
-<use ./images/nor_schematic.PNG>
-Package pdftex.def Info: ./images/nor_schematic.PNG used on input line 10.
-(pdftex.def)             Requested size: 142.43176pt x 79.0451pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8 <./images/nand_transient_output.PNG>]
-<./images/nor_transient_output.PNG, id=56, 1100.61188pt x 492.33937pt>
-File: ./images/nor_transient_output.PNG Graphic file (type png)
-
-<use ./images/nor_transient_output.PNG>
-Package pdftex.def Info: ./images/nor_transient_output.PNG used on input line 3
-7.
-(pdftex.def)             Requested size: 330.18611pt x 147.70294pt.
-)) [9 <./images/nor_schematic.PNG> <./images/nor_transient_output.PNG>] (./conc
-lusion/conclusion.tex
-(./conclusion/conc_inverter.tex) (./conclusion/conc_nand.tex)
-(./conclusion/conc_nor.tex)) [10] (./main.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./conclusion_wrap.aux) ) 
 Here is how much of TeX's memory you used:
- 11954 strings out of 493029
- 261465 string characters out of 6136235
- 259400 words of memory out of 5000000
- 15363 multiletter control sequences out of 15000+600000
- 10330 words of font info for 38 fonts, out of 8000000 for 9000
+ 11779 strings out of 493029
+ 257221 string characters out of 6136235
+ 258275 words of memory out of 5000000
+ 15242 multiletter control sequences out of 15000+600000
+ 5654 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,7n,46p,10397b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvi
-ps/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000
-.pfb>
-Output written on main.pdf (11 pages, 550906 bytes).
+ 40i,4n,46p,10411b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
+<
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on conclusion_wrap.pdf (1 page, 40556 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 20 PDF objects out of 1000 (max. 8388607)
+ 13 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
