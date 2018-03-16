@@ -1,0 +1,2 @@
+#!/bin/bash
+~/Circuits-Lab/common/scripts/azide --report "Design of a D-Latch" --course "EECS 170LB" --authors "Roman Parise (59611417)" "Johnathan Fritsche (11106947)" "Jason Wang (42873192)" --sections "Introduction" "SPICE Simulation" "Microwind Layout" "Conclusion"
