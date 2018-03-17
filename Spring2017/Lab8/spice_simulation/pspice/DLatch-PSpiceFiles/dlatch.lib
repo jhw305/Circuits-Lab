@@ -1,0 +1,30 @@
+* PSpice Model Editor - Version 17.2.0
+*$
+.model Mbreakp PMOS
++W=1.2e-6
++L=0.1e-6
++VTO=-1
++KP=3.5e-3
++CBD=5pF
++CBS=2pF
++RD=1
++RS=2
++LAMBDA=0.01
++CGSO=1pF
++CGDO=1pF
++CGBO=1pF
+*$
+.model Mbreakn NMOS
++W=10e-6
++L=0.1e-6
++VTO=1
++KP=10e-3
++CBD=5pF
++CBS=2pF
++RD=1
++RS=2
++LAMBDA=0.01
++CGSO=1pF
++CGDO=1pF
++CGBO=5pF
+*$
