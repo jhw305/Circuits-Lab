@@ -1,0 +1,28 @@
+* source DLATCH
+M_M1         N00152 N02324 N00072 0 Mbreakn           
+M_M2         N00072 N02961 0 0 Mbreakn           
+M_M3         N00152 N02324 N00285 N00285 Mbreakp           
+M_M4         N00152 N02961 N00285 N00285 Mbreakp           
+V_V1         N00285 0 5Vdc
+M_M5         N00642 N00152 N00546 N00546 Mbreakp           
+M_M6         N00642 N01116 N00546 N00546 Mbreakp           
+M_M7         N00642 N00152 N00682 0 Mbreakn           
+M_M8         N00682 N01116 0 0 Mbreakn           
+V_V2         N00546 0 5Vdc
+M_M10         N01116 N00642 N01020 N01020 Mbreakp           
+M_M12         N01156 N01604 0 0 Mbreakn           
+M_M11         N01116 N00642 N01156 0 Mbreakn           
+V_V3         N01020 0 5Vdc
+M_M9         N01116 N01604 N01020 N01020 Mbreakp           
+M_M13         N01604 N02961 N01508 N01508 Mbreakp           
+M_M15         N01604 N02027 N01644 0 Mbreakn           
+V_V4         N01508 0 5Vdc
+M_M14         N01604 N02027 N01508 N01508 Mbreakp           
+M_M16         N01644 N02961 0 0 Mbreakn           
+M_M17         N02027 N02324 N01955 N01955 Mbreakp           
+V_V5         N01955 0 5Vdc
+M_M19         N02027 N02324 0 0 Mbreakn           
+V_V6         N02324 0  
++PULSE 0V 5V 10ns 0.1ns 0.1ns 25ns 50ns
+V_V7         N02961 0  
++PULSE 0V 5V 10ns 0.1ns 0.1ns 50ns 100ns

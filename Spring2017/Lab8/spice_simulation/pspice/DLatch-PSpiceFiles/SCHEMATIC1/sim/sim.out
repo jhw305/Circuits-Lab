@@ -1,0 +1,171 @@
+
+**** 03/16/18 17:18:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ c:\users\johnm\dropbox\school\uci\winter 2018\170b_electronics2\lab\final\pspice\dlatch-pspicefiles\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../dlatch-pspicefiles/dlatch.lib" 
+* From [PSPICE NETLIST] section of C:\Users\johnm\Documents\repos\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DLATCH
+M_M1         N00152 N02324 N00072 0 Mbreakn           
+M_M2         N00072 N02961 0 0 Mbreakn           
+M_M3         N00152 N02324 N00285 N00285 Mbreakp           
+M_M4         N00152 N02961 N00285 N00285 Mbreakp           
+V_V1         N00285 0 5Vdc
+M_M5         N00642 N00152 N00546 N00546 Mbreakp           
+M_M6         N00642 N01116 N00546 N00546 Mbreakp           
+M_M7         N00642 N00152 N00682 0 Mbreakn           
+M_M8         N00682 N01116 0 0 Mbreakn           
+V_V2         N00546 0 5Vdc
+M_M10         N01116 N00642 N01020 N01020 Mbreakp           
+M_M12         N01156 N01604 0 0 Mbreakn           
+M_M11         N01116 N00642 N01156 0 Mbreakn           
+V_V3         N01020 0 5Vdc
+M_M9         N01116 N01604 N01020 N01020 Mbreakp           
+M_M13         N01604 N02961 N01508 N01508 Mbreakp           
+M_M15         N01604 N02027 N01644 0 Mbreakn           
+V_V4         N01508 0 5Vdc
+M_M14         N01604 N02027 N01508 N01508 Mbreakp           
+M_M16         N01644 N02961 0 0 Mbreakn           
+M_M17         N02027 N02324 N01955 N01955 Mbreakp           
+V_V5         N01955 0 5Vdc
+M_M19         N02027 N02324 0 0 Mbreakn           
+V_V6         N02324 0  
++PULSE 0V 5V 10ns 0.1ns 0.1ns 25ns 50ns
+V_V7         N02961 0  
++PULSE 0V 5V 10ns 0.1ns 0.1ns 50ns 100ns
+
+**** RESUMING sim.cir ****
+.END
+
+**** 03/16/18 17:18:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ c:\users\johnm\dropbox\school\uci\winter 2018\170b_electronics2\lab\final\pspice\dlatch-pspicefiles\
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Mbreakn         Mbreakp         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L  100.000000E-09  100.000000E-09 
+           W   10.000000E-06    1.200000E-06 
+         VTO    1              -1            
+          KP     .01            3.500000E-03 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA     .01             .01         
+          RD    1               1            
+          RS    2               2            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+         CBD    5.000000E-12    5.000000E-12 
+         CBS    2.000000E-12    2.000000E-12 
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    1.000000E-12    1.000000E-12 
+        CGDO    1.000000E-12    1.000000E-12 
+        CGBO    5.000000E-12    1.000000E-12 
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 03/16/18 17:18:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ c:\users\johnm\dropbox\school\uci\winter 2018\170b_electronics2\lab\final\pspice\dlatch-pspicefiles\
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00072)    0.0000 (N00152)    5.0000 (N00285)    5.0000 (N00546)    5.0000     
+
+(N00642)    5.0000 (N00682)    4.0000 (N01020)    5.0000 (N01116) 65.13E-12     
+
+(N01156) 32.57E-12 (N01508)    5.0000 (N01604)    5.0000 (N01644)    4.0000     
+
+(N01955)    5.0000 (N02027)    5.0000 (N02324)    0.0000 (N02961)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.011E-12
+    V_V2        -1.303E-11
+    V_V3        -1.002E-11
+    V_V4        -1.303E-11
+    V_V5        -5.011E-12
+    V_V6         0.000E+00
+    V_V7         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.31E-10  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/16/18 17:18:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ c:\users\johnm\dropbox\school\uci\winter 2018\170b_electronics2\lab\final\pspice\dlatch-pspicefiles\
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .25
+
