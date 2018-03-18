@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  18 MAR 2018 14:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  18 MAR 2018 12:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**microwind_layout_wrap.tex
-(./microwind_layout_wrap.tex
+**spice_simulation_wrap.tex
+(./spice_simulation_wrap.tex
 LaTeX2e <2017-04-15>
 Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -421,12 +421,8 @@ Package shellesc Info: Restricted shell escape enabled on input line 69.
 \c@csvcol=\count196
 \csv@out=\write3
 )
-(./microwind_layout_wrap.aux
-
-LaTeX Warning: Label `fig:inverter_layout_vtc' multiply defined.
-
-)
-\openout1 = `microwind_layout_wrap.aux'.
+(./spice_simulation_wrap.aux)
+\openout1 = `spice_simulation_wrap.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -524,179 +520,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 \c__siunitx_mathtt_int=\count270
 
-(./microwind_layout.tex
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 5.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-<../images/inverter_layout.PNG, id=1, 358.33875pt x 365.86688pt>
-File: ../images/inverter_layout.PNG Graphic file (type png)
-<use ../images/inverter_layout.PNG>
-Package pdftex.def Info: ../images/inverter_layout.PNG  used on input line 14. 
-on input line 14.
-Package pdftex.def Info: Requested size: 143.33296pt x 146.34415pt on input lin
-e 14.
-<../images/inverter_layout_vtc.PNG, id=3, 868.74562pt x 519.44063pt>
-File: ../images/inverter_layout_vtc.PNG Graphic file (type png)
-<use ../images/inverter_layout_vtc.PNG>
-Package pdftex.def Info: ../images/inverter_layout_vtc.PNG  used on input line 
-27. on input line 27.
-Package pdftex.def Info: Requested size: 260.62569pt x 155.83339pt on input lin
-e 27.
-<../images/inverter_logic_test.PNG, id=4, 1059.05663pt x 531.78674pt>
-File: ../images/inverter_logic_test.PNG Graphic file (type png)
-<use ../images/inverter_logic_test.PNG>
-Package pdftex.def Info: ../images/inverter_logic_test.PNG  used on input line 
-40. on input line 40.
-Package pdftex.def Info: Requested size: 317.71944pt x 159.53725pt on input lin
-e 40.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/inverter_layout.
-PNG> <../images/inverter_layout_vtc.PNG>]
-<../images/nand_layout.PNG, id=18, 256.45813pt x 304.13625pt>
-File: ../images/nand_layout.PNG Graphic file (type png)
-<use ../images/nand_layout.PNG>
-Package pdftex.def Info: ../images/nand_layout.PNG  used on input line 56. on i
-nput line 56.
-Package pdftex.def Info: Requested size: 179.51945pt x 212.8939pt on input line
- 56.
-<../images/nand_logic_test.PNG, id=19, 1061.46562pt x 532.69012pt>
-File: ../images/nand_logic_test.PNG Graphic file (type png)
-<use ../images/nand_logic_test.PNG>
-Package pdftex.def Info: ../images/nand_logic_test.PNG  used on input line 69. 
-on input line 69.
-Package pdftex.def Info: Requested size: 318.44214pt x 159.80826pt on input lin
-e 69.
- [2 <../images/inverter_logic_test.PNG> <../images/nand_layout.PNG>]
-<../images/dlatch_layout.PNG, id=25, 284.06125pt x 386.44376pt>
-File: ../images/dlatch_layout.PNG Graphic file (type png)
-<use ../images/dlatch_layout.PNG>
-Package pdftex.def Info: ../images/dlatch_layout.PNG  used on input line 82. on
- input line 82.
-Package pdftex.def Info: Requested size: 198.84149pt x 270.50877pt on input lin
-e 82.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3 <../images/nand_logic_test.PNG>]
-<../images/dlatch_fsm.PNG, id=30, 374.90062pt x 154.47713pt>
-File: ../images/dlatch_fsm.PNG Graphic file (type png)
-<use ../images/dlatch_fsm.PNG>
-Package pdftex.def Info: ../images/dlatch_fsm.PNG  used on input line 108. on i
-nput line 108.
-Package pdftex.def Info: Requested size: 262.42863pt x 108.13324pt on input lin
-e 108.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4 <../images/dlatch_layout.PNG>]
-<../images/test_inputs_from_manual.PNG, id=35, 1060.56226pt x 533.29237pt>
-File: ../images/test_inputs_from_manual.PNG Graphic file (type png)
-<use ../images/test_inputs_from_manual.PNG>
-Package pdftex.def Info: ../images/test_inputs_from_manual.PNG  used on input l
-ine 124. on input line 124.
-Package pdftex.def Info: Requested size: 318.17113pt x 159.98894pt on input lin
-e 124.
-<../images/1ghz_test_case_2.PNG, id=36, 1060.26112pt x 532.389pt>
-File: ../images/1ghz_test_case_2.PNG Graphic file (type png)
-<use ../images/1ghz_test_case_2.PNG>
-Package pdftex.def Info: ../images/1ghz_test_case_2.PNG  used on input line 133
-. on input line 133.
-Package pdftex.def Info: Requested size: 318.0808pt x 159.71793pt on input line
- 133.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5 <../images/dlatch_fsm.PNG> <../images/test_inputs_from_manual.PNG>]
-<../images/1ghz_test_case_1.PNG, id=42, 1059.96pt x 532.389pt>
-File: ../images/1ghz_test_case_1.PNG Graphic file (type png)
-<use ../images/1ghz_test_case_1.PNG>
-Package pdftex.def Info: ../images/1ghz_test_case_1.PNG  used on input line 142
-. on input line 142.
-Package pdftex.def Info: Requested size: 317.99045pt x 159.71793pt on input lin
-e 142.
-<../images/4ghz_test_case_2.PNG, id=43, 1059.96pt x 534.19576pt>
-File: ../images/4ghz_test_case_2.PNG Graphic file (type png)
-<use ../images/4ghz_test_case_2.PNG>
-Package pdftex.def Info: ../images/4ghz_test_case_2.PNG  used on input line 151
-. on input line 151.
-Package pdftex.def Info: Requested size: 317.99045pt x 160.25996pt on input lin
-e 151.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6 <../images/1ghz_test_case_2.PNG> <../images/1ghz_test_case_1.PNG>]
-<../images/4ghz_test_case_1.PNG, id=49, 1060.56226pt x 532.99126pt>
-File: ../images/4ghz_test_case_1.PNG Graphic file (type png)
-<use ../images/4ghz_test_case_1.PNG>
-Package pdftex.def Info: ../images/4ghz_test_case_1.PNG  used on input line 160
-. on input line 160.
-Package pdftex.def Info: Requested size: 318.17113pt x 159.8986pt on input line
- 160.
-
-Overfull \hbox (96.39792pt too wide) in paragraph at lines 175--176
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--182
-
- []
-
-[7 <../images/4ghz_test_case_2.PNG> <../images/4ghz_test_case_1.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 183--187
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--193
-
- []
-
-<../images/dlatch_layout_area.PNG, id=56, 322.20375pt x 481.19775pt>
-File: ../images/dlatch_layout_area.PNG Graphic file (type png)
-<use ../images/dlatch_layout_area.PNG>
-Package pdftex.def Info: ../images/dlatch_layout_area.PNG  used on input line 2
-02. on input line 202.
-Package pdftex.def Info: Requested size: 225.54108pt x 336.83614pt on input lin
-e 202.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8]) [9 <../images/dlatch_layout_area.PNG>] (./microwind_layout_wrap.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+(./spice_simulation.tex) (./spice_simulation_wrap.aux) ) 
 Here is how much of TeX's memory you used:
- 13222 strings out of 492990
- 287496 string characters out of 6135004
- 299354 words of memory out of 5000000
- 16684 multiletter control sequences out of 15000+600000
- 532694 words of font info for 31 fonts, out of 8000000 for 9000
+ 13060 strings out of 492990
+ 282977 string characters out of 6135004
+ 295191 words of memory out of 5000000
+ 16550 multiletter control sequences out of 15000+600000
+ 531681 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,46p,10417b,914s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb
->
-Output written on microwind_layout_wrap.pdf (9 pages, 2385036 bytes).
+ 41i,3n,46p,10417b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+No pages of output.
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 0 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,9 +2,9 @@
 
 A CMOS inverter and CMOS logic NAND gate is constructed to be used in the D Latch layout design.
 
-The width and length of the NMOS to be used in the inverter is given to be $0.5$ \si{\nano\meter} and $0.1$ \si{\nano\meter}, respectively.
+The width and length of the NMOS to be used in the inverter is given to be $0.5$ \si{\micro\meter} and $0.1$ \si{\micro\meter}, respectively.
 The PMOS to be used in the inverter is then designed so that the inverter is matched (steepest slope of the VTC curve occurs when $V_{out} = V_{in} = \frac{V_{DD}}{2}$).
-The CMOS inverter is matched using a PMOS with a width $W = 1.2$ \si{\nano\meter} and a length $L = 0.1$ \si{\nano\meter}.
+The CMOS inverter is matched using a PMOS with a width $W = 1.2$ \si{\micro\meter} and a length $L = 0.1$ \si{\micro\meter}.
 This results in the following layout for the CMOS inverter.
 
 \FloatBarrier
@@ -46,7 +46,7 @@ The logic of the CMOS inverter is verified using a $250$ \si{\mega\hertz} clock 
 
 Next, a CMOS logic NAND gate is constructed with two PMOS in parallel and two NMOS in series.
 The NAND gate is designed so that it operates with the same speed of the CMOS inverter.
-To achieve this design goal, the width of both NMOS are doubled to $W = 1.0$ \si{\nano\meter} so that it operates twice as fast to compensate for the speed lost due to having two NMOS connected in series.
+To achieve this design goal, the width of both NMOS are doubled to $W = 1.0$ \si{\micro\meter} so that it operates twice as fast to compensate for the speed lost due to having two NMOS connected in series.
 This results in the following layout for the NAND gate.
 
 \FloatBarrier
@@ -112,7 +112,7 @@ The truth table above translates to the the following finite state machine (FSM)
 
 \FloatBarrier
 
-The delays for the transitions between Q high and Q low ($\tau_{PHL}$) and vise versa ($\tau_{PLH}$) can be used to determine the maximum operating frequency of the D Latch.
+The delays for the transitions between Q high and Q low ($\tau_{PHL}$) and vice versa ($\tau_{PLH}$) can be used to determine the maximum operating frequency of the D Latch.
 
 The D Latch is tested with input clock C at $250$ \si{\mega\hertz}, $1$ \si{\giga\hertz}, and $4$ \si{\giga\hertz} with clock D always set to half the frequency of C.
 Rise and fall times of $0.050$ \si{\nano\second} and $0.001$ \si{\nano\second} are tested for each clock frequency.
@@ -178,10 +178,20 @@ The following delays and average power dissipation values are found.
 \FloatBarrier
 
 It is observed that the delay of the D Latch is only dependent on the rise and fall times of the input clocks.
-This behavior is expected because the dynamic portions of the inputs are kept constant and the length of the static portions of the input should not affect the performance of the circuit as long as they are longer than the delays.
+This behavior is expected because the dynamic portions of the inputs are kept constant, and the length of the static portions of the input should not affect the performance of the circuit as long as they are longer than the delays. \\
 
-The most ideal rise and fall times of the input clocks, $0.001$ \si{\nano\second}, result in the output delays $\tau_{PHL} = 23$ \si{\pico\second} and $\tau_{PLH} = 15$ \si{\pico\second}.
-Taking the longer delay $23$ \si{\pico\second}, the maximum operating frequency of the D Latch is determined to be $1/23$ \si{\pico\second} $= 43$ \si{\giga\hertz}.
+Rise and fall times of the input signals affect the propagation delays.
+So, in order to discuss critical path delays and other timing metrics, rise and fall times need to be fixed so that those figures are meaningful.
+Otherwise, one could simply change the rise and fall times of the input signals and argue that certain circuits operate differently from or better than other circuits.
+So, the standard used herein for measuring propagation delays is when the rise and fall times are smallest at $0.001$ \si{\nano\second}. \\
+
+A propagation delay only technically matters when the output transitions from one state to another.
+When the rise and fall times of the input clocks are $0.001$ \si{\nano\second}, the output delays are given by $\tau_{PHL} = 23$ \si{\pico\second} and $\tau_{PLH} = 15$ \si{\pico\second}.
+The FSM for the latch contains only two transitions whose delays would be measurable, when $C = 1$, $D = 1$, and $Q = 0$ and when $C = 1$, $D = 0$, and $Q = 1$.
+The former corresponds to $\tau_{PLH}$ since $Q$ transitions from $0$ to $1$ before the state change occurs, and the latter therefore corresponds to $\tau_{PHL}$. The longer of the two delays is $\tau_{PHL} = 23$ \si{\pico\second}.
+This makes sense since the critical path delay should run through the inverter, and the inverter switching states is what causes the output to change. \\
+
+So, the propagation delay is given by $\tau_{P} = \frac{ \tau_{PHL} + \tau_{PLH} }{ 2 }$, which is $19$ \si{\pico\second}. So, the maximum switching frequency is given by $f_{max} = \frac{1}{2 t_{p}} \approx 26.3$\si{\giga\hertz}.
 
 The length of the D Latch layout is $12.650$ \si{\micro\meter} and the width of the layout is $5.850$ \si{\micro\meter}. The total area of the layout is $74 \mu m^2$.
 
@@ -197,3 +207,16 @@ The length of the D Latch layout is $12.650$ \si{\micro\meter} and the width of 
 \FloatBarrier
 
 Operating at $1$ \si{\giga\hertz}, the average power consumption is determined to be $14.240$ \si{\micro\watt}.
+
+\FloatBarrier
+
+\begin{table}[h!]
+	\centering
+	\caption{Final Layout Characteristics}
+	\label{tab:specs}
+	\csvautotabular{../data/specs.csv}
+\end{table}
+
+\FloatBarrier
+
+The maximum switching frequency far exceeds the required $1$\si{\giga\hertz}, the power consumption falls well below the required $100$\si{\watt}, and the area is considerably smaller than the required $100m^2$. Therefore, the design satisfies the specification.
