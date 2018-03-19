@@ -1,7 +1,7 @@
 
-**** 03/16/18 17:18:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 03/19/18 09:55:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-sim"  [ c:\users\johnm\dropbox\school\uci\winter 2018\170b_electronics2\lab\final\pspice\dlatch-pspicefiles\
+ ** Profile: "SCHEMATIC1-sim"  [ C:\Users\johnm\Documents\repos\170\Circuits-Lab\Spring2017\Lab8\spice_simulation\pspice\DLatch-PSpic
 
 
  ****     CIRCUIT DESCRIPTION
@@ -55,17 +55,17 @@ M_M16         N01644 N02961 0 0 Mbreakn
 M_M17         N02027 N02324 N01955 N01955 Mbreakp           
 V_V5         N01955 0 5Vdc
 M_M19         N02027 N02324 0 0 Mbreakn           
-V_V6         N02324 0  
+V_D         N02324 0  
 +PULSE 0V 5V 10ns 0.1ns 0.1ns 25ns 50ns
-V_V7         N02961 0  
+V_C         N02961 0  
 +PULSE 0V 5V 10ns 0.1ns 0.1ns 50ns 100ns
 
 **** RESUMING sim.cir ****
 .END
 
-**** 03/16/18 17:18:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 03/19/18 09:55:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-sim"  [ c:\users\johnm\dropbox\school\uci\winter 2018\170b_electronics2\lab\final\pspice\dlatch-pspicefiles\
+ ** Profile: "SCHEMATIC1-sim"  [ C:\Users\johnm\Documents\repos\170\Circuits-Lab\Spring2017\Lab8\spice_simulation\pspice\DLatch-PSpic
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -112,9 +112,9 @@ V_V7         N02961 0
        XPART    0               0            
 
 
-**** 03/16/18 17:18:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 03/19/18 09:55:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-sim"  [ c:\users\johnm\dropbox\school\uci\winter 2018\170b_electronics2\lab\final\pspice\dlatch-pspicefiles\
+ ** Profile: "SCHEMATIC1-sim"  [ C:\Users\johnm\Documents\repos\170\Circuits-Lab\Spring2017\Lab8\spice_simulation\pspice\DLatch-PSpic
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -146,8 +146,8 @@ V_V7         N02961 0
     V_V3        -1.002E-11
     V_V4        -1.303E-11
     V_V5        -5.011E-12
-    V_V6         0.000E+00
-    V_V7         0.000E+00
+    V_D          0.000E+00
+    V_C          0.000E+00
 
     TOTAL POWER DISSIPATION   2.31E-10  WATTS
 
@@ -155,9 +155,9 @@ V_V7         N02961 0
 
           JOB CONCLUDED
 
-**** 03/16/18 17:18:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 03/19/18 09:55:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-sim"  [ c:\users\johnm\dropbox\school\uci\winter 2018\170b_electronics2\lab\final\pspice\dlatch-pspicefiles\
+ ** Profile: "SCHEMATIC1-sim"  [ C:\Users\johnm\Documents\repos\170\Circuits-Lab\Spring2017\Lab8\spice_simulation\pspice\DLatch-PSpic
 
 
  ****     JOB STATISTICS SUMMARY

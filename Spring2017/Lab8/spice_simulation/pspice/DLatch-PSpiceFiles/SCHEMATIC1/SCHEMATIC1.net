@@ -22,7 +22,7 @@ M_M16         N01644 N02961 0 0 Mbreakn
 M_M17         N02027 N02324 N01955 N01955 Mbreakp           
 V_V5         N01955 0 5Vdc
 M_M19         N02027 N02324 0 0 Mbreakn           
-V_V6         N02324 0  
+V_D         N02324 0  
 +PULSE 0V 5V 10ns 0.1ns 0.1ns 25ns 50ns
-V_V7         N02961 0  
+V_C         N02961 0  
 +PULSE 0V 5V 10ns 0.1ns 0.1ns 50ns 100ns
