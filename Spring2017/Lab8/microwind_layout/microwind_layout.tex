@@ -11,7 +11,7 @@ This results in the following layout for the CMOS inverter.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.40]{../images/inverter_layout.PNG}
+	\includegraphics[scale=0.40]{./images/inverter_layout.PNG}
 	\caption{CMOS Inverter Layout}
 	\label{fig:inverter_layout}
 \end{figure}
@@ -24,7 +24,7 @@ The VTC of the CMOS inverter shown below verifies that it is matched.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.30]{../images/inverter_layout_vtc.PNG}
+	\includegraphics[scale=0.30]{./images/inverter_layout_vtc.PNG}
 	\caption{VTC of CMOS Inverter Layout}
 	\label{fig:inverter_layout_vtc}
 \end{figure}
@@ -37,7 +37,7 @@ The logic of the CMOS inverter is verified using a $250$ \si{\mega\hertz} clock 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.30]{../images/inverter_logic_test.PNG}
+	\includegraphics[scale=0.30]{./images/inverter_logic_test.PNG}
 	\caption{CMOS Inverter Logic Test}
 	\label{fig:inverter_layout_logic}
 \end{figure}
@@ -53,7 +53,7 @@ This results in the following layout for the NAND gate.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.70]{../images/nand_layout.PNG}
+	\includegraphics[scale=0.70]{./images/nand_layout.PNG}
 	\caption{NAND Gate Layout}
 	\label{fig:nand_layout}
 \end{figure}
@@ -66,7 +66,7 @@ The logic of the NAND gate verified using a $250$ \si{\mega\hertz} clock input a
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.30]{../images/nand_logic_test.PNG}
+	\includegraphics[scale=0.30]{./images/nand_logic_test.PNG}
 	\caption{NAND Gate Logic Test}
 	\label{fig:inverter_layout_vtc}
 \end{figure}
@@ -79,7 +79,7 @@ Using the CMOS inverter and NAND gate designed above, the following D Latch layo
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.70]{../images/dlatch_layout.PNG}
+	\includegraphics[scale=0.70]{./images/dlatch_layout.PNG}
 	\caption{D Latch Layout}
 	\label{fig:dlatch_layout}
 \end{figure}
@@ -94,7 +94,7 @@ The expected behavior of the D Latch can be expressed in the following truth tab
 	\centering
 	\caption{Logic Chart of D Latch Circuit}
 	\label{tab:dlatch_logic}
-	\csvautotabular{../data/dlatch_logic.csv}
+	\csvautotabular{./data/dlatch_logic.csv}
 \end{table}
 
 \FloatBarrier
@@ -105,7 +105,7 @@ The truth table above translates to the the following finite state machine (FSM)
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.70]{../images/dlatch_fsm.PNG}
+	\includegraphics[scale=0.70]{./images/dlatch_fsm.PNG}
 	\caption{D Latch FSM}
 	\label{fig:dlatch_fsm}
 \end{figure}
@@ -121,7 +121,7 @@ Rise and fall times of $0.050$ \si{\nano\second} and $0.001$ \si{\nano\second} a
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.30]{../images/test_inputs_from_manual.PNG}
+	\includegraphics[scale=0.30]{./images/test_inputs_from_manual.PNG}
 	\caption{Test Case 1 - $f_C = 250$ \si{\mega\hertz}, Rise/Fall Time $= 0.050$ \si{\nano\second}}
 	\label{fig:layout_test_1}
 \end{figure}
@@ -130,7 +130,7 @@ Rise and fall times of $0.050$ \si{\nano\second} and $0.001$ \si{\nano\second} a
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.30]{../images/1ghz_test_case_2.PNG}
+	\includegraphics[scale=0.30]{./images/1ghz_test_case_2.PNG}
 	\caption{Test Case 2 - $f_C = 1$ \si{\giga\hertz}, Rise/Fall Time $= 0.050$ \si{\nano\second}}
 	\label{fig:layout_test_2}
 \end{figure}
@@ -139,7 +139,7 @@ Rise and fall times of $0.050$ \si{\nano\second} and $0.001$ \si{\nano\second} a
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.30]{../images/1ghz_test_case_1.PNG}
+	\includegraphics[scale=0.30]{./images/1ghz_test_case_1.PNG}
 	\caption{Test Case 3 - $f_C = 1$ \si{\giga\hertz}, Rise/Fall Time $= 0.001$ \si{\nano\second}}
 	\label{fig:layout_test_3}
 \end{figure}
@@ -148,7 +148,7 @@ Rise and fall times of $0.050$ \si{\nano\second} and $0.001$ \si{\nano\second} a
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.30]{../images/4ghz_test_case_2.PNG}
+	\includegraphics[scale=0.30]{./images/4ghz_test_case_2.PNG}
 	\caption{Test Case 4 - $f_C = 4$ \si{\giga\hertz}, Rise/Fall Time $= 0.050$ \si{\nano\second}}
 	\label{fig:layout_test_4}
 \end{figure}
@@ -157,7 +157,7 @@ Rise and fall times of $0.050$ \si{\nano\second} and $0.001$ \si{\nano\second} a
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.30]{../images/4ghz_test_case_1.PNG}
+	\includegraphics[scale=0.30]{./images/4ghz_test_case_1.PNG}
 	\caption{Test Case 5 - $f_C = 4$ \si{\giga\hertz}, Rise/Fall Time $= 0.001$ \si{\nano\second}}
 	\label{fig:layout_test_5}
 \end{figure}
@@ -172,7 +172,7 @@ The following delays and average power dissipation values are found.
 	\centering
 	\caption{D Latch Layout Test Results}
 	\label{tab:dlatch_test_results}
-	\csvautotabular{../data/dlatch_test_results.csv}
+	\csvautotabular{./data/dlatch_test_results.csv}
 \end{table}
 
 \FloatBarrier
@@ -199,7 +199,7 @@ The length of the D Latch layout is $12.650$ \si{\micro\meter} and the width of 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.70]{../images/dlatch_layout_area.PNG}
+	\includegraphics[scale=0.70]{./images/dlatch_layout_area.PNG}
 	\caption{Total Area of D Latch Layout}
 	\label{fig:dlatch_area}
 \end{figure}
@@ -214,7 +214,7 @@ Operating at $1$ \si{\giga\hertz}, the average power consumption is determined t
 	\centering
 	\caption{Final Layout Characteristics}
 	\label{tab:specs}
-	\csvautotabular{../data/specs.csv}
+	\csvautotabular{./data/specs.csv}
 \end{table}
 
 \FloatBarrier

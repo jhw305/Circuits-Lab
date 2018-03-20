@@ -1,4 +1,9 @@
 \subsection{SPICE Simulation}
+The D-latch design satisfies its behavioral description.
+The only nonideality that occurs is the brief spiking behavior when $D$ is switched to $1$ and $C$ is switched to $0$.
+So long as a sufficient amount of time, likely on the order of picoseconds at most, is given to allow the circuit's values to stabilize, this should not be a major concern.
+The same transistor dimensions used in the SPICE simulation are used for the Microwind layout.
+In SPICE, no physical issues arise from the transistor dimensions, but a true layout provides a more realistic simulation of the circuit's behavior when fabricated.
 \subsection{Microwind Layout}
 The final D-latch design outperforms all aspects of the specification by a decent amount.
 However, the design can be made even better.
