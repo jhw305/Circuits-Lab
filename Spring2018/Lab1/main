@@ -1,0 +1,3 @@
+#!/bin/bash
+scp rparise@zuma.eecs.uci.edu:170C/lab1_pics/*.png ./images/
+#./scripts/*

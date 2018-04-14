@@ -1,0 +1,2 @@
+#!/bin/bash
+~/Circuits-Lab/common/scripts/azide --report "Simulation Assignment #1" --course "EECS 170LC" --authors "Roman Parise (59611417)" "Jason Wang (42873192)" --sections "Introduction" "Simulation 1" "Simulation 2" "Simulation 3" "Simulation 4" "Conclusion"
