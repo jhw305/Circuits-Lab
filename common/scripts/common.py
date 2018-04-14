@@ -20,14 +20,14 @@ SUCCESS = 0
 def perc_err( measured , theoretical ):
 	return abs( ( measured - theoretical ) / theoretical )
 
-def fmt_perc_err( measured , theoretical ) :
-	return fmt_perc( perc_err( measured , theoretical ) )
+def fmt_perc_err( measured , theoretical , prec ) :
+	return fmt_perc( perc_err( measured , theoretical ) , prec )
 
 def set_precision_str( fp_number , prec ):
 	return ( ( "%." + str( prec ) + "f" ) % fp_number )
 
-def fmt_perc( perc_as_decimal ):
-	return ( set_precision_str( 100 * perc_as_decimal ) ) + "\%"
+def fmt_perc( perc_as_decimal , prec ):
+	return ( set_precision_str( 100 * perc_as_decimal , prec ) ) + "\%"
 
 # TODO: Overwrites files. Is this the best way to do it?
 # TODO: Error checking?
