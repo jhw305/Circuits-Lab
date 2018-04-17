@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  16 APR 2018 23:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  17 APR 2018 00:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -632,7 +632,7 @@ Overfull \hbox (112.32938pt too wide) in paragraph at lines 82--83
  []
 
 [5 <./images/id_vs_vds_vgs_is_2_5.PNG> <./images/id_vs_vds_vgs_is_5.PNG>]
-Overfull \hbox (219.88983pt too wide) in paragraph at lines 99--100
+Overfull \hbox (43.09784pt too wide) in paragraph at lines 99--100
  [][] 
  []
 
@@ -743,7 +743,7 @@ Overfull \hbox (3.16731pt too wide) in paragraph at lines 92--93
 ) (./conclusion/conclusion.tex) [10] [11] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  13253 strings out of 492990
- 288088 string characters out of 6135004
+ 288028 string characters out of 6135004
  304016 words of memory out of 5000000
  16688 multiletter control sequences out of 15000+600000
  533896 words of font info for 35 fonts, out of 8000000 for 9000
@@ -762,7 +762,7 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm1000.pfb>
-Output written on main.pdf (12 pages, 688514 bytes).
+Output written on main.pdf (12 pages, 688491 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
