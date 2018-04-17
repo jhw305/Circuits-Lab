@@ -1,4 +1,4 @@
-fC [GHz],fD,Rise/Fall Time [ns],tPHL of Q [ps],tPLH of Q [ps],Average Power [uW]
+fC [GHz],fD,Rise/fall Time [ns],tPHL of Q [ps],tPLH of Q [ps],Average Power Dissipation [uW]
 0.25,0.125,0.050,28,22,4.340
 1,0.5,0.050,28,22,16.218
 1,0.5,0.001,23,15,14.240
