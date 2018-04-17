@@ -23,8 +23,8 @@ if __name__ == "__main__" :
 	pmos_true_lambda = 0.010
 
 	# Format and write to file
-	PREC = 5
-	table_headers = [ "" , "Calculated Lambda [ V^-1 ]" , "Model-Specified Lambda [ V^-1 ]" , "Percentage Error" ]
+	PREC = 10
+	table_headers = [ "" , "Calculated Lambda" , "Model-Specified Lambda" , "Percentage Error" ]
 	nmos = [ "NMOS" , common.set_precision_str( nmos_lambda , PREC ) , common.set_precision_str( nmos_true_lambda , PREC ) , common.fmt_perc_err( nmos_lambda , nmos_true_lambda , PREC ) ]
-	pmos = [ "NMOS" , common.set_precision_str( pmos_lambda , PREC ) , common.set_precision_str( pmos_true_lambda , PREC ) , common.fmt_perc_err( pmos_lambda , pmos_true_lambda , PREC ) ]
+	pmos = [ "PMOS" , common.set_precision_str( pmos_lambda , PREC ) , common.set_precision_str( pmos_true_lambda , PREC ) , common.fmt_perc_err( pmos_lambda , pmos_true_lambda , PREC ) ]
 	common.write_csv_from_matrix( "tables/lambda.csv" , [ table_headers, nmos , pmos ] )

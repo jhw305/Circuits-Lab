@@ -1,2 +1,2 @@
-Vgs [ V ] , gm [ uA / V ]
-2.674 , 784
+Vgs [ V ] , gm from DC operating point simulation [ uA / V ] , gm from Graph [ uA / V ] , Percentage Error
+2.674 , 784 , 752.231 , 4.05\%

@@ -2,20 +2,21 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit4.PNG}
+	\includegraphics[scale=0.30]{../images/circuit4.PNG}
 	\caption{Circuit for Simulation 4}
 	\label{fig:circuit4}
 \end{figure}
 
 \FloatBarrier
 The results for Simulation 4 are similar to Simulation 2, except a PMOS is used instead of an NMOS.
+The definition $g_{sd} = \frac{\partial I_{D}}{\partial V_{SD}}$ is used instead.
 
 \FloatBarrier
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/id_vs_vds_vgs_is_0_pmos.PNG}
-	\caption{PMOS $I_{D}$ versus $V_{DS}$ when $V_{GS} = 0$\si{\volt}}
+	\includegraphics[scale=0.30]{../images/id_vs_vds_vgs_is_0_pmos.PNG}
+	\caption{PMOS $I_{D}$ versus $V_{SD}$ when $V_{SG} = 0$\si{\volt}}
 	\label{fig:id_vs_vds_vgs_is_0_pmos}
 \end{figure}
 
@@ -25,8 +26,8 @@ The results for Simulation 4 are similar to Simulation 2, except a PMOS is used 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/id_vs_vds_vgs_is_2_5_pmos.PNG}
-	\caption{PMOS $I_{D}$ versus $V_{DS}$ when $V_{GS} = 2.5$\si{\volt}}
+	\includegraphics[scale=0.30]{../images/id_vs_vds_vgs_is_2_5_pmos.PNG}
+	\caption{PMOS $I_{D}$ versus $V_{SD}$ when $V_{SG} = 2.5$\si{\volt}}
 	\label{fig:id_vs_vds_vgs_is_2_5_pmos}
 \end{figure}
 
@@ -36,8 +37,8 @@ The results for Simulation 4 are similar to Simulation 2, except a PMOS is used 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/id_vs_vds_vgs_is_5_pmos.PNG}
-	\caption{PMOS $I_{D}$ versus $V_{DS}$ when $V_{GS} = 5.0$\si{\volt}}
+	\includegraphics[scale=0.30]{../images/id_vs_vds_vgs_is_5_pmos.PNG}
+	\caption{PMOS $I_{D}$ versus $V_{SD}$ when $V_{SG} = 5.0$\si{\volt}}
 	\label{fig:id_vs_vds_vgs_is_5_pmos}
 \end{figure}
 
@@ -49,7 +50,7 @@ The results for Simulation 4 are similar to Simulation 2, except a PMOS is used 
 	\centering
 	\caption{Simulation 4 Results}
 	\label{tab:sim4_results}
-	\csvautotabular{../tables/sim4_results.csv}
+	\csvautotabular{../tables/sim4_results}
 \end{table}
 
 \FloatBarrier
@@ -92,3 +93,18 @@ The results are compared with the simulation models.
 \end{table}
 
 \FloatBarrier
+
+A simpler approach can also be taken to determine $\lambda$.
+For processes with relatively long transistors, $\lambda$ should not be very large.
+Because $\lambda = \frac{1}{V_{A}}$, where $V_{A}$ is the Early voltage, this implies that $V_{A}$ is quite large.
+So, long as $V_{DS}$ (or $V_{SD}$ in the case of a PMOS) is not very large relative to $V_{A}$ ($V_{DS} << V_{A}$), the following approximation can be made:
+
+\begin{equation}
+	\label{eq:approx_lambda}
+	I_{D} = I_{D}' ( 1 + \lambda V_{DS} ) \\
+	= I_{D}' ( 1 + \frac{V_{DS}}{V_{A}} ) \\
+	\approx I_{D}'
+\end{equation}
+
+Therefore, $g_{ds} = \lambda I_{D}' \approx \lambda I_{D}$ for $V_{A} >> V_{DS}$ (or $V_{A} >> V_{SD}$ for a PMOS).
+So, $lambda$ can also be approximated using $\lambda \approx \frac{g_{ds}}{I_{D}}$ (or $g_{sd}$ in the case of a PMOS) provided that these assumptions about the transistor hold.
