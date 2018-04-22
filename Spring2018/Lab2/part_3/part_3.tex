@@ -24,7 +24,7 @@
 
 As $V_{SG}$ is increased, electrons are repelled from the channel beneath the gate of the PMOS.
 This exposes a depletion layer in the channel.
-Once $V_{SG}$ hits the threshold voltage $|V_{tp}|$, for which $|V_{tp}| \approx 1.4$\si{\volt} in this case, holes are ripped from the postiviely-charged donor ions in n-type substrate, and a p-type channel is formed. \\
+Once $V_{SG}$ hits the threshold voltage $|V_{tp}|$, for which $|V_{tp}| \approx 1.5$\si{\volt} in this case, holes are ripped from the postiviely-charged donor ions in n-type substrate, and a p-type channel is formed. \\
 
 The transistor exits cutoff past $|V_{tp}|$.
 If $V_{SD} > V_{SG} - |V_{tp}|$, then the transistor operates in the saturation region.
@@ -59,7 +59,7 @@ Thus, by design, the transistor exits cutoff and enters saturation, in which cas
 
 \FloatBarrier
 
-When increasing the source-bulk voltage $V_{SB}$, the threshold voltage increases slightly to about $1.6$\si{\volt}.
+When increasing the source-bulk voltage $V_{SB}$, the threshold voltage increases slightly to about $1.7$\si{\volt}.
 In a very simplified model, two pn-junction diodes exist in a PMOS transistor.
 The first is between the source and the bulk.
 The other is between the drain and the bulk.
@@ -73,6 +73,73 @@ Therefore, less current flows through the channel.
 So, a higher $V_{SG}$ is required to achieve the same current.
 Thus, the threshold voltage $|V_{tp}|$ must increase.
 The transistor exits cutoff around $1.6$\si{\volt} this time.
-Therefore, in line with theory, the threshold voltage increased slightly with the increased $V_{SB}$, namely from about $1.4$\si{\volt} to $1.6$\si{\volt}.
+Therefore, in line with theory, the threshold voltage increased slightly with the increased $V_{SB}$, namely from about $1.5$\si{\volt} to $1.7$\si{\volt}.
 
 % TODO W/L ratio of transistor
+
+The current in the saturation region for an NMOS transistor is approximately given by:
+
+\begin{equation}
+	\label{eq:nmos_sat}
+	i_{D} = \frac{k_{n}'}{2} \frac{W}{L} ( V_{GS} - V_{tn} )^{2}
+\end{equation}
+
+Rearranging the equation, the NMOS's $\frac{W}{L}$ ratio can be determined:
+
+\begin{equation}
+	\label{eq:w_over_l_nmos}
+	\frac{W}{L} = \frac{2 i_{D}}{k_{n}' (V_{GS} - V_{tn})^{2}}
+\end{equation}
+
+A similar result is obtained for the PMOS:
+
+\begin{equation}
+	\label{eq:w_over_l_pmos}
+	\frac{W}{L} = \frac{ 2 i_{D}}{k_{p}' (V_{SG} - |V_{tp}|)^{2}}
+\end{equation}
+
+So, if the various parameters on the right-side of either equation are known for different test cases, then $\frac{W}{L}$ can be calculated for different points, and the average can be taken for a good estimate of the true value.
+$i_{D}$ and $V_{SG}$ are trivial since those are essentially directly measured in the experiment.
+$V_{tn}$ and $|V_{tp}|$ are given in the SPICE model of the CD4007 transistors, but they do not reflect what is observed in the actual transistors.
+However, from analyzing the measured data points, the threshold voltages can be easily obtained for the transistors in lab, and those are to be used.
+The threshold voltages are given in table (\ref{tab:vt}):
+
+\FloatBarrier
+
+\begin{table}[h!]
+	\centering
+	\caption{Measured Threshold Voltages for NMOS and PMOS}
+	\label{tab:vt}
+	\csvautotabular{../tables/vt.csv}
+\end{table}
+
+\FloatBarrier
+
+The only unknown values are the process transconductance parameters $k_{n}'$ and $k_{p}'$.
+It is difficult to decouple $k_{n}'$ from $\frac{W}{L}$.
+The same applies to the PMOS values.
+So, the $k_{n}'$ and $k_{p}'$ values from the SPICE model are to be used.
+
+\FloatBarrier
+
+\begin{table}[h!]
+	\centering
+	\caption{SPICE Model Process Transconductance Parameters for NMOS and PMOS}
+	\label{tab:k}
+	\csvautotabular{../tables/k.csv}
+\end{table}
+
+\FloatBarrier
+
+Using the data in tables (\ref{tab:vt}) and (\ref{tab:k}) as well as equations (\ref{eq:w_over_l_nmos}) and (\ref{eq:w_over_l_pmos}), the $\frac{W}{L}$ ratios for each transistor can be approximated.
+
+\FloatBarrier
+
+\begin{table}[h!]
+	\centering
+	\caption{$\frac{W}{L}$ Ratios for NMOS and PMOS}
+	\label{tab:w_over_l}
+	\csvautotabular{../tables/w_over_l.csv}
+\end{table}
+
+\FloatBarrier

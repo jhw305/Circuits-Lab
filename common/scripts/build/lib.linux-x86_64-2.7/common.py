@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 # Roman Parise
-# Common functions for melatonin flow
+# Common functions for azide flow
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
@@ -37,12 +37,7 @@ def write_csv_from_matrix( fname , matrix ):
 			str_to_write = COMMA_DELIMITER.join( [ str( element ) for element in row ] )
 			file_handle.write( str_to_write + NEWLINE )
 
-# TODO: Need a clean way to generate plots from rows or columns format
-
-# TODO: Needs error checking and possibly a cleaner, more elegant solution
-# Reads out a csv file into cols
-# Note: Top row is reserved for headings
-def read_csv_cols( csv_fname ) :
+def read_csv_rows( csv_fname ) :
 	# Get data in a matrix
 	data_matrix = [ ]
 	# TODO Maybe we can use dtype to our advantage
@@ -57,8 +52,17 @@ def read_csv_cols( csv_fname ) :
 				# Data
 				data_matrix_row.append( float( reader[ row_index ][ col_index ] ) )
 		data_matrix.append( data_matrix_row )
+	return data_matrix
+
+
+# TODO: Need a clean way to generate plots from rows or columns format
+
+# TODO: Needs error checking and possibly a cleaner, more elegant solution
+# Reads out a csv file into cols
+# Note: Top row is reserved for headings
+def read_csv_cols( csv_fname ) :
 	# TODO: Temp soln. Transpose the matrix to get in column form.
-	return transpose( data_matrix )
+	return transpose( read_csv_rows( csv_fname ) )
 
 # TODO: Only checks rank-2 tensors. Do we care about rank-n where 0 <= n < inf?
 # Matrix by our current definition is a nonempty array of nonempty arrays, all of same length.
