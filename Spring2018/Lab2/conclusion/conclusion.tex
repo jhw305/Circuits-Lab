@@ -1,0 +1,12 @@
+\subsection{Part 3}
+The $i_{D}$ versus $V_{SG}$ characteristics of the PMOS are as expected.
+Furthermore, increasing $V_{SB}$ increases $|V_{tp}|$, which is in line with theory.
+Enough informaton is available to determine the $\frac{W}{L}$ ratios for the transistors, which turn out to be $2.019$ for the NMOS and $1.740$ for the PMOS.
+However, this is probably not terribly accurate since $k_{n}'$ and $k_{p}'$ are taken from the SPICE model.
+The threshold voltage is considerably different from the SPICE model, so there is reason to believe that the $k$ parameters are as well.
+These parameters should be determined through further experimentation before making a definitive statement about the $\frac{W}{L}$ ratio of the transistor.
+\subsection{Part 4}
+The $i_{D}$ versus $V_{SD}$ characteristics for the PMOS are not at all consistent with intuition nor theory.
+One possibility is that the CD4007 chips have been damaged due to short circuits or other practical considerations, leading to the bizarre characteristics that make it act as a diode with a very high forward voltage.
+However, this is a difficult argument to make since the $i_{D}$ versus $V_{SG}$ characteristics are in tact.
+The measurement equipment or the circuit used to perform this analysis are likely the culprit.

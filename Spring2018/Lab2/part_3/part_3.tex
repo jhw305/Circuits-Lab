@@ -31,8 +31,8 @@ If $V_{SD} > V_{SG} - |V_{tp}|$, then the transistor operates in the saturation 
 The drain in this circuit is grounded.
 The source is set to supply, which is $V_{DD} = 5$\si{\volt}.
 Therefore, $V_{SD} = 5$\si{\volt}.
-If $|V_{tp}| \gte 0$ by the definition of the absolute value of a real number.
-Therefore, so long as $V_{SG} < V_{SD} + |V_{tp}| \lte 5$\si{\volt}, the transistor stays in saturation.
+If $|V_{tp}| \geq 0$ by the definition of the absolute value of a real number.
+Therefore, so long as $V_{SG} < V_{SD} + |V_{tp}| \leq 5$\si{\volt}, the transistor stays in saturation.
 If $V_{SG}$ is increased past about $4$\si{\volt}, the current in the actual experiment becomes much too large to handle.
 As a result, the test cases are limited to $V_{SG} < 4$\si{\volt}.
 Thus, by design, the transistor exits cutoff and enters saturation, in which case the current grows with $V_{SG}^{2}$. \\
