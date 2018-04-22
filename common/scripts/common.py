@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 # Roman Parise
-# Common functions for melatonin flow
+# Common functions for azide flow
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
