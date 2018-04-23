@@ -30,7 +30,7 @@ def print_usage( ) :
 def cover_page_txt( report_name , course , authors ) :
 	txt = ""
 	txt += "\centering" + common.NEWLINE
-	txt += "\\vspace{2.5cm}" + common.NEWLINE
+	txt += "\\vspace*{5cm}" + common.NEWLINE
 	txt += "{\huge " + report_name + " \par}" + common.NEWLINE
 	txt += "{\Large " + course + " \par}" + common.NEWLINE
 	txt += "{\Large \\today \par}" + common.NEWLINE

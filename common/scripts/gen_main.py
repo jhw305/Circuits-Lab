@@ -27,6 +27,7 @@ def section_source( section_name ) :
 def gen_main_txt( sections ) :
 	txt = ""
 	txt += "\documentclass{article}" + common.NEWLINE
+	txt += "\usepackage[letterpaper, portrait, margin = 1in]{geometry}" + common.NEWLINE
 	txt += "\input{" + gen_files.PREAMBLE_FNAME + "}" + common.NEWLINE
 	txt += "\\begin{document}" + common.NEWLINE
 	txt += "\\begin{titlepage}" + common.NEWLINE
