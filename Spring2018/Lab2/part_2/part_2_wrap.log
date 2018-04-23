@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  22 APR 2018 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  23 APR 2018 10:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,24 +527,67 @@ Package pdftex.def Info: ../images/circuit_2.PNG  used on input line 5. on inpu
 t line 5.
 Package pdftex.def Info: Requested size: 107.95303pt x 97.56424pt on input line
  5.
-) [1
+<../images/data_2.PNG, id=3, 462.528pt x 346.896pt>
+File: ../images/data_2.PNG Graphic file (type png)
+<use ../images/data_2.PNG>
+Package pdftex.def Info: ../images/data_2.PNG  used on input line 17. on input 
+line 17.
+Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
+e 17.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/circuit_2.PNG>] 
-(./part_2_wrap.aux) ) 
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 17--18
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:data_2' on page 1 undefined on input line 27.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/circuit_2.PNG> <
+../images/data_2.PNG>]
+<../images/data_2_b.PNG, id=14, 462.528pt x 346.896pt>
+File: ../images/data_2_b.PNG Graphic file (type png)
+<use ../images/data_2_b.PNG>
+Package pdftex.def Info: ../images/data_2_b.PNG  used on input line 36. on inpu
+t line 36.
+Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
+e 36.
+
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 36--37
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2] [3 <../images/data_2_b.PNG>]) [4
+
+] (./part_2_wrap.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 13071 strings out of 492990
- 283051 string characters out of 6135004
- 295179 words of memory out of 5000000
- 16556 multiletter control sequences out of 15000+600000
- 531681 words of font info for 28 fonts, out of 8000000 for 9000
+ 13101 strings out of 492990
+ 283601 string characters out of 6135004
+ 300211 words of memory out of 5000000
+ 16581 multiletter control sequences out of 15000+600000
+ 531989 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,46p,10407b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb>
-Output written on part_2_wrap.pdf (1 page, 23128 bytes).
+ 41i,7n,46p,10407b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on part_2_wrap.pdf (4 pages, 90313 bytes).
 PDF statistics:
- 15 PDF objects out of 1000 (max. 8388607)
- 8 compressed objects within 1 object stream
+ 44 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

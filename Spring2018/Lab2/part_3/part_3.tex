@@ -4,7 +4,7 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit_3.PNG}
+	\includegraphics[scale=0.75]{./images/circuit_3.PNG}
 	\caption{Circuit 3}
 	\label{fig:circuit_3}
 \end{figure}
@@ -15,7 +15,7 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/data_3.PNG}
+	\includegraphics[scale=0.75]{./images/data_3.PNG}
 	\caption{$i_{D}$ versus $V_{SG}$ of PMOS where $V_{SB}= 0$\si{\volt}}
 	\label{fig:data_3}
 \end{figure}
@@ -28,14 +28,14 @@
 	\centering
 	\caption{Figure (\ref{fig:data_3}) Data}
 	\label{tab:data_3}
-	\csvautotabular{../tables/data_3.csv}
+	\csvautotabular{./tables/data_3.csv}
 \end{table}
 
 \FloatBarrier
 
 As $V_{SG}$ is increased, electrons are repelled from the channel beneath the gate of the PMOS.
 This exposes a depletion layer in the channel.
-Once $V_{SG}$ hits the threshold voltage $|V_{tp}|$, for which $|V_{tp}| \approx 1.5$\si{\volt} in this case, holes are ripped from the postiviely-charged donor ions in n-type substrate, and a p-type channel is formed. \\
+Once $V_{SG}$ hits the threshold voltage $|V_{tp}|$, for which $|V_{tp}| \approx 1.5$\si{\volt} in this case, holes are ripped from the positively-charged donor ions in n-type substrate, and a p-type channel is formed. \\
 
 The transistor exits cutoff past $|V_{tp}|$.
 If $V_{SD} > V_{SG} - |V_{tp}|$, then the transistor operates in the saturation region.
@@ -52,7 +52,7 @@ Thus, by design, the transistor exits cutoff and enters saturation, in which cas
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/data_3_b.PNG}
+	\includegraphics[scale=0.75]{./images/data_3_b.PNG}
 	\caption{$i_{D}$ versus $V_{SG}$ of PMOS where $V_{SB}= 0.5$\si{\volt}}
 	\label{fig:data_3_b}
 \end{figure}
@@ -65,7 +65,7 @@ Thus, by design, the transistor exits cutoff and enters saturation, in which cas
 	\centering
 	\caption{Figure (\ref{fig:data_3_b}) Data}
 	\label{tab:data_3_b}
-	\csvautotabular{../tables/data_3_b.csv}
+	\csvautotabular{./tables/data_3_b.csv}
 \end{table}
 
 \FloatBarrier
@@ -121,7 +121,7 @@ The threshold voltages are given in table (\ref{tab:vt}):
 	\centering
 	\caption{Measured Threshold Voltages for NMOS and PMOS}
 	\label{tab:vt}
-	\csvautotabular{../tables/vt.csv}
+	\csvautotabular{./tables/vt.csv}
 \end{table}
 
 \FloatBarrier
@@ -137,7 +137,7 @@ So, the $k_{n}'$ and $k_{p}'$ values from the SPICE model are to be used.
 	\centering
 	\caption{SPICE Model Process Transconductance Parameters for NMOS and PMOS}
 	\label{tab:k}
-	\csvautotabular{../tables/k.csv}
+	\csvautotabular{./tables/k.csv}
 \end{table}
 
 \FloatBarrier
@@ -150,7 +150,7 @@ Using the data in tables (\ref{tab:vt}) and (\ref{tab:k}) as well as equations (
 	\centering
 	\caption{$\frac{W}{L}$ Ratios for NMOS and PMOS}
 	\label{tab:w_over_l}
-	\csvautotabular{../tables/w_over_l.csv}
+	\csvautotabular{./tables/w_over_l.csv}
 \end{table}
 
 \FloatBarrier

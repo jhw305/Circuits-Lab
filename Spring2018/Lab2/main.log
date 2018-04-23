@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  23 APR 2018 10:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  23 APR 2018 10:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**part_3_wrap.tex
-(./part_3_wrap.tex
+**main.tex
+(./main.tex
 LaTeX2e <2017-04-15>
 Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -22,7 +22,7 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (../preamble.tex
+) (./preamble.tex
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2017/07/19 L3 programming layer (loader) 
@@ -419,9 +419,12 @@ Package shellesc Info: Restricted shell escape enabled on input line 69.
 \c@csvrow=\count195
 \c@csvcol=\count196
 \csv@out=\write3
+) (./main.aux
+
+LaTeX Warning: Label `fig:data_3' multiply defined.
+
 )
-(./part_3_wrap.aux)
-\openout1 = `part_3_wrap.aux'.
+\openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -519,47 +522,56 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 \c__siunitx_mathtt_int=\count270
 
-(./part_3.tex
-<../images/circuit_3.PNG, id=1, 131.59163pt x 135.80737pt>
-File: ../images/circuit_3.PNG Graphic file (type png)
-<use ../images/circuit_3.PNG>
-Package pdftex.def Info: ../images/circuit_3.PNG  used on input line 7. on inpu
-t line 7.
-Package pdftex.def Info: Requested size: 98.69348pt x 101.85527pt on input line
- 7.
-<../images/data_3.PNG, id=3, 462.528pt x 346.896pt>
-File: ../images/data_3.PNG Graphic file (type png)
-<use ../images/data_3.PNG>
-Package pdftex.def Info: ../images/data_3.PNG  used on input line 18. on input 
-line 18.
-Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
-e 18.
+(./cover_page/cover.tex) [1
 
-Overfull \hbox (1.89514pt too wide) in paragraph at lines 18--19
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction/introducti
+on.tex) (./part_1/part_1.tex
+<./images/circuit_1.PNG, id=8, 132.79613pt x 134.904pt>
+File: ./images/circuit_1.PNG Graphic file (type png)
+<use ./images/circuit_1.PNG>
+Package pdftex.def Info: ./images/circuit_1.PNG  used on input line 7. on input
+ line 7.
+Package pdftex.def Info: Requested size: 99.59683pt x 101.17775pt on input line
+ 7.
+<./images/data_1.PNG, id=10, 462.528pt x 346.896pt>
+File: ./images/data_1.PNG Graphic file (type png)
+<use ./images/data_1.PNG>
+Package pdftex.def Info: ./images/data_1.PNG  used on input line 21. on input l
+ine 21.
+Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
+e 21.
+
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 21--22
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[1
+[1 <./images/circuit_1.PNG>]
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/circuit_3.PNG> <
-../images/data_3.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 36--39
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <./images/data_1.PNG>] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--50
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
 
-<../images/data_3_b.PNG, id=14, 462.528pt x 346.896pt>
-File: ../images/data_3_b.PNG Graphic file (type png)
-<use ../images/data_3_b.PNG>
-Package pdftex.def Info: ../images/data_3_b.PNG  used on input line 55. on inpu
-t line 55.
+<./images/data_1_lower_body.PNG, id=26, 462.528pt x 346.896pt>
+File: ./images/data_1_lower_body.PNG Graphic file (type png)
+<use ./images/data_1_lower_body.PNG>
+Package pdftex.def Info: ./images/data_1_lower_body.PNG  used on input line 55.
+ on input line 55.
 Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
 e 55.
 
@@ -570,31 +582,171 @@ Overfull \hbox (1.89514pt too wide) in paragraph at lines 55--56
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2]
+[4
+
+ <./images/data_1_lower_body.PNG>]) (./part_2/part_2.tex
+<./images/circuit_2.PNG, id=34, 143.93774pt x 130.086pt>
+File: ./images/circuit_2.PNG Graphic file (type png)
+<use ./images/circuit_2.PNG>
+Package pdftex.def Info: ./images/circuit_2.PNG  used on input line 5. on input
+ line 5.
+Package pdftex.def Info: Requested size: 107.95303pt x 97.56424pt on input line
+ 5.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3 <../images/data_3_b.PNG>] [4] [5
+[5]
+<./images/data_2.PNG, id=39, 462.528pt x 346.896pt>
+File: ./images/data_2.PNG Graphic file (type png)
+<use ./images/data_2.PNG>
+Package pdftex.def Info: ./images/data_2.PNG  used on input line 17. on input l
+ine 17.
+Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
+e 17.
 
-]) [6] (./part_3_wrap.aux) ) 
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 17--18
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:data_2' on page 6 undefined on input line 27.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6 <./images/circuit_2.PNG> <./images/data_2.PNG>]
+<./images/data_2_b.PNG, id=46, 462.528pt x 346.896pt>
+File: ./images/data_2_b.PNG Graphic file (type png)
+<use ./images/data_2_b.PNG>
+Package pdftex.def Info: ./images/data_2_b.PNG  used on input line 36. on input
+ line 36.
+Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
+e 36.
+
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 36--37
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7] [8 <./images/data_2_b.PNG>]) (./part_3/part_3.tex
+<./images/circuit_3.PNG, id=55, 131.59163pt x 135.80737pt>
+File: ./images/circuit_3.PNG Graphic file (type png)
+<use ./images/circuit_3.PNG>
+Package pdftex.def Info: ./images/circuit_3.PNG  used on input line 7. on input
+ line 7.
+Package pdftex.def Info: Requested size: 98.69348pt x 101.85527pt on input line
+ 7.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9
+
+]
+<./images/data_3.PNG, id=59, 462.528pt x 346.896pt>
+File: ./images/data_3.PNG Graphic file (type png)
+<use ./images/data_3.PNG>
+Package pdftex.def Info: ./images/data_3.PNG  used on input line 18. on input l
+ine 18.
+Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
+e 18.
+
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 18--19
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <./images/circuit_3.PNG> <./images/data_3.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--50
+
+ []
+
+<./images/data_3_b.PNG, id=65, 462.528pt x 346.896pt>
+File: ./images/data_3_b.PNG Graphic file (type png)
+<use ./images/data_3_b.PNG>
+Package pdftex.def Info: ./images/data_3_b.PNG  used on input line 55. on input
+ line 55.
+Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
+e 55.
+
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 55--56
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <./images/data_3_b.PNG>] [13] [14
+
+]) (./part_4/part_4.tex
+<./images/circuit_4.PNG, id=80, 160.80075pt x 140.62538pt>
+File: ./images/circuit_4.PNG Graphic file (type png)
+<use ./images/circuit_4.PNG>
+Package pdftex.def Info: ./images/circuit_4.PNG  used on input line 5. on input
+ line 5.
+Package pdftex.def Info: Requested size: 120.60025pt x 105.46875pt on input lin
+e 5.
+<./images/data_4.PNG, id=81, 462.528pt x 346.896pt>
+File: ./images/data_4.PNG Graphic file (type png)
+<use ./images/data_4.PNG>
+Package pdftex.def Info: ./images/data_4.PNG  used on input line 16. on input l
+ine 16.
+Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
+e 16.
+
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 16--17
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15 <./images/circuit_4.PNG>]) (./conclusion/conclusion.tex [16 <./images/data_
+4.PNG>]) [17] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 13119 strings out of 492990
- 284157 string characters out of 6135004
- 301259 words of memory out of 5000000
- 16597 multiletter control sequences out of 15000+600000
- 531681 words of font info for 28 fonts, out of 8000000 for 9000
+ 13210 strings out of 492990
+ 285830 string characters out of 6135004
+ 301375 words of memory out of 5000000
+ 16652 multiletter control sequences out of 15000+600000
+ 533498 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,46p,10407b,908s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on part_3_wrap.pdf (6 pages, 109283 bytes).
+ 41i,7n,46p,10397b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb>
+Output written on main.pdf (18 pages, 266276 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
