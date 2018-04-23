@@ -1,4 +1,4 @@
-Vgs [ V ] , gsd from Simulation Curves [ uA / V ]  , gsd from DC Operating Point Simulation [ mA / V ] , Percentage Error
-0 , 0 , 0 , 0.000\%
-2.5 , 7.24 , 7.249 , 0.124\%
-5.0 , 392.3 , 361.6 , 8.490\%
+Vsg [ V ] , gsd from Graph [ uA / V ]  , gsd from DC Op Point [ mA / V ] , Error
+0 , 0 , 0 , 0\%
+2.5 , 7.24 , 7.249 , 0.12\%
+5.0 , 392.3 , 361.6 , 8.5\%

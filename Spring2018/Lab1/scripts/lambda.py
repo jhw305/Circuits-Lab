@@ -23,7 +23,7 @@ if __name__ == "__main__" :
 	pmos_true_lambda = 0.010
 
 	# Format and write to file
-	PREC = 10
+	PREC = 5
 	table_headers = [ "" , "Calculated Lambda" , "Model-Specified Lambda" , "Percentage Error" ]
 	nmos = [ "NMOS" , common.set_precision_str( nmos_lambda , PREC ) , common.set_precision_str( nmos_true_lambda , PREC ) , common.fmt_perc_err( nmos_lambda , nmos_true_lambda , PREC ) ]
 	pmos = [ "PMOS" , common.set_precision_str( pmos_lambda , PREC ) , common.set_precision_str( pmos_true_lambda , PREC ) , common.fmt_perc_err( pmos_lambda , pmos_true_lambda , PREC ) ]
