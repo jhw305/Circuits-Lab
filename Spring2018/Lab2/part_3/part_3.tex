@@ -42,10 +42,11 @@ If $V_{SD} > V_{SG} - |V_{tp}|$, then the transistor operates in the saturation 
 The drain in this circuit is grounded.
 The source is set to supply, which is $V_{DD} = 5$\si{\volt}.
 Therefore, $V_{SD} = 5$\si{\volt}.
-If $|V_{tp}| \geq 0$ by the definition of the absolute value of a real number.
+$|V_{tp}| \geq 0$ by the definition of the absolute value of a real number.
 Therefore, so long as $V_{SG} < V_{SD} + |V_{tp}| \leq 5$\si{\volt}, the transistor stays in saturation.
-If $V_{SG}$ is increased past about $4$\si{\volt}, the current in the actual experiment becomes much too large to handle.
-As a result, the test cases are limited to $V_{SG} < 4$\si{\volt}.
+If $V_{SG}$ is increased past about $4$\si{\volt}, there is the concern that the current in the actual experiment becomes much too large to handle.
+As a result, the test cases for the $V_{SB} = 0$\si{\volt} case are limited to $V_{SG} < 4$\si{\volt}.
+However, the $V_{SB} = 0.5$\si{\volt} case contains the full range up to $5$\si{\volt}.
 Thus, by design, the transistor exits cutoff and enters saturation, in which case the current grows with $V_{SG}^{2}$. \\
 
 \FloatBarrier
@@ -109,8 +110,8 @@ A similar result is obtained for the PMOS:
 	\frac{W}{L} = \frac{ 2 i_{D}}{k_{p}' (V_{SG} - |V_{tp}|)^{2}}
 \end{equation}
 
-So, if the various parameters on the right-side of either equation are known for different test cases, then $\frac{W}{L}$ can be calculated for different points, and the average can be taken for a good estimate of the true value.
-$i_{D}$ and $V_{SG}$ are trivial since those are essentially directly measured in the experiment.
+So, if the various parameters on the right-side of either equation are known for different test cases, then $\frac{W}{L}$ can be calculated for saturation points in the $i_{D}$ versus $V_{GS}$ and $i_{D}$ versus $V_{SG}$ experiments, and the average can be taken for a good estimate of the true value.
+$i_{D}$, $V_{GS}$, and $V_{SG}$ are trivial since those are essentially directly measured in the experiment.
 $V_{tn}$ and $|V_{tp}|$ are given in the SPICE model of the CD4007 transistors, but they do not reflect what is observed in the actual transistors.
 However, from analyzing the measured data points, the threshold voltages can be easily obtained for the transistors in lab, and those are to be used.
 The threshold voltages are given in table (\ref{tab:vt}):

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  23 APR 2018 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  23 APR 2018 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,17 +693,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--39
  []
 
 [7 <./images/data_3.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 40--50
+Underfull \hbox (badness 10000) in paragraph at lines 40--51
 
  []
 
 <./images/data_3_b.PNG, id=56, 462.528pt x 346.896pt>
 File: ./images/data_3_b.PNG Graphic file (type png)
 <use ./images/data_3_b.PNG>
-Package pdftex.def Info: ./images/data_3_b.PNG  used on input line 55. on input
- line 55.
+Package pdftex.def Info: ./images/data_3_b.PNG  used on input line 56. on input
+ line 56.
 Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
-e 55.
+e 56.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -737,7 +737,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  13687 strings out of 492990
- 292832 string characters out of 6135004
+ 292836 string characters out of 6135004
  317302 words of memory out of 5000000
  17118 multiletter control sequences out of 15000+600000
  533498 words of font info for 34 fonts, out of 8000000 for 9000
@@ -754,7 +754,7 @@ public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy7.pfb>
-Output written on main.pdf (13 pages, 263965 bytes).
+Output written on main.pdf (13 pages, 264367 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
