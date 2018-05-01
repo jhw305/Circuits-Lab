@@ -1,0 +1,2 @@
+#!/bin/bash
+~/Circuits-Lab/common/scripts/azide --report "Measurement Lab \#2" --course "EECS 170LC" --authors "Roman Parise (59611417)" "Jason Wang (42873192)" "Gregory Krueper (73788236)" --sections "Introduction" "Part 1" "Part 2" "Part 3" "Conclusion"

@@ -1,5 +1,7 @@
 #!/usr/bin/python
 import common
+from math import pi
+from math import sqrt
 
 TABLES_DIR = "tables/"
 PREC = 2
@@ -8,6 +10,9 @@ I = 1e-6 # Amperes
 V_tn = 1.4 # Volts
 R_L = 500 # Ohms
 LAMBDA = 0.005 # Volts^-1
+f = 1e6 # Hertz
+w = 2 * pi * f # rad / s
+C = 1e-6 # Farads
 
 # Common Source Amplifier
 R_D = 5e3 # Ohms
@@ -39,7 +44,7 @@ if __name__ == "__main__" :
 	# CSA
 	ro_csa = 1.0 / ( LAMBDA * I_D_csa )
 	ro_sim_csa = 1.0 / ( 2.415e-6 )
-	common.write_csv_from_matrix( TABLES_DIR + "common_source_amp_ro.csv" , [ [ "ro from Op Point Listing [ kiloohms ]" , "Calculated ro [ kiloohms ]" , "Error from Listing" ] , [ common.set_precision_str( 1e-3 * ro_sim_cda , PREC ) , common.set_precision_str( 1e-3 * ro_cda , PREC ) , common.fmt_perc_err( ro_cda , ro_sim_cda , PREC ) ] ] )
+	common.write_csv_from_matrix( TABLES_DIR + "common_source_amp_ro.csv" , [ [ "ro from Op Point Listing [ kiloohms ]" , "Calculated ro [ kiloohms ]" , "Error from Listing" ] , [ common.set_precision_str( 1e-3 * ro_sim_csa , PREC ) , common.set_precision_str( 1e-3 * ro_csa , PREC ) , common.fmt_perc_err( ro_csa , ro_sim_csa , PREC ) ] ] )
 
 	# CSA Gain
 	gain_theory = -1 * g_m_csa * ( 1.0 / ( ( 1.0 / R_D ) + ( 1 / ro_sim_csa ) ) )
