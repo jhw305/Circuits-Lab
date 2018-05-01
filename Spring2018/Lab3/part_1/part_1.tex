@@ -4,8 +4,8 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.45]{../images/circuit1.PNG}
-	\caption{Circuit 1}
+	\includegraphics[scale=0.30]{./images/circuit1.PNG}
+	\caption{Common-Drain Amplifier}
 	\label{fig:circuit1}
 \end{figure}
 
@@ -17,8 +17,8 @@ The circuit in figure (\ref{fig:circuit1})'s voltage transfer characteristic is 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.45]{../images/sim1_vtc.PNG}
-	\caption{Circuit 1 Voltage Transfer Characteristic}
+	\includegraphics[scale=0.45]{./images/sim1_vtc.PNG}
+	\caption{Common-Drain Amplifier Voltage Transfer Characteristic}
 	\label{fig:sim1_vtc}
 \end{figure}
 
@@ -35,7 +35,6 @@ Here, $V_{tn} \approx 1.4$\si{\volt} since that is the dividing line between cut
 
 % Find V_in = V_in,eq1 that corresponds to the center of the sat region
 Taking the average of the maximum and minimum values in the saturation region, $V_{in(eq1)} = 3.27$\si{\volt}.
-Note that $3.27$\si{\volt} is used to compensate for the fact that $V_{out}$ at $V_{in} = 3.26$\si{\volt} is slightly below the midpoint.
 % Part B: With V_in = V_in,eq1, do DC op point simulation
 Figure (\ref{fig:circuit1}) shows a DC operating point simulation at this bias point.
 $g_{m}$ is given by $\frac{2I_{D}'}{V_{ov}}$, where $I_{D}'$ is the saturation current not accounting for channel-length modulation and $V_{ov}$ is the overdrive voltage.
@@ -48,13 +47,13 @@ Here, the approximation $I_{D}' \approx I_{D}$ is used.
 	\centering
 	\caption{$g_{m}$ for the Common-Drain Amplifier}
 	\label{tab:common_drain_amp_gm}
-	\csvautotabular{../tables/common_drain_amp_gm.csv}
+	\csvautotabular{./tables/common_drain_amp_gm.csv}
 \end{table}
 
 \FloatBarrier
 
 $g_{ds}$ is simply the slope of the voltage transfer characteristic.
-A DC operating point listing providing by Virtuoso gives the value of $g_{ds}$ for the transistor.
+A DC operating point listing provided by Virtuoso gives the value of $g_{ds}$ for the transistor.
 $r_{o}$ can then be acquired from $r_{o} = \frac{1}{g_{ds}}$.
 $r_{o}$ can be calculated using $\frac{1}{\lambda I_{D}'} \approx \frac{1}{\lambda I_{D}}$.
 
@@ -64,7 +63,7 @@ $r_{o}$ can be calculated using $\frac{1}{\lambda I_{D}'} \approx \frac{1}{\lamb
 	\centering
 	\caption{$r_{o}$ for the Common-Drain Amplifier}
 	\label{tab:common_drain_amp_ro}
-	\csvautotabular{../tables/common_drain_amp_ro.csv}
+	\csvautotabular{./tables/common_drain_amp_ro.csv}
 \end{table}
 
 \FloatBarrier
@@ -76,7 +75,7 @@ An input signal of $10$\si{\milli\volt} amplitude and $1$\si{\mega\hertz} freque
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.45]{../images/sim1_vin.PNG}
+	\includegraphics[scale=0.45]{./images/sim1_vin.PNG}
 	\caption{$V_{in}$ for Small-Signal Analysis of Common-Drain Amplifier}
 	\label{fig:sim1_vin}
 \end{figure}
@@ -89,7 +88,7 @@ A signal is then observed at the output of the amplifier.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.45]{../images/sim1_vout.PNG}
+	\includegraphics[scale=0.45]{./images/sim1_vout.PNG}
 	\caption{$V_{out}$ for Small-Signal Analysis of Common-Drain Amplifier}
 	\label{fig:sim1_vout}
 \end{figure}
@@ -102,6 +101,28 @@ The bias at the output is simply the output voltage when $V_{in}$ is biased at $
 
 % Part E: Increase Vin,eq1 by 10mV. What do you observe?
 $10$\si{\milli\volt} is then added to the input bias to take it from $3.27$\si{\volt} to $3.28$\si{\volt}.
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{./images/sim1_vin_plus10mV.PNG}
+	\caption{$V_{in}$ for Small-Signal Analysis of Common-Drain Amplifier when Bias Increased by $10$\si{\milli\volt}}
+	\label{fig:sim1_vin_plus10mV}
+\end{figure}
+
+\FloatBarrier
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{./images/sim1_vout_plus10mV.PNG}
+	\caption{$V_{out}$ for Small-Signal Analysis of Common-Drain Amplifier when Bias Increased by $10$\si{\milli\volt}}
+	\label{fig:sim1_vout_plus10mV}
+\end{figure}
+
+\FloatBarrier
 Again, the output amplitude is the same as the input amplitude.
 The output bias shifts up by the same amount as expected, specifically from $1.64$\si{\volt} to $1.65$\si{\volt}.
 Again, this behavior is expected since the common-drain amplifier acts as a "voltage follower".

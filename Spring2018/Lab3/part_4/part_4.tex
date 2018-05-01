@@ -2,7 +2,7 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.45]{../images/circuit5.PNG}
+	\includegraphics[scale=0.30]{./images/circuit5.PNG}
 	\caption{Circuit 5}
 	\label{fig:circuit5}
 \end{figure}
@@ -13,7 +13,7 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.45]{../images/sim5_vin.PNG}
+	\includegraphics[scale=0.45]{./images/sim5_vin.PNG}
 	\caption{$V_{in}$ for Small-Signal Test of Circuit 5}
 	\label{fig:sim5_vin}
 \end{figure}
@@ -24,7 +24,7 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.45]{../images/sim5_vout.PNG}
+	\includegraphics[scale=0.45]{./images/sim5_vout.PNG}
 	\caption{$V_{out}$ for Small-Signal Test of Circuit 5}
 	\label{fig:sim5_vout}
 \end{figure}
@@ -32,7 +32,7 @@
 \FloatBarrier
 
 The small-signal gain can simply be acquired by taking the ratio of the amplitude of $V_{out}$ to the amplitude of $V_{in}$. This should also be multiplied by a factor of $-1$ since the signals are out of phase by $180^{o}$.
-The gain can be determined theoretically from $-g_{m} ( R_{D} || R_{L} )$.
+The gain can be determined theoretically from $-g_{m} ( R_{D} || R_{L} || r_{o} )$.
 
 % Determine gain for Circuit 5
 
@@ -42,7 +42,7 @@ The gain can be determined theoretically from $-g_{m} ( R_{D} || R_{L} )$.
 	\centering
 	\caption{Common-Source Amplifier Gain}
 	\label{tab:common_source_amp_gain}
-	\csvautotabular{../tables/common_source_amp_gain.csv}
+	\csvautotabular{./tables/common_source_amp_gain.csv}
 \end{table}
 
 \FloatBarrier
@@ -53,19 +53,19 @@ The gain can be determined theoretically from $-g_{m} ( R_{D} || R_{L} )$.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.45]{../images/circuit6.PNG}
-	\caption{Two-Stage Amplifier}
+	\includegraphics[scale=0.30]{./images/circuit6.PNG}
+	\caption{Cascaded Two-Stage Amplifier}
 	\label{fig:circuit6}
 \end{figure}
 
 \FloatBarrier
 
 The common-drain amplifier at the output will present nearly the same output voltage, but with a much lower output resistance.
-The theoretical gain can be calculated by multiplying a common-source gain with a common-drain gain (assumed to be about 1) and then applying the voltage division equation.
+The theoretical gain can be calculated by multiplying a common-source gain with a common-drain gain (usually about $1$) and then applying the voltage division equation.
 
 \begin{equation}
 	\label{eq:theoretical_cascaded_gain}
-	A_{cascade} = -\frac{ g_{m,CSA} R_{L} ( R_{D} || r_{o,CSA} ) }{ r_{out,CDA} + R_{L} }
+	A_{cascade} = \frac{ A_{CSA} A_{CDA} R_{L} }{ r_{out,CDA} + R_{L} }
 \end{equation}
 
 \FloatBarrier
@@ -74,7 +74,13 @@ The theoretical gain can be calculated by multiplying a common-source gain with 
 	\centering
 	\caption{Gain of Cascaded Amplifier}
 	\label{tab:cascade_gain}
-	\csvautotabular{../tables/cascade_gain.csv}
+	\csvautotabular{./tables/cascade_gain.csv}
 \end{table}
 
 \FloatBarrier
+
+A discrepancy exists between the theoretical value of the cascaded gain and the actual simulation result.
+The simulation likely accounts for parameters that are difficult to capture in theoretical calculations, such as the nonideal effects of the decoupling capacitor in the circuit.
+What is clear from either result is that the gain of the amplifier increases.
+This is because the common-drain amplifier's lower output resistance decreases the significance of the loading effect.
+So, instead of the load resistance causing the gain to drop as a result of a voltage divider effect, the load resistance receives a greater portion of the voltage drop because the output resistance of the amplifier has decreased.

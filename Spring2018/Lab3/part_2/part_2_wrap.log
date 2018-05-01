@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  30 APR 2018 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  1 MAY 2018 01:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -560,24 +560,107 @@ Overfull \hbox (50.79523pt too wide) in paragraph at lines 53--54
  [][] 
  []
 
-) [2 <../images/sim2_vtc.PNG>] (./part_2_wrap.aux) ) 
+<../images/sim2_vtc_deriv.PNG, id=10, 1016.29688pt x 429.10312pt>
+File: ../images/sim2_vtc_deriv.PNG Graphic file (type png)
+<use ../images/sim2_vtc_deriv.PNG>
+Package pdftex.def Info: ../images/sim2_vtc_deriv.PNG  used on input line 67. o
+n input line 67.
+Package pdftex.def Info: Requested size: 762.2208pt x 321.82654pt on input line
+ 67.
+
+Overfull \hbox (417.2208pt too wide) in paragraph at lines 67--68
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <../images/sim2_vtc.PNG>]
+<../images/sim2_vin.PNG, id=18, 1016.29688pt x 429.10312pt>
+File: ../images/sim2_vin.PNG Graphic file (type png)
+<use ../images/sim2_vin.PNG>
+Package pdftex.def Info: ../images/sim2_vin.PNG  used on input line 97. on inpu
+t line 97.
+Package pdftex.def Info: Requested size: 762.2208pt x 321.82654pt on input line
+ 97.
+
+Overfull \hbox (417.2208pt too wide) in paragraph at lines 97--98
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3 <../images/sim2_vtc_deriv.PNG>]
+<../images/sim2_vout.PNG, id=25, 1016.29688pt x 429.10312pt>
+File: ../images/sim2_vout.PNG Graphic file (type png)
+<use ../images/sim2_vout.PNG>
+Package pdftex.def Info: ../images/sim2_vout.PNG  used on input line 108. on in
+put line 108.
+Package pdftex.def Info: Requested size: 762.2208pt x 321.82654pt on input line
+ 108.
+
+Overfull \hbox (417.2208pt too wide) in paragraph at lines 108--109
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <../images/sim2_vin.PNG>] [5 <../images/sim2_vout.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 115--118
+
+ []
+
+<../images/sim2_vin_plus10mV.PNG, id=34, 1016.29688pt x 429.10312pt>
+File: ../images/sim2_vin_plus10mV.PNG Graphic file (type png)
+<use ../images/sim2_vin_plus10mV.PNG>
+Package pdftex.def Info: ../images/sim2_vin_plus10mV.PNG  used on input line 12
+7. on input line 127.
+Package pdftex.def Info: Requested size: 762.2208pt x 321.82654pt on input line
+ 127.
+
+Overfull \hbox (417.2208pt too wide) in paragraph at lines 127--128
+ [][] 
+ []
+
+<../images/sim2_vout_plus10mV.PNG, id=35, 1016.29688pt x 429.10312pt>
+File: ../images/sim2_vout_plus10mV.PNG Graphic file (type png)
+<use ../images/sim2_vout_plus10mV.PNG>
+Package pdftex.def Info: ../images/sim2_vout_plus10mV.PNG  used on input line 1
+38. on input line 138.
+Package pdftex.def Info: Requested size: 762.2208pt x 321.82654pt on input line
+ 138.
+
+Overfull \hbox (417.2208pt too wide) in paragraph at lines 138--139
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6
+
+ <../images/sim2_vin_plus10mV.PNG>]) [7 <../images/sim2_vout_plus10mV.PNG>]
+(./part_2_wrap.aux) ) 
 Here is how much of TeX's memory you used:
- 13103 strings out of 492990
- 283936 string characters out of 6135004
- 296961 words of memory out of 5000000
- 16583 multiletter control sequences out of 15000+600000
+ 13141 strings out of 492990
+ 285058 string characters out of 6135004
+ 298009 words of memory out of 5000000
+ 16615 multiletter control sequences out of 15000+600000
  531681 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,7n,46p,10378b,739s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb>
-Output written on part_2_wrap.pdf (2 pages, 141419 bytes).
+ 42i,7n,46p,10378b,914s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on part_2_wrap.pdf (7 pages, 370483 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
