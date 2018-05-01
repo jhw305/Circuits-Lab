@@ -4,7 +4,7 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/circuit1.PNG}
+	\includegraphics[scale=0.45]{../images/circuit1.PNG}
 	\caption{Circuit 1}
 	\label{fig:circuit1}
 \end{figure}
@@ -17,7 +17,7 @@ The circuit in figure (\ref{fig:circuit1})'s voltage transfer characteristic is 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/sim1_vtc.PNG}
+	\includegraphics[scale=0.45]{../images/sim1_vtc.PNG}
 	\caption{Circuit 1 Voltage Transfer Characteristic}
 	\label{fig:sim1_vtc}
 \end{figure}
@@ -39,21 +39,35 @@ Note that $3.27$\si{\volt} is used to compensate for the fact that $V_{out}$ at 
 % Part B: With V_in = V_in,eq1, do DC op point simulation
 Figure (\ref{fig:circuit1}) shows a DC operating point simulation at this bias point.
 $g_{m}$ is given by $\frac{2I_{D}'}{V_{ov}}$, where $I_{D}'$ is the saturation current not accounting for channel-length modulation and $V_{ov}$ is the overdrive voltage.
+Here, the approximation $I_{D}' \approx I_{D}$ is used.
 
 % Part C: Solve for gm and ro and compare with s.s. params in output listing
 \FloatBarrier
 
 \begin{table}[h!]
 	\centering
-	\caption{$g_{m}$ for the Common Drain Amplifier}
+	\caption{$g_{m}$ for the Common-Drain Amplifier}
 	\label{tab:common_drain_amp_gm}
 	\csvautotabular{../tables/common_drain_amp_gm.csv}
 \end{table}
 
 \FloatBarrier
 
-$g_{ds}$ is simply the slope of the voltage transfer characteristic
+$g_{ds}$ is simply the slope of the voltage transfer characteristic.
+A DC operating point listing providing by Virtuoso gives the value of $g_{ds}$ for the transistor.
+$r_{o}$ can then be acquired from $r_{o} = \frac{1}{g_{ds}}$.
+$r_{o}$ can be calculated using $\frac{1}{\lambda I_{D}'} \approx \frac{1}{\lambda I_{D}}$.
 
+\FloatBarrier
+
+\begin{table}[h!]
+	\centering
+	\caption{$r_{o}$ for the Common-Drain Amplifier}
+	\label{tab:common_drain_amp_ro}
+	\csvautotabular{../tables/common_drain_amp_ro.csv}
+\end{table}
+
+\FloatBarrier
 % Part D: Transient for Vin and Vout. Compare DC and AC components.
 
 An input signal of $10$\si{\milli\volt} amplitude and $1$\si{\mega\hertz} frequency biased at $3.27$\si{\volt} is applied to the input of the common-drain amplifier.
@@ -62,7 +76,7 @@ An input signal of $10$\si{\milli\volt} amplitude and $1$\si{\mega\hertz} freque
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/sim1_vin.PNG}
+	\includegraphics[scale=0.45]{../images/sim1_vin.PNG}
 	\caption{$V_{in}$ for Small-Signal Analysis of Common-Drain Amplifier}
 	\label{fig:sim1_vin}
 \end{figure}
@@ -75,7 +89,7 @@ A signal is then observed at the output of the amplifier.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/sim1_vout.PNG}
+	\includegraphics[scale=0.45]{../images/sim1_vout.PNG}
 	\caption{$V_{out}$ for Small-Signal Analysis of Common-Drain Amplifier}
 	\label{fig:sim1_vout}
 \end{figure}
