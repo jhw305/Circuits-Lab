@@ -1,0 +1,1 @@
+For 1MHz for part 2 gain test, we cranked up the amplitude to 60mVpp. The reason is because 20mVpp was too weak and so we got distortions and noise etc. degrading our signal quality
