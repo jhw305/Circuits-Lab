@@ -1,0 +1,64 @@
+% TODO Circuit pic
+The common-source amplifier is constructed with a $1$\si{\micro\farad} decoupling capacitor and $500$\si{\ohm} load at the output.
+% TODO Oscope pics
+The decoupling capacitor ensures that the output has a DC bias of $0$\si{\volt} since any DC voltage simply charges the capacitor and does not make it to the resistor.
+The gain is determined at different frequencies.
+Again, the gain degrades at higher frequencies due to the parasitic capacitances of the MOSFET acting as a low-pass filter, which cuts down on the signal's amplitude.
+Because of the attached load, only $\frac{R_{L}}{r_{out} + R_{L}}V_{in}$ ends up appearing at the output, where $r_{out}$ is the amplifier's output resistance.
+Since $R_{L}$ is comaparable in magnitude to $r_{out}$, the voltage division effect causes the gain to be much lower than an ideal open circuit gain, measured in part $2$.
+% Gain for CSA
+\FloatBarrier
+
+\begin{table}[h!]
+	\centering
+	\caption{Common-Source Amplifier with Decoupling Capacitor and Load Gain}
+	\label{tab:gain_part3}
+	\csvautotabular{../tables/gain_part3.csv}
+\end{table}
+
+\FloatBarrier
+
+% TODO Next circuit - cascaded amplifier
+
+A common-drain amplifier is then connected to the output of the common-source amplifier.
+The common-drain amplifier's output resistance is given by $r_{out,CDA} = R_{S} || r_{o} || \frac{1}{g_{m}}$.
+Assuming $r_{o}$ is very large, $r_{out,CDA} \approx R_{S} || \frac{1}{g_{m}}$.
+The common-source amplifier's output resistance is given by $r_{out,CSA} = R_{D} || r_{o}$.
+Making the same assumption about $r_{o}$, $r_{out,CSA} \approx R_{D}$. \\
+
+In this specific case, $R_{S} = R_{D} = R$.
+Expanding $r_{out,CDA}$, the equation can be rewritten as:
+
+\begin{equation}
+	\label{eq:r_out_cda}
+	r_{out,CDA} = \frac{R}{1+g_{m}R}
+\end{equation}
+
+Likewise, $r_{out,CSA}$ can be written as:
+
+\begin{equation}
+	\label{eq:r_out_csa}
+	r_{out,CSA} = R
+\end{equation}
+
+Assume $R > 0$\si{\ohm} and $g_{m} > 0 \frac{mA}{V}$.
+$g_{m}R > 0$ must then be true.
+This further implies that $1 + g_{m}R > 1$ and that $\frac{1}{1 + g_{m}R} < 1$.
+Because $R > 0$\si{\ohm}, $\frac{R}{1 + g_{m}R} < R$.
+Invoking equations (\ref{eq:r_out_cda}) and (\ref{eq:r_out_csa}), $r_{out,CDA} < r_{out,CSA}$. \\
+
+Therefore, in this configuration, the cascaded amplifier should have a lower output resistance since the output is presented with $r_{out,CDA}$ and not $r_{out,CSA}$.
+As a result, for the same load, the gain should be higher since $R_{L}$ is now relatively larger in the voltage divider.
+This claim is corroborated by the data at various frequencies.
+The gain magnitude increases.
+
+\FloatBarrier
+
+\begin{table}[h!]
+	\centering
+	\caption{Two-Stage Amplifier with Decoupling Capacitor and Load Gain}
+	\label{tab:gain_part3_cascade}
+	\csvautotabular{../tables/gain_part3_cascade.csv}
+\end{table}
+
+\FloatBarrier
