@@ -1,2 +1,0 @@
-#!/bin/bash
-~/Circuits-Lab/common/scripts/azide --report "HW 2" --course "EECS 282" --authors "Roman Parise (59611417)" --sections "Specification" "Device Selection" "Matching Network Design" "Optimization" "Microstrip Layout" "Conclusion"

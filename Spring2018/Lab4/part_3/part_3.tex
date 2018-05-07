@@ -1,11 +1,54 @@
-% TODO Circuit pic
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.60]{./images/circuit_3.PNG}
+	\caption{Amplifiers with Loads and Decoupling Capacitors}
+	\label{fig:circuit_3}
+\end{figure}
+
+\FloatBarrier
 The common-source amplifier is constructed with a $1$\si{\micro\farad} decoupling capacitor and $500$\si{\ohm} load at the output.
-% TODO Oscope pics
 The decoupling capacitor ensures that the output has a DC bias of $0$\si{\volt} since any DC voltage simply charges the capacitor and does not make it to the resistor.
 The gain is determined at different frequencies.
 Again, the gain degrades at higher frequencies due to the parasitic capacitances of the MOSFET acting as a low-pass filter, which cuts down on the signal's amplitude.
 Because of the attached load, only $\frac{R_{L}}{r_{out} + R_{L}}V_{in}$ ends up appearing at the output, where $r_{out}$ is the amplifier's output resistance.
 Since $R_{L}$ is comaparable in magnitude to $r_{out}$, the voltage division effect causes the gain to be much lower than an ideal open circuit gain, measured in part $2$.
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{./images/SCOPE_13.PNG}
+	\caption{Common-Source Amplifier with Load and Decoupling Capacitors, $1$\si{\kilo\hertz} Input}
+	\label{fig:SCOPE_13}
+\end{figure}
+
+\FloatBarrier
+
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{./images/SCOPE_14.PNG}
+	\caption{Common-Source Amplifier with Load and Decoupling Capacitors, $100$\si{\kilo\hertz} Input}
+	\label{fig:SCOPE_14}
+\end{figure}
+
+\FloatBarrier
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{./images/SCOPE_15.PNG}
+	\caption{Common-Source Amplifier with Load and Decoupling Capacitors, $1$\si{\mega\hertz} Input}
+	\label{fig:SCOPE_15}
+\end{figure}
+
+\FloatBarrier
 % Gain for CSA
 \FloatBarrier
 
@@ -13,12 +56,10 @@ Since $R_{L}$ is comaparable in magnitude to $r_{out}$, the voltage division eff
 	\centering
 	\caption{Common-Source Amplifier with Decoupling Capacitor and Load Gain}
 	\label{tab:gain_part3}
-	\csvautotabular{../tables/gain_part3.csv}
+	\csvautotabular{./tables/gain_part3.csv}
 \end{table}
 
 \FloatBarrier
-
-% TODO Next circuit - cascaded amplifier
 
 A common-drain amplifier is then connected to the output of the common-source amplifier.
 The common-drain amplifier's output resistance is given by $r_{out,CDA} = R_{S} || r_{o} || \frac{1}{g_{m}}$.
@@ -54,11 +95,44 @@ The gain magnitude increases.
 
 \FloatBarrier
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{./images/SCOPE_18.PNG}
+	\caption{Two-Stage Amplifier with Load and Decoupling Capacitors, $1$\si{\kilo\hertz}}
+	\label{fig:SCOPE_18}
+\end{figure}
+
+\FloatBarrier
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{./images/SCOPE_17.PNG}
+	\caption{Two-Stage Amplifier with Load and Decoupling Capacitors, $100$\si{\kilo\hertz}}
+	\label{fig:SCOPE_17}
+\end{figure}
+
+\FloatBarrier
+
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{./images/SCOPE_16.PNG}
+	\caption{Two-Stage Amplifier with Load and Decoupling Capacitors, $1$\si{\mega\hertz}}
+	\label{fig:SCOPE_16}
+\end{figure}
+
+\FloatBarrier
+
+\FloatBarrier
+
 \begin{table}[h!]
 	\centering
 	\caption{Two-Stage Amplifier with Decoupling Capacitor and Load Gain}
 	\label{tab:gain_part3_cascade}
-	\csvautotabular{../tables/gain_part3_cascade.csv}
+	\csvautotabular{./tables/gain_part3_cascade.csv}
 \end{table}
 
 \FloatBarrier

@@ -5,14 +5,14 @@ A common source NMOS amplifier is constructed for dc and small signal analysis.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.75]{./images/circuit_2.PNG}
-	\caption{Circuit 2}
+	\caption{Common-Source Amplifier}
 	\label{fig:circuit_2}
 \end{figure}
 
 \FloatBarrier
 
 $V_{in}$ or $V_{GS}$ is swept from $0$ \si{\volt} to $3$ \si{\volt} in increments of $0.1$ \si{\volt} and $V_{out}$ or $V_{DS}$ is measured at each point.
-This range was chosen in order to capture the full range of the saturation operating mode and the transition from saturation to triode mode of the NMOS in the VTC.
+This range is chosen in order to capture the full range of the saturation operating mode and the transition from saturation to triode mode of the NMOS in the VTC.
 The results are plotted and tabulated below.
 
 \FloatBarrier
@@ -39,15 +39,15 @@ From the VTC in Figure (\ref{fig:part2_vtc}), the NMOS begins and remains in cut
 The NMOS then enters the saturation region and remains there until the slope of the curve begins to decrease at around $V_{in} = 2.6$ \si{\volt}.
 Beyond that point, the NMOS operates in triode mode. \\
 
-To find the dc voltage at the middle of saturation region $V_{in(eq2)}$, the average from the highest and lowest $V_{out}$ value in the VTC is calculated.
+To find the DC voltage at the middle of saturation region $V_{in(eq2)}$, the average from the highest and lowest $V_{out}$ value in the VTC is calculated.
 Then, and the closest value of $V_{in}$ that corresponds to the the calculated average is the value taken for $V_{in(eq2)}$. \\
 
 \begin{equation}
 	\label{eq:v_in_eq2}
-	\frac{5 V + 0.439 V}{2} = 2.720 V \approx V_{out} = 2.602 V \Rightarrow V{in(eq2)} = 2.3 V
+	\frac{5 V + 0.439 V}{2} = 2.720 V \approx V_{out} = 2.602 V \Rightarrow V_{in(eq2)} = 2.3 V
 \end{equation}
 
-Then circuit is then biased at the $V{in(eq2)}$ found above and a sine wave with $10$ \si{\milli\volt} amplitude and $1$ \si{\mega\hertz} is applied at the input. Note, for the measurement taken at $1$ \si{\mega\hertz}, a $30$ \si{\milli\volt} amplitude is used for the input sine wave because the original $10$ \si{\milli\volt} amplitude is too weak and yielded a heavily distorted output signal that is immeasureable with the oscilloscope.
+Then circuit is then biased at the $V_{in(eq2)}$ found above and a sine wave with $10$ \si{\milli\volt} amplitude and $1$ \si{\mega\hertz} is applied at the input. Note, for the measurement taken at $1$ \si{\mega\hertz}, a $30$ \si{\milli\volt} amplitude is used for the input sine wave because the original $10$ \si{\milli\volt} amplitude is too weak and yielded a heavily distorted output signal that is immeasureable with the oscilloscope.
 
 \FloatBarrier
 
@@ -83,7 +83,7 @@ This experiment is repeated with sine waves with varying frequencies.
 \FloatBarrier
 
 The amplitude of the output sine wave is measured for each input sine wave. 
-From the output amplitudes, the small signal gain in \si{\decibel} is found for each frequency.
+From the output amplitudes, the small signal gain in $\frac{V}{V}$ is found for each frequency.
 
 \FloatBarrier
 
@@ -97,9 +97,9 @@ From the output amplitudes, the small signal gain in \si{\decibel} is found for 
 \FloatBarrier
 
 The small signal gain is observed to decrease as the frequency increases.
-This is expected because capacitances in the NMOS cause the circuit to effectively behave like a highpass filter. \\
+This is expected because parasitic capacitances in the NMOS cause the circuit to effectively behave like a low-pass filter. \\
 
-The dc bias of the circuit is then increased by $10$ \si{\milli\volt} and the experiment is repeated.
+The DC bias of the circuit is then increased by $10$ \si{\milli\volt}, and the experiment is repeated.
 
 \FloatBarrier
 
@@ -130,7 +130,7 @@ The dc bias of the circuit is then increased by $10$ \si{\milli\volt} and the ex
 
 \FloatBarrier
 
-The small signal gain values found are tabulated below.
+The small-signal gain values found are tabulated below.
 
 \FloatBarrier
 
@@ -143,5 +143,5 @@ The small signal gain values found are tabulated below.
 
 \FloatBarrier
 
-As expected, the new gain values are slightly higher than the values found for the original dc bias.
-This is because in saturation mode, $V_{out}$ is directly proportional to the drain current, which is directly proportional to the square of $V_{in}$. This means that as $V_{in}$ increases in the saturation region, the slope of the VTC, another definition for the small signal gain, will increase as well. \\
+As expected, the new gain values are slightly higher than the values found for the original DC bias.
+This is because in saturation mode, $V_{out}$ is directly proportional to the drain current, which is directly proportional to the square of $V_{in}$. This means that as $V_{in}$ increases in the saturation region, the slope of the VTC $\frac{dV_{out}}{dV_{in}}$, another definition for the small-signal gain, increases as well. \\

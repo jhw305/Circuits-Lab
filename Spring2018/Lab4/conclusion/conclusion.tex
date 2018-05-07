@@ -1,22 +1,16 @@
 \subsection{Part 1}
-<<<<<<< HEAD
-
-
+The common-drain configuration behaves as expected in both DC and AC tests. The circuit's near-unity gain makes it an excellent voltage follower if operated at the right frequency.
+There is a noticable decrease in gain at higher frequencies due to the unavoidable parasitic capacitances in the package and the transistor.
 \subsection{Part 2}
 The common source amplifier exhibited expected behavior within reasonable tolerances.
 The VTC of the circuit shows distinct cutoff, saturation, and triode regions.
-However, sweeping $V_{in}$ from $0$ to $2$ \si{\volt} did not provide a sufficient range for the entire saturation region to be observed. 
-For the small signal analysis, input sine waves at $1$ \si{\mega\hertz} produced distorted output sine waves, especially at low amplitudes. 
+However, sweeping $V_{in}$ from $0$ to $2$ \si{\volt} does not provide a sufficient range for the entire saturation region to be observed, which is why $V_{in}$ is swept from $0$ to $3$ \si{\volt} instead. 
+For the small-signal analysis, input sine waves at $1$ \si{\mega\hertz} produced distorted output sine waves, especially at low amplitudes. 
 This provided motivation for lower frequencies and higher amplitudes to be used in the experiment.
-Because $1$ \si{\milli\volt} amplitude input signal is much too weak for this application, $30$ \si{\milli\volt} amplitude is used for the $1$ \si{\mega\hertz} input signal and $10$ \si{\milli\volt} amplitude is used for the other frequencies.
+Because $1$ \si{\milli\volt} amplitude input signal is much too weak for this application, $30$ \si{\milli\volt} amplitude is used for the $1$ \si{\mega\hertz} input signal, and $10$ \si{\milli\volt} amplitude is used for the other frequencies.
 Because no clamping of the output signal is observed, the gain values calculated should not be adversely affected despite the different amplitudes applied for different frequencies.
-
-=======
-The common-drain configuration behaves as expected in both DC and AC tests. The circuit's near-unity gain makes it an excellent voltage follower if operated upon at the right frequency.
-There was a noticable decrease in gain at higher frequencies due to the unavoidable parasitic capacitance in the package, as well as other frequency effects.
->>>>>>> a42b480342332b722a47309ceac555dcfcf1fe20
 \subsection{Part 3}
 Decoupling capacitors should be used in practice for amplifier designs to prevent the output signal from having a DC bias that may affect later circuit stages.
-When a load resistance is added to the output, the gain is going to drop significantly due to the formation of a voltage divider with the amplifier's output resistance.
+When a small load resistance is added to the output, the gain is going to drop significantly due to the formation of a voltage divider with the amplifier's output resistance.
 One way to remedy this with common-source amplifiers is to add a common-drain amplifier stage to its output because common-drain amplifiers typically have lower output resistances.
 The data and oscilloscope plots confirm these claims.
