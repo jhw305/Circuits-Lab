@@ -1,0 +1,28 @@
+part1b
+scope_0 - 1kHz
+scope_1 - Ignore
+scope_2 - 100kHz
+scope_3- 1MHz
+increased bias by 10mV
+scope_4 - 1MHz
+scope_5 - 100kHz
+scope_6 - 1kHz
+
+part 2b - input of 60mV
+scope_7 - 1kHz
+scope_8 - 100kHz
+scope_9 - 1MHz
+Increased bias by 10mV
+scope_10 - ignore
+scope_11 - 1kHz
+scope_12 - 100kHz
+1mHz measurement is MIA
+
+part 3
+scope_13 - 1kHz
+scope_14 - 100kHz
+scope_15 - 1MHz
+cascaded amp
+scope_16 - 1MHz
+scope_17 - 100kHz
+scope_18 - 1kHz
