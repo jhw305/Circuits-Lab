@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.1)  6 MAY 2018 18:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.1)  6 MAY 2018 18:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**conclusion_wrap.tex
-(./conclusion_wrap.tex
+**part_2_wrap.tex
+(./part_2_wrap.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -386,8 +386,12 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-(./conclusion_wrap.aux)
-\openout1 = `conclusion_wrap.aux'.
+(./part_2_wrap.aux
+
+LaTeX Warning: Label `tab:gain_part2' multiply defined.
+
+)
+\openout1 = `part_2_wrap.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -477,26 +481,77 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 \c__siunitx_mathtt_int=\count143
 
-(./conclusion.tex) [1
+(./part_2.tex <../images/circuit_2.PNG, id=1, 149.96025pt x 194.82788pt>
+File: ../images/circuit_2.PNG Graphic file (type png)
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(./conclusion_wrap.aux) ) 
+<use ../images/circuit_2.PNG>
+Package pdftex.def Info: ../images/circuit_2.PNG used on input line 7.
+(pdftex.def)             Requested size: 112.4699pt x 146.12054pt.
+
+<../images/sim2_vtc.PNG, id=3, 462.528pt x 346.896pt>
+File: ../images/sim2_vtc.PNG Graphic file (type png)
+
+<use ../images/sim2_vtc.PNG>
+Package pdftex.def Info: ../images/sim2_vtc.PNG used on input line 22.
+(pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
+
+Overfull \hbox (1.89514pt too wide) in paragraph at lines 22--23
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/circuit_2.PNG>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <../images/sim2_vtc.PNG>] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 100--5
+
+ []
+
+[4
+
+] [5] (./part_2_wrap.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 11770 strings out of 493029
- 257101 string characters out of 6136235
- 258275 words of memory out of 5000000
- 15242 multiletter control sequences out of 15000+600000
- 5654 words of font info for 22 fonts, out of 8000000 for 9000
+ 11801 strings out of 493029
+ 257731 string characters out of 6136235
+ 261350 words of memory out of 5000000
+ 15268 multiletter control sequences out of 15000+600000
+ 5049 words of font info for 20 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,4n,46p,10412b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on conclusion_wrap.pdf (1 page, 44749 bytes).
+ 42i,7n,46p,10408b,902s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on part_2_wrap.pdf (5 pages, 87665 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
- 16 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
