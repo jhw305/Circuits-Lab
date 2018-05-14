@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  13 MAY 2018 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  14 MAY 2018 00:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -449,9 +449,6 @@ File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 Package: placeins 2005/04/18  v 2.2
 ) (./main.aux
 
-LaTeX Warning: Label `tab:gain_part2' multiply defined.
-
-
 LaTeX Warning: Label `fig:1mhz_original' multiply defined.
 
 
@@ -606,13 +603,13 @@ Package pdftex.def Info: Requested size: 89.09453pt x 108.40399pt on input line
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [1 <./images/circuit_1.PNG>]
-<./images/part1_vtc.PNG, id=18, 462.528pt x 346.896pt>
+<./images/part1_vtc.PNG, id=19, 462.528pt x 346.896pt>
 File: ./images/part1_vtc.PNG Graphic file (type png)
 <use ./images/part1_vtc.PNG>
-Package pdftex.def Info: ./images/part1_vtc.PNG  used on input line 69. on inpu
-t line 69.
+Package pdftex.def Info: ./images/part1_vtc.PNG  used on input line 70. on inpu
+t line 70.
 Package pdftex.def Info: Requested size: 208.13567pt x 156.10175pt on input lin
-e 69.
+e 70.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -621,17 +618,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./images/SCOPE_0.PNG, id=24, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_0.PNG Graphic file (type png)
 <use ./images/SCOPE_0.PNG>
-Package pdftex.def Info: ./images/SCOPE_0.PNG  used on input line 80. on input 
-line 80.
+Package pdftex.def Info: ./images/SCOPE_0.PNG  used on input line 81. on input 
+line 81.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 80.
+e 81.
 <./images/SCOPE_2.PNG, id=25, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_2.PNG Graphic file (type png)
 <use ./images/SCOPE_2.PNG>
-Package pdftex.def Info: ./images/SCOPE_2.PNG  used on input line 89. on input 
-line 89.
+Package pdftex.def Info: ./images/SCOPE_2.PNG  used on input line 90. on input 
+line 90.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 89.
+e 90.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -640,10 +637,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./images/SCOPE_3.PNG, id=30, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_3.PNG Graphic file (type png)
 <use ./images/SCOPE_3.PNG>
-Package pdftex.def Info: ./images/SCOPE_3.PNG  used on input line 98. on input 
-line 98.
+Package pdftex.def Info: ./images/SCOPE_3.PNG  used on input line 99. on input 
+line 99.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 98.
+e 99.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -652,17 +649,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./images/SCOPE_6.PNG, id=37, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_6.PNG Graphic file (type png)
 <use ./images/SCOPE_6.PNG>
-Package pdftex.def Info: ./images/SCOPE_6.PNG  used on input line 111. on input
- line 111.
+Package pdftex.def Info: ./images/SCOPE_6.PNG  used on input line 113. on input
+ line 113.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 111.
+e 113.
 <./images/SCOPE_5.PNG, id=38, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_5.PNG Graphic file (type png)
 <use ./images/SCOPE_5.PNG>
-Package pdftex.def Info: ./images/SCOPE_5.PNG  used on input line 120. on input
- line 120.
+Package pdftex.def Info: ./images/SCOPE_5.PNG  used on input line 122. on input
+ line 122.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 120.
+e 122.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -673,10 +670,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./images/SCOPE_4.PNG, id=43, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_4.PNG Graphic file (type png)
 <use ./images/SCOPE_4.PNG>
-Package pdftex.def Info: ./images/SCOPE_4.PNG  used on input line 129. on input
- line 129.
+Package pdftex.def Info: ./images/SCOPE_4.PNG  used on input line 131. on input
+ line 131.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 129.
+e 131.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -701,7 +698,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [9
 
  <./images/circuit_2.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
@@ -712,70 +709,70 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./images/sim2_vtc.PNG, id=58, 462.528pt x 346.896pt>
 File: ./images/sim2_vtc.PNG Graphic file (type png)
 <use ./images/sim2_vtc.PNG>
-Package pdftex.def Info: ./images/sim2_vtc.PNG  used on input line 75. on input
- line 75.
+Package pdftex.def Info: ./images/sim2_vtc.PNG  used on input line 71. on input
+ line 71.
 Package pdftex.def Info: Requested size: 346.89514pt x 260.17136pt on input lin
-e 75.
+e 71.
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
+Underfull \hbox (badness 10000) in paragraph at lines 78--81
 
  []
 
 File: ./images/SCOPE_3.PNG Graphic file (type png)
 <use ./images/SCOPE_3.PNG>
-Package pdftex.def Info: ./images/SCOPE_3.PNG  used on input line 90. on input 
-line 90.
+Package pdftex.def Info: ./images/SCOPE_3.PNG  used on input line 86. on input 
+line 86.
 Package pdftex.def Info: Requested size: 308.35437pt x 247.52666pt on input lin
-e 90.
+e 86.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11 <./images/sim2_vtc.PNG>]
 File: ./images/SCOPE_0.PNG Graphic file (type png)
 <use ./images/SCOPE_0.PNG>
-Package pdftex.def Info: ./images/SCOPE_0.PNG  used on input line 103. on input
- line 103.
+Package pdftex.def Info: ./images/SCOPE_0.PNG  used on input line 99. on input 
+line 99.
 Package pdftex.def Info: Requested size: 308.35437pt x 247.52666pt on input lin
-e 103.
+e 99.
 File: ./images/SCOPE_2.PNG Graphic file (type png)
 <use ./images/SCOPE_2.PNG>
-Package pdftex.def Info: ./images/SCOPE_2.PNG  used on input line 112. on input
- line 112.
+Package pdftex.def Info: ./images/SCOPE_2.PNG  used on input line 108. on input
+ line 108.
 Package pdftex.def Info: Requested size: 308.35437pt x 247.52666pt on input lin
-e 112.
+e 108.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
 
  []
 
 File: ./images/SCOPE_4.PNG Graphic file (type png)
 <use ./images/SCOPE_4.PNG>
-Package pdftex.def Info: ./images/SCOPE_4.PNG  used on input line 126. on input
- line 126.
+Package pdftex.def Info: ./images/SCOPE_4.PNG  used on input line 122. on input
+ line 122.
 Package pdftex.def Info: Requested size: 308.35437pt x 247.52666pt on input lin
-e 126.
+e 122.
 File: ./images/SCOPE_6.PNG Graphic file (type png)
 <use ./images/SCOPE_6.PNG>
-Package pdftex.def Info: ./images/SCOPE_6.PNG  used on input line 135. on input
- line 135.
+Package pdftex.def Info: ./images/SCOPE_6.PNG  used on input line 131. on input
+ line 131.
 Package pdftex.def Info: Requested size: 308.35437pt x 247.52666pt on input lin
-e 135.
+e 131.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13]
 File: ./images/SCOPE_5.PNG Graphic file (type png)
 <use ./images/SCOPE_5.PNG>
-Package pdftex.def Info: ./images/SCOPE_5.PNG  used on input line 144. on input
- line 144.
+Package pdftex.def Info: ./images/SCOPE_5.PNG  used on input line 140. on input
+ line 140.
 Package pdftex.def Info: Requested size: 308.35437pt x 247.52666pt on input lin
-e 144.
+e 140.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 151--14
+Underfull \hbox (badness 10000) in paragraph at lines 147--14
 
  []
 
@@ -813,10 +810,10 @@ e 83.
 <./images/SCOPE_14.PNG, id=81, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_14.PNG Graphic file (type png)
 <use ./images/SCOPE_14.PNG>
-Package pdftex.def Info: ./images/SCOPE_14.PNG  used on input line 95. on input
- line 95.
+Package pdftex.def Info: ./images/SCOPE_14.PNG  used on input line 92. on input
+ line 92.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 95.
+e 92.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -825,10 +822,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./images/SCOPE_15.PNG, id=85, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_15.PNG Graphic file (type png)
 <use ./images/SCOPE_15.PNG>
-Package pdftex.def Info: ./images/SCOPE_15.PNG  used on input line 106. on inpu
-t line 106.
+Package pdftex.def Info: ./images/SCOPE_15.PNG  used on input line 101. on inpu
+t line 101.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 106.
+e 101.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -837,17 +834,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./images/SCOPE_18.PNG, id=93, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_18.PNG Graphic file (type png)
 <use ./images/SCOPE_18.PNG>
-Package pdftex.def Info: ./images/SCOPE_18.PNG  used on input line 117. on inpu
-t line 117.
+Package pdftex.def Info: ./images/SCOPE_18.PNG  used on input line 110. on inpu
+t line 110.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 117.
+e 110.
 <./images/SCOPE_17.PNG, id=94, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_17.PNG Graphic file (type png)
 <use ./images/SCOPE_17.PNG>
-Package pdftex.def Info: ./images/SCOPE_17.PNG  used on input line 128. on inpu
-t line 128.
+Package pdftex.def Info: ./images/SCOPE_17.PNG  used on input line 119. on inpu
+t line 119.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 128.
+e 119.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -857,10 +854,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./images/SCOPE_16.PNG, id=98, 1027.84pt x 825.0825pt>
 File: ./images/SCOPE_16.PNG Graphic file (type png)
 <use ./images/SCOPE_16.PNG>
-Package pdftex.def Info: ./images/SCOPE_16.PNG  used on input line 139. on inpu
-t line 139.
+Package pdftex.def Info: ./images/SCOPE_16.PNG  used on input line 128. on inpu
+t line 128.
 Package pdftex.def Info: Requested size: 462.52373pt x 371.28369pt on input lin
-e 139.
+e 128.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -874,10 +871,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13737 strings out of 492990
- 294117 string characters out of 6135004
- 316410 words of memory out of 5000000
- 17159 multiletter control sequences out of 15000+600000
+ 13739 strings out of 492990
+ 294157 string characters out of 6135004
+ 316419 words of memory out of 5000000
+ 17160 multiletter control sequences out of 15000+600000
  534203 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,7n,46p,10398b,916s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -891,7 +888,7 @@ amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (23 pages, 911675 bytes).
+Output written on main.pdf (23 pages, 911948 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream

@@ -1,5 +1,5 @@
 \subsection{Descriptions}
-A common source NMOS amplifier is constructed for dc and small signal analysis.
+A common source NMOS amplifier is constructed for DC and small-signal analysis.
 
 \FloatBarrier
 
@@ -16,11 +16,7 @@ $V_{in}$ or $V_{GS}$ is swept from $0$ \si{\volt} to $3$ \si{\volt} in increment
 This range is chosen in order to capture the full range of the saturation operating mode and the transition from saturation to triode mode of the NMOS in the VTC.
 The results are plotted and tabulated below. \\
 
-The circuit is then biased at $V_{in(eq2)}$ in the middle of the saturation region and a sine wave with $10$ \si{\milli\volt} amplitude and $1$ \si{\mega\hertz} is applied at the input. Note, for the measurement taken at $1$ \si{\mega\hertz}, a $30$ \si{\milli\volt} amplitude is used for the input sine wave because the original $10$ \si{\milli\volt} amplitude is too weak and yields a heavily distorted output signal that is immeasureable with the oscilloscope.
-
-The DC bias of the circuit is then increased by $10$ \si{\milli\volt}, and the experiment is repeated.
-
-The small-signal gain values can be found in table (\ref{tab:gain_part2}).
+The circuit is then biased at $V_{in(eq2)}$ in the middle of the saturation region and a sine wave with $10$ \si{\milli\volt} amplitude and $1$ \si{\mega\hertz} is applied at the input. Note, for the measurement taken at $1$ \si{\mega\hertz}, a $30$ \si{\milli\volt} amplitude is used for the input sine wave because the original $10$ \si{\milli\volt} amplitude is too weak and yields a heavily distorted output signal that is immeasureable with the oscilloscope. The DC bias of the circuit is then increased by $10$ \si{\milli\volt}, and the experiment is repeated. The small-signal gain values can be found in tables (\ref{tab:gain_part2}) and (\ref{tab:gain_part2_plus}).
 
 \subsection{Calculations}
 
@@ -60,8 +56,8 @@ From the output amplitudes, the small signal gain in $\frac{V}{V}$ is found for 
 \begin{table}[h!]
 	\centering
 	\caption{Gain of Common Source Amplifier with $10$ \si{\milli\volt} Higher Bias}
-	\label{tab:gain_part2}
-	\csvautotabular{./tables/gain_part2.csv}
+	\label{tab:gain_part2_plus}
+	\csvautotabular{./tables/gain_part2_plus10mV.csv}
 \end{table}
 
 \FloatBarrier
