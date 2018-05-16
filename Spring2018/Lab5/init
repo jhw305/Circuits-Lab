@@ -1,0 +1,2 @@
+#!/bin/bash
+~/Circuits-Lab/common/scripts/azide --report "Simulation Lab \#3" --course "EECS 170LC" --authors "Roman Parise (59611417)" --sections "Introduction" "Part 1" "Part 2" "Part 3" "Part 4" "Conclusion"
