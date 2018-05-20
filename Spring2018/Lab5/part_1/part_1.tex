@@ -97,12 +97,13 @@ $r_{o1A,B}$ is the output resistance of $M_{1A}$ and $M_{1B}$.
 
 The common-mode gain can be acquired by recognizing that the current sources act as MOSFETs with the gate and source grounded since only DC signals exist in the reference part of the circuit.
 So, the small-signal model of these transistors reduces to the output resistance of each of the MOSFETs, which turn out to be identical.
-By analyzing the half-circuit with Kirchhoff's Laws, the following expression is acquired for the common-mode gain:
 $r_{o2A,B}$ is the output resistance of $M_{2A}$ and $M_{2B}$.
+Note that $r_{o1A,B} = r_{o2A,B}$.
+By analyzing the half-circuit with Kirchhoff's Laws, the following expression is acquired for the common-mode gain:
 
 \begin{equation}
 	\label{eq:cm_gain}
-	A_{cm} = - \frac{ g_{m1A,B} R_{D} }{ 1 + r_{o2A,B} ( g_{m1A,B} + \frac{ 1 }{ r_{o1A,B} } ) }
+	A_{cm} = - \frac{ g_{m1A,B} R_{D} }{ 3 + g_{m1A,B} r_{o1A,B} }
 \end{equation}
 
 $g_{m}$ can be calculated using $\frac{ 2 I_{D}' }{ V_{GS} - V_{tn} }$, where $I_{D}'$ is the drain current excluding channel-length modulation effects.

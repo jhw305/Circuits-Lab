@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  19 MAY 2018 18:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  20 MAY 2018 03:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -600,7 +600,7 @@ Here is how much of TeX's memory you used:
  41i,4n,46p,10397b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on main.pdf (1 page, 23038 bytes).
+Output written on main.pdf (1 page, 23037 bytes).
 PDF statistics:
  16 PDF objects out of 1000 (max. 8388607)
  10 compressed objects within 1 object stream
