@@ -73,7 +73,17 @@ if __name__ == "__main__" :
 	id2AB = 225e-6 # Amps
 	ro2AB = 1.0 / ( lambda_n * id2AB ) # A / V
 	
-	A_dm = -1.0 * gm1AB * parallel( r_d , ro1AB )
+	A_dm = 1.0 * gm1AB * parallel( r_d , ro1AB )
 	A_cm = ( -1.0 * gm1AB * r_d ) / ( 1.0 + ( ro2AB * ( gm1AB + ( 1.0 / ro1AB ) ) ) )
 
 	common.write_csv_from_matrix( TABLES_DIR + "sim1_gain.csv" , [ [ "Differential Mode Gain [V/V]" , "Common Mode Gain [V/V]" , "Common-Mode Rejection Ratio" ] , [ common.set_precision_str( A_dm , PREC ) , common.set_precision_str( A_cm , PREC ) , common.set_precision_str( abs( A_dm / A_cm ) , PREC ) ] ] )
+
+	# Saturation range for sim 2
+
+	common.write_csv_from_matrix( TABLES_DIR + "sim2_sat.csv" , [ [ "" , "Maximum [V]" , "Minimum [V]" ] , [ "DM Output Voltage" , 3.8794 , -3.8957 ] , [ "DM Input Voltage" , 291.89 , -308.75 ] ] )
+
+	# Gain tables for sim 2
+
+	A_dm_sim2 = 20.03
+
+	common.write_csv_from_matrix( TABLES_DIR + "sim2_gain.csv" , [ [ "Theoretical Calculation [V/V]" , "Simulation Result [V/V]" , "Error" ] , [ common.set_precision_str( A_dm , PREC ) , A_dm_sim2 , common.fmt_perc_err( A_dm_sim2 , A_dm , PREC ) ] ] )

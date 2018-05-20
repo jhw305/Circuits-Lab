@@ -86,12 +86,13 @@ Furthermore, all of the transistors remain in saturation.
 Assume the small-signal parameters of the circuit are known.
 For only differential mode signals, the source of $M_{1A}$ and $M_{1B}$ becomes an AC ground.
 Therefore, the half-circuit is simply a common-source amplifier with drain resistor $R_{D}$.
+The negative sign disappears since the negative and positive differential inputs are flipped in the circuit.
 $g_{m1A,B}$ is $g_{m}$ for both $M_{1A}$ and $M_{1B}$ which turns out to be the same.
 $r_{o1A,B}$ is the output resistance of $M_{1A}$ and $M_{1B}$.
 
 \begin{equation}
 	\label{eq:dm_gain}
-	A_{dm} = - g_{m1A,B} ( R_{D} || 
+	A_{dm} = g_{m1A,B} ( R_{D} || r_{o1A,B} )
 \end{equation}
 
 The common-mode gain can be acquired by recognizing that the current sources act as MOSFETs with the gate and source grounded since only DC signals exist in the reference part of the circuit.

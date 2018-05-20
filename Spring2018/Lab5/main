@@ -1,0 +1,5 @@
+#!/bin/bash
+scp rparise@zuma.eecs.uci.edu:170C/lab3_pics/*.png ./images/
+for fname in ./images/*.png ; do
+	mv $fname "./images/$(basename $fname .png).PNG"
+done
