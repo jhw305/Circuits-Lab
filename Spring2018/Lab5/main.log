@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  20 MAY 2018 03:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  22 MAY 2018 02:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -445,21 +445,21 @@ Package shellesc Info: Restricted shell escape enabled on input line 69.
 \c@csvrow=\count198
 \c@csvcol=\count199
 \csv@out=\write3
-) (./main.aux)
+) (./constants.tex) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -570,40 +570,135 @@ e
 ))
 \c__siunitx_mathsf_int=\count272
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
+(Font)              <7> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
+(Font)              <5> on input line 5.
 \c__siunitx_mathtt_int=\count273
 
 (./cover_page/cover.tex) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction/introducti
 on.tex) (./part_1/part_1.tex
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 23.
 
-LaTeX Warning: Reference `eq:vgs' on page 1 undefined on input line 22.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+<./images/diff_amp.PNG, id=8, 1371.1225pt x 770.88pt>
+File: ./images/diff_amp.PNG Graphic file (type png)
+<use ./images/diff_amp.PNG>
+Package pdftex.def Info: ./images/diff_amp.PNG  used on input line 51. on input
+ line 51.
+Package pdftex.def Info: Requested size: 479.90007pt x 269.81204pt on input lin
+e 51.
+
+Overfull \hbox (10.14505pt too wide) in paragraph at lines 51--52
+ [][] 
+ []
 
 
-LaTeX Warning: Reference `eq:r_ref' on page 1 undefined on input line 22.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! Undefined control sequence.
-l.22 ...) and (\ref{eq:r_ref}), $R_{REF} = $ \rref
-                                                  .
-? X
- 
+[1]
+<./images/diff_amp_2.PNG, id=23, 1371.1225pt x 770.88pt>
+File: ./images/diff_amp_2.PNG Graphic file (type png)
+<use ./images/diff_amp_2.PNG>
+Package pdftex.def Info: ./images/diff_amp_2.PNG  used on input line 79. on inp
+ut line 79.
+Package pdftex.def Info: Requested size: 479.90007pt x 269.81204pt on input lin
+e 79.
+
+Overfull \hbox (10.14505pt too wide) in paragraph at lines 79--80
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <./images/diff_amp.PNG>]) (./part_2/part_2.tex
+<./images/sim2_sweep.PNG, id=27, 1016.29688pt x 429.10312pt>
+File: ./images/sim2_sweep.PNG Graphic file (type png)
+<use ./images/sim2_sweep.PNG>
+Package pdftex.def Info: ./images/sim2_sweep.PNG  used on input line 5. on inpu
+t line 5.
+Package pdftex.def Info: Requested size: 406.51155pt x 171.6382pt on input line
+ 5.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3 <./images/diff_amp_2.PNG>]) (./part_3/part_3.tex
+<./images/sim3.PNG, id=32, 1016.29688pt x 429.10312pt>
+File: ./images/sim3.PNG Graphic file (type png)
+<use ./images/sim3.PNG>
+Package pdftex.def Info: ./images/sim3.PNG  used on input line 5. on input line
+ 5.
+Package pdftex.def Info: Requested size: 406.51155pt x 171.6382pt on input line
+ 5.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./images/sim2_sweep.PNG>]
+<./images/sim3_bigrange.PNG, id=37, 1016.29688pt x 429.10312pt>
+File: ./images/sim3_bigrange.PNG Graphic file (type png)
+<use ./images/sim3_bigrange.PNG>
+Package pdftex.def Info: ./images/sim3_bigrange.PNG  used on input line 18. on 
+input line 18.
+Package pdftex.def Info: Requested size: 406.51155pt x 171.6382pt on input line
+ 18.
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <./images/sim3.PNG> <./images/sim3_bigrange.PNG>]) (./part_4/part_4.tex
+<./images/sim4_max_sin.PNG, id=44, 1016.29688pt x 429.10312pt>
+File: ./images/sim4_max_sin.PNG Graphic file (type png)
+<use ./images/sim4_max_sin.PNG>
+Package pdftex.def Info: ./images/sim4_max_sin.PNG  used on input line 5. on in
+put line 5.
+Package pdftex.def Info: Requested size: 406.51155pt x 171.6382pt on input line
+ 5.
+<./images/sim4_past_max.PNG, id=45, 1016.29688pt x 429.10312pt>
+File: ./images/sim4_past_max.PNG Graphic file (type png)
+<use ./images/sim4_past_max.PNG>
+Package pdftex.def Info: ./images/sim4_past_max.PNG  used on input line 21. on 
+input line 21.
+Package pdftex.def Info: Requested size: 406.51155pt x 171.6382pt on input line
+ 21.
+)
+(./conclusion/conclusion.tex) [6 <./images/sim4_max_sin.PNG> <./images/sim4_pas
+t_max.PNG>] [7] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 13556 strings out of 492990
- 290101 string characters out of 6135004
- 311080 words of memory out of 5000000
- 17023 multiletter control sequences out of 15000+600000
- 533191 words of font info for 33 fonts, out of 8000000 for 9000
+ 13712 strings out of 492990
+ 293485 string characters out of 6135004
+ 315475 words of memory out of 5000000
+ 17136 multiletter control sequences out of 15000+600000
+ 534195 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,4n,46p,10397b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on main.pdf (1 page, 23037 bytes).
+ 41i,7n,46p,10397b,916s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-sup
+er-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (8 pages, 456533 bytes).
 PDF statistics:
- 16 PDF objects out of 1000 (max. 8388607)
- 10 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -77,7 +77,7 @@ if __name__ == "__main__" :
 	# A_cm = ( -1.0 * gm1AB * r_d ) / ( 1.0 + ( ro2AB * ( gm1AB + ( 1.0 / ro1AB ) ) ) )
 	A_cm = - ( gm1AB * r_d * ro1AB ) / ( r_d + ( gm1AB * ( ro1AB ** 2.0 ) ) )
 
-	common.write_csv_from_matrix( TABLES_DIR + "sim1_gain.csv" , [ [ "Differential Mode Gain [V/V]" , "Common Mode Gain [V/V]" , "Common-Mode Rejection Ratio" ] , [ common.set_precision_str( A_dm , PREC ) , common.set_precision_str( A_cm , PREC ) , common.set_precision_str( abs( A_dm / A_cm ) , PREC ) ] ] )
+	common.write_csv_from_matrix( TABLES_DIR + "sim1_gain.csv" , [ [ "Differential Mode Gain [V/V]" , "Common Mode Gain [V/V]" , "Common-Mode Rejection Ratio" ] , [ common.set_precision_str( A_dm , PREC ) , common.set_precision_str( A_cm , PREC + 2 ) , common.set_precision_str( abs( A_dm / A_cm ) , PREC ) ] ] )
 
 	# Saturation range for sim 2
 
@@ -90,8 +90,8 @@ if __name__ == "__main__" :
 	common.write_csv_from_matrix( TABLES_DIR + "sim2_gain.csv" , [ [ "Theoretical Calculation [V/V]" , "Simulation Result [V/V]" , "Error" ] , [ common.set_precision_str( A_dm , PREC ) , A_dm_sim2 , common.fmt_perc_err( A_dm_sim2 , A_dm , PREC ) ] ] )
 
 	# Saturation range for sim 3
-	
+	common.write_csv_from_matrix( TABLES_DIR + "sim3_sat.csv" , [ [ "" , "Maximum [V]" , "Minimum [V]" ] , [ "CM Output Voltage" , 5.0 - V_midpoint , 3.0284 - V_midpoint ] , [ "CM Input Voltage" , -1.1 , "N/A" ] ] )
 
 	# Gain tables for sim 3
 	A_cm_sim3 = -0.01
-	common.write_csv_from_matrix( TABLES_DIR + "sim3_gain.csv" , [ [ "Theoretical Calculation [V/V]" , "Simulation Result [V/V]" , "Error" ] , [ common.set_precision_str( A_cm , PREC ) , A_cm_sim3 , common.fmt_perc_err( A_cm_sim3 , A_cm , PREC ) ] ] )
+	common.write_csv_from_matrix( TABLES_DIR + "sim3_gain.csv" , [ [ "Theoretical Calculation [V/V]" , "Simulation Result [V/V]" , "Error" ] , [ common.set_precision_str( A_cm , PREC + 2 ) , A_cm_sim3 , common.fmt_perc_err( A_cm_sim3 , A_cm , PREC ) ] ] )

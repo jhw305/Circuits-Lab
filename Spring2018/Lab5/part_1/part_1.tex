@@ -1,5 +1,5 @@
 % TODO Circuit pic
-Two resistor values need to be determined in order ot properly design the differential amplifier.
+Two resistor values need to be determined in order to properly design the differential amplifier.
 $R_{REF}$ needs to be determined to design the current source.
 The two transistors $M_{2A}$ and $M_{2B}$ are matched and conduct a total current of $I_{SS}$.
 Thus, each conducts a current of $\frac{I_{SS}}{2}$.
@@ -20,7 +20,7 @@ Therefore, $V_{GS}$ can acquired using:
 \end{equation}
 
 Using equations (\ref{eq:vgs}) and (\ref{eq:r_ref}), $R_{REF} = $ \rref.
-This ensures that the $I_{SS} = $\iss specification is met.
+This ensures that the $I_{SS} = $\iss \ specification is met.
 To achieve maximum output swing, one must know the midpoint of $V_{out}^{+}$ and $V_{out}^{-}$, referred to as $V_{midpoint}$.
 From this information, $R_{D}$ can be acquired:
 
@@ -48,7 +48,7 @@ Figure (\ref{fig:diff_amp}) depicts the amplifier design with the DC operating p
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.35]{../images/diff_amp.PNG}
+	\includegraphics[scale=0.35]{./images/diff_amp.PNG}
 	\caption{Differential Amplifier with DC Operating Point Results}
 	\label{fig:diff_amp}
 \end{figure}
@@ -76,7 +76,7 @@ Furthermore, all of the transistors remain in saturation.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.35]{../images/diff_amp_2.PNG}
+	\includegraphics[scale=0.35]{./images/diff_amp_2.PNG}
 	\caption{Second Differential Amplifier Design Iteration}
 	\label{fig:diff_amp_2}
 \end{figure}
@@ -117,7 +117,7 @@ It should be noted that these gain calculations use the values in figure (\ref{f
 	\centering
 	\caption{Gains for Part $1$ Second Iteration Amplifier}
 	\label{tab:sim1_gain}
-	\csvautotabular{../tables/sim1_gain.csv}
+	\csvautotabular{./tables/sim1_gain.csv}
 \end{table}
 
 \FloatBarrier

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  22 MAY 2018 01:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.10.29)  21 MAY 2018 18:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**part_2_wrap.tex
-(./part_2_wrap.tex
+**part_3_wrap.tex
+(./part_3_wrap.tex
 LaTeX2e <2017-04-15>
 Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -420,8 +420,8 @@ Package shellesc Info: Restricted shell escape enabled on input line 69.
 \c@csvcol=\count196
 \csv@out=\write3
 )
-(./part_2_wrap.aux)
-\openout1 = `part_2_wrap.aux'.
+(./part_3_wrap.aux)
+\openout1 = `part_3_wrap.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -519,36 +519,36 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 \c__siunitx_mathtt_int=\count270
 
-(./part_2.tex
-<../images/sim2_sweep.PNG, id=1, 1016.29688pt x 429.10312pt>
-File: ../images/sim2_sweep.PNG Graphic file (type png)
-<use ../images/sim2_sweep.PNG>
-Package pdftex.def Info: ../images/sim2_sweep.PNG  used on input line 5. on inp
-ut line 5.
-Package pdftex.def Info: Requested size: 406.51155pt x 171.6382pt on input line
- 5.
+(./part_3.tex
+<../images/sim3.PNG, id=1, 1016.29688pt x 429.10312pt>
+File: ../images/sim3.PNG Graphic file (type png)
+<use ../images/sim3.PNG>
+Package pdftex.def Info: ../images/sim3.PNG  used on input line 5. on input lin
+e 5.
+Package pdftex.def Info: Requested size: 558.96501pt x 236.00743pt on input lin
+e 5.
 
-Overfull \hbox (61.51155pt too wide) in paragraph at lines 5--6
+Overfull \hbox (213.96501pt too wide) in paragraph at lines 5--6
  [][] 
  []
 
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/sim2_sweep.PNG>]
- (./part_2_wrap.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../images/sim3.PNG>]
+(./part_3_wrap.aux) ) 
 Here is how much of TeX's memory you used:
- 13099 strings out of 492990
- 283698 string characters out of 6135004
- 297195 words of memory out of 5000000
- 16580 multiletter control sequences out of 15000+600000
+ 13091 strings out of 492990
+ 283467 string characters out of 6135004
+ 296187 words of memory out of 5000000
+ 16573 multiletter control sequences out of 15000+600000
  531681 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,46p,10407b,739s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
-b>
-Output written on part_2_wrap.pdf (1 page, 65182 bytes).
+ 41i,7n,46p,10407b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+>
+Output written on part_3_wrap.pdf (1 page, 62446 bytes).
 PDF statistics:
  23 PDF objects out of 1000 (max. 8388607)
  14 compressed objects within 1 object stream
