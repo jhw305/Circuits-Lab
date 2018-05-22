@@ -81,7 +81,7 @@ if __name__ == "__main__" :
 
 	# Saturation range for sim 2
 
-	common.write_csv_from_matrix( TABLES_DIR + "sim2_sat.csv" , [ [ "" , "Maximum [V]" , "Minimum [V]" ] , [ "DM Output Voltage" , 3.8794 , -3.8957 ] , [ "DM Input Voltage" , 291.89 , -308.75 ] ] )
+	common.write_csv_from_matrix( TABLES_DIR + "sim2_sat.csv" , [ [ "" , "Maximum [V]" , "Minimum [V]" ] , [ "DM Output Voltage" , 3.8794 , -3.8957 ] , [ "DM Input Voltage" , 291.89e-3 , -308.75e-3 ] ] )
 
 	# Gain tables for sim 2
 
