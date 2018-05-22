@@ -48,7 +48,7 @@ Figure (\ref{fig:diff_amp}) depicts the amplifier design with the DC operating p
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/diff_amp.PNG}
+	\includegraphics[scale=0.35]{../images/diff_amp.PNG}
 	\caption{Differential Amplifier with DC Operating Point Results}
 	\label{fig:diff_amp}
 \end{figure}
@@ -76,7 +76,7 @@ Furthermore, all of the transistors remain in saturation.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{../images/diff_amp_2.PNG}
+	\includegraphics[scale=0.35]{../images/diff_amp_2.PNG}
 	\caption{Second Differential Amplifier Design Iteration}
 	\label{fig:diff_amp_2}
 \end{figure}
@@ -103,7 +103,7 @@ By analyzing the half-circuit with Kirchhoff's Laws, the following expression is
 
 \begin{equation}
 	\label{eq:cm_gain}
-	A_{cm} = - \frac{ g_{m1A,B} R_{D} }{ 3 + g_{m1A,B} r_{o1A,B} }
+	A_{cm} = - \frac{ g_{m1A,B} R_{D} r_{o1A,B} }{ R_{D} + g_{m1A,B} r_{o1A,B}^{2} }
 \end{equation}
 
 $g_{m}$ can be calculated using $\frac{ 2 I_{D}' }{ V_{GS} - V_{tn} }$, where $I_{D}'$ is the drain current excluding channel-length modulation effects.
