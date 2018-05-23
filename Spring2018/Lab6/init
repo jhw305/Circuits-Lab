@@ -1,0 +1,2 @@
+#!/bin/bash
+~/Circuits-Lab/common/scripts/azide --report "Measurement Lab \#3" --course "EECS 170LC" --authors "Roman Parise (59611417)" --sections "Introduction" "Descriptions" "Calculations" "Analysis" "Conclusion"

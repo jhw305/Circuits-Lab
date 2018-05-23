@@ -1,0 +1,32 @@
+1) Current source
+	- Test the transistor. (X) Then connect the resistor. (X)
+	- Just the diode connected transistor with the resistance box in series (X)
+	- Tune resistor so that current is 225uA (X)
+		- Current is at 213uA.
+		- 10k for Rref
+	- Add extra two transistors for current source (X)
+		- 480uA total current
+	- Set Vd on those transistors to be high enough so they're in saturation. Ensure total current is 450uA. (X)
+2) Common source amplifier 1
+	- Build a voltage divider and test
+		- 5ks for both transistors
+	- Bias with the voltage divider 
+	- Build two common source amplifiers with M1A and M1B
+		- 10k and 5k in parallel for the drain resistors. Get about 3.0V bias at the output.
+	- Then add one current source beneath it. Check the characteristic. Should look like CSA with src degen
+3) Common source amplifier 2
+	- Do the same thing, but bias so the same operating point as CSA 1
+4) Connect the two together
+	- 240uA through one side
+	- 246uA through the other
+
+1kHz test
+---------
+Distorts around 1.2V for 1kHz
+Distorts around 1.5V for 1MHz
+
+Maximum of Vout+ at 1MHz - 5.075V
+Minimum of Vout+ at 1MHz - 3.2625V
+Maximum of Vout- at 1MHz - 5.04375V
+Minimum of Vout- at 1MHz - 3.65625V
+Input Vin- is 3.5Vpp
