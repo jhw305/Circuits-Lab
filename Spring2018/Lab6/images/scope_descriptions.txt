@@ -1,0 +1,12 @@
+All voltages listed are interpreted as peak-to-peak
+source 4 = Vout-
+source 3 = Vout+
+scope_0 = Vin-, 200mV
+scope_1 = Vout+, Vout- for 200mV input
+scope_2 = Vout+, Vout-, VDM for 200mV input
+scope_3 = scope_2 but for 1V input
+scope_4 = scope_2 but for 2V input (clamping)
+scope_5 = scope_2 but for 200mV input and at 1MHz
+scope_6 = scope_5 but for 1.5V input
+scope_7 = measurement of max/min voltages of Vout-
+scope_8 = measurement of max/min voltages of Vout+
