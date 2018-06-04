@@ -4,19 +4,22 @@ The differential-mode gain and common-mode gain from simulations performed prior
 $v_{out(dm)}$ and $v_{out(cm)}$ can be found by evaluating the product of the corresponding gain values and input components.
 Thus, $v_{out(dm)} = A_{dm}v_{in(dm)} = 4$\si{\volt} peak-to-peak and $v_{out(cm)} = A_{cm}v_{in(cm)} = 1$\si{\milli\volt} peak-to-peak.
 However, the result for $v_{out(dm)}$ is much too large when compared to the amplitudes seen on the oscilloscope.
-The result for $v_{out(cm)}$ is reasonable since the common-mode component of the output is typically a negligible quantity. \\
+Also, because amplitude of $V_{out+}$ and $V_{out-}$ differ significantly more than $1$\si{\milli\volt}, the common-mode gain from the simulation is much too small.\\
 
-Using the results from the oscilloscope, and assuming that the common-mode component of the output is negligible, $v_{out(dm)}$ can be approximated by $V_{out+} - V_{out-} = 466$\si{\milli\volt} peak-to-peak.
+Using the results from the oscilloscope, $v_{out(dm)}$ is given by $V_{out+} - V_{out-} = 466$\si{\milli\volt} peak-to-peak.
 The differential-mode gain can then be found: $A_{dm} = \frac{v_{out(dm)}}{v_{in(dm)}} = 2.33$ \si{\volt}/\si{\volt}.
 This is significantly lower than the value from the simulation.
-Because the common-mode output is assumed to be negligible, the common-mode gain cannot be conclusively found so the common-mode rejection ratio cannot be found either by extension.
-However, if the common-mode gain from the simulation is assumed to be correct (this is a baseless assumption), then the CMRR would be $233$. \\
+The common-mode gain $v_{out(dm)}$ is given by $\frac{1}{2}(V_{out+} + V_{out-}) = 30$\si{\milli\volt} peak-to-peak.
+The common-mode gain can then be found: $A_{cm} = \frac{v_{out(cm)}}{v_{in(cm)}} = 0.3$ \si{\volt}/\si{\volt}.
+This is significantly higher than the value from the simulation.
+With both gain values, the common-mode rejection ratio is given by $CMRR = |\frac{A_{dm}}{A_{cm}}| = 7.77$.
+This indicates that the performance of the differential amplifier is worse than the simulated results by a significant margin. \\
 
 \subsection{Clamping \& Distortion}
 
 Given the voltage ranges of which the amplifying transistors work from (\ref{fig:scope_7}) and (\ref{fig:scope_8}), $V_{out+}$ seems to exhibit a larger swing.
 Although we biased these transistors as identically as we could with the current mirrors and DC voltage dividers, they still exhibit some differences.
-Notably, the transistor for $V_{out+}$ clearly hits cutoff where the one for $V_{out-}$ does not.
+Notably, the transistor for $V_{out+}$ clearly hits cutoff where the one for V_{out-} does not.
 The voltage variation in $V_{out+} - V_{out-}$ was earlier found to be 3.19\si{\volt}
 Interestingly, this is approximately equal to $V_{DD} - V_{t}$, which is the normal limit in voltage output swing for a common-source amplifier.
 
@@ -24,7 +27,7 @@ Interestingly, this is approximately equal to $V_{DD} - V_{t}$, which is the nor
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.40]{./images/scope_6}
+	\includegraphics[scale=0.60]{./images/scope_6}
 	\caption{Measured maximum signal swing of $V_{out+}$ and $V_{out-}$ from a 1.5\si{\volt} p/p input at 1MHz}
 	\label{fig:scope_6}
 \end{figure}
